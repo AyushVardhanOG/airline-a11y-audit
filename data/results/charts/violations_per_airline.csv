@@ -1,0 +1,30 @@
+airline,region,pages_scanned,elements_failed,elements_per_page
+Peach,Japan/Asia,2,87.0,43.5
+Cathay Pacific,Japan/Asia,2,82.0,41.0
+SpiceJet,India,1,33.0,33.0
+easyJet,Europe,3,78.0,26.0
+Air India Express,India,2,47.0,23.5
+IndiGo,India,3,66.0,22.0
+Air India,India,3,55.0,18.3
+ANA,Japan/Asia,3,44.0,14.7
+Akasa Air,India,2,29.0,14.5
+Singapore Airlines,Japan/Asia,3,35.0,11.7
+Turkish Airlines,Europe,2,23.0,11.5
+Air France,Europe,3,30.0,10.0
+Emirates,Middle East/Oceania,3,29.0,9.7
+Ryanair,Europe,3,18.0,6.0
+Iberia,Europe,3,16.0,5.3
+Qatar Airways,Middle East/Oceania,3,15.0,5.0
+Delta,North America,3,14.0,4.7
+Qantas,Middle East/Oceania,3,10.0,3.3
+Southwest,North America,3,10.0,3.3
+American,North America,3,10.0,3.3
+Lufthansa,Europe,3,7.0,2.3
+Air Canada,North America,2,4.0,2.0
+United,North America,2,4.0,2.0
+TAP Air Portugal,Europe,3,6.0,2.0
+SAS,Europe,3,6.0,2.0
+KLM,Europe,3,5.0,1.7
+JAL,Japan/Asia,3,4.0,1.3
+Finnair,Europe,3,1.0,0.3
+JetBlue,North America,3,0.0,0.0

@@ -4,3 +4,7 @@
 # More packages (scikit-learn, xgboost, shap, fastapi) will be added in later steps.
 
 playwright==1.65.0
+
+# Step 4 analysis (src/analyze.py): tables and PNG charts
+pandas==3.1.1
+matplotlib==3.11.2

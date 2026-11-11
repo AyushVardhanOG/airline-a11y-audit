@@ -586,3 +586,66 @@ the homepages reflect what a visitor from India sees.
 
 **Next (Step 4)**: scan the 78 saved copies offline with `scan_captures.py`, then
 `compare_live_vs_capture.py` for the 11 allowed airlines.
+
+---
+
+## 2026-11-11 - Step 4: scan all saved copies, live vs copy, analysis
+
+**1. Offline scan of the saved copies**: `scan_captures.py`, run 20261111T142233Z (14:22 UTC),
+78 files (only files directly in data/captures/; `_duplicates/` and SAME_AS_HOME pages skipped).
+All 78 ok, every iframe injected, every capture has its UTC time from log.csv.
+- One warning checked: `american_checkin` was flagged "almost no visible text", but the screenshot shows
+  the full page and axe passed 28 rules. The text check (Playwright `inner_text`) misses
+  content inside web components (shadow DOM), which axe-core does scan. It is a false alarm in the
+  warning only; results are not affected.
+- 11 pages have 0 violations; the pages with the fewest *passed* rules still passed 15-22, so none
+  is empty.
+
+**2. Live vs saved copy** (`compare_live_vs_capture.py`): 25 page pairs from the 11 allowed airlines
+(no pair for ANA check-in, Ryanair assistance - no usable live scan - and Finnair home - live URL
+differs, skipped by the new URL check). Live and copy were 2-17 min apart.
+- 16 of 25 pages (64%) failed exactly the same rules; mean rule overlap (Jaccard) 0.77, median 1.0.
+- Total failing elements: 201 live vs 197 in the copies, so the totals are very close.
+- Main differences: **color-contrast failed only live on all 3 JetBlue pages**. Contrast depends on
+  rendering (fonts, background images), which a static copy can change. SpiceJet home: the copy had
+  3 extra rules and 33 vs 14 elements; the live scan ran while a loading overlay still covered the
+  page (seen in Step 3). Qantas check-in: 3 extra rules in the copy. Air India Express home:
+  same 7 rules, but 53 live vs 27 elements in the copy.
+- Conclusion for the paper: saved copies reproduce the live rule set exactly for about two-thirds
+  of pages and the element totals closely; differences are page-specific (rendering-dependent
+  contrast, loading state at scan time), not a systematic bias in one direction.
+
+**3. `src/analyze.py`** (pandas 3.1.1, matplotlib 3.11.2, pinned in requirements.txt):
+- `violations_all.csv` (768 rows, one per failing element: rule, impact, WCAG level and criterion,
+  selector, in_iframe, HTML snippet + length; for Objectives 2-3), `pages_summary.csv`,
+  `summary_per_airline.csv` (all 30 airlines; Alaska marked excluded).
+  Checked: totals agree per element / page / airline / impact (768 each).
+- 6 charts in `data/results/charts/`, each with a CSV of exactly the numbers shown (the "table view"):
+  top-10 rules (by number of pages, not elements, so a few pages with hundreds of contrast failures
+  do not dominate), elements per page by airline / region / page type (averages, because airlines
+  have 1-3 scanned pages; medians also given), elements by impact, and the automated-access share.
+- Charts follow the project's chart guidance: one color for single-series bars, a palette checked with
+  the palette validator for the 4-part access bar (passes; low-contrast aqua/yellow are covered by
+  labels inside the blocks + the CSV), solid hairline grid, values at bar ends. I looked at every
+  PNG; fixed the access bar's legend order (it did not follow the block order) and bar height.
+- Checked that the top rule `label-content-name-mismatch` is a normal WCAG 2.1 A rule (SC 2.5.3) in
+  axe-core 4.14, not an experimental one. No experimental or best-practice rules appear in the results.
+
+**Key results** (details in `data/results/summary.md`): 67 of 78 pages (86%) fail at least one rule;
+768 failing elements, mean 9.8 / median 4 per page; 27 different rules. Top rules by pages:
+label-content-name-mismatch 46, color-contrast 22, link-name 15, image-alt 13, nested-interactive 12.
+Impact: 19% critical, 80% serious. Most elements per page: Peach 43.5, Cathay 41, SpiceJet 33; fewest:
+JetBlue 0, Finnair 0.3, JAL 1.3. By region: India 20.9, Japan/Asia 19.4, Europe 6.6,
+Middle East/Oceania 6, North America 2.6 (small groups, not statistically tested).
+
+**Size note**: the 78 capture-scan screenshots are 98 MB in total (largest 6.6 MB), committed like
+the earlier screenshots.
+
+**Still open for Objective 1**: the second checker (Pa11y or IBM Equal Access).
+
+**SingleFile adds attributes**: saved copies contain `data-sf-nesting-track-id="1.3.1.5.1"`-style
+attributes that SingleFile adds while saving (they are not on the live sites). They do not affect
+axe-core rules, but 9 of the 768 HTML snippets in violations_all.csv include them. Strip `data-sf-*`
+attributes before giving snippets to an LLM in Objective 2, and before computing snippet-length
+features. (These attributes also looked like IP addresses to the privacy check; a stricter check
+found no real IP addresses, and the Step 2 IP is not in any committed file.)

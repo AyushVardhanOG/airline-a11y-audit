@@ -1,0 +1,28 @@
+rule_id,pages_affected,airlines_affected,elements_failed,impact,wcag_criteria,rule_help
+label-content-name-mismatch,46,23,152,serious,2.5.3,Elements must have their visible text as part of their accessible name
+color-contrast,22,13,228,serious,1.4.3,Elements must meet minimum color contrast ratio thresholds
+link-name,15,9,45,serious,2.4.4;4.1.2,Links must have discernible text
+image-alt,13,8,41,critical,1.1.1,Images must have alternative text
+nested-interactive,12,10,34,serious,4.1.2,Interactive controls must not be nested
+list,11,9,27,serious,1.3.1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+aria-required-children,11,7,18,critical,1.3.1,Certain ARIA roles must contain particular children
+button-name,11,9,16,critical,4.1.2,Buttons must have discernible text
+aria-prohibited-attr,9,7,14,serious,4.1.2,Elements must only use permitted ARIA attributes
+aria-allowed-attr,8,8,20,critical,4.1.2,Elements must only use supported ARIA attributes
+listitem,6,5,31,serious,1.3.1,<li> elements must be contained in a <ul> or <ol>
+link-in-text-block,6,4,18,serious,1.4.1,Links must be distinguishable without relying on color
+aria-hidden-focus,5,4,15,serious,4.1.2,ARIA hidden element must not be focusable or contain focusable elements
+aria-command-name,5,5,8,serious,4.1.2,ARIA commands must have an accessible name
+aria-valid-attr-value,5,5,8,critical,4.1.2,ARIA attributes must conform to valid values
+meta-viewport,5,3,5,moderate,1.4.4,Zooming and scaling must not be disabled
+role-img-alt,3,2,32,serious,1.1.1,"[role=""img""] and [role=""image""] elements must have alternative text"
+aria-required-parent,3,2,28,critical,1.3.1,Certain ARIA roles must be contained by particular parents
+select-name,3,2,9,critical,4.1.2,Select element must have an accessible name
+frame-title,3,3,3,serious,4.1.2,Frames must have an accessible name
+input-button-name,3,2,3,critical,4.1.2,Input buttons must have discernible text
+label,2,2,4,critical,4.1.2,Form elements must have labels
+aria-input-field-name,2,2,3,serious,4.1.2,ARIA input fields must have an accessible name
+aria-required-attr,2,2,2,critical,4.1.2,Required ARIA attributes must be provided
+aria-toggle-field-name,1,1,2,serious,4.1.2,ARIA toggle fields must have an accessible name
+avoid-inline-spacing,1,1,1,serious,1.4.12,Inline text spacing must be adjustable with custom stylesheets
+html-has-lang,1,1,1,serious,3.1.1,<html> element must have a lang attribute

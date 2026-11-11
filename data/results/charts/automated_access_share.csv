@@ -1,0 +1,5 @@
+result,meaning,airlines
+allowed,Allowed (real page loaded),11
+blocked,Blocked (HTTP 403 / 'Access Denied'),9
+blocked_unconfirmed,Error page instead of real page (probably blocked),3
+error,Connection cut before loading (cause unknown),7

@@ -1,0 +1,31 @@
+airline_id,airline,region,access_result,excluded_reason,pages_scanned,page_types_scanned,rules_failed_distinct,elements_failed,elements_per_page,critical,serious,moderate,minor
+air_india,Air India,India,error,,3,home;checkin;assistance,4.0,55.0,18.3,3.0,52.0,0.0,0.0
+indigo,IndiGo,India,blocked_unconfirmed,,3,home;checkin;assistance,11.0,66.0,22.0,19.0,47.0,0.0,0.0
+spicejet,SpiceJet,India,allowed,,1,home,6.0,33.0,33.0,2.0,30.0,1.0,0.0
+akasa_air,Akasa Air,India,allowed,,2,home;checkin,2.0,29.0,14.5,0.0,29.0,0.0,0.0
+air_india_express,Air India Express,India,allowed,,2,home;checkin,7.0,47.0,23.5,28.0,19.0,0.0,0.0
+ana,ANA,Japan/Asia,allowed,,3,home;checkin;assistance,12.0,44.0,14.7,21.0,23.0,0.0,0.0
+jal,JAL,Japan/Asia,blocked,,3,home;checkin;assistance,3.0,4.0,1.3,3.0,1.0,0.0,0.0
+peach,Peach,Japan/Asia,error,,2,home;assistance,11.0,87.0,43.5,17.0,70.0,0.0,0.0
+singapore_airlines,Singapore Airlines,Japan/Asia,blocked_unconfirmed,,3,home;checkin;assistance,7.0,35.0,11.7,1.0,34.0,0.0,0.0
+cathay_pacific,Cathay Pacific,Japan/Asia,error,,2,home;assistance,14.0,82.0,41.0,12.0,68.0,2.0,0.0
+lufthansa,Lufthansa,Europe,blocked,,3,home;checkin;assistance,2.0,7.0,2.3,0.0,7.0,0.0,0.0
+air_france,Air France,Europe,error,,3,home;checkin;assistance,3.0,30.0,10.0,0.0,30.0,0.0,0.0
+klm,KLM,Europe,error,,3,home;checkin;assistance,2.0,5.0,1.7,2.0,3.0,0.0,0.0
+ryanair,Ryanair,Europe,allowed,,3,home;checkin;assistance,9.0,18.0,6.0,5.0,13.0,0.0,0.0
+easyjet,easyJet,Europe,blocked,,3,home;checkin;assistance,10.0,78.0,26.0,4.0,72.0,2.0,0.0
+iberia,Iberia,Europe,blocked,,3,home;checkin;assistance,7.0,16.0,5.3,1.0,15.0,0.0,0.0
+finnair,Finnair,Europe,allowed,,3,home;checkin;assistance,1.0,1.0,0.3,0.0,1.0,0.0,0.0
+sas,SAS,Europe,blocked,,3,home;checkin;assistance,3.0,6.0,2.0,0.0,6.0,0.0,0.0
+tap_air_portugal,TAP Air Portugal,Europe,allowed,,3,home;checkin;assistance,3.0,6.0,2.0,2.0,4.0,0.0,0.0
+turkish_airlines,Turkish Airlines,Europe,error,,2,home;assistance,4.0,23.0,11.5,8.0,15.0,0.0,0.0
+delta,Delta,North America,blocked,,3,home;checkin;assistance,2.0,14.0,4.7,3.0,11.0,0.0,0.0
+united,United,North America,error,,2,home;checkin,2.0,4.0,2.0,0.0,4.0,0.0,0.0
+american,American,North America,blocked,,3,home;checkin;assistance,3.0,10.0,3.3,3.0,7.0,0.0,0.0
+southwest,Southwest,North America,allowed,,3,home;checkin;assistance,3.0,10.0,3.3,0.0,10.0,0.0,0.0
+alaska,Alaska,North America,blocked_unconfirmed,blocked_for_human_visitor,0,,,,,,,,
+jetblue,JetBlue,North America,allowed,,3,home;checkin;assistance,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+air_canada,Air Canada,North America,allowed,,2,home;checkin,2.0,4.0,2.0,0.0,4.0,0.0,0.0
+emirates,Emirates,Middle East/Oceania,blocked,,3,home;checkin;assistance,8.0,29.0,9.7,4.0,25.0,0.0,0.0
+qatar_airways,Qatar Airways,Middle East/Oceania,blocked,,3,home;checkin;assistance,4.0,15.0,5.0,9.0,6.0,0.0,0.0
+qantas,Qantas,Middle East/Oceania,allowed,,3,home;checkin;assistance,4.0,10.0,3.3,2.0,8.0,0.0,0.0
