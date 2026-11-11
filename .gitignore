@@ -9,6 +9,14 @@ node_modules/
 # Secrets such as LLM API keys - never commit these
 .env
 
+# Privacy: block pages can show our own public IP address. Keep these local only.
+# - screenshots of block pages (the scanner names them *_blocked.png)
+screenshots/**/*_blocked.png
+# - Step 2 run 20261111T115319Z was made before IP redaction was added. Its Lufthansa
+#   files contain the IP. They stay on disk untouched (rule 6) but are not published.
+data/raw/step2_feasibility/20261111T115319Z/lufthansa.json
+screenshots/step2_feasibility/20261111T115319Z/lufthansa.png
+
 # Editor / OS clutter
 .vscode/
 .idea/

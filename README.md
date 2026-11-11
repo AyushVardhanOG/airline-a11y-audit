@@ -47,7 +47,7 @@ npm install
 ## Status
 
 - [x] Step 1: project setup
-- [ ] Step 2: feasibility test on 4 airline homepages
+- [x] Step 2: feasibility test on 6 airline homepages
 - [ ] Step 3: final list of airlines and pages
 - [ ] Step 4: full audit pipeline
 - [ ] Step 5: LLM repair prototype

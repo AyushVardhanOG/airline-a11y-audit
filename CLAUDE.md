@@ -61,7 +61,7 @@ can fix the problems it finds, and check whether those fixes actually work.
 
 ## Current status
 - [x] Step 1: project setup
-- [ ] Step 2: feasibility test on 4 airline homepages (Air India, IndiGo, ANA, Lufthansa)
+- [x] Step 2: feasibility test on 6 airline homepages (Air India, IndiGo, ANA, JAL, Lufthansa, Emirates)
 - [ ] Step 3: choose the final list of ~30 airlines and pages
 - [ ] Step 4: full audit pipeline (Objective 1)
 - [ ] Step 5: LLM repair prototype (Objective 2)

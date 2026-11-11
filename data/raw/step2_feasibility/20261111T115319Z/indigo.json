@@ -1,0 +1,37 @@
+{
+  "airline_id": "indigo",
+  "airline": "IndiGo",
+  "url": "https://www.goindigo.in",
+  "scan_started_utc": "2026-11-11T11:53:35+00:00",
+  "tool_versions": {
+    "python": "3.14.6",
+    "playwright": "1.65.0",
+    "browser": "chromium 158.0.8127.18"
+  },
+  "settings": {
+    "wcag_tags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa"
+    ],
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "headless": true,
+    "page_load_timeout_ms": 60000,
+    "settle_time_s": 3
+  },
+  "status": "blocked",
+  "block_reason": "page has almost no visible text (possible block or failed load)",
+  "error": null,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36",
+  "load_time_s": 5.4,
+  "http_status": 200,
+  "final_url": "https://www.goindigo.in/",
+  "page_title": "",
+  "screenshot": "screenshots/step2_feasibility/20261111T115319Z/indigo.png",
+  "visible_text_start": "Something went wrong\n\nPlease contact our customer support team.",
+  "scan_finished_utc": "2026-11-11T11:53:40+00:00"
+}

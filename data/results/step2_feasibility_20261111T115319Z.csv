@@ -1,0 +1,7 @@
+airline,status,http,load_s,rules_failed,elements_failed,critical,serious,moderate,minor,note
+Air India,error,,,,,,,,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airindia.com/
+IndiGo,blocked,200,5.4,,,,,,,page has almost no visible text (possible block or failed load)
+ANA,ok,200,19.6,7,29,19,10,0,0,
+JAL,blocked,403,3.7,,,,,,,HTTP status 403
+Lufthansa,blocked,403,4.2,,,,,,,HTTP status 403
+Emirates,blocked,403,7.8,,,,,,,HTTP status 403

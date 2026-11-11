@@ -1,0 +1,37 @@
+{
+  "airline_id": "jal",
+  "airline": "JAL",
+  "url": "https://www.jal.co.jp/jp/en/",
+  "scan_started_utc": "2026-11-11T11:54:22+00:00",
+  "tool_versions": {
+    "python": "3.14.6",
+    "playwright": "1.65.0",
+    "browser": "chromium 158.0.8127.18"
+  },
+  "settings": {
+    "wcag_tags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa"
+    ],
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "headless": true,
+    "page_load_timeout_ms": 60000,
+    "settle_time_s": 3
+  },
+  "status": "blocked",
+  "block_reason": "HTTP status 403",
+  "error": null,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36",
+  "load_time_s": 3.7,
+  "http_status": 403,
+  "final_url": "https://www.jal.co.jp/jp/en/",
+  "page_title": "Access Denied",
+  "screenshot": "screenshots/step2_feasibility/20261111T115319Z/jal.png",
+  "visible_text_start": "Access Denied\nYou don't have permission to access \"http://www.jal.co.jp/jp/en/\" on this server.\n\nReference #18.111cc517.1794398052.4acc50c5\n\nhttps://errors.edgesuite.net/18.111cc517.1794398052.4acc50c5",
+  "scan_finished_utc": "2026-11-11T11:54:25+00:00"
+}
