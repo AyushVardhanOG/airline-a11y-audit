@@ -34,6 +34,7 @@ saved copy is to the live page.
 | `src/scan_pa11y.js` | second checker: Pa11y (HTML_CodeSniffer, WCAG2AA) on the same saved copies, offline |
 | `src/compare_checkers.py` | compares axe-core and Pa11y per page by WCAG success criterion |
 | `src/analyze.py` | tables, charts and `data/results/summary.md` from the saved-copy scans |
+| `src/repair.py` | Step 5 pilot: select failing elements, ask an LLM for a fix, apply it to a copy, re-scan (`select` / `run` / `report`) |
 | `src/register_captures.py` | renames new SingleFile captures and adds them to `data/captures/log.csv` |
 | `src/axe_runner.py` | shared axe-core settings used by both scanners |
 

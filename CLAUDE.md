@@ -119,7 +119,14 @@ getting around that, so **every airline is measured the same way**:
   - [x] `src/compare_checkers.py`: compared per page by WCAG success criterion; 21% of (page, criterion)
         failures found by both tools (44% on the 5 criteria both tools report); differences explained
         (different criterion mapping, criteria only one tool tests, Pa11y also flags hidden elements)
-- [ ] Step 5: LLM repair prototype (Objective 2)
+- [ ] Step 5: LLM repair prototype (Objective 2) - PILOT PREPARED, waiting for the LLM to be set up
+  - [x] `src/repair.py select`: 40 failing elements (top 10 rules x 4, 22 airlines; no iframes/shadow DOM,
+        HTML <= 3000 chars as sent) -> `data/results/repairs_pilot_selection.csv`
+  - [x] `run`/`report` built and tested WITHOUT an LLM (echo provider + hand-written answers): fixed /
+        not fixed / invalid output / fixed-but-new-issue are all detected; fixes go only into copies in
+        `data/repaired/` (git-ignored); prompts send the element HTML without data-sf-* attributes and with
+        long data: URIs replaced by placeholders (restored before applying)
+  - [ ] install Ollama + pull the model (or set a free API in `.env`), then run `repair.py run` and `report`
 - [ ] Step 6: evaluate fixes + label them works/fails (Objective 3)
 - [ ] Step 7: train the ML failure predictor + dashboard (Objective 3)
 - [ ] Step 8: paper draft

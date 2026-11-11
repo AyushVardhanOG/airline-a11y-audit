@@ -30,3 +30,6 @@ data/captures/**/*.html
 .idea/
 Thumbs.db
 .DS_Store
+
+# LLM-repaired COPIES of the saved pages (Step 5): full airline pages, like data/captures/.
+data/repaired/

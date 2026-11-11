@@ -698,3 +698,46 @@ rule names and selector styles, so element-by-element matching is not reliable).
 
 **For the paper**: the low overlap is mostly due to different test design, not tool errors. Report both
 tools, the criterion mapping, and the hidden-element difference. Using two checkers widens coverage.
+
+---
+
+## 2026-11-11/12 - Step 5 pilot prepared (LLM not run yet)
+
+**Order**: Objective 1 (Pa11y) was still running when the Step 5 request came, and its output feeds
+Step 5, so it was finished and committed first.
+
+**`src/repair.py`** (commands `select`, `run`, `report`):
+- `select`: top 10 rules by pages (same ranking as the analysis), 4 elements each, greedy choice that
+  prefers airlines used least so far -> **40 elements, 22 airlines** (max 4 from one airline; IndiGo).
+  21 home, 16 assistance, only 3 check-in pages (check-in pages have fewer failures of these rules).
+  16 critical, 24 serious. Skipped: elements in iframes/shadow DOM and elements whose HTML as sent is
+  over 3,000 characters. Exact selectors from the raw capture-scan JSON. No experimental rules (none exist
+  in the results).
+- `run` per element: open the saved copy offline, find the element, run axe ("before"); send the prompt;
+  replace the element in a COPY and save it to `data/repaired/` (git-ignored, like captures); re-scan the
+  saved copy ("after"). Verdicts: fixed / fixed_but_new_issue / not_fixed / invalid_output / llm_error.
+  The repaired element is marked `data-repair-id` so its violations can be found again even if its selector
+  changes (data attributes do not affect axe rules). Results saved after every element.
+- Saved per element (rule 5): exact prompt, system prompt + template, model name + digest/version,
+  temperature 0 (+ seed 42 for Ollama), raw LLM output, cleaned output, before/after results.
+- `report`: simple before/after HTML table.
+
+**Prompt hygiene**:
+- SingleFile's `data-sf-*` attributes are removed from the HTML that is sent.
+- SingleFile embeds images as long base64 `data:` URIs (one test image was several thousand
+  characters). They are replaced by placeholders (`data:removed-1`) before sending and restored before
+  the fix is applied, so the LLM never has to copy them (that test image went from thousands of
+  characters to 41). Round trip tested.
+
+**Tested without any LLM**:
+- provider `echo` (returns the HTML unchanged): every element "not_fixed", as expected;
+- hand-written answers on one image-alt element: correct alt -> "fixed"; two elements ->
+  "invalid_output"; wrapping the image in a link -> "fixed_but_new_issue" (the re-scan caught a
+  new `nested-interactive` on the page, because the image sits inside a button).
+- Test copies were deleted from data/repaired/ afterwards; the report was rendered and checked.
+
+**LLM choice (recommended, waiting for confirmation)**: local **Ollama** with **qwen2.5-coder:7b**: free, no
+account or rate limits, nothing leaves the computer, exact model digest can be recorded. Hardware:
+16 GB RAM, Ryzen 7 6800H, AMD RX 6650M; if Ollama cannot use the AMD GPU it runs on the CPU (slower,
+fine for 40 short snippets). Option B: any free API with an OpenAI-compatible endpoint via `.env`.
+`.env.example` documents both; `.env` stays git-ignored.
