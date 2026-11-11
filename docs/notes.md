@@ -144,3 +144,42 @@ assistance links, was dropped: it would hit the same bot blocks.)
 
 **Next**: capture the pages for all 30 airlines; for ANA, run `scan_live.py ana` in the same
 hour; then `scan_captures.py` and `compare_live_vs_capture.py`.
+
+---
+
+## 2026-11-11 - Step 3 (part 2): URL suggestions for all 30 airlines
+
+**Done**
+- `data/airlines.csv` rewritten with columns: airline_id, airline, region, homepage,
+  checkin_url, assistance_url, url_verified. Requested columns plus `airline_id`, which
+  is kept because capture file names and all scanners depend on it.
+- URLs were suggested by **web search** (search engine results only; no airline page was opened
+  by Playwright or any script). About 70 searches: one for check-in and one for special assistance per
+  airline, restricted to the airline's own domain, plus follow-up searches for gaps.
+  All rows have `url_verified = no`.
+- Result: 84 of 90 pages have a suggestion, **6 MISSING**: Akasa Air assistance (only a
+  section in its Conditions of Carriage), Air India Express assistance, Peach check-in
+  (check-in is app-only), Cathay Pacific check-in (only FAQ pages found), United assistance
+  (only on a preview server, gtmpreview.united.com, which was not used), Air Canada assistance
+  (only the formal Accessibility Plan found).
+- `data/url_search_notes.csv`: one note per suggestion that needs attention (38 notes).
+  Main issues: many URLs are another country's version of the site (e.g. Lufthansa /ge/en/,
+  United /en/NG/), some are help/FAQ pages rather than the check-in form, and some are on
+  separate sites (help.ryanair.com, support.southwest.com, mobilecheckin.jetblue.com,
+  ANA's booking engine aswbe-i.ana.co.jp).
+- Homepages are mostly the bare domain (e.g. https://www.klm.com); those sites redirect by
+  location, so the English / home-country version must be chosen while capturing.
+- `src/make_capture_checklist.py` -> `docs/capture_checklist.md`: 90 checkboxes grouped by region,
+  with URL and notes. The script refuses to overwrite an existing checklist (so ticks are
+  not lost) unless run with `--force`.
+- `src/scan_live.py` now only scans airlines with `url_verified = yes`, so unchecked
+  suggestions are never visited by the live scanner. (ANA is currently skipped for this reason.)
+
+**Why web search instead of Playwright**: the Step 2 result showed most airline sites block
+the headless browser, so crawling homepages for links would mostly fail; search results also
+do not touch the airline sites at all.
+
+**Limitation**: search-engine results can be outdated or point to old page versions (several
+results were marked as years old). That is why every URL must be checked by hand before use.
+
+**Next**: check URLs and capture pages, airline by airline, using the checklist.

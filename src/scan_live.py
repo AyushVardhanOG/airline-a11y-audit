@@ -8,7 +8,8 @@ compare_live_vs_capture.py can check how much a saved copy differs from the live
 Run this close in time (same hour if possible) to when the same pages were captured.
 
 Which pages: for each airline whose result in data/results/automated_access.csv is
-"allowed", the URLs in data/airlines.csv (homepage, checkin_url, assistance_url).
+"allowed" AND whose url_verified is "yes" in data/airlines.csv, the URLs in
+data/airlines.csv (homepage, checkin_url, assistance_url).
 Empty URLs and URLs marked MISSING are skipped.
 
 Rules followed (CLAUDE.md): one page at a time, 10 s pause between pages, only
@@ -64,6 +65,11 @@ def pages_to_scan(only_airlines):
             if row["airline_id"] not in allowed:
                 continue
             if only_airlines and row["airline_id"] not in only_airlines:
+                continue
+            # The URLs in airlines.csv started as web-search suggestions. Only visit
+            # them live after a person has checked them (url_verified = yes).
+            if row.get("url_verified", "").strip().lower() != "yes":
+                print(f"Skipping {row['airline_id']}: url_verified is not 'yes' in data/airlines.csv")
                 continue
             for page_type, column in URL_COLUMNS.items():
                 url = (row.get(column) or "").strip()

@@ -1,0 +1,39 @@
+airline_id,page_type,note
+spicejet,assistance,old-style .aspx page; SpiceJet's site has several old versions (classic/corporate) - look for a current page on spicejet.com
+akasa_air,assistance,no assistance page found; assistance rules are only a section of the Conditions of Carriage (https://www.akasaair.com/quick-links/conditions-of-carriage) - look for a real page on the site
+air_india_express,assistance,no assistance page found (the 'specialequipment' page is for sports equipment) - look on the site
+ana,checkin,separate booking-engine site (aswbe-i.ana.co.jp); ANA's info page is https://www.ana.co.jp/en/jp/guide/boarding-procedures/checkin/international/online-checkin/
+peach,checkin,web check-in is app-only; no Manage Booking URL found - look for 'Manage Booking' on the homepage
+singapore_airlines,checkin,may be an info page - check that it has the booking-reference form
+singapore_airlines,assistance,US-market version (en_UK/us) - switch to Singapore (sg) if it exists
+cathay_pacific,checkin,only FAQ pages found - look for 'Manage booking' / 'Check in' on the homepage
+cathay_pacific,assistance,US-market version (en_US) - switch to Hong Kong (en_HK) if it exists
+lufthansa,checkin,Georgia-market version (/ge/en/) - switch to Germany (/de/en/) if it exists
+lufthansa,assistance,Hong Kong-market version (/hk/en/) - switch to Germany (/de/en/) if it exists
+air_france,checkin,UK-market version (airfrance.co.uk) - switch to France/English if it exists
+klm,assistance,US-market version - switch to Netherlands/English if it exists
+ryanair,checkin,booking-lookup page found ('Lost Booking' title) - check it is the check-in start page
+ryanair,assistance,separate help-centre site (help.ryanair.com)
+easyjet,checkin,help page about check-in; not the check-in form (check-in is inside Manage Bookings which needs login - do NOT log in; use the 'Find booking' form if there is one)
+iberia,checkin,info page; US-market version - check for the booking-reference form; switch to Spain/English if it exists
+iberia,assistance,US-market version - switch to Spain/English if it exists
+finnair,assistance,US-market version (us-en) - switch to Finland (fi-en) if it exists
+sas,checkin,US-market version (us-en)
+sas,assistance,Netherlands-market version (nl-en)
+tap_air_portugal,checkin,US-market version (en-us) - switch to Portugal/English if it exists
+tap_air_portugal,assistance,US-market version (en-us) - switch to Portugal/English if it exists
+turkish_airlines,checkin,unusual URL (seat-selection path) - check it opens the check-in start page; info page is https://www.turkishairlines.com/en-us/any-questions/check-in/
+delta,checkin,older check-in application URL - check it still works; overview is https://www.delta.com/us/en/check-in-security/overview
+delta,assistance,sub-page ('Airport & Onboard Assistance') - look for an accessible-travel overview page
+united,checkin,Nigeria-market version (/en/NG/) - switch to US (/en/us/)
+united,assistance,only found on a preview server (gtmpreview.united.com) - not used; look for 'Customers with disabilities' on united.com
+southwest,assistance,separate help-centre site (support.southwest.com)
+alaska,checkin,info page about check-in options - check for the actual check-in form
+alaska,assistance,sub-page (seating) of the 'accessible services' section - look for the section's overview page
+jetblue,checkin,separate check-in site (mobilecheckin.jetblue.com)
+air_canada,assistance,no assistance page found; only the Accessibility Plan and FAQ - look for 'Accessibility' / 'Special assistance' on the site
+emirates,checkin,UAE (ae/english) version
+qatar_airways,checkin,US-market version (en-us) - switch to Qatar (en-qa) if it exists
+qatar_airways,assistance,generic English version (/en/)
+qantas,checkin,US-market version (en-us) - switch to Australia (en-au) if it exists
+qantas,assistance,US-market version (en-us) - switch to Australia (en-au) if it exists

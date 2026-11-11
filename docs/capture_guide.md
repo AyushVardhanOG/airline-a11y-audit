@@ -35,6 +35,9 @@ has run) into one `.html` file, with images and styles packed inside.
 
 ## 2. Which pages to capture
 
+Work through **[capture_checklist.md](capture_checklist.md)**: it lists every page with a
+suggested URL (found by web search, not yet checked) and notes on what to check.
+
 For **each airline** in `data/airlines.csv`, three pages:
 
 | page_type    | What it is |
@@ -48,8 +51,10 @@ choose the airline's **home country** if it has an English version there
 (e.g. ANA: Japan / English), otherwise the international / global English site.
 Write the country you chose in `notes`.
 
-If an airline has no such page, or you cannot find it within about 5 minutes,
-write `MISSING` in that column of `data/airlines.csv` and move on.
+If a suggested URL is wrong, correct it in `data/airlines.csv`. If an airline has no
+such page, or you cannot find it within about 5 minutes, write `MISSING` in that
+column and move on. When all three URLs of an airline are checked, set its
+`url_verified` column to `yes`.
 
 Capture all three pages of one airline **in one sitting** (same day, close together).
 
@@ -106,8 +111,9 @@ Capture all three pages of one airline **in one sitting** (same day, close toget
    | `singlefile_version` | `1.22.80`                       | from `chrome://extensions` |
    | `notes`              | `Japan/English; cookie banner shown` | region chosen, anything unusual |
 
-6. Copy the URL into the right column of `data/airlines.csv` (`homepage`,
-   `checkin_url` or `assistance_url`), or `MISSING` if not found.
+6. If the URL differs from the suggestion in `data/airlines.csv` (`homepage`,
+   `checkin_url` or `assistance_url`), correct it there. Tick the box in
+   `docs/capture_checklist.md`.
 
 **Never edit a saved capture file afterwards.** Captures are raw data, like
 `data/raw/`. The LLM fixes in Objective 2 will work on copies stored elsewhere.
@@ -120,7 +126,8 @@ See `data/results/automated_access.csv`. For these airlines we **also** scan the
 pages, to measure how much a saved copy differs from the live page. The two must be
 made **close together in time**, because websites change:
 
-1. Capture the airline's 3 pages as above and fill in their URLs in `data/airlines.csv`.
+1. Capture the airline's 3 pages as above, check their URLs in `data/airlines.csv`
+   and set `url_verified` to `yes` (the live scanner skips airlines that are not `yes`).
 2. **Within the same hour**, run the live scan:
    ```powershell
    .venv\Scripts\python.exe src\scan_live.py ana

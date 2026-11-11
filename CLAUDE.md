@@ -57,7 +57,10 @@ getting around that, so **every airline is measured the same way**:
 
 ## Folder structure
 - `src/` all code
-- `data/airlines.csv` the 30 airlines (airline_id used in all file names) and their page URLs
+- `data/airlines.csv` the 30 airlines (airline_id used in all file names), their page URLs, and
+  `url_verified` (yes only after a person checked the URLs; the live scanner skips airlines that are not yes)
+- `data/url_search_notes.csv` where each web-search URL suggestion came from / what to check
+- `docs/capture_checklist.md` one checkbox per page to capture (made by `src/make_capture_checklist.py`)
 - `data/captures/` saved SingleFile copies (`*.html`, NOT on GitHub, back them up) + `log.csv`
 - `data/raw/` raw scan results (JSON), never edited by hand
 - `data/results/` processed tables and charts
@@ -86,7 +89,10 @@ getting around that, so **every airline is measured the same way**:
   - [x] 30 airlines listed in `data/airlines.csv`
   - [x] capture method chosen (SingleFile for all airlines), guide written, scanners + live-vs-copy comparison built
   - [x] which airlines blocked automated access recorded (6 tested: 1 allowed, 3 blocked, 1 unconfirmed, 1 error)
-  - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand) and fill in URLs
+  - [x] URLs suggested by web search for all 90 pages (84 found, 6 MISSING), all `url_verified = no`;
+        source notes in `data/url_search_notes.csv`; `docs/capture_checklist.md` has one box per page
+  - [ ] check each airline's URLs by hand and set `url_verified = yes` (0 of 30 done)
+  - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand), ticking `docs/capture_checklist.md`
   - [ ] ANA: live scan in the same hour as its captures, then run the live-vs-copy comparison
 - [ ] Step 4: full audit pipeline (Objective 1)
 - [ ] Step 5: LLM repair prototype (Objective 2)
