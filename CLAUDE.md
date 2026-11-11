@@ -92,9 +92,10 @@ getting around that, so **every airline is measured the same way**:
   - [x] which airlines blocked automated access recorded (Step 2: 6 airlines; all 30 after Step 4 part 1)
   - [x] URLs suggested by web search for all 90 pages (84 found, 6 MISSING), all `url_verified = no`;
         source notes in `data/url_search_notes.csv`; `docs/capture_checklist.md` has one box per page
-  - [ ] check each airline's URLs by hand and set `url_verified = yes` (1 of 30 done: ANA)
+  - [ ] check each airline's URLs by hand and set `url_verified = yes` (5 of 30 done: ANA, Air India, SpiceJet, Akasa Air, Air India Express)
   - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand), ticking `docs/capture_checklist.md`
-        (3 of 90 done: ANA, 2026-11-11; registered with `src/register_captures.py`)
+        (14 of 90 done on 2026-11-11: ANA 3, India 11 - IndiGo homepage still to capture;
+        registered with `src/register_captures.py`; SpiceJet assistance now MISSING, so 7 MISSING)
   - [ ] airlines with access "allowed" (11): live scan in the same hour as their captures, then run the live-vs-copy comparison
         (ANA live scan done, run 20261111T124041Z: home + assistance ok, check-in page connection cut;
         live-vs-copy comparison for ANA not run yet)

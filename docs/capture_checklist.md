@@ -25,39 +25,40 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 ### Air India (`air_india`)
 
-- [ ] **home**: <https://www.airindia.com>  
+- [x] **home**: <https://www.airindia.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.airindia.com/in/en/manage/web-checkin.html>
-- [ ] **assistance**: <https://www.airindia.com/in/en/travel-information/health-medical-assistance/disability-assistance.html>
+- [x] **checkin**: <https://www.airindia.com/in/en/manage/web-checkin.html>
+- [x] **assistance**: <https://www.airindia.com/in/en/travel-information/health-medical-assistance/disability-assistance.html>
 
 ### IndiGo (`indigo`)
 
 - [ ] **home**: <https://www.goindigo.in>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.goindigo.in/web-check-in.html>
-- [ ] **assistance**: <https://www.goindigo.in/information/special-disability-assistance.html>
+- [x] **checkin**: <https://www.goindigo.in/web-check-in.html>
+- [x] **assistance**: <https://www.goindigo.in/information/special-disability-assistance.html>
 
 ### SpiceJet (`spicejet`)
 
-- [ ] **home**: <https://www.spicejet.com>  
+- [x] **home**: <https://www.spicejet.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.spicejet.com/checkin>
-- [ ] **assistance**: <https://spicejet.com/SpecialAssistance.aspx>  
+- [x] **checkin**: <https://www.spicejet.com/checkin>
+- [ ] **assistance**: <https://spicejet.com/SpecialAssistance.aspx>    
+  _Update 2026-11-11: this URL redirected to the homepage; now MISSING in airlines.csv (to be confirmed)_
   _Note: old-style .aspx page; SpiceJet's site has several old versions (classic/corporate) - look for a current page on spicejet.com_
 
 ### Akasa Air (`akasa_air`)
 
-- [ ] **home**: <https://www.akasaair.com>  
+- [x] **home**: <https://www.akasaair.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.akasaair.com/check-in/web-check-in>
+- [x] **checkin**: <https://www.akasaair.com/check-in/web-check-in>
 - [ ] **assistance**: MISSING  
   _Note: no assistance page found; assistance rules are only a section of the Conditions of Carriage (https://www.akasaair.com/quick-links/conditions-of-carriage) - look for a real page on the site_
 
 ### Air India Express (`air_india_express`)
 
-- [ ] **home**: <https://www.airindiaexpress.com>  
+- [x] **home**: <https://www.airindiaexpress.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.airindiaexpress.com/checkin-home>
+- [x] **checkin**: <https://www.airindiaexpress.com/checkin-home>
 - [ ] **assistance**: MISSING  
   _Note: no assistance page found (the 'specialequipment' page is for sports equipment) - look on the site_
 
@@ -66,10 +67,10 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 ### ANA (`ana`)
 
-- [ ] **home**: <https://www.ana.co.jp/en/jp/>
-- [ ] **checkin**: <https://aswbe-i.ana.co.jp/international_asw/pages/webcheckin/checkin_search_input.xhtml?CONNECTION_KIND=CHE&LANG=en>  
+- [x] **home**: <https://www.ana.co.jp/en/jp/>
+- [x] **checkin**: <https://aswbe-i.ana.co.jp/international_asw/pages/webcheckin/checkin_search_input.xhtml?CONNECTION_KIND=CHE&LANG=en>  
   _Note: separate booking-engine site (aswbe-i.ana.co.jp); ANA's info page is https://www.ana.co.jp/en/jp/guide/boarding-procedures/checkin/international/online-checkin/_
-- [ ] **assistance**: <https://www.ana.co.jp/en/jp/guide/flight_service_info/assist/>
+- [x] **assistance**: <https://www.ana.co.jp/en/jp/guide/flight_service_info/assist/>
 
 ### JAL (`jal`)
 

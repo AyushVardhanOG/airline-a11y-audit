@@ -88,6 +88,7 @@ def main():
 
     lookup = url_lookup()
     new_rows = []
+    planned_names = set()  # names given in this run (so the dry run is accurate too)
     for path in sorted(CAPTURES_DIR.glob("*.html")):
         if FILE_NAME_RE.match(path.name):
             continue  # already registered
@@ -108,9 +109,13 @@ def main():
         airline_id, page_type = match
         new_name = f"{airline_id}_{page_type}_{local:%Y%m%d}.html"
         target = CAPTURES_DIR / new_name
-        if target.exists():
-            print(f"SKIP (target already exists, not overwriting): {new_name} <- {path.name}")
+        if target.exists() or new_name in planned_names:
+            # Two captures of the same page on the same day (e.g. a URL that redirected to
+            # the homepage). Keep the first, leave this one untouched for a person to decide.
+            print(f"SKIP (another capture already has the name {new_name}; left untouched):\n"
+                  f"     {path.name}")
             continue
+        planned_names.add(new_name)
 
         print(f"{'WOULD RENAME' if args.dry_run else 'RENAMED'}: {path.name}\n     -> {new_name}")
         if not args.dry_run:

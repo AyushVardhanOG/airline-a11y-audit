@@ -293,3 +293,40 @@ are not directly comparable.
   browsing, not automation, and the browser is not disguised.
 - Tested with `--dry-run` only: India 13 tabs, Japan/Asia 10, Europe 30, North America 19,
   Middle East/Oceania 9. That is 81 tabs = 90 pages - 3 ANA (verified) - 6 MISSING.
+
+---
+
+## 2026-11-11 - India batch registered (11 pages)
+
+Opened with `open_batch.py India` (13 tabs) and saved with SingleFile; 12 files arrived, all saved
+within 8 s (21:50:40-21:50:48 local = 12:50 UTC). Registered 11 with `register_captures.py`
+(same Chrome/SingleFile versions as ANA).
+
+| Airline | Pages captured | URL changes | url_verified |
+|---|---|---|---|
+| Air India | home, checkin, assistance | none (bare domain stayed on airindia.com/) | yes |
+| IndiGo | checkin, assistance | - | **no**: homepage not in the batch |
+| SpiceJet | home, checkin | checkin `/checkin` -> `/#checkin` (homepage with check-in form tab); assistance -> MISSING | yes |
+| Akasa Air | home, checkin | none; assistance stays MISSING | yes |
+| Air India Express | home, checkin | home `/` -> `/home` (path redirect, not location); assistance stays MISSING | yes |
+
+No redirects by location in this batch (unlike ANA's /en/jp/ -> /en/in/).
+
+**SpiceJet assistance**: 3 SpiceJet tabs were opened, and 3 SpiceJet files were saved: one `/#checkin`
+and two `https://www.spicejet.com/` with the same visible text, neither of them a special-assistance
+page. So the old URL https://spicejet.com/SpecialAssistance.aspx most likely redirects to the
+homepage. Marked MISSING in airlines.csv. This is an inference from the files and still needs a
+quick manual check. The second homepage file was left in data/captures/ untouched and unregistered
+(git-ignored).
+
+**SpiceJet check-in** is the homepage with the check-in tab open, so its scan results will
+overlap heavily with spicejet_home. Keep this in mind when counting violations per page type.
+
+**Script fix**: `register_captures.py` now also catches two NEW files that would get the same name
+in one run (the dry run had shown both SpiceJet homepage files mapping to spicejet_home).
+Previously only an existing file on disk was checked.
+
+`docs/capture_checklist.md`: ticked the 14 captured pages (ANA 3 + India 11).
+
+**Not done**: live scans for the "allowed" airlines in this batch (SpiceJet, Akasa Air, Air India
+Express) - not requested this time.
