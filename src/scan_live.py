@@ -66,6 +66,9 @@ def pages_to_scan(only_airlines):
                 continue
             if only_airlines and row["airline_id"] not in only_airlines:
                 continue
+            if (row.get("excluded_reason") or "").strip():  # excluded from the study
+                print(f"Skipping {row['airline_id']}: excluded ({row['excluded_reason'].strip()})")
+                continue
             # The URLs in airlines.csv started as web-search suggestions. Only visit
             # them live after a person has checked them (url_verified = yes).
             if row.get("url_verified", "").strip().lower() != "yes":

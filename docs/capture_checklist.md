@@ -200,38 +200,42 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 ### Delta (`delta`)
 
-- [ ] **home**: <https://www.delta.com>  
+- [x] **home**: <https://www.delta.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.delta.com/PCCOciWeb/findBy.action>  
+- [x] **checkin**: <https://www.delta.com/PCCOciWeb/findBy.action>  
   _Note: older check-in application URL - check it still works; overview is https://www.delta.com/us/en/check-in-security/overview_
-- [ ] **assistance**: <https://www.delta.com/us/en/accessible-travel-services/additional-assistance>  
+- [x] **assistance**: <https://www.delta.com/us/en/accessible-travel-services/additional-assistance>  
   _Note: sub-page ('Airport & Onboard Assistance') - look for an accessible-travel overview page_
 
 ### United (`united`)
 
-- [ ] **home**: <https://www.united.com>  
+- [x] **home**: <https://www.united.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.united.com/en/NG/checkin>  
+- [x] **checkin**: <https://www.united.com/en/NG/checkin>  
   _Note: Nigeria-market version (/en/NG/) - switch to US (/en/us/)_
 - [ ] **assistance**: MISSING  
   _Note: only found on a preview server (gtmpreview.united.com) - not used; look for 'Customers with disabilities' on united.com_
 
 ### American (`american`)
 
-- [ ] **home**: <https://www.aa.com>  
+- [x] **home**: <https://www.aa.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.aa.com/reservation/flightCheckInViewReservationsAccess.do>
-- [ ] **assistance**: <https://www.aa.com/web/i18n/travel-info/special-assistance/special-assistance.html>
+- [x] **checkin**: <https://www.aa.com/reservation/flightCheckInViewReservationsAccess.do>
+- [x] **assistance**: <https://www.aa.com/web/i18n/travel-info/special-assistance/special-assistance.html>
 
 ### Southwest (`southwest`)
 
-- [ ] **home**: <https://www.southwest.com>  
+- [x] **home**: <https://www.southwest.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.southwest.com/air/check-in/>
-- [ ] **assistance**: <https://support.southwest.com/helpcenter/s/pathway/a1F5G00000cLOqhUAG/disabilityrelated-accommodations>  
+- [x] **checkin**: <https://www.southwest.com/air/check-in/>
+- [x] **assistance**: <https://support.southwest.com/helpcenter/s/pathway/a1F5G00000cLOqhUAG/disabilityrelated-accommodations>  
   _Note: separate help-centre site (support.southwest.com)_
 
 ### Alaska (`alaska`)
+
+**EXCLUDED (blocked_for_human_visitor)**: on 2026-11-11 none of the 3 pages loaded in a normal
+browser (blocked or error), so there are no captures. Alaska stays in the results, marked as excluded
+(`excluded_reason` in data/airlines.csv and data/results/automated_access.csv).
 
 - [ ] **home**: <https://www.alaskaair.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
@@ -242,17 +246,17 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 ### JetBlue (`jetblue`)
 
-- [ ] **home**: <https://www.jetblue.com>  
+- [x] **home**: <https://www.jetblue.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://mobilecheckin.jetblue.com/>  
+- [x] **checkin**: <https://mobilecheckin.jetblue.com/>  
   _Note: separate check-in site (mobilecheckin.jetblue.com)_
-- [ ] **assistance**: <https://www.jetblue.com/at-the-airport/accessibility-assistance>
+- [x] **assistance**: <https://www.jetblue.com/at-the-airport/accessibility-assistance>
 
 ### Air Canada (`air_canada`)
 
-- [ ] **home**: <https://www.aircanada.com>  
+- [x] **home**: <https://www.aircanada.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.aircanada.com/home/ca/en/aco/checkin>
+- [x] **checkin**: <https://www.aircanada.com/home/ca/en/aco/checkin>
 - [ ] **assistance**: MISSING  
   _Note: no assistance page found; only the Accessibility Plan and FAQ - look for 'Accessibility' / 'Special assistance' on the site_
 

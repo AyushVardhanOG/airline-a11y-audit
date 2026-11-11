@@ -86,6 +86,9 @@ def pages_for_region(region):
 
     pages, skipped = [], []
     for r in chosen:
+        if (r.get("excluded_reason") or "").strip():  # e.g. blocked_for_human_visitor
+            skipped.append(f"{r['airline_id']} (excluded: {r['excluded_reason'].strip()})")
+            continue
         if r["url_verified"].strip().lower() == "yes":
             skipped.append(f"{r['airline_id']} (url_verified = yes)")
             continue

@@ -1,31 +1,31 @@
-airline_id,airline,region,homepage,checkin_url,assistance_url,url_verified
-air_india,Air India,India,https://www.airindia.com,https://www.airindia.com/in/en/manage/web-checkin.html,https://www.airindia.com/in/en/travel-information/health-medical-assistance/disability-assistance.html,yes
-indigo,IndiGo,India,https://www.goindigo.in,https://www.goindigo.in/web-check-in.html,https://www.goindigo.in/information/special-disability-assistance.html,yes
-spicejet,SpiceJet,India,https://www.spicejet.com,SAME_AS_HOME,MISSING,yes
-akasa_air,Akasa Air,India,https://www.akasaair.com,https://www.akasaair.com/check-in/web-check-in,MISSING,yes
-air_india_express,Air India Express,India,https://www.airindiaexpress.com/home,https://www.airindiaexpress.com/checkin-home,MISSING,yes
-ana,ANA,Japan/Asia,https://www.ana.co.jp/en/in/,https://aswbe.ana.co.jp/webapps/checkin/checkin-search?LANG=en&CONNECTION_KIND=CHE,https://www.ana.co.jp/en/jp/guide/flight_service_info/assist/,yes
-jal,JAL,Japan/Asia,https://www.jal.co.jp/en-jp/,https://www.jal.co.jp/jp/en/inter/boarding/online-checkin/,https://www.jal.co.jp/jp/en/jalpri/support/,yes
-peach,Peach,Japan/Asia,https://www.flypeach.com/en,MISSING,https://www.flypeach.com/en/lm/ai/airports/special_support,yes
-singapore_airlines,Singapore Airlines,Japan/Asia,https://www.singaporeair.com/en_UK/in/home/,https://www.singaporeair.com/en_UK/sg/travel-info/check-in/online-mobile-checkin/,https://www.singaporeair.com/en_UK/us/travel-info/special-assistance/,yes
-cathay_pacific,Cathay Pacific,Japan/Asia,https://www.cathaypacific.com/cx/en_IN.html,MISSING,https://www.cathaypacific.com/cx/en_US/prepare-trip/help-for-passengers.html,yes
-lufthansa,Lufthansa,Europe,https://www.lufthansa.com/in/en/homepage,https://www.lufthansa.com/ge/en/online-check-in,https://www.lufthansa.com/de/en/passengers-using-wheelchairs,yes
-air_france,Air France,Europe,https://wwws.airfrance.fr/en,https://wwws.airfrance.fr/en/check-in,https://wwws.airfrance.fr/en/information/passagers/acheter-billet-avion-pmr-autres-handicaps,yes
-klm,KLM,Europe,https://www.klm.co.in/?showredirectnotice=1,https://www.klm.nl/en/check-in,https://www.klm.co.in/information/assistance-health?showredirectnotice=1,yes
-ryanair,Ryanair,Europe,https://www.ryanair.com/ie/en,https://www.ryanair.com/us/en/lp/check-in/link?returnTo=managehub,https://help.ryanair.com/hc/en-us/categories/12489466690833-Special-Assistance,yes
-easyjet,easyJet,Europe,https://www.easyjet.com/en/,https://www.easyjet.com/en/help/booking-and-check-in/check-in,https://www.easyjet.com/en/help/boarding-and-flying/special-assistance,yes
-iberia,Iberia,Europe,https://www.iberia.com,https://www.iberia.com/us/checkin-information/,https://www.iberia.com/us/fly-with-iberia/special-needs/,yes
-finnair,Finnair,Europe,https://www.finnair.com/fi-en,https://www.finnair.com/fi-en/check-in,https://www.finnair.com/us-en/special-assistance-and-health,yes
-sas,SAS,Europe,https://www.flysas.com/en,https://www.flysas.com/us-en/checkin,https://www.flysas.com/nl-en/travel-info/assistance/,yes
-tap_air_portugal,TAP Air Portugal,Europe,https://www.flytap.com/en-pt,https://www.flytap.com/en-pt/check-in-information,https://www.flytap.com/en-pt/information/special-needs,yes
-turkish_airlines,Turkish Airlines,Europe,https://www.turkishairlines.com/en-in/,SAME_AS_HOME,https://www.turkishairlines.com/en-int/any-questions/special-assistance-for-passengers/,yes
-delta,Delta,North America,https://www.delta.com,https://www.delta.com/PCCOciWeb/findBy.action,https://www.delta.com/us/en/accessible-travel-services/additional-assistance,no
-united,United,North America,https://www.united.com,https://www.united.com/en/NG/checkin,MISSING,no
-american,American,North America,https://www.aa.com,https://www.aa.com/reservation/flightCheckInViewReservationsAccess.do,https://www.aa.com/web/i18n/travel-info/special-assistance/special-assistance.html,no
-southwest,Southwest,North America,https://www.southwest.com,https://www.southwest.com/air/check-in/,https://support.southwest.com/helpcenter/s/pathway/a1F5G00000cLOqhUAG/disabilityrelated-accommodations,no
-alaska,Alaska,North America,https://www.alaskaair.com,https://www.alaskaair.com/content/travel-info/at-the-airport/airport-check-in-options,https://www.alaskaair.com/content/travel-info/accessible-services/specialservices-tsa,no
-jetblue,JetBlue,North America,https://www.jetblue.com,https://mobilecheckin.jetblue.com/,https://www.jetblue.com/at-the-airport/accessibility-assistance,no
-air_canada,Air Canada,North America,https://www.aircanada.com,https://www.aircanada.com/home/ca/en/aco/checkin,MISSING,no
-emirates,Emirates,Middle East/Oceania,https://www.emirates.com,https://www.emirates.com/ae/english/manage-booking/online-check-in/,https://www.emirates.com/ae/english/help/accessibility-hub/accessible-travel/,no
-qatar_airways,Qatar Airways,Middle East/Oceania,https://www.qatarairways.com/en-qa/homepage.html,https://www.qatarairways.com/en-us/services-checking-in.html,https://www.qatarairways.com/en/services-special/disability-and-medical.html,no
-qantas,Qantas,Middle East/Oceania,https://www.qantas.com,https://www.qantas.com/en-us/manage-booking/check-in,https://www.qantas.com/en-us/travel-information/specific-needs-assistance,no
+airline_id,airline,region,homepage,checkin_url,assistance_url,url_verified,excluded_reason
+air_india,Air India,India,https://www.airindia.com,https://www.airindia.com/in/en/manage/web-checkin.html,https://www.airindia.com/in/en/travel-information/health-medical-assistance/disability-assistance.html,yes,
+indigo,IndiGo,India,https://www.goindigo.in,https://www.goindigo.in/web-check-in.html,https://www.goindigo.in/information/special-disability-assistance.html,yes,
+spicejet,SpiceJet,India,https://www.spicejet.com,SAME_AS_HOME,MISSING,yes,
+akasa_air,Akasa Air,India,https://www.akasaair.com,https://www.akasaair.com/check-in/web-check-in,MISSING,yes,
+air_india_express,Air India Express,India,https://www.airindiaexpress.com/home,https://www.airindiaexpress.com/checkin-home,MISSING,yes,
+ana,ANA,Japan/Asia,https://www.ana.co.jp/en/in/,https://aswbe.ana.co.jp/webapps/checkin/checkin-search?LANG=en&CONNECTION_KIND=CHE,https://www.ana.co.jp/en/jp/guide/flight_service_info/assist/,yes,
+jal,JAL,Japan/Asia,https://www.jal.co.jp/en-jp/,https://www.jal.co.jp/jp/en/inter/boarding/online-checkin/,https://www.jal.co.jp/jp/en/jalpri/support/,yes,
+peach,Peach,Japan/Asia,https://www.flypeach.com/en,MISSING,https://www.flypeach.com/en/lm/ai/airports/special_support,yes,
+singapore_airlines,Singapore Airlines,Japan/Asia,https://www.singaporeair.com/en_UK/in/home/,https://www.singaporeair.com/en_UK/sg/travel-info/check-in/online-mobile-checkin/,https://www.singaporeair.com/en_UK/us/travel-info/special-assistance/,yes,
+cathay_pacific,Cathay Pacific,Japan/Asia,https://www.cathaypacific.com/cx/en_IN.html,MISSING,https://www.cathaypacific.com/cx/en_US/prepare-trip/help-for-passengers.html,yes,
+lufthansa,Lufthansa,Europe,https://www.lufthansa.com/in/en/homepage,https://www.lufthansa.com/ge/en/online-check-in,https://www.lufthansa.com/de/en/passengers-using-wheelchairs,yes,
+air_france,Air France,Europe,https://wwws.airfrance.fr/en,https://wwws.airfrance.fr/en/check-in,https://wwws.airfrance.fr/en/information/passagers/acheter-billet-avion-pmr-autres-handicaps,yes,
+klm,KLM,Europe,https://www.klm.co.in/?showredirectnotice=1,https://www.klm.nl/en/check-in,https://www.klm.co.in/information/assistance-health?showredirectnotice=1,yes,
+ryanair,Ryanair,Europe,https://www.ryanair.com/ie/en,https://www.ryanair.com/us/en/lp/check-in/link?returnTo=managehub,https://help.ryanair.com/hc/en-us/categories/12489466690833-Special-Assistance,yes,
+easyjet,easyJet,Europe,https://www.easyjet.com/en/,https://www.easyjet.com/en/help/booking-and-check-in/check-in,https://www.easyjet.com/en/help/boarding-and-flying/special-assistance,yes,
+iberia,Iberia,Europe,https://www.iberia.com,https://www.iberia.com/us/checkin-information/,https://www.iberia.com/us/fly-with-iberia/special-needs/,yes,
+finnair,Finnair,Europe,https://www.finnair.com/fi-en,https://www.finnair.com/fi-en/check-in,https://www.finnair.com/us-en/special-assistance-and-health,yes,
+sas,SAS,Europe,https://www.flysas.com/en,https://www.flysas.com/us-en/checkin,https://www.flysas.com/nl-en/travel-info/assistance/,yes,
+tap_air_portugal,TAP Air Portugal,Europe,https://www.flytap.com/en-pt,https://www.flytap.com/en-pt/check-in-information,https://www.flytap.com/en-pt/information/special-needs,yes,
+turkish_airlines,Turkish Airlines,Europe,https://www.turkishairlines.com/en-in/,SAME_AS_HOME,https://www.turkishairlines.com/en-int/any-questions/special-assistance-for-passengers/,yes,
+delta,Delta,North America,https://www.delta.com/apac/en,https://www.delta.com/us/en/check-in-security/check-in-time-requirements/international-check-in,https://www.delta.com/us/en/accessible-travel-services/additional-assistance,yes,
+united,United,North America,https://www.united.com/en/us,https://www.united.com/en/NG/checkin,MISSING,yes,
+american,American,North America,https://www.americanairlines.in/intl/in/index.jsp,https://www.aa.com/reservation/flightCheckInViewReservationsAccess.do,https://www.aa.com/web/i18n/travel-info/special-assistance/special-assistance.html,yes,
+southwest,Southwest,North America,https://www.southwest.com,https://www.southwest.com/air/check-in/,https://support.southwest.com/helpcenter/pathway/disability-related-accommodations,yes,
+alaska,Alaska,North America,https://www.alaskaair.com,https://www.alaskaair.com/content/travel-info/at-the-airport/airport-check-in-options,https://www.alaskaair.com/content/travel-info/accessible-services/specialservices-tsa,no,blocked_for_human_visitor
+jetblue,JetBlue,North America,https://www.jetblue.com,https://mobilecheckin.jetblue.com/checkin/,https://www.jetblue.com/at-the-airport/accessibility-assistance,yes,
+air_canada,Air Canada,North America,https://www.aircanada.com/home/in/en/aco/flights,https://www.aircanada.com/home/ca/en/aco/checkin,MISSING,yes,
+emirates,Emirates,Middle East/Oceania,https://www.emirates.com,https://www.emirates.com/ae/english/manage-booking/online-check-in/,https://www.emirates.com/ae/english/help/accessibility-hub/accessible-travel/,no,
+qatar_airways,Qatar Airways,Middle East/Oceania,https://www.qatarairways.com/en-qa/homepage.html,https://www.qatarairways.com/en-us/services-checking-in.html,https://www.qatarairways.com/en/services-special/disability-and-medical.html,no,
+qantas,Qantas,Middle East/Oceania,https://www.qantas.com,https://www.qantas.com/en-us/manage-booking/check-in,https://www.qantas.com/en-us/travel-information/specific-needs-assistance,no,

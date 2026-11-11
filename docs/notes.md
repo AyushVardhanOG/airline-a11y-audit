@@ -497,3 +497,52 @@ airlines (still to do: Southwest, JetBlue, Air Canada, Qantas - all in the remai
 
 Progress: 20 of 30 airlines verified; 53 of 81 pages captured; remaining regions: North America,
 Middle East/Oceania.
+
+---
+
+## 2026-11-11 - North America batch registered (16 pages) + live scans of Southwest, JetBlue, Air Canada
+
+Opened with `open_batch.py "North America"` (19 tabs); 16 files saved at 23:07:06-23:07:13 local
+(14:07 UTC). Alaska's 3 pages are missing on purpose (see below).
+
+**Live scans first** (time-critical): Southwest, JetBlue and Air Canada are "allowed". Their URLs
+were updated first and `scan_live.py southwest jetblue air_canada` started at 14:08:59 UTC
+(run 20261111T140859Z), about 2 min after the captures.
+
+| Page | Rules / elements | Main rule |
+|---|---|---|
+| southwest home | 1 / 1 | color-contrast |
+| southwest checkin | 1 / 5 | label-content-name-mismatch |
+| southwest assistance (support.southwest.com) | 1 / 4 | link-in-text-block |
+| jetblue home / checkin / assistance | 1 / 1 each | color-contrast |
+| air_canada home (/in/en) / checkin (/ca/en) | 2 / 3 each | aria-prohibited-attr, label-content-name-mismatch |
+
+All 8: HTTP 200, expected titles, final URL = captured URL, every iframe injected, 28-35 rules
+passed (fully loaded pages). Most never reached "network idle" within 15 s; scanned anyway.
+
+**Registered 16 pages**:
+- **Location redirects**: Delta home -> `/apac/en` (Asia-Pacific), American home ->
+  `americanairlines.in/intl/in/index.jsp` (India site, other domain), Air Canada home -> `/home/in/en/`.
+- **Delta check-in**: the suggested `PCCOciWeb/findBy.action` gave a 502 error. Opened from Delta's own
+  menu, it led to `.../check-in-security/check-in-time-requirements/international-check-in`, which is an
+  **information page about check-in times, not the check-in form**. Recorded with this note.
+- Southwest assistance: the help-centre URL with an ID redirected to the shorter
+  `support.southwest.com/helpcenter/pathway/disability-related-accommodations`.
+- JetBlue check-in -> `mobilecheckin.jetblue.com/checkin/`. The capture has only about 250 characters of
+  text; checked: it is complete, a short form (last name + confirmation code, Continue button).
+- United home -> `/en/us` (not location). United check-in is still the Nigeria version
+  (`/en/NG/checkin`), and United assistance stays MISSING.
+- No page went to the homepage.
+
+**Alaska excluded**: none of the 3 pages loaded for me in a normal browser (blocked or error).
+New column `excluded_reason` in airlines.csv (Alaska = `blocked_for_human_visitor`, empty for all
+others). Alaska stays `url_verified = no` (nothing could be confirmed) and has no captures.
+- `record_access.py` copies the column into automated_access.csv, so Alaska stays in the results,
+  marked as excluded. Checked: no other value in that table changed.
+- `open_batch.py` and `scan_live.py` skip excluded airlines.
+- Checklist: Alaska marked EXCLUDED, boxes left unticked.
+- For the paper: Alaska also failed the automated test (HTTP 406 error page), so it is
+  inaccessible to both a headless browser and a normal human visitor from India on this day.
+
+Progress: 26 of 30 airlines verified + 1 excluded; 69 of 78 pages captured; live scans for
+10 of 11 "allowed" airlines (Qantas left, in the last region).

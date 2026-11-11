@@ -91,6 +91,9 @@ def main():
                 "tested_in": label,
                 "tested_in_run": run_id,
                 "live_scan_kept": "yes" if result == "allowed" else "no",
+                # Airlines excluded from the study stay in this table, marked with the reason
+                # (e.g. Alaska: blocked_for_human_visitor - pages did not load in a normal browser).
+                "excluded_reason": (airline.get("excluded_reason") or "").strip(),
             })
 
     with open(OUT_PATH, "w", newline="", encoding="utf-8") as f:

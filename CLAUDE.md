@@ -65,7 +65,8 @@ getting around that, so **every airline is measured the same way**:
 - `data/captures/` saved SingleFile copies (`*.html`, NOT on GitHub, back them up) + `log.csv`;
   `data/captures/_duplicates/` holds unneeded duplicate captures (moved, never deleted, not scanned)
 - URL columns of `data/airlines.csv` may also hold `MISSING` (no such page) or `SAME_AS_HOME`
-  (the page is the homepage itself; not captured/scanned separately)
+  (the page is the homepage itself; not captured/scanned separately). Column `excluded_reason`
+  (e.g. Alaska: `blocked_for_human_visitor`) marks airlines kept in the results but not captured/scanned
 - `data/raw/` raw scan results (JSON), never edited by hand
 - `data/results/` processed tables and charts
 - `screenshots/` page screenshots
@@ -95,12 +96,13 @@ getting around that, so **every airline is measured the same way**:
   - [x] which airlines blocked automated access recorded (Step 2: 6 airlines; all 30 after Step 4 part 1)
   - [x] URLs suggested by web search for all 90 pages (84 found, 6 MISSING), all `url_verified = no`;
         source notes in `data/url_search_notes.csv`; `docs/capture_checklist.md` has one box per page
-  - [ ] check each airline's URLs by hand and set `url_verified = yes` (20 of 30 done: India, Japan/Asia, Europe complete)
+  - [ ] check each airline's URLs by hand and set `url_verified = yes` (26 of 30 done: India, Japan/Asia, Europe, North America complete; Alaska excluded as
+        blocked_for_human_visitor; left: Middle East/Oceania - Emirates, Qatar Airways, Qantas)
   - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand), ticking `docs/capture_checklist.md`
-        (53 pages done on 2026-11-11: India 11 + Japan/Asia 13 + Europe 29; registered with
+        (69 pages done on 2026-11-11: India 11 + Japan/Asia 13 + Europe 29 + North America 16; registered with
         `src/register_captures.py`. Of the 90 page slots: 7 MISSING, 2 SAME_AS_HOME (SpiceJet and
-        Turkish check-in), so 81 pages to capture in total; still open: North America,
-        Middle East/Oceania)
+        Turkish check-in), 3 excluded (Alaska), so 78 pages to capture in total; still open:
+        Middle East/Oceania, 9 pages)
   - [ ] airlines with access "allowed" (11): live scan in the same hour as their captures, then run the live-vs-copy comparison
         (ANA live scan done, run 20261111T124041Z: home + assistance ok, check-in page connection cut;
         live-vs-copy comparison for ANA not run yet;
@@ -109,7 +111,8 @@ getting around that, so **every airline is measured the same way**:
         Ryanair, Finnair, TAP live scan done, run 20261111T133826Z, ~15 min after their captures:
         8 of 9 pages ok, Ryanair assistance (help.ryanair.com) blocked 403; Finnair home was the
         country-selection page and is NOT comparable with the new fi-en capture (no fi-en live scan yet);
-        7 of 11 allowed airlines now have live scans)
+        Southwest, JetBlue, Air Canada live scan done, run 20261111T140859Z, ~2 min after their captures:
+        all 8 pages ok; 10 of 11 allowed airlines now have live scans - Qantas left)
 - [ ] Step 4: full audit pipeline (Objective 1)
   - [x] part 1: one headless homepage visit to the 24 untested airlines (`src/access_test.py`);
         all 30 now in `data/results/automated_access.csv`: 11 allowed, 9 blocked, 3 blocked_unconfirmed, 7 error
