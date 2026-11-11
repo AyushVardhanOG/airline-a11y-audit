@@ -328,5 +328,37 @@ Previously only an existing file on disk was checked.
 
 `docs/capture_checklist.md`: ticked the 14 captured pages (ANA 3 + India 11).
 
-**Not done**: live scans for the "allowed" airlines in this batch (SpiceJet, Akasa Air, Air India
-Express) - not requested this time.
+(Live scans for the "allowed" airlines of this batch: see next entry.)
+
+---
+
+## 2026-11-11 - Live scans: SpiceJet, Akasa Air, Air India Express
+
+`scan_live.py spicejet akasa_air air_india_express`, run 20261111T130057Z, started 13:00:57 UTC,
+about 10 min after the India captures (12:50 UTC). Only home + checkin for each, because their
+assistance pages are MISSING. One page at a time, 10 s apart.
+
+| Page | HTTP | Rules failed | Elements | Rules |
+|---|---|---|---|---|
+| spicejet home | 200 | 4 | 14 | aria-allowed-attr, color-contrast (11), html-has-lang, meta-viewport |
+| spicejet checkin (/#checkin) | 200 | 4 | 9 | same 4 rules (color-contrast 6) |
+| akasa_air home | 200 | 1 | 21 | color-contrast (21) |
+| akasa_air checkin | 200 | 2 | 7 | color-contrast (6), label-content-name-mismatch |
+| air_india_express home (/home) | 200 | 7 | 53 | aria-required-parent (27), nested-interactive (14), image-alt (5), color-contrast (3), aria-required-children (2), frame-title, label-content-name-mismatch |
+| air_india_express checkin | 200 | 3 | 20 | color-contrast (13), aria-required-parent (6), aria-required-children |
+
+Checked: all HTTP 200, expected titles, final URLs equal the captured URLs, every iframe got axe
+(0 not injected). No IP-like strings in the committed files.
+
+Observations:
+- SpiceJet home and check-in fail the same 4 rules, as expected (check-in is the homepage
+  with the check-in tab open).
+- The SpiceJet check-in screenshot (taken right after axe) still shows a grey loading overlay with
+  a spinner over the top of the page, so axe probably ran while the page was still loading.
+  The saved copy shows the page at the moment of saving, so live and copy may differ partly
+  because of this.
+- Both Air India Express pages never reached "network idle" within 15 s; scanned anyway (noted in
+  the raw JSON).
+
+Live scans now exist for 4 of the 11 "allowed" airlines (ANA, SpiceJet, Akasa Air, Air India Express).
+**Next**: scan the saved copies (`scan_captures.py`) and run `compare_live_vs_capture.py`.

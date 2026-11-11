@@ -98,7 +98,9 @@ getting around that, so **every airline is measured the same way**:
         registered with `src/register_captures.py`; SpiceJet assistance now MISSING, so 7 MISSING)
   - [ ] airlines with access "allowed" (11): live scan in the same hour as their captures, then run the live-vs-copy comparison
         (ANA live scan done, run 20261111T124041Z: home + assistance ok, check-in page connection cut;
-        live-vs-copy comparison for ANA not run yet)
+        live-vs-copy comparison for ANA not run yet;
+        SpiceJet, Akasa Air, Air India Express live scan done, run 20261111T130057Z, ~10 min after
+        their captures: all 6 pages ok; 4 of 11 allowed airlines now have live scans)
 - [ ] Step 4: full audit pipeline (Objective 1)
   - [x] part 1: one headless homepage visit to the 24 untested airlines (`src/access_test.py`);
         all 30 now in `data/results/automated_access.csv`: 11 allowed, 9 blocked, 3 blocked_unconfirmed, 7 error

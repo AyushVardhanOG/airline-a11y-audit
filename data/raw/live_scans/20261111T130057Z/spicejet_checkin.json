@@ -1,0 +1,2632 @@
+{
+  "source": "live",
+  "airline_id": "spicejet",
+  "page_type": "checkin",
+  "url": "https://www.spicejet.com/#checkin",
+  "scan_started_utc": "2026-11-11T13:01:18+00:00",
+  "tool_versions": {
+    "python": "3.14.6",
+    "playwright": "1.65.0",
+    "browser": "chromium 158.0.8127.18",
+    "axe_core": "4.14.0"
+  },
+  "settings": {
+    "wcag_tags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa"
+    ],
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "headless": true,
+    "page_scripts": "enabled (live site)",
+    "page_load_timeout_ms": 60000,
+    "settle_time_s": 3
+  },
+  "status": "ok",
+  "block_reason": null,
+  "error": null,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36",
+  "load_time_s": 6.6,
+  "http_status": 200,
+  "final_url": "https://www.spicejet.com/#checkin",
+  "page_title": "SpiceJet - Flight Booking for Domestic and International, Cheap Air Tickets",
+  "frames_total": 3,
+  "frames_not_injected": 0,
+  "axe_results": {
+    "testEngine": {
+      "name": "axe-core",
+      "version": "4.14.0"
+    },
+    "testRunner": {
+      "name": "axe"
+    },
+    "testEnvironment": {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36",
+      "windowWidth": 1366,
+      "windowHeight": 768,
+      "orientationAngle": 0,
+      "orientationType": "landscape-primary"
+    },
+    "timestamp": "2026-11-11T13:01:26.141Z",
+    "url": "https://www.spicejet.com/#checkin",
+    "toolOptions": {
+      "runOnly": {
+        "type": "tag",
+        "values": [
+          "wcag2a",
+          "wcag2aa",
+          "wcag21a",
+          "wcag21aa"
+        ]
+      },
+      "resultTypes": [
+        "violations"
+      ],
+      "reporter": "v1"
+    },
+    "inapplicable": [
+      {
+        "id": "area-alt",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag244",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.2.4.4",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-1.1.2"
+        ],
+        "description": "Ensure <area> elements of image maps have alternative text",
+        "help": "Active <area> elements must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/area-alt?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-braille-equivalent",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2"
+        ],
+        "description": "Ensure aria-braillelabel and aria-brailleroledescription have a non-braille equivalent",
+        "help": "aria-braille attributes must have a non-braille equivalent",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-braille-equivalent?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-command-name",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.9.1"
+        ],
+        "description": "Ensure every ARIA button, link and menuitem has an accessible name",
+        "help": "ARIA commands must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-command-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-deprecated-role",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure elements do not use deprecated roles",
+        "help": "Deprecated ARIA roles must not be used",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-deprecated-role?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-input-field-name",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "description": "Ensure every ARIA input field has an accessible name",
+        "help": "ARIA input fields must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-input-field-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-meter-name",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag111",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "description": "Ensure every ARIA meter node has an accessible name",
+        "help": "ARIA meter nodes must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-meter-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-progressbar-name",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag111",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "description": "Ensure every ARIA progressbar node has an accessible name",
+        "help": "ARIA progressbar nodes must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-progressbar-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-required-attr",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure elements with ARIA roles have all required ARIA attributes",
+        "help": "Required ARIA attributes must be provided",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-required-attr?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-required-children",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag131",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-9.3.1"
+        ],
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-required-children?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-required-parent",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag131",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-9.3.1"
+        ],
+        "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+        "help": "Certain ARIA roles must be contained by particular parents",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-required-parent?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-roles",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure all elements with a role attribute use a valid value",
+        "help": "ARIA roles used must conform to valid values",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-roles?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-tab-name",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure every ARIA tab node has an accessible name",
+        "help": "ARIA tab nodes must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-tab-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-toggle-field-name",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure every ARIA toggle field has an accessible name",
+        "help": "ARIA toggle fields must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-toggle-field-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "aria-tooltip-name",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2"
+        ],
+        "description": "Ensure every ARIA tooltip node has an accessible name",
+        "help": "ARIA tooltip nodes must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-tooltip-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "autocomplete-valid",
+        "impact": null,
+        "tags": [
+          "cat.forms",
+          "wcag21aa",
+          "wcag135",
+          "EN-301-549",
+          "EN-9.1.3.5",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.13.1"
+        ],
+        "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+        "help": "autocomplete attribute must be used correctly",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/autocomplete-valid?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "avoid-inline-spacing",
+        "impact": null,
+        "tags": [
+          "cat.structure",
+          "wcag21aa",
+          "wcag1412",
+          "EN-301-549",
+          "EN-9.1.4.12",
+          "ACT"
+        ],
+        "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+        "help": "Inline text spacing must be adjustable with custom stylesheets",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/avoid-inline-spacing?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "blink",
+        "impact": null,
+        "tags": [
+          "cat.time-and-media",
+          "wcag2a",
+          "wcag222",
+          "section508",
+          "section508.22.j",
+          "TTv5",
+          "TT2.b",
+          "EN-301-549",
+          "EN-9.2.2.2",
+          "RGAAv4",
+          "RGAA-13.8.1"
+        ],
+        "description": "Ensure <blink> elements are not used",
+        "help": "<blink> elements are deprecated and must not be used",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/blink?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "button-name",
+        "impact": null,
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.9.1"
+        ],
+        "description": "Ensure buttons have discernible text",
+        "help": "Buttons must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/button-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "definition-list",
+        "impact": null,
+        "tags": [
+          "cat.structure",
+          "wcag2a",
+          "wcag131",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-9.3.3"
+        ],
+        "description": "Ensure <dl> elements are structured correctly",
+        "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/definition-list?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "dlitem",
+        "impact": null,
+        "tags": [
+          "cat.structure",
+          "wcag2a",
+          "wcag131",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-9.3.3"
+        ],
+        "description": "Ensure <dt> and <dd> elements are contained by a <dl>",
+        "help": "<dt> and <dd> elements must be contained by a <dl>",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/dlitem?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "duplicate-id-aria",
+        "impact": null,
+        "tags": [
+          "cat.parsing",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-8.2.1"
+        ],
+        "description": "Ensure every id attribute value used in ARIA and in labels is unique",
+        "help": "IDs used in ARIA and labels must be unique",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/duplicate-id-aria?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "form-field-multiple-labels",
+        "impact": null,
+        "tags": [
+          "cat.forms",
+          "wcag2a",
+          "wcag332",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.3.3.2",
+          "RGAAv4",
+          "RGAA-11.2.1"
+        ],
+        "description": "Ensure form field does not have multiple label elements",
+        "help": "Form field must not have multiple label elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/form-field-multiple-labels?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "frame-focusable-content",
+        "impact": null,
+        "tags": [
+          "cat.keyboard",
+          "wcag2a",
+          "wcag211",
+          "TTv5",
+          "TT4.a",
+          "EN-301-549",
+          "EN-9.2.1.1",
+          "RGAAv4",
+          "RGAA-7.3.2"
+        ],
+        "description": "Ensure <frame> and <iframe> elements with focusable content do not have tabindex=-1",
+        "help": "Frames with focusable content must not have tabindex=-1",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/frame-focusable-content?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "frame-title-unique",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag412",
+          "TTv5",
+          "TT12.d",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-2.2.1"
+        ],
+        "description": "Ensure <iframe> and <frame> elements contain a unique title attribute",
+        "help": "Frames must have a unique title attribute",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/frame-title-unique?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "frame-title",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.i",
+          "TTv5",
+          "TT12.d",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-2.1.1"
+        ],
+        "description": "Ensure <iframe> and <frame> elements have an accessible name",
+        "help": "Frames must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/frame-title?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "html-lang-valid",
+        "impact": null,
+        "tags": [
+          "cat.language",
+          "wcag2a",
+          "wcag311",
+          "TTv5",
+          "TT11.a",
+          "EN-301-549",
+          "EN-9.3.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-8.4.1"
+        ],
+        "description": "Ensure the lang attribute of the <html> element has a valid value",
+        "help": "<html> element must have a valid value for the lang attribute",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/html-lang-valid?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "html-xml-lang-mismatch",
+        "impact": null,
+        "tags": [
+          "cat.language",
+          "wcag2a",
+          "wcag311",
+          "EN-301-549",
+          "EN-9.3.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-8.3.1"
+        ],
+        "description": "Ensure that HTML elements with both valid lang and xml:lang attributes agree on the base language of the page",
+        "help": "HTML elements with lang and xml:lang must have the same base language",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/html-xml-lang-mismatch?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "input-button-name",
+        "impact": null,
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.9.1"
+        ],
+        "description": "Ensure input buttons have discernible text",
+        "help": "Input buttons must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/input-button-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "input-image-alt",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT7.a",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-1.1.3"
+        ],
+        "description": "Ensure <input type=\"image\"> elements have alternative text",
+        "help": "Image buttons must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/input-image-alt?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "impact": null,
+        "tags": [
+          "cat.semantics",
+          "wcag21a",
+          "wcag253",
+          "EN-301-549",
+          "EN-9.2.5.3",
+          "RGAAv4",
+          "RGAA-6.1.5"
+        ],
+        "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+        "help": "Elements must have their visible text as part of their accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "label",
+        "impact": null,
+        "tags": [
+          "cat.forms",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.n",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "description": "Ensure every form element has a label",
+        "help": "Form elements must have labels",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": null,
+        "tags": [
+          "cat.color",
+          "wcag2a",
+          "wcag141",
+          "TTv5",
+          "TT13.a",
+          "EN-301-549",
+          "EN-9.1.4.1",
+          "RGAAv4",
+          "RGAA-10.6.1"
+        ],
+        "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+        "help": "Links must be distinguishable without relying on color",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "link-name",
+        "impact": null,
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag244",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.2.4.4",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-6.2.1"
+        ],
+        "description": "Ensure links have discernible text",
+        "help": "Links must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "list",
+        "impact": null,
+        "tags": [
+          "cat.structure",
+          "wcag2a",
+          "wcag131",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-9.3.1"
+        ],
+        "description": "Ensure that lists are structured correctly",
+        "help": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/list?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "listitem",
+        "impact": null,
+        "tags": [
+          "cat.structure",
+          "wcag2a",
+          "wcag131",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-9.3.1"
+        ],
+        "description": "Ensure <li> elements are used semantically",
+        "help": "<li> elements must be contained in a <ul> or <ol>",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/listitem?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "marquee",
+        "impact": null,
+        "tags": [
+          "cat.parsing",
+          "wcag2a",
+          "wcag222",
+          "TTv5",
+          "TT2.b",
+          "EN-301-549",
+          "EN-9.2.2.2",
+          "RGAAv4",
+          "RGAA-13.8.1"
+        ],
+        "description": "Ensure <marquee> elements are not used",
+        "help": "<marquee> elements are deprecated and must not be used",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/marquee?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "meta-refresh",
+        "impact": null,
+        "tags": [
+          "cat.time-and-media",
+          "wcag2a",
+          "wcag221",
+          "TTv5",
+          "TT8.a",
+          "EN-301-549",
+          "EN-9.2.2.1",
+          "RGAAv4",
+          "RGAA-13.1.2"
+        ],
+        "description": "Ensure <meta http-equiv=\"refresh\"> is not used for delayed refresh",
+        "help": "Delayed refresh under 20 hours must not be used",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/meta-refresh?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "nested-interactive",
+        "impact": null,
+        "tags": [
+          "cat.keyboard",
+          "wcag2a",
+          "wcag412",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+        "help": "Interactive controls must not be nested",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/nested-interactive?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "object-alt",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "RGAAv4",
+          "RGAA-1.1.6"
+        ],
+        "description": "Ensure <object> elements have alternative text",
+        "help": "<object> elements must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/object-alt?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "role-img-alt",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT7.a",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-1.1.1"
+        ],
+        "description": "Ensure [role=\"img\"] and [role=\"image\"] elements have alternative text",
+        "help": "[role=\"img\"] and [role=\"image\"] elements must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/role-img-alt?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "scrollable-region-focusable",
+        "impact": null,
+        "tags": [
+          "cat.keyboard",
+          "wcag2a",
+          "wcag211",
+          "wcag213",
+          "TTv5",
+          "TT4.a",
+          "EN-301-549",
+          "EN-9.2.1.1",
+          "EN-9.2.1.3",
+          "RGAAv4",
+          "RGAA-7.3.2"
+        ],
+        "description": "Ensure elements that have scrollable content are accessible by keyboard in Safari",
+        "help": "Scrollable region must have keyboard access",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/scrollable-region-focusable?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "select-name",
+        "impact": null,
+        "tags": [
+          "cat.forms",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.n",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "description": "Ensure select element has an accessible name",
+        "help": "Select element must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/select-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "server-side-image-map",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag211",
+          "section508",
+          "section508.22.f",
+          "TTv5",
+          "TT4.a",
+          "EN-301-549",
+          "EN-9.2.1.1",
+          "RGAAv4",
+          "RGAA-1.1.4"
+        ],
+        "description": "Ensure that server-side image maps are not used",
+        "help": "Server-side image maps must not be used",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/server-side-image-map?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "summary-name",
+        "impact": null,
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2"
+        ],
+        "description": "Ensure summary elements have discernible text",
+        "help": "Summary elements must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/summary-name?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "svg-img-alt",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT7.a",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-1.1.5"
+        ],
+        "description": "Ensure <svg> elements with an img, image, graphics-document or graphics-symbol role have accessible text",
+        "help": "<svg> elements with an img or image role must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/svg-img-alt?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "td-headers-attr",
+        "impact": null,
+        "tags": [
+          "cat.tables",
+          "wcag2a",
+          "wcag131",
+          "section508",
+          "section508.22.g",
+          "TTv5",
+          "TT14.b",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-5.7.4"
+        ],
+        "description": "Ensure that each cell in a table that uses the headers attribute refers only to other <th> elements in that table",
+        "help": "Table cell headers attributes must refer to other <th> elements in the same table",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/td-headers-attr?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "th-has-data-cells",
+        "impact": null,
+        "tags": [
+          "cat.tables",
+          "wcag2a",
+          "wcag131",
+          "section508",
+          "section508.22.g",
+          "TTv5",
+          "TT14.b",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-5.7.1"
+        ],
+        "description": "Ensure that <th> elements and elements with role=columnheader/rowheader have data cells they describe",
+        "help": "Table headers in a data table must refer to data cells",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/th-has-data-cells?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "valid-lang",
+        "impact": null,
+        "tags": [
+          "cat.language",
+          "wcag2aa",
+          "wcag312",
+          "TTv5",
+          "TT11.b",
+          "EN-301-549",
+          "EN-9.3.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-8.8.1"
+        ],
+        "description": "Ensure lang attributes have valid values",
+        "help": "lang attribute must have a valid value",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/valid-lang?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "video-caption",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag122",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT17.a",
+          "EN-301-549",
+          "EN-9.1.2.2",
+          "RGAAv4",
+          "RGAA-4.3.1"
+        ],
+        "description": "Ensure <video> elements have captions",
+        "help": "<video> elements must have captions",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/video-caption?application=axeAPI",
+        "nodes": []
+      },
+      {
+        "id": "no-autoplay-audio",
+        "impact": null,
+        "tags": [
+          "cat.time-and-media",
+          "wcag2a",
+          "wcag142",
+          "TTv5",
+          "TT2.a",
+          "EN-301-549",
+          "EN-9.1.4.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-4.10.1"
+        ],
+        "description": "Ensure <video> or <audio> elements do not autoplay audio for more than 3 seconds without a control mechanism to stop or mute the audio",
+        "help": "<video> or <audio> elements must not play automatically",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/no-autoplay-audio?application=axeAPI",
+        "nodes": []
+      }
+    ],
+    "passes": [
+      {
+        "id": "aria-conditional-attr",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure ARIA attributes are used as described in the specification of the element's role",
+        "help": "ARIA attributes must be used as specified for the element's role",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-conditional-attr?application=axeAPI",
+        "nodes": [
+          {
+            "any": [],
+            "all": [
+              {
+                "id": "aria-conditional-attr",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "ARIA attribute is allowed"
+              }
+            ],
+            "none": [],
+            "impact": null,
+            "html": "<div aria-modal=\"true\" class=\"css-1dbjc4n r-1niwhzg r-1p0dtai r-6koalj r-1d2f490 r-1xcajam r-zchlnj r-ipm5af\" style=\"z-index: 9999;\">",
+            "target": [
+              ".r-1xcajam.r-6koalj[aria-modal=\"true\"]"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aria-hidden-body",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag131",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-10.8.1"
+        ],
+        "description": "Ensure aria-hidden=\"true\" is not present on the document body.",
+        "help": "aria-hidden=\"true\" must not be present on the document body",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-hidden-body?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "aria-hidden-body",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "No aria-hidden attribute is present on document body"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<body>",
+            "target": [
+              "body"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure ARIA attributes are not prohibited for an element's role",
+        "help": "Elements must only use permitted ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-prohibited-attr?application=axeAPI",
+        "nodes": [
+          {
+            "any": [],
+            "all": [],
+            "none": [
+              {
+                "id": "aria-prohibited-attr",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "ARIA attribute is allowed"
+              }
+            ],
+            "impact": null,
+            "html": "<div aria-modal=\"true\" class=\"css-1dbjc4n r-1niwhzg r-1p0dtai r-6koalj r-1d2f490 r-1xcajam r-zchlnj r-ipm5af\" style=\"z-index: 9999;\">",
+            "target": [
+              ".r-1xcajam.r-6koalj[aria-modal=\"true\"]"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aria-valid-attr-value",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure all ARIA attributes have valid values",
+        "help": "ARIA attributes must conform to valid values",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr-value?application=axeAPI",
+        "nodes": [
+          {
+            "any": [],
+            "all": [
+              {
+                "id": "aria-valid-attr-value",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "ARIA attribute values are valid"
+              },
+              {
+                "id": "aria-errormessage",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "aria-errormessage exists and references elements visible to screen readers that use a supported aria-errormessage technique"
+              },
+              {
+                "id": "aria-level",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "aria-level values are valid"
+              }
+            ],
+            "none": [],
+            "impact": null,
+            "html": "<div aria-modal=\"true\" class=\"css-1dbjc4n r-1niwhzg r-1p0dtai r-6koalj r-1d2f490 r-1xcajam r-zchlnj r-ipm5af\" style=\"z-index: 9999;\">",
+            "target": [
+              ".r-1xcajam.r-6koalj[aria-modal=\"true\"]"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aria-valid-attr",
+        "impact": null,
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure attributes that begin with aria- are valid ARIA attributes",
+        "help": "ARIA attributes must conform to valid names",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-valid-attr?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "aria-valid-attr",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "ARIA attribute name is valid"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<div aria-modal=\"true\" class=\"css-1dbjc4n r-1niwhzg r-1p0dtai r-6koalj r-1d2f490 r-1xcajam r-zchlnj r-ipm5af\" style=\"z-index: 9999;\">",
+            "target": [
+              ".r-1xcajam.r-6koalj[aria-modal=\"true\"]"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#ffffff",
+                  "bgColor": "#c30b12",
+                  "contrastRatio": 7.03,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": "#b40a11",
+                  "colorParse": null
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element has sufficient color contrast of 7.03"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<div class=\"css-76zvg2 r-jwli3a r-ubezar r-16dba41 r-1pzd9i8\" dir=\"auto\" style=\"font-family: inherit;\">Add-ons</div>",
+            "target": [
+              ".css-1dbjc4n:nth-child(1) > div > .r-bpynri.r-1otgn73.r-1loqt21 > .r-1pzd9i8.r-16dba41.r-jwli3a"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "document-title",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag242",
+          "TTv5",
+          "TT12.a",
+          "EN-301-549",
+          "EN-9.2.4.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-8.5.1"
+        ],
+        "description": "Ensure each HTML document contains a non-empty <title> element",
+        "help": "Documents must have <title> element to aid in navigation",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/document-title?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "doc-has-title",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Document has a non-empty <title> element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": null,
+            "html": "<html>",
+            "target": [
+              "html"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "image-alt",
+        "impact": null,
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT7.a",
+          "TT7.b",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-1.1.1"
+        ],
+        "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+        "help": "Images must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/image-alt?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "has-alt",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "Element has an alt attribute"
+              },
+              {
+                "id": "presentational-role",
+                "data": {
+                  "role": "presentation"
+                },
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "Element's default semantics were overridden with role=\"presentation\""
+              }
+            ],
+            "all": [],
+            "none": [
+              {
+                "id": "alt-space-value",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "Element has a valid alt attribute value"
+              }
+            ],
+            "impact": null,
+            "html": "<img alt=\"\" class=\"css-9pa8cd\" draggable=\"false\" src=\"https://www.spicejet.com/loader.gif\">",
+            "target": [
+              "div[data-testid=\"app-loader\"] > .css-9pa8cd[alt=\"\"][draggable=\"false\"]"
+            ]
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-10.8.1"
+        ],
+        "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+        "help": "ARIA hidden element must not be focusable or contain focusable elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-hidden-focus?application=axeAPI",
+        "nodes": [
+          {
+            "any": [],
+            "all": [
+              {
+                "id": "focusable-modal-open",
+                "data": null,
+                "relatedNodes": [
+                  {
+                    "html": "<div role=\"button\" tabindex=\"0\" class=\"carousel-dots-item carousel-dots-item-active carousel-dot-1\"></div>",
+                    "target": [
+                      ".carousel-dots-item-active"
+                    ]
+                  },
+                  {
+                    "html": "<div role=\"button\" tabindex=\"0\" class=\"carousel-dots-item carousel-dot-2\"></div>",
+                    "target": [
+                      ".carousel-dot-2"
+                    ]
+                  },
+                  {
+                    "html": "<div role=\"button\" tabindex=\"0\" class=\"carousel-dots-item carousel-dot-3\"></div>",
+                    "target": [
+                      ".carousel-dot-3"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1loqt21 r-13awgt0 r-1mlwlqe r-eu3ka r-1udh08x r-1otgn73 r-1lgpqti\" data-focusable=\"true\" tabindex=\"0\" style=\"width: 155px;\">",
+                    "target": [
+                      ".r-1lgpqti.r-1mlwlqe.r-eu3ka"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-bpynri r-1otgn73\" data-focusable=\"true\" tabindex=\"0\">",
+                    "target": [
+                      ".css-1dbjc4n:nth-child(1) > div > .r-bpynri.r-1otgn73.r-1loqt21"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/SpiceMax.aspx\" to=\"https://corporate.spicejet.com/SpiceMax.aspx\" data-testid=\"test-id-SpiceMax\">",
+                    "target": [
+                      "a[data-testid=\"test-id-SpiceMax\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/spiceCafe.aspx\" to=\"https://corporate.spicejet.com/spiceCafe.aspx\" data-testid=\"test-id-SpiceCafé\">",
+                    "target": [
+                      "a[data-testid=\"test-id-SpiceCafé\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/YouFirst.aspx\" to=\"https://corporate.spicejet.com/YouFirst.aspx\" data-testid=\"test-id-You1st\">",
+                    "target": [
+                      "a[data-testid=\"test-id-You1st\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/VisaServices.aspx\" to=\"https://corporate.spicejet.com/VisaServices.aspx\" data-testid=\"test-id-Visa Services\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Visa Services\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/SpiceAssurance.aspx\" to=\"https://corporate.spicejet.com/SpiceAssurance.aspx\" data-testid=\"test-id-SpiceAssurance\">",
+                    "target": [
+                      "a[data-testid=\"test-id-SpiceAssurance\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/FamilyAndFriendOffer.aspx\" to=\"https://corporate.spicejet.com/FamilyAndFriendOffer.aspx\" data-testid=\"test-id-Friends and Family\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Friends and Family\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/SeniorCitizen.aspx\" to=\"https://corporate.spicejet.com/SeniorCitizen.aspx\" data-testid=\"test-id-Senior Citizen Discount\">",
+                    "target": [
+                      ".r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(4) > .r-18u37iz.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]:nth-child(1)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/StudentDiscountLanding.aspx\" to=\"https://corporate.spicejet.com/StudentDiscountLanding.aspx\" data-testid=\"test-id-Student Discount\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Student Discount\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/ExtraSeat.aspx\" to=\"https://corporate.spicejet.com/ExtraSeat.aspx\" data-testid=\"test-id-Extra Seat\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Extra Seat\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/spicelock.aspx\" to=\"https://corporate.spicejet.com/spicelock.aspx\" data-testid=\"test-id-SpiceLock\">",
+                    "target": [
+                      "a[data-testid=\"test-id-SpiceLock\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/IAFPersonnel.aspx\" to=\"https://corporate.spicejet.com/IAFPersonnel.aspx\" data-testid=\"test-id-Indian Armed Forces Personnel\">",
+                    "target": [
+                      ".css-1dbjc4n:nth-child(6) > .r-18u37iz.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]:nth-child(1)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/SpiceFlexFare.aspx\" to=\"https://corporate.spicejet.com/SpiceFlexFare.aspx\" data-testid=\"test-id-SpiceFlex\">",
+                    "target": [
+                      "a[data-testid=\"test-id-SpiceFlex\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/GovtEmployee.aspx\" to=\"https://corporate.spicejet.com/GovtEmployee.aspx\" data-testid=\"test-id-Govt. Employee\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Govt. Employee\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/spicePlus.aspx\" to=\"https://corporate.spicejet.com/spicePlus.aspx\" data-testid=\"test-id-SpicePlus\">",
+                    "target": [
+                      "a[data-testid=\"test-id-SpicePlus\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/FLYEarlyProductatAirports.aspx\" to=\"https://corporate.spicejet.com/FLYEarlyProductatAirports.aspx\" data-testid=\"test-id-FlyEarly\">",
+                    "target": [
+                      "a[data-testid=\"test-id-FlyEarly\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/ExcessBaggage.aspx\" to=\"https://corporate.spicejet.com/ExcessBaggage.aspx\" data-testid=\"test-id-Excess Baggage\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Excess Baggage\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/RedHotOffers.aspx\" to=\"https://corporate.spicejet.com/RedHotOffers.aspx\" data-testid=\"test-id-Deals\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Deals\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spicejet.woohoo.in/home\" to=\"https://spicejet.woohoo.in/home\" data-testid=\"test-id-GiftCard\">",
+                    "target": [
+                      "a[data-testid=\"test-id-GiftCard\"]"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-bpynri r-1otgn73\" data-focusable=\"true\" tabindex=\"0\">",
+                    "target": [
+                      ".css-1dbjc4n:nth-child(4) > div > .r-bpynri.r-1otgn73.r-1loqt21"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/home#program\" to=\"https://spiceclub.spicejet.com/home#program\" data-testid=\"test-id-Our Program\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Our Program\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/home#benefits\" to=\"https://spiceclub.spicejet.com/home#benefits\" data-testid=\"test-id-Benefits\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Benefits\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/home#tiers\" to=\"https://spiceclub.spicejet.com/home#tiers\" data-testid=\"test-id-Tiers\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Tiers\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/howToEarn\" to=\"https://spiceclub.spicejet.com/howToEarn\" data-testid=\"test-id-Earn Points\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Earn Points\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/howToUse\" to=\"https://spiceclub.spicejet.com/howToUse\" data-testid=\"test-id-Use Points\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Use Points\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/axisBank\" to=\"https://spiceclub.spicejet.com/axisBank\" data-testid=\"test-id-Credit Cards\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Credit Cards\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/instantVouchers\" to=\"https://spiceclub.spicejet.com/instantVouchers\" data-testid=\"test-id-Instant Vouchers\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Instant Vouchers\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spicescreen.com/\" to=\"https://spicescreen.com/\" data-testid=\"test-id-SpiceScreen\">",
+                    "target": [
+                      "a[href$=\"spicescreen.com/\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://www.spicexpress.com\" to=\"https://www.spicexpress.com\" data-testid=\"test-id-Cargo\">",
+                    "target": [
+                      "a[href$=\"www.spicexpress.com\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/CharterLanding.aspx\" to=\"https://corporate.spicejet.com/CharterLanding.aspx\" data-testid=\"test-id-Charter\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Charter\"]"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-bpynri r-1otgn73\" data-focusable=\"true\" tabindex=\"0\">",
+                    "target": [
+                      ".css-1dbjc4n:nth-child(8) > div > .r-bpynri.r-1otgn73.r-1loqt21"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/PassengerSupport.aspx\" to=\"https://corporate.spicejet.com/PassengerSupport.aspx\" data-testid=\"test-id-Passenger Support\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Passenger Support\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/PassengerRights.aspx\" to=\"https://corporate.spicejet.com/PassengerRights.aspx\" data-testid=\"test-id-Passenger Rights\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Passenger Rights\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Content/pdf/Tariffs.pdf\" to=\"https://corporate.spicejet.com/Content/pdf/Tariffs.pdf\" data-testid=\"test-id-Tariffs\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Tariffs\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Baggage.aspx\" to=\"https://corporate.spicejet.com/Baggage.aspx\" data-testid=\"test-id-Baggage Information\">",
+                    "target": [
+                      "a[data-testid=\"test-id-Baggage Information\"]"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-1otgn73\" data-focusable=\"true\" tabindex=\"0\">",
+                    "target": [
+                      ".r-18u37iz.css-1dbjc4n:nth-child(3) > .r-1otgn73.r-1loqt21[data-focusable=\"true\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/signup\" to=\"https://spiceclub.spicejet.com/signup\"><div class=\"css-76zvg2 r-jwli3a r-ubezar\" dir=\"auto\" style=\"font-family: inherit;\">Signup</div></a>",
+                    "target": [
+                      ".r-1jkjb.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-kicko2 r-1loqt21 r-18u37iz r-779j7e r-1f1sjgu r-1otgn73\" data-focusable=\"true\" tabindex=\"0\" data-testid=\"Flights-horizontal-nav-tabs\">",
+                    "target": [
+                      ".r-kicko2"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-184aecr r-1loqt21 r-18u37iz r-779j7e r-1f1sjgu r-1otgn73\" data-focusable=\"true\" tabindex=\"0\" data-testid=\"check-in-horizontal-nav-tabs\">",
+                    "target": [
+                      "div[data-testid=\"check-in-horizontal-nav-tabs\"]"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-779j7e r-1f1sjgu r-1otgn73\" data-focusable=\"true\" tabindex=\"0\" data-testid=\"flight status-horizontal-nav-tabs\">",
+                    "target": [
+                      ".r-779j7e.r-1f1sjgu.r-1otgn73:nth-child(3)"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-notknq r-1loqt21 r-18u37iz r-779j7e r-1f1sjgu r-1otgn73\" data-focusable=\"true\" tabindex=\"0\" data-testid=\"manage booking-horizontal-nav-tabs\">",
+                    "target": [
+                      ".r-notknq"
+                    ]
+                  },
+                  {
+                    "html": "<input maxlength=\"8\" placeholder=\"e.g. W3X3H8\" autocapitalize=\"sentences\" autocomplete=\"new-password\" autocorrect=\"on\" class=\"css-1cwyjr8 r-ubezar...\" dir=\"auto\" spellcheck=\"false\" type=\"text\" data-focusable=\"true\" value=\"\" style=\"color: inherit; font...\">",
+                    "target": [
+                      "input[maxlength=\"8\"]"
+                    ]
+                  },
+                  {
+                    "html": "<input placeholder=\"john.doe@spicejet.co...\" autocapitalize=\"sentences\" autocomplete=\"new-password\" autocorrect=\"on\" class=\"css-1cwyjr8 r-ubezar...\" dir=\"auto\" spellcheck=\"false\" type=\"text\" data-focusable=\"true\" value=\"\" style=\"color: inherit; font...\">",
+                    "target": [
+                      "input[placeholder=\"john.doe@spicejet.com\"]"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-19m6qjp r-z2wwpe r-1loqt21 r-18u37iz r-1777fci r-d9fdf6 r-1w50u8q r-ah5dr5 r-1otgn73 r-13qz1uu\" data-focusable=\"true\" tabindex=\"0\" style=\"\">",
+                    "target": [
+                      ".r-d9fdf6.r-ah5dr5.r-19m6qjp"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1loqt21 r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr\" data-focusable=\"true\" tabindex=\"0\">",
+                    "target": [
+                      ".r-1x0uki6.css-1dbjc4n > .r-1awozwy.r-18u37iz.css-1dbjc4n > .css-1dbjc4n:nth-child(1) > .r-eafdt9.r-1i6wzkk.r-lrvibr"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"\" to=\"\" style=\"color: rgb(195, 11, 18); font-weight: 600; padding-left: 3px;\"></a>",
+                    "target": [
+                      ".announcement-item.r-1h0z5md.r-1habvwh:nth-child(1) > .css-cens5h.r-fdjqy7.r-14yzgew > a[to=\"\"][href=\"\"][target=\"_blank\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://www.spicejet.com/#status\" to=\"https://www.spicejet.com/#status\" style=\"color: rgb(195, 11, 18); font-weight: 600; padding-left: 3px;\">flight status</a>",
+                    "target": [
+                      ".announcement-item.r-1h0z5md.r-1habvwh:nth-child(2) > .css-cens5h.r-fdjqy7.r-14yzgew > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\" https://corporate.spicejet.com/Tnc.aspx\" to=\" https://corporate.spicejet.com/Tnc.aspx\" style=\"color: rgb(195, 11, 18); font-weight: 600; padding-left: 3px;\">Read more</a>",
+                    "target": [
+                      ".announcement-item.r-1h0z5md.r-1habvwh:nth-child(3) > .css-cens5h.r-fdjqy7.r-14yzgew > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://changes.spicejet.com/index.html#/\" to=\"https://changes.spicejet.com/index.html#/\" style=\"color: rgb(195, 11, 18); font-weight: 600; padding-left: 3px;\">Change Assist</a>",
+                    "target": [
+                      ".announcement-item.r-1h0z5md.r-1habvwh:nth-child(4) > .css-cens5h.r-fdjqy7.r-14yzgew > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"\" to=\"\" style=\"color: rgb(195, 11, 18); font-weight: 600; padding-left: 3px;\"></a>",
+                    "target": [
+                      ".announcement-item.r-1h0z5md.r-1habvwh:nth-child(5) > .css-cens5h.r-fdjqy7.r-14yzgew > a[to=\"\"][href=\"\"][target=\"_blank\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Digiyatra.aspx\" to=\"https://corporate.spicejet.com/Digiyatra.aspx\" style=\"color: rgb(195, 11, 18); font-weight: 600; padding-left: 3px;\">Know more.</a>",
+                    "target": [
+                      ".announcement-item.r-1h0z5md.r-1habvwh:nth-child(6) > .css-cens5h.r-fdjqy7.r-14yzgew > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-19m6qjp r-1ewfge1 r-cdmcib r-rs99b7 r-1loqt21 r-1xbve24 r-vlx1xi r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-8hc5te\" data-focusable=\"true\" tabindex=\"0\"></div>",
+                    "target": [
+                      ".r-1ewfge1.r-cdmcib.r-1xbve24:nth-child(1)"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1ewfge1 r-cdmcib r-rs99b7 r-1loqt21 r-1xbve24 r-vlx1xi r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-8hc5te\" data-focusable=\"true\" tabindex=\"0\"></div>",
+                    "target": [
+                      ".r-1ewfge1.r-cdmcib.r-1xbve24:nth-child(2)"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1ewfge1 r-cdmcib r-rs99b7 r-1loqt21 r-1xbve24 r-vlx1xi r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-8hc5te\" data-focusable=\"true\" tabindex=\"0\"></div>",
+                    "target": [
+                      ".r-1ewfge1.r-cdmcib.r-1xbve24:nth-child(3)"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1ewfge1 r-cdmcib r-rs99b7 r-1loqt21 r-1xbve24 r-vlx1xi r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-8hc5te\" data-focusable=\"true\" tabindex=\"0\"></div>",
+                    "target": [
+                      ".r-1ewfge1.r-cdmcib.r-1xbve24:nth-child(4)"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1ewfge1 r-cdmcib r-rs99b7 r-1loqt21 r-1xbve24 r-vlx1xi r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-8hc5te\" data-focusable=\"true\" tabindex=\"0\"></div>",
+                    "target": [
+                      ".r-1ewfge1.r-cdmcib.r-1xbve24:nth-child(5)"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1ewfge1 r-cdmcib r-rs99b7 r-1loqt21 r-1xbve24 r-vlx1xi r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-8hc5te\" data-focusable=\"true\" tabindex=\"0\"></div>",
+                    "target": [
+                      ".r-1ewfge1.r-cdmcib.r-1xbve24:nth-child(6)"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1loqt21 r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr\" data-focusable=\"true\" tabindex=\"0\">",
+                    "target": [
+                      ".r-1habvwh.css-1dbjc4n > .r-eafdt9.r-1i6wzkk.r-lrvibr"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://changes.spicejet.com/index.html#/\" to=\"https://changes.spicejet.com/index.html#/\" data-testid=\"tripdetails-baggage-allowance\">",
+                    "target": [
+                      "a[data-testid=\"tripdetails-baggage-allowance\"][target=\"_blank\"][rel=\"noopener noreferrer\"]:nth-child(1)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/\" to=\"https://spiceclub.spicejet.com/\" data-testid=\"tripdetails-baggage-allowance\">",
+                    "target": [
+                      "a[data-testid=\"tripdetails-baggage-allowance\"][target=\"_blank\"][rel=\"noopener noreferrer\"]:nth-child(2)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/axisBank\" to=\"https://spiceclub.spicejet.com/axisBank\" data-testid=\"tripdetails-baggage-allowance\">",
+                    "target": [
+                      "a[data-testid=\"tripdetails-baggage-allowance\"][target=\"_blank\"][rel=\"noopener noreferrer\"]:nth-child(3)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/VisaServices.aspx\" to=\"https://corporate.spicejet.com/VisaServices.aspx\" data-testid=\"tripdetails-baggage-allowance\">",
+                    "target": [
+                      "a[data-testid=\"tripdetails-baggage-allowance\"][target=\"_blank\"][rel=\"noopener noreferrer\"]:nth-child(4)"
+                    ]
+                  },
+                  {
+                    "html": "<a data-testid=\"tripdetails-baggage-allowance\" href=\"\" style=\"text-decoration: none;\">",
+                    "target": [
+                      "a[data-testid=\"tripdetails-baggage-allowance\"][href=\"\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a id=\"spinwheel\" href=\"\" style=\"text-decoration: none;\">",
+                    "target": [
+                      "#spinwheel"
+                    ]
+                  },
+                  {
+                    "html": "<a href=\"\" style=\"text-decoration: none;\"><span class=\" lazy-load-image-background blur\" style=\"color: transparent; display: inline-block; width: 100%;\"><span class=\"\" style=\"display: inline-block; width: 100%;\"></span></span></a>",
+                    "target": [
+                      ".r-tvv088.r-1kihuf0.r-13qz1uu > .r-1qxgc49.r-15d164r.r-1wtj0ep > a[href=\"\"]"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-19m6qjp r-z2wwpe r-1loqt21 r-18u37iz r-1777fci r-1w50u8q r-ah5dr5 r-1otgn73\" data-focusable=\"true\" tabindex=\"0\" style=\"padding-right: 15px; padding-left: 15px; width: 250px;\">",
+                    "target": [
+                      ".r-1w50u8q.r-1awozwy.css-1dbjc4n > .r-ah5dr5.r-19m6qjp.r-1w50u8q"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/spiceMax.aspx\" to=\"https://corporate.spicejet.com/spiceMax.aspx\" data-testid=\"trip-addons\">",
+                    "target": [
+                      ".r-dopjnz.r-kdyh1x.r-zso239:nth-child(1) > a[data-testid=\"trip-addons\"][target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/spiceCafe.aspx\" to=\"https://corporate.spicejet.com/spiceCafe.aspx\" data-testid=\"trip-addons\">",
+                    "target": [
+                      ".r-dopjnz.r-kdyh1x.r-zso239:nth-child(2) > a[data-testid=\"trip-addons\"][target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/ExcessBaggage.aspx\" to=\"https://corporate.spicejet.com/ExcessBaggage.aspx\" data-testid=\"trip-addons\">",
+                    "target": [
+                      ".r-dopjnz.r-kdyh1x.r-zso239:nth-child(3) > a[data-testid=\"trip-addons\"][target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/YouFirst.aspx\" to=\"https://corporate.spicejet.com/YouFirst.aspx\" data-testid=\"trip-addons\">",
+                    "target": [
+                      ".r-dopjnz.r-kdyh1x.r-zso239:nth-child(4) > a[data-testid=\"trip-addons\"][target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/ExtraSeat.aspx\" to=\"https://corporate.spicejet.com/ExtraSeat.aspx\" data-testid=\"trip-addons\">",
+                    "target": [
+                      ".r-dopjnz.r-kdyh1x.r-zso239:nth-child(5) > a[data-testid=\"trip-addons\"][target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/spicePlus.aspx\" to=\"https://corporate.spicejet.com/spicePlus.aspx\" data-testid=\"trip-addons\">",
+                    "target": [
+                      ".r-dopjnz.r-kdyh1x.r-zso239:nth-child(6) > a[data-testid=\"trip-addons\"][target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://groups.spicejet.com/\" to=\"https://groups.spicejet.com/\" data-testid=\"trip-addons\">",
+                    "target": [
+                      "a[href$=\"groups.spicejet.com/\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://sme.spicejet.com/Account/Login?ReturnUrl=%2FHome%2FLandingPage\" to=\"https://sme.spicejet.com/Account/Login?ReturnUrl=%2FHome%2FLandingPage\" data-testid=\"trip-addons\">",
+                    "target": [
+                      ".r-aci1zz.r-1wo540k.r-kdyh1x:nth-child(2) > a[data-testid=\"trip-addons\"][target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/CorporateQueries.aspx\" to=\"https://corporate.spicejet.com/CorporateQueries.aspx\" data-testid=\"trip-addons\">",
+                    "target": [
+                      ".r-aci1zz.r-1wo540k.r-kdyh1x:nth-child(3) > a[data-testid=\"trip-addons\"][target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/\" to=\"https://spiceclub.spicejet.com/\">",
+                    "target": [
+                      ".r-ym11oa > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://spiceclub.spicejet.com/signup\" to=\"https://spiceclub.spicejet.com/signup\"><div class=\"css-76zvg2 r-jwli3a r-1b43r93 r-1kfrs79 r-14yzgew\" dir=\"auto\" style=\"font-family: inherit;\">Join SpiceClub</div></a>",
+                    "target": [
+                      ".r-15bsvpr.r-7xmw5f.r-19m6qjp > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-19m6qjp r-z2wwpe r-1loqt21 r-18u37iz r-1777fci r-19h5ruw r-1w50u8q r-ah5dr5 r-1otgn73\" data-focusable=\"true\" tabindex=\"0\" style=\"padding-right: 15px; padding-left: 15px; width: 150px;\">",
+                    "target": [
+                      ".r-11wnrd2.r-18u37iz.css-1dbjc4n:nth-child(1) > .r-1hfyk0a.r-11wnrd2.r-eqz5dr > .css-1dbjc4n:nth-child(4) > .r-19h5ruw.r-ah5dr5.r-19m6qjp"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1awozwy r-19m6qjp r-z2wwpe r-1loqt21 r-18u37iz r-1777fci r-19h5ruw r-1w50u8q r-ah5dr5 r-1otgn73\" data-focusable=\"true\" tabindex=\"0\" style=\"padding-right: 15px; padding-left: 15px; width: 150px;\">",
+                    "target": [
+                      ".r-11wnrd2.r-18u37iz.css-1dbjc4n:nth-child(2) > .r-1hfyk0a.r-11wnrd2.r-eqz5dr > .css-1dbjc4n:nth-child(4) > .r-19h5ruw.r-ah5dr5.r-19m6qjp"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/SpiceRoute.aspx\" to=\"https://corporate.spicejet.com/SpiceRoute.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(1) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(1) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/CorporateOverview.aspx\" to=\"https://corporate.spicejet.com/CorporateOverview.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(1) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(2) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Fleet.aspx\" to=\"https://corporate.spicejet.com/Fleet.aspx\"><div class=\"css-1dbjc4n r-d0pm55\"><div class=\"css-76zvg2\" dir=\"auto\" style=\"color: inherit; font-family: inherit;\">Fleet</div></div></a>",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(1) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(3) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/careers.aspx\" to=\"https://corporate.spicejet.com/careers.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(1) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(4) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/PressReleaseNews.aspx\" to=\"https://corporate.spicejet.com/PressReleaseNews.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(1) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(5) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/AwardsandApplaud.aspx\" to=\"https://corporate.spicejet.com/AwardsandApplaud.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(1) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(6) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Airports.aspx\" to=\"https://corporate.spicejet.com/Airports.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(2) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(1) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/InternationalOffices.aspx\" to=\"https://corporate.spicejet.com/InternationalOffices.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(2) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(2) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/ContactUs.aspx\" to=\"https://corporate.spicejet.com/ContactUs.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(2) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(3) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/MediaSale.aspx\" to=\"https://corporate.spicejet.com/MediaSale.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(2) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(4) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Content/pdf/GSA-RFP.pdf\" to=\"https://corporate.spicejet.com/Content/pdf/GSA-RFP.pdf\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(2) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(5) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Charter.aspx\" to=\"https://corporate.spicejet.com/Charter.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(3) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(1) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/GeneralAirTravelFaq.aspx\" to=\"https://corporate.spicejet.com/GeneralAirTravelFaq.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(3) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(2) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Content/pdf/FitnessFlyGuidelines.pdf\" to=\"https://corporate.spicejet.com/Content/pdf/FitnessFlyGuidelines.pdf\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(3) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(3) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Schedules.aspx\" to=\"https://corporate.spicejet.com/Schedules.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(3) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(4) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Tnc.aspx\" to=\"https://corporate.spicejet.com/Tnc.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(3) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(5) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/FeesCharges.aspx\" to=\"https://corporate.spicejet.com/FeesCharges.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(3) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(6) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://www.civilaviation.gov.in/ministry-documents/passenger-charter-of-rights\" to=\"https://www.civilaviation.gov.in/ministry-documents/passenger-charter-of-rights\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(3) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(7) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"http://flebo.in/\" to=\"http://flebo.in/\"><div class=\"css-1dbjc4n r-d0pm55\"><div class=\"css-76zvg2\" dir=\"auto\" style=\"color: inherit; font-family: inherit;\">Book Any Test From Any Lab</div></div></a>",
+                    "target": [
+                      "a[href$=\"flebo.in/\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://flebo.in/health/delhi/\" to=\"https://flebo.in/health/delhi/\">",
+                    "target": [
+                      "a[href$=\"delhi/\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/InvestorsCorporateGovernance.aspx\" to=\"https://corporate.spicejet.com/InvestorsCorporateGovernance.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(4) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(1) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/InvestorsFinancialInformation.aspx\" to=\"https://corporate.spicejet.com/InvestorsFinancialInformation.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(4) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(2) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/InvestorsNotices.aspx\" to=\"https://corporate.spicejet.com/InvestorsNotices.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(4) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(3) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/InvestorCorporateAnnouncements.aspx\" to=\"https://corporate.spicejet.com/InvestorCorporateAnnouncements.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(4) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(4) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/InvestorsShareholdingPattern.aspx\" to=\"https://corporate.spicejet.com/InvestorsShareholdingPattern.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(4) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(5) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/InvestorServices.aspx\" to=\"https://corporate.spicejet.com/InvestorServices.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(4) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(6) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Regulation46.aspx\" to=\"https://corporate.spicejet.com/Regulation46.aspx\">",
+                    "target": [
+                      ".r-1n9sb9w.css-1dbjc4n:nth-child(4) > .r-1x0uki6.r-13awgt0.css-1dbjc4n > .r-11yh6sk.r-1rnoaur.r-150rngu > .css-1dbjc4n > .css-1dbjc4n:nth-child(7) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_self\" href=\"mailto:custrelations@spicejet.com\" to=\"mailto:custrelations@spicejet.com\">custrelations@spicejet.com</a>",
+                    "target": [
+                      "a[target=\"_self\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://www.facebook.com/FlySpiceJet/\" to=\"https://www.facebook.com/FlySpiceJet/\">",
+                    "target": [
+                      ".r-1habvwh.r-18u37iz.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]:nth-child(2)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://twitter.com/flyspicejet\" to=\"https://twitter.com/flyspicejet\">",
+                    "target": [
+                      ".r-1habvwh.r-18u37iz.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]:nth-child(3)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://www.linkedin.com/company/spicejet-limited/ \" to=\"https://www.linkedin.com/company/spicejet-limited/ \">",
+                    "target": [
+                      ".r-1habvwh.r-18u37iz.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]:nth-child(4)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://www.instagram.com/spicejetairlines/?hl=en\" to=\"https://www.instagram.com/spicejetairlines/?hl=en\">",
+                    "target": [
+                      ".r-1habvwh.r-18u37iz.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]:nth-child(5)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://www.youtube.com/channel/UCldnpuM5Q-y11XGNpfh3k-A\" to=\"https://www.youtube.com/channel/UCldnpuM5Q-y11XGNpfh3k-A\">",
+                    "target": [
+                      ".r-1habvwh.r-18u37iz.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]:nth-child(6)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.vl.spicejet&hl=en\" to=\"https://play.google.com/store/apps/details?id=com.vl.spicejet&hl=en\">",
+                    "target": [
+                      ".r-1awozwy.r-18u37iz.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]:nth-child(1)"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://itunes.apple.com/us/app/spicejet/id998319513?mt=8\" to=\"https://itunes.apple.com/us/app/spicejet/id998319513?mt=8\">",
+                    "target": [
+                      ".r-1awozwy.r-18u37iz.css-1dbjc4n > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]:nth-child(3)"
+                    ]
+                  },
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-1loqt21 r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr\" data-focusable=\"true\" tabindex=\"0\"><div class=\"css-76zvg2 r-1enofrn\" dir=\"auto\" style=\"color: inherit; font-family: inherit;\">Home</div></div>",
+                    "target": [
+                      ".r-1awozwy.r-18u37iz.css-1dbjc4n > .r-1awozwy.r-18u37iz.css-1dbjc4n:nth-child(1) > .r-eafdt9.r-1i6wzkk.r-lrvibr"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/PrivacyPolicy.aspx\" to=\"https://corporate.spicejet.com/PrivacyPolicy.aspx\"><div class=\"css-76zvg2 r-1enofrn\" dir=\"auto\" style=\"color: inherit; font-family: inherit;\">Privacy Policy</div></a>",
+                    "target": [
+                      ".r-1awozwy.r-18u37iz.css-1dbjc4n > .r-1awozwy.r-18u37iz.css-1dbjc4n:nth-child(2) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Disclaimer.aspx \" to=\"https://corporate.spicejet.com/Disclaimer.aspx \"><div class=\"css-76zvg2 r-1enofrn\" dir=\"auto\" style=\"color: inherit; font-family: inherit;\">Disclaimer</div></a>",
+                    "target": [
+                      ".r-1awozwy.r-18u37iz.css-1dbjc4n:nth-child(3) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/GstInformation.aspx\" to=\"https://corporate.spicejet.com/GstInformation.aspx\"><div class=\"css-76zvg2 r-1enofrn\" dir=\"auto\" style=\"color: inherit; font-family: inherit;\">GST Information</div></a>",
+                    "target": [
+                      ".r-1awozwy.r-18u37iz.css-1dbjc4n:nth-child(4) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  },
+                  {
+                    "html": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/Sitemap.aspx\" to=\"https://corporate.spicejet.com/Sitemap.aspx\"><div class=\"css-76zvg2 r-1enofrn\" dir=\"auto\" style=\"color: inherit; font-family: inherit;\">Sitemap</div></a>",
+                    "target": [
+                      ".r-1awozwy.r-18u37iz.css-1dbjc4n:nth-child(5) > a[target=\"_blank\"][rel=\"noopener noreferrer\"][content=\"external-tag\"]"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Check that focusable elements are not tabbable in the current state"
+              }
+            ],
+            "none": [],
+            "impact": "serious",
+            "html": "<div id=\"react-root\" aria-hidden=\"true\">",
+            "target": [
+              "#react-root"
+            ],
+            "failureSummary": "Fix all of the following:\n  Check that focusable elements are not tabbable in the current state"
+          }
+        ]
+      },
+      {
+        "id": "bypass",
+        "impact": "serious",
+        "tags": [
+          "cat.keyboard",
+          "wcag2a",
+          "wcag241",
+          "section508",
+          "section508.22.o",
+          "TTv5",
+          "TT9.a",
+          "EN-301-549",
+          "EN-9.2.4.1",
+          "RGAAv4",
+          "RGAA-12.7.1"
+        ],
+        "description": "Ensure each page has at least one mechanism for a user to bypass navigation and jump straight to the content",
+        "help": "Page must have means to bypass repeated blocks",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/bypass?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "internal-link-present",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "No valid skip link found"
+              },
+              {
+                "id": "header-present",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Page does not have a heading"
+              },
+              {
+                "id": "landmark",
+                "data": null,
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Page does not have a landmark region"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<html>",
+            "target": [
+              "html"
+            ],
+            "failureSummary": "Fix any of the following:\n  No valid skip link found\n  Page does not have a heading\n  Page does not have a landmark region"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it is overlapped by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<div class=\"css-76zvg2 r-jwli3a r-ubezar r-1kfrs79\" dir=\"auto\" style=\"font-family: inherit;\">Search Booking</div>",
+            "target": [
+              ".r-d9fdf6.r-ah5dr5.r-19m6qjp > .r-jwli3a.r-1kfrs79.r-ubezar"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+          }
+        ]
+      }
+    ],
+    "violations": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag412",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "RGAAv4",
+          "RGAA-7.1.1"
+        ],
+        "description": "Ensure an element's role supports its ARIA attributes",
+        "help": "Elements must only use supported ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/aria-allowed-attr?application=axeAPI",
+        "nodes": [
+          {
+            "any": [],
+            "all": [
+              {
+                "id": "aria-allowed-attr",
+                "data": {
+                  "messageKey": "singular",
+                  "values": [
+                    "aria-modal=\"true\""
+                  ]
+                },
+                "relatedNodes": [],
+                "impact": "critical",
+                "message": "ARIA attribute is not allowed: aria-modal=\"true\""
+              }
+            ],
+            "none": [],
+            "impact": "critical",
+            "html": "<div aria-modal=\"true\" class=\"css-1dbjc4n r-1niwhzg r-1p0dtai r-6koalj r-1d2f490 r-1xcajam r-zchlnj r-ipm5af\" style=\"z-index: 9999;\">",
+            "target": [
+              ".r-1xcajam.r-6koalj[aria-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-modal=\"true\""
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#777777",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 4.47,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-14lw9ot r-z2wwpe r-vgw6uq r-oswwj1 r-156q2ks r-11ict49 r-8uuktl r-136ojw6\" style=\"margin-left: 82px;\">",
+                    "target": [
+                      ".r-vgw6uq"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 4.47 (foreground color: #777777, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<div class=\"css-76zvg2 r-1862ga2 r-2t9rge r-1b43r93\" dir=\"auto\">Web check-in is available for all flights departing from India </div>",
+            "target": [
+              ".r-2t9rge.r-1862ga2.r-1b43r93"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.47 (foreground color: #777777, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#7e7e7e",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 4.05,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-14lw9ot r-z2wwpe r-vgw6uq r-oswwj1 r-156q2ks r-11ict49 r-8uuktl r-136ojw6\" style=\"margin-left: 82px;\">",
+                    "target": [
+                      ".r-vgw6uq"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 4.05 (foreground color: #7e7e7e, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<div class=\"css-76zvg2 r-xfv69g r-1b43r93\" dir=\"auto\" style=\"font-family: inherit;\">PNR Number / Ticket Number</div>",
+            "target": [
+              ".r-1ifxtd0.r-6ity3w.r-18u37iz > .css-1dbjc4n:nth-child(1) > .r-zl2h9q.css-1dbjc4n > .r-xfv69g.r-1b43r93.css-76zvg2"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.05 (foreground color: #7e7e7e, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#7e7e7e",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 4.05,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-14lw9ot r-z2wwpe r-vgw6uq r-oswwj1 r-156q2ks r-11ict49 r-8uuktl r-136ojw6\" style=\"margin-left: 82px;\">",
+                    "target": [
+                      ".r-vgw6uq"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 4.05 (foreground color: #7e7e7e, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<div class=\"css-76zvg2 r-xfv69g r-1b43r93\" dir=\"auto\" style=\"font-family: inherit;\">Email ID / Last Name</div>",
+            "target": [
+              ".r-1ifxtd0.r-6ity3w.r-18u37iz > .css-1dbjc4n:nth-child(2) > .r-zl2h9q.css-1dbjc4n > .r-xfv69g.r-1b43r93.css-76zvg2"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.05 (foreground color: #7e7e7e, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#ffffff",
+                  "bgColor": "#f7941d",
+                  "contrastRatio": 2.28,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-19m6qjp r-z2wwpe r-15bsvpr r-1w50u8q r-7xmw5f\">",
+                    "target": [
+                      ".r-15bsvpr.r-7xmw5f.r-19m6qjp"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 2.28 (foreground color: #ffffff, background color: #f7941d, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<div class=\"css-76zvg2 r-jwli3a r-1b43r93 r-1kfrs79 r-14yzgew\" dir=\"auto\" style=\"font-family: inherit;\">Join SpiceClub</div>",
+            "target": [
+              ".r-14yzgew.r-jwli3a.r-1b43r93"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.28 (foreground color: #ffffff, background color: #f7941d, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#777777",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 4.47,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-14lw9ot r-1mnahxq\">",
+                    "target": [
+                      ".r-17s6mgv.r-1wyyakw.r-1niwhzg > .r-1mnahxq.r-14lw9ot.css-1dbjc4n"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 4.47 (foreground color: #777777, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<div class=\"css-76zvg2 r-1862ga2 r-1enofrn r-1d7gupr\" dir=\"auto\" style=\"font-family: inherit;\">© Copyright Spicejet India. All Rights Reserved</div>",
+            "target": [
+              ".r-1d7gupr"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.47 (foreground color: #777777, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#777777",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 4.47,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"css-1dbjc4n r-14lw9ot r-1mnahxq\">",
+                    "target": [
+                      ".r-17s6mgv.r-1wyyakw.r-1niwhzg > .r-1mnahxq.r-14lw9ot.css-1dbjc4n"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 4.47 (foreground color: #777777, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<div class=\"css-76zvg2 r-1862ga2 r-1enofrn\" dir=\"auto\" style=\"font-family: inherit;\">Registered Office: SpiceJet Ltd, 319, Udyog Vihar, Phase IV, Gurgaon, Haryana - 122016</div>",
+            "target": [
+              ".r-1862ga2.r-1enofrn.css-76zvg2:nth-child(3)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.47 (foreground color: #777777, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "html-has-lang",
+        "impact": "serious",
+        "tags": [
+          "cat.language",
+          "wcag2a",
+          "wcag311",
+          "TTv5",
+          "TT11.a",
+          "EN-301-549",
+          "EN-9.3.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-8.3.1"
+        ],
+        "description": "Ensure every HTML document has a lang attribute",
+        "help": "<html> element must have a lang attribute",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/html-has-lang?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "has-lang",
+                "data": {
+                  "messageKey": "noLang"
+                },
+                "relatedNodes": [],
+                "impact": "serious",
+                "message": "The <html> element does not have a lang attribute"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<html>",
+            "target": [
+              "html"
+            ],
+            "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+          }
+        ]
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "moderate",
+        "tags": [
+          "cat.sensory-and-visual-cues",
+          "wcag2aa",
+          "wcag144",
+          "EN-301-549",
+          "EN-9.1.4.4",
+          "ACT",
+          "RGAAv4",
+          "RGAA-10.4.2"
+        ],
+        "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/meta-viewport?application=axeAPI",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "meta-viewport",
+                "data": "user-scalable",
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "user-scalable on <meta> tag disables zooming on mobile devices"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,user-scalable=0\">",
+            "target": [
+              "meta[name=\"viewport\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  user-scalable on <meta> tag disables zooming on mobile devices"
+          }
+        ]
+      }
+    ]
+  },
+  "screenshot": "screenshots/live_scans/20261111T130057Z/spicejet_checkin.png",
+  "scan_finished_utc": "2026-11-11T13:01:26+00:00"
+}
