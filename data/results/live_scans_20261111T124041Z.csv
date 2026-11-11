@@ -1,0 +1,4 @@
+airline_id,page_type,scanned_utc,status,http,rules_failed,elements_failed,critical,serious,moderate,minor,note
+ana,home,2026-11-11T12:40:41+00:00,ok,200,10,38,21,17,0,0,
+ana,checkin,2026-11-11T12:41:16+00:00,error,,,,,,,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://aswbe.ana.co.jp/webapps/checkin/checkin-search?LANG=en&CONNECTION_KIND=CHE
+ana,assistance,2026-11-11T12:41:26+00:00,ok,200,3,6,0,6,0,0,

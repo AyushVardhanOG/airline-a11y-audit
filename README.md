@@ -30,6 +30,7 @@ saved copy is to the live page.
 | `src/scan_live.py` | scans live pages, only for airlines that allow automated access |
 | `src/compare_live_vs_capture.py` | compares live vs saved-copy results per page |
 | `src/record_access.py` | records which airlines blocked automated access |
+| `src/register_captures.py` | renames new SingleFile captures and adds them to `data/captures/log.csv` |
 | `src/axe_runner.py` | shared axe-core settings used by both scanners |
 
 ## Ethics and scanning rules

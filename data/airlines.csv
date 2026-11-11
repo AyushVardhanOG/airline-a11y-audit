@@ -4,7 +4,7 @@ indigo,IndiGo,India,https://www.goindigo.in,https://www.goindigo.in/web-check-in
 spicejet,SpiceJet,India,https://www.spicejet.com,https://www.spicejet.com/checkin,https://spicejet.com/SpecialAssistance.aspx,no
 akasa_air,Akasa Air,India,https://www.akasaair.com,https://www.akasaair.com/check-in/web-check-in,MISSING,no
 air_india_express,Air India Express,India,https://www.airindiaexpress.com,https://www.airindiaexpress.com/checkin-home,MISSING,no
-ana,ANA,Japan/Asia,https://www.ana.co.jp/en/jp/,https://aswbe-i.ana.co.jp/international_asw/pages/webcheckin/checkin_search_input.xhtml?CONNECTION_KIND=CHE&LANG=en,https://www.ana.co.jp/en/jp/guide/flight_service_info/assist/,no
+ana,ANA,Japan/Asia,https://www.ana.co.jp/en/in/,https://aswbe.ana.co.jp/webapps/checkin/checkin-search?LANG=en&CONNECTION_KIND=CHE,https://www.ana.co.jp/en/jp/guide/flight_service_info/assist/,yes
 jal,JAL,Japan/Asia,https://www.jal.co.jp/jp/en/,https://www.jal.co.jp/jp/en/inter/boarding/online-checkin/,https://www.jal.co.jp/jp/en/jalpri/support/,no
 peach,Peach,Japan/Asia,https://www.flypeach.com/en,MISSING,https://www.flypeach.com/en/lm/ai/airports/special_support,no
 singapore_airlines,Singapore Airlines,Japan/Asia,https://www.singaporeair.com,https://www.singaporeair.com/en_UK/sg/travel-info/check-in/online-mobile-checkin/,https://www.singaporeair.com/en_UK/us/travel-info/special-assistance/,no

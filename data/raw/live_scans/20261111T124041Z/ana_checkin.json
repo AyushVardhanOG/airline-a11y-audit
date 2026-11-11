@@ -1,0 +1,33 @@
+{
+  "source": "live",
+  "airline_id": "ana",
+  "page_type": "checkin",
+  "url": "https://aswbe.ana.co.jp/webapps/checkin/checkin-search?LANG=en&CONNECTION_KIND=CHE",
+  "scan_started_utc": "2026-11-11T12:41:16+00:00",
+  "tool_versions": {
+    "python": "3.14.6",
+    "playwright": "1.65.0",
+    "browser": "chromium 158.0.8127.18"
+  },
+  "settings": {
+    "wcag_tags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa"
+    ],
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "headless": true,
+    "page_scripts": "enabled (live site)",
+    "page_load_timeout_ms": 60000,
+    "settle_time_s": 3
+  },
+  "status": "error",
+  "block_reason": null,
+  "error": "Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://aswbe.ana.co.jp/webapps/checkin/checkin-search?LANG=en&CONNECTION_KIND=CHE",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36",
+  "scan_finished_utc": "2026-11-11T12:41:16+00:00"
+}

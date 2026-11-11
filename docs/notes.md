@@ -234,3 +234,47 @@ So 19 of 30 (63%) did not give our headless browser the real homepage.
 
 **Next**: Step 4 part 2. With 11 "allowed" airlines, the live-vs-copy comparison can now be
 done on more than one airline.
+
+---
+
+## 2026-11-11 - First captures (ANA) and first live scan
+
+**Captures (by hand, SingleFile)**: ANA home, check-in and assistance, saved 2026-11-11
+21:37-21:38 local time, which is 12:37-12:38 UTC.
+- The SingleFile header says GMT+0900 (Japan Standard Time): this computer's clock is set to
+  Japan time, while websites see the connection as coming from India. The log uses the
+  offset written in the file (+09:00), so the UTC time is correct.
+- Homepage: typed https://www.ana.co.jp/en/jp/ but ANA redirected by location to /en/in/
+  (India version). So the "home" capture is the India/English homepage, not Japan/English.
+- Check-in: the web-search suggestion redirected to
+  https://aswbe.ana.co.jp/webapps/checkin/checkin-search?LANG=en&CONNECTION_KIND=CHE
+- `data/airlines.csv`: ANA now has these final URLs and `url_verified = yes`.
+- Chrome and SingleFile versions were not filled in by hand, so they were read from the installed
+  files at 12:40 UTC: Chrome 157.0.8103.40 and SingleFile 1.37.0 (only installed in Chrome
+  "Profile 4"). Recorded as such in the log notes.
+
+**New script**: `src/register_captures.py` reads the SingleFile header (URL + save date),
+matches the URL to `data/airlines.csv`, renames the file to `airline_pagetype_YYYYMMDD.html`
+and appends the log row. Files whose URL is not in airlines.csv are left untouched.
+First run crashed (harmlessly, before renaming) because the Windows console could not print the
+"｜" character in SingleFile names; fixed by printing UTF-8.
+
+**Live scan of ANA** (`scan_live.py ana`, run 20261111T124041Z, started 12:40 UTC, about 3 min
+after the captures):
+
+| Page | Result |
+|---|---|
+| home (/en/in/) | ok: 10 rules failed, 38 elements |
+| checkin (aswbe.ana.co.jp) | **error**: `net::ERR_HTTP2_PROTOCOL_ERROR`, the same pattern as the 7 "error" airlines. Not retried (rule 3). |
+| assistance | ok: 3 rules failed, 6 elements (aria-hidden-focus, listitem, nested-interactive) |
+
+So ANA allows automated access to www.ana.co.jp but its check-in site (aswbe.ana.co.jp) cut
+the connection. For the paper: access can differ between parts of one airline's site, so the
+homepage access test does not guarantee access to the booking pages. Only 2 of ANA's 3 pages can
+be compared live vs saved copy.
+
+Note: the ANA homepage now fails 10 rules (38 elements), compared with 7 rules (29 elements)
+on /en/jp/ in Step 2. These are different page versions on different days, so the numbers
+are not directly comparable.
+
+**Next**: scan the 3 ANA captures (`scan_captures.py`) and run `compare_live_vs_capture.py`.

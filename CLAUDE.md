@@ -92,9 +92,12 @@ getting around that, so **every airline is measured the same way**:
   - [x] which airlines blocked automated access recorded (Step 2: 6 airlines; all 30 after Step 4 part 1)
   - [x] URLs suggested by web search for all 90 pages (84 found, 6 MISSING), all `url_verified = no`;
         source notes in `data/url_search_notes.csv`; `docs/capture_checklist.md` has one box per page
-  - [ ] check each airline's URLs by hand and set `url_verified = yes` (0 of 30 done)
+  - [ ] check each airline's URLs by hand and set `url_verified = yes` (1 of 30 done: ANA)
   - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand), ticking `docs/capture_checklist.md`
+        (3 of 90 done: ANA, 2026-11-11; registered with `src/register_captures.py`)
   - [ ] airlines with access "allowed" (11): live scan in the same hour as their captures, then run the live-vs-copy comparison
+        (ANA live scan done, run 20261111T124041Z: home + assistance ok, check-in page connection cut;
+        live-vs-copy comparison for ANA not run yet)
 - [ ] Step 4: full audit pipeline (Objective 1)
   - [x] part 1: one headless homepage visit to the 24 untested airlines (`src/access_test.py`);
         all 30 now in `data/results/automated_access.csv`: 11 allowed, 9 blocked, 3 blocked_unconfirmed, 7 error

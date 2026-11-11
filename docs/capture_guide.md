@@ -82,7 +82,9 @@ Capture all three pages of one airline **in one sitting** (same day, close toget
 1. Open the page and **wait about 10 seconds** until it stops changing.
 2. Click the **SingleFile icon**. Wait until it finishes. The file appears in your
    Downloads folder.
-3. **Rename** the file to:
+3. **Rename** the file (or skip steps 3-5 and run `srcegister_captures.py`, which reads the
+   URL and save date from the file, renames it and adds the log row for you - the final
+   URL must already be in `data/airlines.csv`) to:
 
    ```
    <airline_id>_<page_type>_<YYYYMMDD>.html
