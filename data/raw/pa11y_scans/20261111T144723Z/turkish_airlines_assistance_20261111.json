@@ -1,0 +1,244 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "turkish_airlines_assistance_20261111.html",
+  "airline_id": "turkish_airlines",
+  "page_type": "assistance",
+  "scan_started_utc": "2026-11-11T14:50:18+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Special Assistance Services for Passengers | Turkish Airlines ®",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "html > body > header > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > button",
+      "context": "<button type=\"button\" class=\"d-block d-md-none navbar-toggler box-shadow-none noborder h-60 sf-hidden\" data-bs-toggle=\"collapse\" data-bs-target=\"#mobile-toggle-menu\"> </button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#tcm508-350347 > div > div > div > div > div > h3",
+      "context": "<h3 class=\"bold fs-48 fs-32-mbl font-100\"> </h3>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#tcm508-350347 > div > div > div > div > div > h5",
+      "context": "<h5 class=\"bold fs-20 fs-16-mbl\"> </h5>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#tcm508-350349 > div > div:nth-child(1) > h1",
+      "context": "<h1 class=\"mt-0 mb-0 ps-15-mbl pe-15-mbl pb-15-mbl fs-14 fw500\" tabindex=\"0\"> </h1>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#tcm508-325511 > div > div:nth-child(2) > div > div > div > div > div > a",
+      "context": "<a href=\"https://turkishairlines.bynder.com/files/70782546-6a41-3765-b424-e667a3c6cc5e?account_id=FB6A3302-BFFC-4039-9FF952A929F22379&amp;expiry=1795008009333&amp;signature=73P6Wi6CCOq6RBGJ8dptBZIwAghzO2vDO6%2FTDyagpfLjA7baEObEhCkPWgZENSVRZDk9BbRdkLq...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#tcm508-401403 > div > div:nth-child(1) > h1",
+      "context": "<h1 class=\"mt-0 mb-0 ps-15-mbl pe-15-mbl pb-15-mbl fs-14 fw500\" tabindex=\"0\"> </h1>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#tcm508-357158 > div > div > div:nth-child(1) > img",
+      "context": "<img src=\"data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAG1pZjFhdmlmbWlhZgAAANZtZXRhAAAAAAAAACFoZGxyAAAAAAAAAABwaWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAAImlsb2MAAAAAREAAAQABAAAAAAD6AAEAAAAAAAAwggAAACNpaW5mAAAAAAABAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAVmlwc...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#tcm508-350363 > div > div:nth-child(1) > h1",
+      "context": "<h1 class=\"mt-0 mb-0 ps-15-mbl pe-15-mbl pb-15-mbl fs-14 fw500\" tabindex=\"0\"> </h1>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#tcm508-357131 > div > div > img",
+      "context": "<img src=\"data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAOptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABwaWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAAImlsb2MAAAAAREAAAQABAAAAAAEOAAEAAAAAAAA3wQAAACNpaW5mAAAAAAABAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAamlwc...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#tcm508-357131 > div > div > div > div:nth-child(2) > h3",
+      "context": "<h3> </h3>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#tcm508-15921 > div > div > div:nth-child(1) > a",
+      "context": "<a href=\"https://www.turkishairlines.com/en-int/press-room/awards/turkish-airlines-guinness-world-records/\" target=\"_blank\"><img src=\"data:image/avif;base6...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#tcm508-15921 > div > div > div:nth-child(2) > a",
+      "context": "<a href=\"https://www.turkishairlines.com/en-int/turkish-airlines-apex-world-class-award/\" target=\"_blank\"><img src=\"data:image/avif;base6...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#tcm508-15921 > div > div > div:nth-child(3) > a",
+      "context": "<a href=\"https://www.turkishairlines.com/en-int/press-room/awards/turkish-airlines-skytrax-award/\" target=\"_blank\"><img src=\"data:image/svg+xml,&l...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#tcm508-15921 > div > div > div:nth-child(4) > a",
+      "context": "<a href=\"https://www.turkishairlines.com/en-int/press-room/awards/turkish-airlines-skytrax-award/\" target=\"_blank\"><img src=\"data:image/svg+xml,&l...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#tcm508-15921 > div > div > div:nth-child(5) > a",
+      "context": "<a href=\"https://www.turkishairlines.com/en-int/turkish-airlines-apex-world-class-award/\" target=\"_blank\"><img src=\"data:image/avif;base6...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#tcm508-15921 > div > div > div:nth-child(6) > a",
+      "context": "<a href=\"https://www.turkishairlines.com/en-int/turkish-airlines-apex-world-class-award/\" target=\"_blank\"><img src=\"data:image/avif;base6...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"faqsearch\" found on the web page.",
+      "selector": "#faqsearch",
+      "context": "<div id=\"faqsearch\" aref=\"/com.thy.web.online.search/search\"> </div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "html > body > footer > div:nth-child(3) > div > div > a:nth-child(5)",
+      "context": "<a href=\"https://www.turkishairlines.com/en-int/legal-notice/privacy-policy/cookies/\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(36)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(37)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(42)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name",
+      "type": "error",
+      "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#g-recaptcha-response-100000",
+      "context": "<textarea id=\"g-recaptcha-response-100000\" name=\"g-recaptcha-response\" class=\"g-recaptcha-response\" style=\"width:250px;height:40px;border:1px solid rgb(193,193,193);margin:10px 25px;padding:0px;resize:none;display:none\"></textarea>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#g-recaptcha-response-100000",
+      "context": "<textarea id=\"g-recaptcha-response-100000\" name=\"g-recaptcha-response\" class=\"g-recaptcha-response\" style=\"width:250px;height:40px;border:1px solid rgb(193,193,193);margin:10px 25px;padding:0px;resize:none;display:none\"></textarea>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > div:nth-child(45) > iframe",
+      "context": "<iframe style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(52)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(53)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:50:20+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

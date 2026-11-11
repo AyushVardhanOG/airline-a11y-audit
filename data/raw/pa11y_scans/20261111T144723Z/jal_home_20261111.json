@@ -1,0 +1,908 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "jal_home_20261111.html",
+  "airline_id": "jal",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:49:02+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "JAL | Domestic and International Flight Tickets/Flight Ticket Bookings",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(86)",
+      "context": "<img src=\"data:,\" hidden=\"\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#JS_gnaviUnit > div > div:nth-child(2) > div:nth-child(2) > a",
+      "context": "<a href=\"javascript:void(0)\" class=\"ds-header__link ds-header__link--logout JS_ctrlLogoutBtn is-hide sf-hidden\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#JS_spLogin",
+      "context": "<form id=\"JS_spLogin\" name=\"memLogin\" action=\"https://sp5971.jal.co.jp/JmbSp/JR/LogIn_en.do\" method=\"post\" class=\"sf-hidden\">\n<input type=\"hidden\">\n</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_chevron_down\" found on the web page.",
+      "selector": "#icon_chevron_down",
+      "context": "<symbol id=\"icon_chevron_down\" class=\"ds-icon--chevronDown\" viewBox=\"0 0 16 9\"><path fill=\"currentColor\" d=\"M8...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#JS_pcLogin",
+      "context": "<form id=\"JS_pcLogin\" name=\"jmb_log_in\" autocomplete=\"off\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Top_en.do\" method=\"post\">\n</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(2) > form",
+      "context": "<form name=\"toLogin\" action=\"\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(3) > form",
+      "context": "<form action=\"https://www121.jal.co.jp/JmbWeb/Dispatcher_en.do\" name=\"intWebchkinFrm\">\n <input type=\"hidden\">\n<input ...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#JS_autoPlayCarouselBtn",
+      "context": "<button type=\"button\" id=\"JS_autoPlayCarouselBtn\" class=\"ds-importantInformation__controlsButton\" aria-controls=\"JS_slickNotice\"><svg class=\"ds-icon ds-importan...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#JS_nearFlightBannerForm",
+      "context": "<form id=\"JS_nearFlightBannerForm\" method=\"POST\" action=\"https://booking.jal.co.jp/jl/dom-pbkg/quick-navi\">\n <input type=\"hidden\">\n <input...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#JS_topPanelsContainer > h2:nth-child(1)",
+      "context": "<h2 class=\"p-moduleContentToggle__accordionHeading u-d-none--pc sf-hidden\">\n \n </h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#JS_topPanelsContainer > h2:nth-child(3)",
+      "context": "<h2 class=\"p-moduleContentToggle__accordionHeading u-d-none--pc sf-hidden\">\n \n </h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#JS_topPanelsContainer > h2:nth-child(5)",
+      "context": "<h2 class=\"p-moduleContentToggle__accordionHeading u-d-none--pc sf-hidden\">\n \n </h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#JS_topPanelsContainer > h2:nth-child(7)",
+      "context": "<h2 class=\"p-moduleContentToggle__accordionHeading u-d-none--pc sf-hidden\">\n \n </h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(1)",
+      "context": "<form name=\"ReferCreditEng\" action=\"https://booking.jal.co.jp/jl/dom-other/cc-maintenance\" method=\"post\" target=\"otherwindow\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(2)",
+      "context": "<form name=\"AWDbooking\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(3)",
+      "context": "<form name=\"domAwardAffinityFrm\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(4)",
+      "context": "<form name=\"domAwardAffinityFrmSP\" action=\"https://sp5971.jal.co.jp/JmbSp/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(5)",
+      "context": "<form name=\"intAwdFrm\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(6)",
+      "context": "<form name=\"intAwdFrmSP\" action=\"https://sp5971.jal.co.jp/JmbSp/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(7)",
+      "context": "<form name=\"intAffinityFrm\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(8)",
+      "context": "<form name=\"intAffinityFrmSP\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(9)",
+      "context": "<form name=\"intAwdUpgradeFrm\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(10)",
+      "context": "<form name=\"intAwdUpgradeFrmSP\" action=\"https://sp5971.jal.co.jp/JmbSp/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(11)",
+      "context": "<form name=\"gkAwdFrm\" action=\"https://www121.jal.co.jp/JmbWeb/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(12)",
+      "context": "<form name=\"gkAwdFrmSP\" action=\"https://sp5971.jal.co.jp/JmbSp/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(13)",
+      "context": "<form name=\"partnerAwdFrm\" action=\"https://www121.jal.co.jp/JmbWeb/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(14)",
+      "context": "<form name=\"partnerAwdFrmSP\" action=\"https://sp5971.jal.co.jp/JmbSp/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(15)",
+      "context": "<form name=\"oneworldAwdFrm\" action=\"https://www121.jal.co.jp/JmbWeb/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(16)",
+      "context": "<form name=\"oneworldAwdFrmSP\" action=\"https://sp5971.jal.co.jp/JmbSp/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(17)",
+      "context": "<form name=\"intMyBookingsREDFrm\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(18)",
+      "context": "<form name=\"intMyBookingsREDFrmSP\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Dispatcher_en.do\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(19)",
+      "context": "<form name=\"jrReservationSearchEn\" action=\"https://booking.jal.co.jp/jl/dom-pbkg/booking-list\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(20)",
+      "context": "<form name=\"intMyBookingsFrm\" action=\"https://book-i.jal.co.jp/JLInt/dyn/air/postBooking/myBookings\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(21)",
+      "context": "<form name=\"intMyBookingsFrmSP\" action=\"https://book-i.jal.co.jp/JLInt/dyn/air/postBooking/myBookings\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(22)",
+      "context": "<form name=\"receiptSearchEn\" action=\"https://booking.jal.co.jp/jl/dom-other/eticket-list\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(23)",
+      "context": "<form method=\"POST\" action=\"https://booking.jal.co.jp/jl/dom-pbkg/quick-navi\" name=\"webCheckin\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(24)",
+      "context": "<form name=\"honLogin4MessageFrm\" method=\"post\" action=\"https://www121.jal.co.jp/JmbWeb/JR/Dispatcher_en.do\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(25)",
+      "context": "<form method=\"post\" action=\"https://book-i.jal.co.jp/JLInt/dyn/air/postBooking/myEtickets\" name=\"intMyEticketsFrm\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(26)",
+      "context": "<form name=\"gnaviIntMyBookingsFrm\" action=\"https://book-i.jal.co.jp/JLInt/dyn/air/postBooking/myBookings\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#wrapper > div > div > main > div:nth-child(2) > div > div > div:nth-child(3) > div > div > div > div > div:nth-child(3) > div > div > form:nth-child(27)",
+      "context": "<form name=\"gnaviIntMyBookingsFrmSP\" action=\"https://book-i.jal.co.jp/JLInt/dyn/air/postBooking/myBookings\" method=\"post\">\n<input type=\"hidden\">\n<input t...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"icon_link_blank\" found on the web page.",
+      "selector": "#icon_link_blank",
+      "context": "<symbol id=\"icon_link_blank\" class=\"ds-icon--linkBlank\" viewBox=\"0 0 16 15\"><path fill=\"currentColor\" d=\"M1...</symbol>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(166)",
+      "context": "<iframe src=\"\" width=\"1\" height=\"1\" style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(167)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(168)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(181)",
+      "context": "<iframe src=\"\" width=\"1\" height=\"1\" style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(202)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(203)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(214)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(215)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(216)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(217)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(218)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(219)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(220)",
+      "context": "<iframe src=\"\" width=\"1\" height=\"1\" style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(230)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(231)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(237)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(238)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(239)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(243)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(244)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(245)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(246)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:49:04+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

@@ -4,6 +4,7 @@
   "private": true,
   "description": "Node is used only to download a pinned copy of axe-core, which Python injects into pages.",
   "dependencies": {
-    "axe-core": "4.14.0"
+    "axe-core": "4.14.0",
+    "pa11y": "10.0.0"
   }
 }

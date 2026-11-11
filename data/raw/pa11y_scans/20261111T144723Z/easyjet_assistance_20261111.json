@@ -1,0 +1,140 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "easyjet_assistance_20261111.html",
+  "airline_id": "easyjet",
+  "page_type": "assistance",
+  "scan_started_utc": "2026-11-11T14:48:21+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Special assistance | easyJet",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#theMegaNav > ul > li:nth-child(3) > div > ul > li:nth-child(2) > ul > a",
+      "context": "<a rel=\"noopener noreferrer\" href=\"https://www.gatwickexpress.com/?utm_source=ej_CMS&amp;utm_medium=EN_Homepage&amp;utm_term=Transport&amp;utm_content=colD_link4&amp;utm_campaign=MegaNav\" shape=\"rect\" target=\"_blank\">\n </a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#theMegaNav > ul > li:nth-child(3) > div > ul > li:nth-child(2) > ul > li:nth-child(6) > a:nth-child(1)",
+      "context": "<a rel=\"noopener noreferrer\" href=\"https://www.gatwickexpress.com/?utm_source=ej_CMS&amp;utm_medium=EN_Homepage&amp;utm_term=Transport&amp;utm_content=colD_link4&amp;utm_campaign=MegaNav\" shape=\"rect\" target=\"_blank\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#pageWrapper > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) > ul > li:nth-child(2) > a",
+      "context": "<a href=\"http://www.easyjet.com/en/help/booking-and-check-in/managing-your-booking\">Manage Bookings</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#pageWrapper > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) > ul > li:nth-child(3) > a",
+      "context": "<a href=\"https://www.easyjet.com/en/help/boarding-and-flying/special-assistance/contact-us\">contacts for all languages</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#pageWrapper > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > div > iframe",
+      "context": "<iframe src=\"\" frameborder=\"0\" autoplay=\"\" sandbox=\"allow-popups allow-top-navigation-by-user-activation allow-scripts allow-modals allow-downloads allow-pointer-lock\" srcdoc=\"&lt;!DOCTYPE html&gt; &lt;html lang=en dir=ltr data-cast-api-enabled=true&...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#pageWrapper > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(3) > p:nth-child(7) > a:nth-child(1)",
+      "context": "<a rel=\"noopener noreferrer\" href=\"https://www.easyjet.com/en/holidays/help?helpCategory=assistance&amp;helpQuestion=booking\" target=\"_blank\">get in touch with our holidays ...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#pageWrapper > div:nth-child(5) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > h2",
+      "context": "<h2><span id=\"main_1_large_2_QuickL...</h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#d159f06a64be437ca199957839e205b6 > div > div > div > input",
+      "context": "<input class=\"search-box\" type=\"text\" placeholder=\"e.g. baggage\" value=\"\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#d159f06a64be437ca199957839e205b6 > div > div > div > input",
+      "context": "<input class=\"search-box\" type=\"text\" placeholder=\"e.g. baggage\" value=\"\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputButton.Name",
+      "type": "error",
+      "message": "This buttoninput element does not have a name available to an accessibility API. Valid names are: value , aria-label , aria-labelledby .",
+      "selector": "#d159f06a64be437ca199957839e205b6 > div > input",
+      "context": "<input class=\"search-button\" type=\"submit\" value=\"\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#pageWrapper > div:nth-child(5) > div:nth-child(2) > div:nth-child(3) > div:nth-child(4) > div:nth-child(1) > div > a",
+      "context": "<a href=\"https://www.easyjet.com/en/MyEasyJet/ViewBooking\">\n Log in\n </a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.62:1. Recommendation:  change text colour to #793000.",
+      "selector": "#pageFeedback_9a0a0100-5525-4916-a335-175f1798e486 > a:nth-child(2)",
+      "context": "<a href=\"#\" class=\"positive-feedback\">Yes</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.62:1. Recommendation:  change text colour to #793000.",
+      "selector": "#pageFeedback_9a0a0100-5525-4916-a335-175f1798e486 > a:nth-child(3)",
+      "context": "<a href=\"#\" class=\"negative-feedback\">No</a>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:48:23+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

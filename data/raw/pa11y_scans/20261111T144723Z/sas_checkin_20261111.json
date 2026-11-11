@@ -1,0 +1,52 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "sas_checkin_20261111.html",
+  "airline_id": "sas",
+  "page_type": "checkin",
+  "scan_started_utc": "2026-11-11T14:49:49+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Check In Online – Prepare for Your Journey | SAS",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.23:1. Recommendation:  change text colour to #0062c4.",
+      "selector": "html > body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > p > a",
+      "context": "<a href=\"https://travelready.flysas.com/\" class=\"a72xll2\">US CDC Ebola Attestation Form</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "html > body > dialog > div > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(1) > div > button",
+      "context": "<button type=\"button\" class=\"_1aybvn27 _1aybvn29 _1aybvn2a sf-hidden\" disabled=\"\"><svg fill=\"none\" viewBox=\"0 0 2...</button>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:49:51+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

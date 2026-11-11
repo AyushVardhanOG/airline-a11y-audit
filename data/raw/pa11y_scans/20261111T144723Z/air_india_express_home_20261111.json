@@ -1,0 +1,404 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "air_india_express_home_20261111.html",
+  "airline_id": "air_india_express",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:47:48+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Air India Express | Book Affordable Flights & Check-In Online",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.05:1. Recommendation:  change background to #767676.",
+      "selector": "#One Way",
+      "context": "<div tabindex=\"0\" role=\"button\" id=\"One Way\" class=\"new-selected-flight-type-button home-new\" style=\"position:relative;z-index:2;width:50%;text-align:center\">One Way</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#flight-search-passenger-count > div:nth-child(1) > div:nth-child(1) > img",
+      "context": "<img src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjM2NTcgNS40NjA5M0MxMy4yNTI2IDUuNDYwOTMgMTMuOTcyNiA2LjE4MDkzIDEzLjk3Mj...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#widget-content-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > img",
+      "context": "<img src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuMDI4NTkgNy41MTkxN0w5LjkxMjM0IDEyLjQ5MjdDOS45MjIyNCAxMi41NTEyIDkuOTE0MD...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#widget-content-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > img",
+      "context": "<img src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjQ5NDYgNi4zNzExN0MxMi41OTkxIDYuMzI1MSAxMi42ODc3IDYuMjQ5NDEgMTIuNzQ5NS...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#widget-content-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > img",
+      "context": "<img src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4NDlfMTU3OSkiPgo8cGF0aCBkPSJNNC43MTY5MSA3LjU2MTI3Qz...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#new-date-selection-container-desktop > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > img",
+      "context": "<img src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMSAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzY0NjdfNTk3MSkiPgo8cGF0aCBkPSJNMTUuMTczOCAyLjIyMjY2Qz...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.78:1. Recommendation:  change text colour to #008a00.",
+      "selector": "#new-date-selection-container-desktop > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > div > span",
+      "context": "<span style=\"color:rgb(0,153,0)\">₹1000</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.96:1. Recommendation:  change text colour to #fd6221.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > div > div > div:nth-child(1) > div",
+      "context": "<div class=\"offer-voucher-title\" tabindex=\"0\" aria-label=\"Deals and Offers\" style=\"color:rgb(255,100,35)\">Deals &amp; Offers</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(1) > div > a > div > div > h2",
+      "context": "<h2></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(2) > div > a > div > div > h2",
+      "context": "<h2></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(3) > div > a > div > div > h2",
+      "context": "<h2></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(4) > div > a > div > div > h2",
+      "context": "<h2></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(5) > div > a > div > div > h2",
+      "context": "<h2></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(6) > div > a > div > div > h2",
+      "context": "<h2></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(7) > div > a > div > div > h2",
+      "context": "<h2></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) > div:nth-child(1) > div:nth-child(2) > div > div > ul > li:nth-child(8) > div > a > div > div > h2",
+      "context": "<h2></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.96:1. Recommendation:  change text colour to #fd6221.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(1) > h1",
+      "context": "<h1 class=\"popular-heading\" style=\"color:rgb(255,100,35)\">Product &amp; Services</h1>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(1) > a",
+      "context": "<a class=\"cards-image-text-viewall\" href=\"javascript:void(0)\" tabindex=\"-1\" aria-label=\"hidden\" target=\"_self\"><img class=\"img3\" alt=\"\" src=\"d...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > div > a",
+      "context": "<a href=\"https://www.airindiaexpress.com/products-and-services?selectedtab=xpress-journey\" aria-label=\"products-and-services?selectedtab=xpress-journey &lt;p&gt;Everything you can plan and personalise before you fly.&lt;/p&gt;\n\" target=\"_self\"><img s...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"_home_jcr_content_root_responsivegrid_cards_with_image_and\" found on the web page.",
+      "selector": "#_home_jcr_content_root_responsivegrid_cards_with_image_and",
+      "context": "<div id=\"_home_jcr_content_root_responsivegrid_cards_with_image_and\" data-rte-editelement=\"true\"><p>Seats, meals, add-ons and mo...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div > div > a",
+      "context": "<a href=\"https://www.airindiaexpress.com/products-and-services?selectedtab=inflight-services\" aria-label=\"products-and-services?selectedtab=inflight-services &lt;p&gt;Seats, meals, add-ons and more. Plan your journey your way.&lt;/p&gt;\n\" target=\"_se...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"_home_jcr_content_root_responsivegrid_cards_with_image_and\" found on the web page.",
+      "selector": "#_home_jcr_content_root_responsivegrid_cards_with_image_and",
+      "context": "<div id=\"_home_jcr_content_root_responsivegrid_cards_with_image_and\" data-rte-editelement=\"true\"><p>Everything about what you ca...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div > div > a",
+      "context": "<a href=\"https://www.airindiaexpress.com/products-and-services?selectedtab=baggage\" aria-label=\"products-and-services?selectedtab=baggage &lt;p&gt;Everything about what you can carry, add, and transfer.&lt;/p&gt;\n\" target=\"_self\"><img src=\"data:image...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 2.96:1. Recommendation:  change text colour to #fd6221.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > div:nth-child(1) > h1",
+      "context": "<h1 class=\"popular-heading\" style=\"color:rgb(255,100,35)\">Xplore More With Air India Expr...</h1>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > div:nth-child(1) > a",
+      "context": "<a class=\"cards-image-text-viewall\" href=\"javascript:void(0)\" tabindex=\"-1\" aria-label=\"hidden\" target=\"_self\"><img class=\"img3\" alt=\"\" src=\"d...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > div > a",
+      "context": "<a href=\"https://www.airindiaexpress.com/tales-of-India\" aria-label=\"tales-of-India &lt;p&gt;Our flights fly with its diverse tail designs that represent the vibrant culture of India.&lt;/p&gt;\n\" target=\"_self\"><img src=\"data:image/svg+xml,&l...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"_home_jcr_content_root_responsivegrid_cards_with_image_and_860524099\" found on the web page.",
+      "selector": "#_home_jcr_content_root_responsivegrid_cards_with_image_and_860524099",
+      "context": "<div id=\"_home_jcr_content_root_responsivegrid_cards_with_image_and_860524099\" data-rte-editelement=\"true\"><p>This unique auditory experie...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div > div > a",
+      "context": "<a href=\"https://www.airindiaexpress.com/Xpress-vibes\" aria-label=\"Xpress-vibes &lt;p&gt;This unique auditory experience merges the rasas of Indian classical music&lt;/p&gt;\n\" target=\"_self\"><img src=\"data:image/svg+xml,&l...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"_home_jcr_content_root_responsivegrid_cards_with_image_and_860524099\" found on the web page.",
+      "selector": "#_home_jcr_content_root_responsivegrid_cards_with_image_and_860524099",
+      "context": "<div id=\"_home_jcr_content_root_responsivegrid_cards_with_image_and_860524099\" data-rte-editelement=\"true\"><p>Discover the delightful quir...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(7) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div > div > a",
+      "context": "<a href=\"https://www.airindiaexpress.com/inglish-dictionary\" aria-label=\"inglish-dictionary &lt;p&gt;Discover the delightful quirks of Indian English with the Inglish Dictionary.&nbsp;&lt;/p&gt;\n\" target=\"_self\"><img src=\"data:image/svg+xml,&l...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.71:1. Recommendation:  change text colour to #cd3d00.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div > div > div > p > a:nth-child(1)",
+      "context": "<a href=\"https://www.airindiaexpress.com/tnc\" target=\"_self\" aria-label=\"Condition of Carriage\" rel=\"noopener noreferrer\">Conditions of Carriage</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.71:1. Recommendation:  change text colour to #cd3d00.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div > div > div > p > a:nth-child(2)",
+      "context": "<a href=\"https://www.airindiaexpress.com/terms-and-conditions\" target=\"_self\" aria-label=\"Terms and Conditions\" rel=\"noopener noreferrer\">Terms and Conditions</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.71:1. Recommendation:  change text colour to #cd3d00.",
+      "selector": "#spa-root > div > div:nth-child(296) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3) > div > div > div > p > a:nth-child(3)",
+      "context": "<a href=\"https://www.airindiaexpress.com/privacy-notice\" aria-label=\"Privacy Notice\">Privacy Notice</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(19)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(20)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(21)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(23)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#pdf_title",
+      "context": "<h4 class=\"modal-title pdf_title sf-hidden\" id=\"pdf_title\"></h4>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#avaamo_pdf_viewer",
+      "context": "<iframe id=\"avaamo_pdf_viewer\" class=\"avaamo_pdf_viewer\" frameborder=\"0\" allowtransparency=\"true\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#avm_chat_widget_3dd3bb6a-31b0-4874-851e-a2c6cc6b6b69 > div:nth-child(4) > a:nth-child(1)",
+      "context": "<a aria-expanded=\"false\" role=\"button\" class=\"avm-bot-avatar\" aria-label=\"Open Tia\" tabindex=\"0\"><img class=\"avm-bot-icon bot-av...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#avm_chat_widget_3dd3bb6a-31b0-4874-851e-a2c6cc6b6b69 > div:nth-child(5) > img",
+      "context": "<img src=\"data:,\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.96:1. Recommendation:  change background to #d84000.",
+      "selector": "#avm_chat_widget_3dd3bb6a-31b0-4874-851e-a2c6cc6b6b69 > div:nth-child(5) > h3 > small",
+      "context": "<small class=\"avm-welcome-notification-message\">Need help?</small>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyNoId",
+      "type": "error",
+      "message": "Anchor element found with no link content and no name and/or ID attribute.",
+      "selector": "#avm_chat_widget_3dd3bb6a-31b0-4874-851e-a2c6cc6b6b69 > div:nth-child(5) > a",
+      "context": "<a class=\"avm-icon-cross\" tabindex=\"0\" title=\"Close welcome popup\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > div:nth-child(34) > iframe",
+      "context": "<iframe style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#hsl-01N__03-body",
+      "context": "<iframe id=\"hsl-01N__03-body\" class=\"hsl-prompt prompt pnc\" style=\"visibility:visible;display:block;background-color:transparent;border-color:rgb(255,255,255);border-width:0px;border-style:solid;position:fixed;border-radius:4px;width:22%;box-shadow:n...",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:47:51+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

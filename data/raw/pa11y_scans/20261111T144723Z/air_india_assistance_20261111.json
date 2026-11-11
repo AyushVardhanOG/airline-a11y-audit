@@ -1,0 +1,252 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "air_india_assistance_20261111.html",
+  "airline_id": "air_india",
+  "page_type": "assistance",
+  "scan_started_utc": "2026-11-11T14:47:41+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Disability Assistance: Support Services & Travel | Air India",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#topMenulogoLight",
+      "context": "<a id=\"topMenulogoLight\" href=\"https://www.airindia.com/in/en.html\" class=\"logo-img light logo-link-localized sf-hidden\">\n \n </a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#signIn > img:nth-child(1)",
+      "context": "<img width=\"24\" height=\"24\" src=\"data:,\" class=\"light d-none sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.27:1. Recommendation:  change text colour to #333b4a.",
+      "selector": "#breadcrumb-f6a2ed5eea > ol > li:nth-child(1) > a > span",
+      "context": "<span itemprop=\"name\">Home</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.27:1. Recommendation:  change text colour to #333b4a.",
+      "selector": "#breadcrumb-f6a2ed5eea > ol > li:nth-child(2) > a > span",
+      "context": "<span itemprop=\"name\">Prepare to Travel</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.27:1. Recommendation:  change text colour to #333b4a.",
+      "selector": "#breadcrumb-f6a2ed5eea > ol > li:nth-child(3) > a > span",
+      "context": "<span itemprop=\"name\">Health &amp; Medical Assistance</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#text-c4e4c47a9d > ul:nth-child(25) > li:nth-child(1) > a",
+      "context": "<a href=\"https://www.airindia.com/in/en/travel-information/health-medical-assistance/travel-with-electric-wheelchair.html\">travelling with an electric whe...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#text-c4e4c47a9d > ul:nth-child(27) > li:nth-child(2) > a",
+      "context": "<a href=\"https://www.airindia.com/content/dam/air-india/pdfs/frequent-travellers-medical-card-form_14-12-23.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">FREMEC<span class=\"cmp-link__sc...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#text-c4e4c47a9d > ul:nth-child(32) > li:nth-child(2) > a",
+      "context": "<a href=\"https://www.airindia.com/in/en/travel-information/health-medical-assistance/medical-information-form.html\" target=\"_self\" rel=\"noopener noreferrer\">MEDIF form</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#text-c4e4c47a9d > ul:nth-child(48) > li:nth-child(4) > a",
+      "context": "<a href=\"https://www.transportation.gov/airconsumer\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.dot.gov/airconsumer...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#disability-assistance-5",
+      "context": "<a id=\"disability-assistance-5\" href=\"https://www.airindia.com/in/en/travel-information/health-medical-assistance/disability-assistance/disability-assistance-united-kingdom.html\" target=\"_self\" rel=\"noopener noreferrer\">UK</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#disability-assistance-6",
+      "context": "<a id=\"disability-assistance-6\" href=\"https://www.airindia.com/in/en/travel-information/health-medical-assistance/disability-assistance/disability-assistance-australia.html\" target=\"_self\" rel=\"noopener noreferrer\">Australia</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(1) > a",
+      "context": "<a aria-label=\"Delhi to Mumbai Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/delhi-to-mumbai-flights\" target=\"_self\">Delhi to Mumbai Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(2) > a",
+      "context": "<a aria-label=\"Delhi to Goa Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/delhi-to-goa-flights\" target=\"_self\">Delhi to Goa Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(3) > a",
+      "context": "<a aria-label=\"Delhi to Bengaluru Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/delhi-to-bangalore-flights\" target=\"_self\">Delhi to Bengaluru Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(4) > a",
+      "context": "<a aria-label=\"Bangalore to Mumbai Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/bangalore-to-mumbai-flights\" target=\"_self\">Bangalore to Mumbai Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(5) > a",
+      "context": "<a aria-label=\"Bangalore to New Delhi Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/bangalore-to-delhi-flights\" target=\"_self\">Bangalore to New Delhi Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(6) > a",
+      "context": "<a aria-label=\"Mumbai to Bengaluru Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/mumbai-to-bangalore-flights\" target=\"_self\">Mumbai to Bengaluru Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(7) > a",
+      "context": "<a aria-label=\"Chennai to Delhi Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/chennai-to-delhi-flights\" target=\"_self\">Chennai to Delhi Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(8) > a",
+      "context": "<a aria-label=\"Delhi to Kolkata Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/delhi-to-kolkata-flights\" target=\"_self\">Delhi to Kolkata Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(9) > a",
+      "context": "<a aria-label=\"New Delhi to Pune Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/delhi-to-pune-flights\" target=\"_self\">New Delhi to Pune Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(10) > a",
+      "context": "<a aria-label=\"Delhi to Chennai Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/delhi-to-chennai-flights\" target=\"_self\">Delhi to Chennai Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.46:1. Recommendation:  change text colour to #3073df.",
+      "selector": "#container-5bc1c340e3 > div > div > div > div:nth-child(11) > a",
+      "context": "<a aria-label=\"Delhi to Hyderabad Flights\" class=\"hyperlink-text\" href=\"https://www.airindia.com/en-in/book-flights/delhi-to-hyderabad-flights\" target=\"_self\">Delhi to Hyderabad Flights</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#page-0b37d82a66 > app-ai-agent-initial-root > app-sticky-chat-bot > section > div > a",
+      "context": "<a href=\"https://airindia.scene7.com/is/content/airindiastage/avatar_F_200px\" target=\"_blank\" style=\"z-index:2147483647!important;position:absolute!important;margin:8px 0px 0px 8px!important;width:16px!important;height:16px!important;min-width:16px!i...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#page-0b37d82a66 > img:nth-child(39)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#page-0b37d82a66 > iframe:nth-child(40)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#page-0b37d82a66 > img:nth-child(41)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#page-0b37d82a66 > iframe:nth-child(43)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:47:44+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

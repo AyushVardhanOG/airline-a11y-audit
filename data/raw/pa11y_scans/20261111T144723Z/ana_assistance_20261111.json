@@ -1,0 +1,60 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "ana_assistance_20261111.html",
+  "airline_id": "ana",
+  "page_type": "assistance",
+  "scan_started_utc": "2026-11-11T14:48:04+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Information for Customers Requiring Assistance|ANA",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.25:1. Recommendation:  change text colour to #fff.",
+      "selector": "#1column-template-asw-04f04abea8 > div:nth-child(4) > div > div > div:nth-child(3) > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div > div:nth-child(2) > div > div:nth-child(2) > div > div > div > div:nth-child(1) > a",
+      "context": "<a href=\"#asw_header_login\" class=\"asw-page-top__button js-scclick-binded\" data-scclick=\"en_other_txt_Go Back to Top \">Go Back to Top of Page</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputCheckbox.Name",
+      "type": "error",
+      "message": "This checkboxinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#dialogToggle",
+      "context": "<input type=\"checkbox\" id=\"dialogToggle\" value=\"on\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#dialogToggle",
+      "context": "<input type=\"checkbox\" id=\"dialogToggle\" value=\"on\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:48:06+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

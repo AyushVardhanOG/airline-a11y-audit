@@ -1,0 +1,16 @@
+criterion,title,pages_axe,pages_pa11y,pages_both,pages_only_axe,pages_only_pa11y,axe_elements,pa11y_errors,pages_either
+2.4.1,Bypass Blocks,0,58,0,0,58,0,171,58
+4.1.2,"Name, Role, Value",38,47,29,9,18,186,230,56
+1.3.1,Info and Relationships,19,42,14,5,28,104,334,47
+2.5.3,Label in Name,46,0,0,46,0,152,0,46
+1.1.1,Non-text Content,14,38,13,1,25,73,196,39
+4.1.1,Parsing,0,39,0,0,39,0,198,39
+1.4.3,Contrast (Minimum),22,33,21,1,12,228,360,34
+3.2.2,On Input,0,21,0,0,21,0,83,21
+2.4.4,Link Purpose (In Context),15,0,0,15,0,45,0,15
+1.4.1,Use of Color,6,0,0,6,0,18,0,6
+1.4.4,Resize Text,5,0,0,5,0,5,0,5
+3.1.1,Language of Page,1,1,1,0,0,1,1,1
+1.3.5,Identify Input Purpose,0,1,0,0,1,0,2,1
+1.4.12,Text Spacing,1,0,0,1,0,1,0,1
+3.1.2,Language of Parts,0,1,0,0,1,0,1,1

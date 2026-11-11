@@ -125,6 +125,7 @@ def load_scans(run_dir, airlines):
                     "impact": v.get("impact") or "minor",
                     "wcag_level": wcag_level(v.get("tags", [])),
                     "wcag_criteria": wcag_criteria(v.get("tags", [])),
+                    "is_experimental": "experimental" in v.get("tags", []),
                     "rule_help": v.get("help"),
                     "target": " >> ".join(" ".join(t) if isinstance(t, list) else str(t) for t in node["target"]),
                     "in_iframe": len(node["target"]) > 1,
@@ -340,6 +341,72 @@ def live_vs_copy_section():
     return lines
 
 
+def experimental_section(elements, pages_ok):
+    """
+    Checked 2026-11-11: axe-core 4.14.0 has 6 experimental rules; axe leaves them out unless asked
+    for, and none appears in our results. If a future scan ever contains one, report the main
+    numbers with AND without experimental rules (the column is_experimental is then kept).
+    """
+    exp = elements[elements["is_experimental"]]
+    if exp.empty:
+        return ["## Rule check: experimental rules", "",
+                "- None of the rules in the results is tagged \"experimental\" by axe-core (checked against the "
+                "installed axe-core's own rule list). All numbers are therefore from standard WCAG 2.0/2.1 A/AA rules.", ""]
+    non = elements[~elements["is_experimental"]]
+    pages_with = lambda e: e.groupby("file_name").size().reindex(pages_ok["file_name"], fill_value=0)
+    n = len(pages_ok)
+    return ["## Rule check: experimental rules", "",
+            f"- Experimental rules found: {', '.join(sorted(exp['rule_id'].unique()))} ({len(exp)} elements).",
+            "| | with experimental rules | without |", "|---|---|---|",
+            f"| pages failing at least one rule | {(pages_with(elements) > 0).sum()} of {n} | {(pages_with(non) > 0).sum()} of {n} |",
+            f"| failing elements | {len(elements)} | {len(non)} |",
+            f"| different rules | {elements['rule_id'].nunique()} | {non['rule_id'].nunique()} |", ""]
+
+
+def second_checker_section():
+    pages_csv, crit_csv = RESULTS / "checker_comparison_pages.csv", RESULTS / "checker_comparison_criteria.csv"
+    if not pages_csv.exists():
+        return ["## Second checker (Pa11y)", "", "Not available: run src/scan_pa11y.js and src/compare_checkers.py.", ""]
+    cp, cc = pd.read_csv(pages_csv, keep_default_na=False), pd.read_csv(crit_csv, keep_default_na=False, dtype={"criterion": str})
+    n = len(cp)
+    both, only_a, only_p = cp["n_both"].sum(), cp["n_only_axe"].sum(), cp["n_only_pa11y"].sum()
+    pairs = both + only_a + only_p
+    common = cc[(cc["pages_axe"] > 0) & (cc["pages_pa11y"] > 0)].set_index("criterion")
+    c_both, c_a, c_p = common["pages_both"].sum(), common["pages_only_axe"].sum(), common["pages_only_pa11y"].sum()
+    c_pairs = c_both + c_a + c_p
+    L = ["## Second checker: Pa11y (HTML_CodeSniffer, WCAG2AA) vs axe-core", "",
+         f"The same {n} saved copies were also scanned with Pa11y, under the same offline conditions. "
+         "The tools name their checks differently, so they are compared by WCAG success criterion (SC): "
+         "for each page, which criteria each tool reports as failed. Pa11y \"errors\" only (its warnings and "
+         "notices are \"check by hand\" items).", "",
+         f"- Pages with at least one failure: **axe-core {(cp['axe_elements'] > 0).sum()}**, "
+         f"**Pa11y {(cp['pa11y_errors'] > 0).sum()}** (of {n}).",
+         f"- Findings: axe-core {cp['axe_elements'].sum()} failing elements; Pa11y {cp['pa11y_errors'].sum()} errors.",
+         f"- Of all {pairs} (page, criterion) failures found by either tool, **{both} ({both / pairs:.0%}) were found by "
+         f"both**, {only_a} ({only_a / pairs:.0%}) only by axe-core and {only_p} ({only_p / pairs:.0%}) only by Pa11y.",
+         f"- Many criteria are only ever reported by ONE of the tools. Counting only the {len(common)} criteria that both "
+         f"tools reported at least once ({', '.join(common.index)}): **{c_both} of {c_pairs} ({c_both / c_pairs:.0%}) "
+         f"found by both**, {c_a} only by axe-core, {c_p} only by Pa11y.",
+         f"- Per page, the overlap of the two sets of failed criteria (Jaccard, 1 = identical) is "
+         f"{cp['criteria_jaccard'].mean():.2f} on average (median {cp['criteria_jaccard'].median():.2f}); "
+         f"identical on {(cp['criteria_jaccard'] == 1).sum()} pages.", "",
+         "Criteria flagged on the most pages (both / only axe-core / only Pa11y):", ""]
+    for r in cc.head(8).itertuples():
+        L.append(f"- {r.criterion} {r.title}: {r.pages_both} / {r.pages_only_axe} / {r.pages_only_pa11y}")
+    L += ["", "Why they differ (checked on this data; details in docs/notes.md):", "",
+          "- **Same problem, different criterion**: a missing iframe title is 2.4.1 for Pa11y but 4.1.2 for axe-core; "
+          "axe-core's link-name rule counts for both 2.4.4 and 4.1.2.",
+          "- **Criteria only one tool tests**: 4.1.1 Parsing (duplicate ids) only Pa11y - axe-core 4.14 switches its "
+          "duplicate-id rules off by default and 4.1.1 was removed in WCAG 2.2; 3.2.2 (form without submit button) and "
+          "obsolete `<font>` markup (1.3.1) only Pa11y; 2.5.3 Label in Name, 1.4.4 (zoom blocked) and 1.4.1 (links "
+          "told apart by colour only) only axe-core.",
+          "- **Hidden elements**: Pa11y also reports hidden or zero-size elements (e.g. tracking-pixel images without "
+          "alt text), which axe-core skips on purpose.",
+          "", "So low agreement does not mean one tool is wrong: they implement different tests. Using both gives wider "
+          "coverage; neither replaces manual testing. Chart: `charts/checker_agreement_by_criterion.png`.", ""]
+    return L
+
+
 def write_summary(run_dir, pages, pages_ok, elements, per_airline, by_rule, access_df, made):
     n = len(pages_ok)
     with_viol = int((pages_ok["elements_failed"] > 0).sum())
@@ -388,7 +455,9 @@ def write_summary(run_dir, pages, pages_ok, elements, per_airline, by_rule, acce
           f"to a headless browser**: {int(acc.get('blocked', 0))} blocked it outright, {int(acc.get('blocked_unconfirmed', 0))} showed an "
           f"error page, {int(acc.get('error', 0))} cut the connection. Only {int(acc.get('allowed', 0))} allowed it.",
           "- This is why all pages were captured by hand with SingleFile instead of scanned automatically.", ""]
+    L += experimental_section(elements, pages_ok)
     L += live_vs_copy_section()
+    L += second_checker_section()
     L += ["## Limitations (state these in the paper)", "",
           "- Automated checkers detect only part of all WCAG problems; manual testing is still needed.",
           "- Saved copies are snapshots: menus, focus behaviour and anything after a click are not tested.",
@@ -420,7 +489,9 @@ def main():
     pages_ok = pages[pages["status"] == "ok"].copy()
     print(f"Run {run_dir.name}: {len(pages)} pages ({len(pages_ok)} ok), {len(elements)} failing elements")
 
-    elements.to_csv(RESULTS / "violations_all.csv", index=False)
+    # is_experimental is only written if any experimental rule appears (checked: none in run 20261111T142233Z)
+    to_write = elements if elements["is_experimental"].any() else elements.drop(columns=["is_experimental"])
+    to_write.to_csv(RESULTS / "violations_all.csv", index=False)
     pages.to_csv(RESULTS / "pages_summary.csv", index=False)
     per_airline = airline_summary(airlines, access, pages_ok, elements)
     per_airline.to_csv(RESULTS / "summary_per_airline.csv", index=False)

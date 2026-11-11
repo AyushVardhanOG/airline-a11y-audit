@@ -649,3 +649,52 @@ axe-core rules, but 9 of the 768 HTML snippets in violations_all.csv include the
 attributes before giving snippets to an LLM in Objective 2, and before computing snippet-length
 features. (These attributes also looked like IP addresses to the privacy check; a stricter check
 found no real IP addresses, and the Step 2 IP is not in any committed file.)
+
+---
+
+## 2026-11-11 - Objective 1 finished: experimental-rule check + second checker (Pa11y)
+
+**1. Experimental rules**: asked the installed axe-core itself (`axe.getRules()`): axe-core 4.14.0 has
+105 rules, 6 tagged experimental (css-orientation-lock, focus-order-semantics, hidden-content,
+p-as-heading, table-fake-caption, td-has-header). **None appears in our results** (axe leaves
+experimental rules out unless asked for). `label-content-name-mismatch` is a normal WCAG 2.1 A
+rule (SC 2.5.3). So, as instructed, no `is_experimental` column was added. `analyze.py` now checks the
+tags on every run: if an experimental rule ever appears it adds the column and reports the numbers
+with and without; otherwise summary.md says none were found.
+
+**2. Pa11y** (`src/scan_pa11y.js`, Node): Pa11y 10.0.0 with the HTML_CodeSniffer 2.6.0 runner, standard
+WCAG2AA, errors only (warnings/notices = "check by hand"). Same 78 files (taken from the axe
+capture-scan run 20261111T142233Z), same offline setup (file served from disk under the fake address,
+all other requests blocked, page scripts off via CSP), same viewport. Puppeteer was installed WITHOUT its
+own Chrome download and uses **Playwright's Chromium 158.0.8127.18**, the same browser as axe-core.
+- Checked first: Pa11y injects HTML_CodeSniffer with `page.evaluate` (not blocked by our CSP), only
+  intercepts requests itself if given headers/method/postData (we give none), and does not close a page
+  it was given.
+- Offline test on a hand-made page: page script blocked (CSP message in the console), internet
+  image blocked, both planted errors found (H37 missing alt = 1.1.1, H91 empty link = 4.1.2).
+- The very first test hung once ("Navigation timeout", 120 s); a debug run and a rerun of the identical
+  test worked in 3 s. Cause not proven (probably the first start of this browser with Puppeteer). The
+  scanner now retries a page once after a timeout (local files only, so harmless); in the real run
+  no retry was needed.
+- Run 20261111T144723Z: 78 of 78 ok, 1,576 errors, every one with a WCAG criterion in its code.
+
+**3. Comparison** (`src/compare_checkers.py`): by WCAG success criterion per page (the tools use different
+rule names and selector styles, so element-by-element matching is not reliable).
+- Pages with at least one failure: axe-core 67, Pa11y 78.
+- Of 370 (page, criterion) failures: **78 (21%) found by both**, 89 only axe-core, 203 only Pa11y.
+  Per-page Jaccard mean 0.18; no page with identical sets.
+- On the 5 criteria BOTH tools reported at least once (4.1.2, 1.3.1, 1.1.1, 1.4.3, 3.1.1): 44% found by both.
+- Why they differ (checked):
+  - same problem, different criterion: missing iframe title = 2.4.1 in Pa11y (H64.1, 161 errors on 58
+    pages) but 4.1.2 in axe (frame-title); axe link-name counts for 2.4.4 AND 4.1.2;
+  - criteria only one tool tests: 4.1.1 duplicate ids (Pa11y F77, 198 errors; axe-core 4.14 has its
+    duplicate-id rules disabled by default and 4.1.1 was removed in WCAG 2.2); 3.2.2 form without submit
+    button (Pa11y H32.2); obsolete `<font>` (Pa11y H49.Font, 1.3.1); 2.5.3, 1.4.4, 1.4.1 only axe-core;
+  - hidden elements: Pa11y H37 (missing alt) 171 vs axe image-alt 41. Checked on the 6 pages with the
+    biggest gap: **67 of 72** Pa11y-flagged images are hidden or zero-size (e.g. tracking pixels), which
+    axe-core skips on purpose. On JAL's 3 pages all 48 are hidden.
+- Chart `charts/checker_agreement_by_criterion.png` (stacked bar per criterion, 3 validated palette
+  slots, legend + CSV). Looked at it: the first version's legend collided with the subtitle, so it was moved below.
+
+**For the paper**: the low overlap is mostly due to different test design, not tool errors. Report both
+tools, the criterion mapping, and the hidden-element difference. Using two checkers widens coverage.

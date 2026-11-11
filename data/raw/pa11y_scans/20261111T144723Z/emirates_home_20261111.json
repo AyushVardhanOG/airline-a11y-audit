@@ -1,0 +1,308 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "emirates_home_20261111.html",
+  "airline_id": "emirates",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:48:32+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Emirates | Fly Better",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#panel0 > div > div > h1",
+      "context": "<h1 class=\"widget__heading sf-hidden\"></h1>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputComponent.Name",
+      "type": "error",
+      "message": "This componentinput element does not have a name available to an accessibility API. Valid names are: element content, aria-label , aria-labelledby .",
+      "selector": "#field-8b333867-f012-4178-82f3-008b2d7cd40f",
+      "context": "<input class=\"js-field-input field__input js-dropdown-open field__input--active\" type=\"component\" name=\"Departure airport\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" id=\"field-8b333867-f012-4178-82f3-008b2d7cd40f\" aria-autocomplete=\"in...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+      "type": "error",
+      "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#search-flight-control > section > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) > div > div > select",
+      "context": "<select class=\"js-hidden-select dropdown-container__hidden-select sf-hidden\"> </select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#search-flight-control > section > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) > div > div > select",
+      "context": "<select class=\"js-hidden-select dropdown-container__hidden-select sf-hidden\"> </select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputComponent.Name",
+      "type": "error",
+      "message": "This componentinput element does not have a name available to an accessibility API. Valid names are: element content, aria-label , aria-labelledby .",
+      "selector": "#field-69839c45-f651-4452-8884-3420db607694",
+      "context": "<input class=\"js-field-input field__input js-dropdown-open\" type=\"component\" name=\"Arrival airport\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\" id=\"field-69839c45-f651-4452-8884-3420db607694\" aria-autocomplete=\"inline\" aria-live=\"off\" v...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#search-flight-control > section > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > div > div > div:nth-child(2) > div > button",
+      "context": "<button type=\"button\" class=\"clear-x-mobile icon icon-delete-light js-clear-selected dropdown__clear sf-hidden\" name=\"clear Arrival airport\" tabindex=\"-1\"></button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+      "type": "error",
+      "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#search-flight-control > section > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > div > div > select",
+      "context": "<select class=\"js-hidden-select dropdown-container__hidden-select sf-hidden\"> </select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#search-flight-control > section > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > div > div > select",
+      "context": "<select class=\"js-hidden-select dropdown-container__hidden-select sf-hidden\"> </select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+      "type": "error",
+      "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#maincontent > section:nth-child(5) > div > div:nth-child(1) > div > div > div > div > select",
+      "context": "<select class=\"js-hidden-select dropdown-container__hidden-select sf-hidden\"> </select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#maincontent > section:nth-child(5) > div > div:nth-child(1) > div > div > div > div > select",
+      "context": "<select class=\"js-hidden-select dropdown-container__hidden-select sf-hidden\"> </select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#maincontent > section:nth-child(5) > div > div:nth-child(1) > div > h2:nth-child(3)",
+      "context": "<h2 class=\"featured-fares__destination__heading featured-fares__destination__heading__last-label js-ff-label-last-v2\"> </h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "html > body > footer > div > div > div:nth-child(1) > h2",
+      "context": "<h2 class=\"footer__heading footer__section-link--accordion js-sectionHeading sf-hidden\"></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "html > body > footer > div > div > div:nth-child(2) > h2",
+      "context": "<h2 class=\"footer__heading footer__section-link--accordion js-sectionHeading sf-hidden\"></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "html > body > footer > div > div > div:nth-child(3) > h2",
+      "context": "<h2 class=\"footer__heading footer__section-link--accordion js-sectionHeading sf-hidden\"></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "html > body > footer > div > div > div:nth-child(4) > h2",
+      "context": "<h2 class=\"footer__heading footer__section-link--accordion js-sectionHeading sf-hidden\"></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "html > body > footer > div > div > div:nth-child(5) > h2",
+      "context": "<h2 class=\"footer__heading footer__section-link--accordion js-sectionHeading sf-hidden\"></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "html > body > footer > div > div > div:nth-child(6) > h2",
+      "context": "<h2 class=\"footer__heading footer__section-link--accordion js-sectionHeading sf-hidden\"></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "html > body > footer > div > div > div:nth-child(7) > h2",
+      "context": "<h2 class=\"footer__heading footer__section-link--accordion js-sectionHeading sf-hidden\"></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "html > body > footer > div > div > div:nth-child(8) > h2",
+      "context": "<h2 class=\"footer__heading footer__section-link--accordion js-sectionHeading sf-hidden\"></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "html > body > footer > div > div > div:nth-child(9) > form",
+      "context": "<form class=\"subscribe\" action=\"/in/english/special-offers/subscribe-to-offers/\" method=\"post\"> <div class=\"field js-fields\"><...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(33)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(39)",
+      "context": "<iframe src=\"\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(42)",
+      "context": "<iframe src=\"\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(43)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(44)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(45)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(47)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(48)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(49)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(50)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(58)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(59)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F92,ARIA4",
+      "type": "error",
+      "message": "This element's role is \"presentation\" but contains child elements with semantic meaning.",
+      "selector": "#maincontent > div:nth-child(6) > ul",
+      "context": "<ul class=\"grid grid--full\" role=\"presentation\"> <li class=\"grid__item medium--...</ul>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F92,ARIA4",
+      "type": "error",
+      "message": "This element's role is \"presentation\" but contains child elements with semantic meaning.",
+      "selector": "#maincontent > div:nth-child(6) > ul > li",
+      "context": "<li class=\"grid__item medium--one-whole\" role=\"presentation\"> <div class=\"market-promo-item-...</li>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:48:34+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

@@ -1,0 +1,180 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "emirates_assistance_20261111.html",
+  "airline_id": "emirates",
+  "page_type": "assistance",
+  "scan_started_utc": "2026-11-11T14:48:28+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Accessible travel | Accessible and inclusive travel hub | Help and Support | Emirates",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(40)",
+      "context": "<iframe src=\"\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(42)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(43)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(45)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(46)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(48)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(49)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(50)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #fff.",
+      "selector": "#footer--rt-crf__8c75db3f-cc69-4938-9a5d-ce5860e5aaf1 > footer > div > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(1) > span:nth-child(1)",
+      "context": "<span itemprop=\"name\" aria-hidden=\"true\">App Store</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #fff.",
+      "selector": "#footer--rt-crf__8c75db3f-cc69-4938-9a5d-ce5860e5aaf1 > footer > div > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(1) > span:nth-child(2)",
+      "context": "<span itemprop=\"operatingSystem\" aria-hidden=\"true\">App Store</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #fff.",
+      "selector": "#footer--rt-crf__8c75db3f-cc69-4938-9a5d-ce5860e5aaf1 > footer > div > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(2) > span:nth-child(1)",
+      "context": "<span itemprop=\"name\" aria-hidden=\"true\">Google Play</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #fff.",
+      "selector": "#footer--rt-crf__8c75db3f-cc69-4938-9a5d-ce5860e5aaf1 > footer > div > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(2) > span:nth-child(2)",
+      "context": "<span itemprop=\"operatingSystem\" aria-hidden=\"true\">Google Play</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #fff.",
+      "selector": "#footer--rt-crf__8c75db3f-cc69-4938-9a5d-ce5860e5aaf1 > footer > div > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(3) > span:nth-child(1)",
+      "context": "<span itemprop=\"name\" aria-hidden=\"true\">Huawei App Gallery</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #fff.",
+      "selector": "#footer--rt-crf__8c75db3f-cc69-4938-9a5d-ce5860e5aaf1 > footer > div > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(3) > span:nth-child(2)",
+      "context": "<span itemprop=\"operatingSystem\" aria-hidden=\"true\">huawai os</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #fff.",
+      "selector": "#header-v2--rt-crf__d794dfd4-aa0e-44c4-9643-5d12ef68943b > header > div:nth-child(1) > div:nth-child(2) > div > nav > div > div > div:nth-child(2) > div > div > div > div > ul > li:nth-child(1) > span",
+      "context": "<span aria-controls=\"tabList__0__0\" tabindex=\"0\" role=\"tab\" aria-selected=\"false\" aria-hidden=\"false\" class=\"focusout-button second-level-menu__list-item-text second-level-menu__list-item-text--desktop\">Book <b class=\"second-level-men...</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #fff.",
+      "selector": "#header-v2--rt-crf__d794dfd4-aa0e-44c4-9643-5d12ef68943b > header > div:nth-child(1) > div:nth-child(2) > div > nav > div > div > div:nth-child(2) > div > div > div > div > ul > li:nth-child(2) > span",
+      "context": "<span aria-controls=\"tabList__0__1\" tabindex=\"0\" role=\"tab\" aria-selected=\"false\" aria-hidden=\"false\" class=\"focusout-button second-level-menu__list-item-text second-level-menu__list-item-text--desktop\">About booking online</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #fff.",
+      "selector": "#header-v2--rt-crf__d794dfd4-aa0e-44c4-9643-5d12ef68943b > header > div:nth-child(1) > div:nth-child(2) > div > nav > div > div > div:nth-child(2) > div > div > div > div > ul > li:nth-child(1) > span > b",
+      "context": "<b class=\"second-level-menu__dot\">•</b>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F92,ARIA4",
+      "type": "error",
+      "message": "This element's role is \"presentation\" but contains child elements with semantic meaning.",
+      "selector": "#header-v2--rt-crf__d794dfd4-aa0e-44c4-9643-5d12ef68943b > header",
+      "context": "<header data-auto=\"header\" role=\"presentation\"><div class=\"main-navigation\"><d...</header>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:48:30+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

@@ -103,7 +103,7 @@ getting around that, so **every airline is measured the same way**:
         T130057Z, T133826Z, T140859Z, T141945Z). Not scannable live: ANA check-in (connection cut),
         Ryanair assistance (403). Finnair live home = country-selection page, NOT comparable with
         the fi-en capture. Exclude spicejet/checkin (SAME_AS_HOME) from live analyses.
-- [x] Step 4: full audit pipeline (Objective 1) - done 2026-11-11 with axe-core only (second checker still to add)
+- [x] Step 4: full audit pipeline (Objective 1) - done 2026-11-11 with both checkers (axe-core + Pa11y)
   - [x] part 1: one headless homepage visit to the 24 untested airlines (`src/access_test.py`);
         all 30 now in `data/results/automated_access.csv`: 11 allowed, 9 blocked, 3 blocked_unconfirmed, 7 error
   - [x] scanned the 78 saved copies offline (`src/scan_captures.py`, run 20261111T142233Z): 0 errors,
@@ -112,7 +112,13 @@ getting around that, so **every airline is measured the same way**:
         failed-rule sets, mean rule overlap (Jaccard) 0.77; color-contrast is the least stable rule
   - [x] `src/analyze.py` -> `data/results/`: violations_all.csv, pages_summary.csv, summary_per_airline.csv,
         6 charts in `charts/` (each with its CSV), and `summary.md` (key numbers in plain words)
-  - [ ] still open for Objective 1: add the second checker (Pa11y or IBM Equal Access) and compare it with axe-core
+  - [x] experimental-rule check: axe-core 4.14.0 has 6 experimental rules; none in our results
+        (label-content-name-mismatch is a normal WCAG 2.1 A rule, SC 2.5.3), so no is_experimental column needed
+  - [x] second checker: Pa11y 10.0.0 / HTML_CodeSniffer 2.6.0, WCAG2AA, errors only (`src/scan_pa11y.js`,
+        run 20261111T144723Z), same 78 copies, same offline setup and same Chromium 158; 0 errors
+  - [x] `src/compare_checkers.py`: compared per page by WCAG success criterion; 21% of (page, criterion)
+        failures found by both tools (44% on the 5 criteria both tools report); differences explained
+        (different criterion mapping, criteria only one tool tests, Pa11y also flags hidden elements)
 - [ ] Step 5: LLM repair prototype (Objective 2)
 - [ ] Step 6: evaluate fixes + label them works/fails (Objective 3)
 - [ ] Step 7: train the ML failure predictor + dashboard (Objective 3)

@@ -1,0 +1,428 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "easyjet_home_20261111.html",
+  "airline_id": "easyjet",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:48:25+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "easyJet | Flights & holidays ✈️ Book low-cost airline tickets",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(3) > ul > li:nth-child(1) > button > p",
+      "context": "<p>Holidays</p>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(3) > ul > li:nth-child(2) > button > p",
+      "context": "<p>Manage Bookings</p>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(3) > ul > li:nth-child(3) > button > p",
+      "context": "<p>Check In</p>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(3) > ul > li:nth-child(4) > button > p",
+      "context": "<p>Help</p>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(3) > ul > li:nth-child(5) > button > p",
+      "context": "<p>English</p>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(4) > ul > li:nth-child(1) > button > div > span",
+      "context": "<span>Flight Info</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(4) > ul > li:nth-child(2) > a > button > div > span",
+      "context": "<span>Holidays</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(4) > ul > li:nth-child(3) > button > div > span",
+      "context": "<span>Cars/Extras</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(4) > ul > li:nth-child(4) > button > div > span",
+      "context": "<span>Business</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(4) > ul > li:nth-child(5) > button > div > span",
+      "context": "<span>Booking.com</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#full-header > header > div > div:nth-child(4) > span > div > button > span",
+      "context": "<span class=\"sign-in-button__label\">Sign In</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#__next > div > div:nth-child(2) > div > a:nth-child(1) > span",
+      "context": "<span class=\"promo-banner-strip__title\">HOLIDAYS BLACK FRIDAY IS NOW ON</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#__next > div > div:nth-child(2) > div > a:nth-child(2) > span",
+      "context": "<span class=\"promo-banner-strip__title\">Book with Confidence</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#__next > div > div:nth-child(17) > div > div:nth-child(1) > div > div:nth-child(1) > ul > li:nth-child(2) > a > div",
+      "context": "<div>Package Holidays</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#__next > div > div:nth-child(17) > div > div:nth-child(1) > div > div:nth-child(1) > ul > li:nth-child(3) > a > div",
+      "context": "<div>Cars</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(17) > div > div:nth-child(1) > div > form > div:nth-child(2) > button > div",
+      "context": "<div class=\"SearchPod_buttonInnerContent__KMLdD\">Show flights</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(17) > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > a > span",
+      "context": "<span>Book flights</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(17) > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(2) > a > span",
+      "context": "<span>Book package holidays</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(1) > div > div > div > div > div > ul > li:nth-child(1) > a > div:nth-child(3)",
+      "context": "<div tabindex=\"-1\" data-testid=\"cta-button\" class=\"Button_primary__zo_dU PopularFlights_ctaButton__xoH4Y\">Book now</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(1) > div > div > div > div > div > ul > li:nth-child(2) > a > div:nth-child(3)",
+      "context": "<div tabindex=\"-1\" data-testid=\"cta-button\" class=\"Button_primary__zo_dU PopularFlights_ctaButton__xoH4Y\">Book now</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(1) > div > div > div > div > div > ul > li:nth-child(3) > a > div:nth-child(3)",
+      "context": "<div tabindex=\"-1\" data-testid=\"cta-button\" class=\"Button_primary__zo_dU PopularFlights_ctaButton__xoH4Y\">Book now</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(1) > div > div > div > div > div > ul > li:nth-child(4) > a > div:nth-child(3)",
+      "context": "<div tabindex=\"-1\" data-testid=\"cta-button\" class=\"Button_primary__zo_dU PopularFlights_ctaButton__xoH4Y\">Book now</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(1) > div > div > div > div > div > ul > li:nth-child(5) > a > div:nth-child(3)",
+      "context": "<div tabindex=\"-1\" data-testid=\"cta-button\" class=\"Button_primary__zo_dU PopularFlights_ctaButton__xoH4Y\">Book now</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(1) > div > div > div > div > div > ul > li:nth-child(6) > a > div:nth-child(3)",
+      "context": "<div tabindex=\"-1\" data-testid=\"cta-button\" class=\"Button_primary__zo_dU PopularFlights_ctaButton__xoH4Y\">Book now</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(2) > div:nth-child(3) > div > div > div > div > ul > li:nth-child(1) > a > div > div:nth-child(2) > div",
+      "context": "<div tabindex=\"-1\" data-testid=\"cta-button\" class=\"Button_primary__zo_dU Button_medium__n1KvC CTAImageTile_ctaButton__eBgsp\">Book now</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(2) > div:nth-child(3) > div > div > div > div > ul > li:nth-child(2) > a > div > div:nth-child(2) > div",
+      "context": "<div tabindex=\"-1\" data-testid=\"cta-button\" class=\"Button_primary__zo_dU Button_medium__n1KvC CTAImageTile_ctaButton__eBgsp\">Book now</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(2) > div:nth-child(3) > div > div > div > div > ul > li:nth-child(3) > a > div > div:nth-child(2) > div",
+      "context": "<div tabindex=\"-1\" data-testid=\"cta-button\" class=\"Button_primary__zo_dU Button_medium__n1KvC CTAImageTile_ctaButton__eBgsp\">Book now</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(3) > div:nth-child(3) > div > div > div > div > a > span",
+      "context": "<span>Book now</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(4) > div:nth-child(3) > div > div > div:nth-child(2) > div > a > span",
+      "context": "<span>Book now</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(5) > div:nth-child(3) > div > div > div > div > a > span",
+      "context": "<span>Book now</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change background to #c95000.",
+      "selector": "#__next > div > div:nth-child(18) > div:nth-child(6) > div:nth-child(3) > div > div > div:nth-child(2) > div > a > span",
+      "context": "<span>Book now</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(1) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Help Centre</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(2) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Special assistance</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(3) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Cancelling your flight</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(4) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Online check-in</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(5) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Change flight</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(6) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Change name</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(7) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Cabin bags</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(8) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Hold bags</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(9) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Delays and cancellations</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(10) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Payment confirmation &amp; VAT ...</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(11) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Choosing a seat</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(12) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Flying with children</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(13) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Dangerous Goods &amp; Prohibite...</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(14) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Latest travel information</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(15) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">Fear of flying</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.94:1. Recommendation:  change text colour to #c95000.",
+      "selector": "#help > div > div > div:nth-child(1) > div:nth-child(16) > a > div > span",
+      "context": "<span data-testid=\"title\" class=\"HelpContentIcon_text__IFjp9\">easyJet Plus</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.67:1. Recommendation:  change text colour to #190a00.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div > button > h2",
+      "context": "<h2>Find cheap flights and holidays</h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.67:1. Recommendation:  change text colour to #190a00.",
+      "selector": "#__next > div > footer > div:nth-child(4) > div > button > h2",
+      "context": "<h2>*Terms and conditions</h2>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:48:28+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

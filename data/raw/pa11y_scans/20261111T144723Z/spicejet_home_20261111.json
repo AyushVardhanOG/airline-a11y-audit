@@ -1,0 +1,308 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "spicejet_home_20261111.html",
+  "airline_id": "spicejet",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:50:06+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "SpiceJet - Flight Booking for Domestic and International, Cheap Air Tickets",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_1.3_1_1.H57.2",
+      "type": "error",
+      "message": "The html element should have a lang or xml:lang attribute which describes the language of the document.",
+      "selector": "html",
+      "context": "<html style=\"\"><!--\n Page saved with SingleFil...</html>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > div > a",
+      "context": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/SpiceMax.aspx\" to=\"https://corporate.spicejet.com/SpiceMax.aspx\" tabindex=\"-1\" class=\"carousel-row-item\" style=\"width:100%;display:inline-block\">...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(3) > div > a",
+      "context": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://corporate.spicejet.com/VisaServices.aspx\" to=\"https://corporate.spicejet.com/VisaServices.aspx\" tabindex=\"-1\" class=\"carousel-row-item\" style=\"width:100%;display:inline...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Div.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: element content, aria-label , aria-labelledby .",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1)",
+      "context": "<div role=\"button\" tabindex=\"0\" class=\"carousel-dots-item carousel-dots-item-active carousel-dot-1\"></div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Div.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: element content, aria-label , aria-labelledby .",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2)",
+      "context": "<div role=\"button\" tabindex=\"0\" class=\"carousel-dots-item carousel-dot-2\"></div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Div.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: element content, aria-label , aria-labelledby .",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3)",
+      "context": "<div role=\"button\" tabindex=\"0\" class=\"carousel-dots-item carousel-dot-3\"></div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.48:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(2) > div",
+      "context": "<div class=\"css-76zvg2 r-1862ga2 r-2t9rge r-1b43r93\" dir=\"auto\">Let's go places! </div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(1) > div > div:nth-child(2) > input",
+      "context": "<input autocapitalize=\"sentences\" autocomplete=\"on\" autocorrect=\"on\" class=\"css-1cwyjr8 r-homxoj r-ubezar r-10paoce r-13qz1uu\" dir=\"auto\" spellcheck=\"false\" type=\"text\" data-focusable=\"true\" value=\"Delhi (DEL)\" style=\"font-family:inherit;text-overflo...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(1) > div > div:nth-child(2) > input",
+      "context": "<input autocapitalize=\"sentences\" autocomplete=\"on\" autocorrect=\"on\" class=\"css-1cwyjr8 r-homxoj r-ubezar r-10paoce r-13qz1uu\" dir=\"auto\" spellcheck=\"false\" type=\"text\" data-focusable=\"true\" value=\"Delhi (DEL)\" style=\"font-family:inherit;text-overflo...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(2) > input",
+      "context": "<input autocapitalize=\"sentences\" autocomplete=\"on\" autocorrect=\"on\" class=\"css-1cwyjr8 r-homxoj r-ubezar r-10paoce r-13qz1uu\" dir=\"auto\" spellcheck=\"false\" type=\"text\" data-focusable=\"true\" value=\"Select Destination\" style=\"font-family:inherit;text-...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(3) > div > div:nth-child(2) > input",
+      "context": "<input autocapitalize=\"sentences\" autocomplete=\"on\" autocorrect=\"on\" class=\"css-1cwyjr8 r-homxoj r-ubezar r-10paoce r-13qz1uu\" dir=\"auto\" spellcheck=\"false\" type=\"text\" data-focusable=\"true\" value=\"Select Destination\" style=\"font-family:inherit;text-...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.48:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(4) > div > div > div:nth-child(1) > div:nth-child(1)",
+      "context": "<div class=\"css-76zvg2 css-bfa6kz r-1862ga2 r-1gkfh8e\" dir=\"auto\" style=\"font-family:inherit\">Departure Date</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.86:1. Recommendation:  change text colour to #6c6c6c.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(4) > div > div > div:nth-child(2) > div:nth-child(1)",
+      "context": "<div class=\"css-76zvg2 css-bfa6kz r-1862ga2 r-1gkfh8e r-icoktb\" dir=\"auto\" style=\"font-family:inherit\">Return Date</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.48:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div > div > div:nth-child(1)",
+      "context": "<div class=\"css-76zvg2 css-bfa6kz r-1862ga2 r-1gkfh8e\" dir=\"auto\" style=\"font-family:inherit\">Passengers</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.48:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(5) > div:nth-child(2) > div > div:nth-child(1)",
+      "context": "<div class=\"css-76zvg2 css-bfa6kz r-1862ga2 r-1gkfh8e\" dir=\"auto\" style=\"font-family:inherit;opacity:1\">Currency</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(4) > div > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(1) > div > a",
+      "context": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://www.spicejet.com/\" to=\"\" style=\"color:rgb(195,11,18);font-weight:600;padding-left:3px\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID",
+      "type": "error",
+      "message": "This link points to a named anchor \"status\" within the document, but no anchor exists with that name.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(4) > div > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(2) > div > a",
+      "context": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"#status\" to=\"https://www.spicejet.com/#status\" style=\"color:rgb(195,11,18);font-weight:600;padding-left:3px\">flight status</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(4) > div > div:nth-child(2) > div > div > div > div:nth-child(1) > div:nth-child(5) > div > a",
+      "context": "<a rel=\"noopener noreferrer\" content=\"external-tag\" target=\"_blank\" href=\"https://www.spicejet.com/\" to=\"\" style=\"color:rgb(195,11,18);font-weight:600;padding-left:3px\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spinwheel",
+      "context": "<a id=\"spinwheel\" href=\"https://www.spicejet.com/\" data-sf-nesting-track-id=\"1.3.1.1.1.6\" style=\"text-decoration:none\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"spinwheel\" found on the web page.",
+      "selector": "#spinwheel",
+      "context": "<a id=\"spinwheel\" href=\"https://www.spicejet.com/\" data-sf-nesting-track-id=\"1.3.1.1.1.6\" style=\"text-decoration:none\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spinwheel",
+      "context": "<a id=\"spinwheel\" href=\"https://www.spicejet.com/\" data-sf-nesting-track-id=\"1.3.1.1.1.6\" style=\"text-decoration:none\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"spinwheel\" found on the web page.",
+      "selector": "#spinwheel",
+      "context": "<a id=\"spinwheel\" href=\"https://www.spicejet.com/\" data-sf-nesting-track-id=\"1.3.1.1.1.6\" style=\"text-decoration:none\"><div class=\"css-76zvg2 r-c20mna...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"spinwheel\" found on the web page.",
+      "selector": "#spinwheel",
+      "context": "<a id=\"spinwheel\" href=\"https://www.spicejet.com/\" data-sf-nesting-track-id=\"1.3.1.1.1.6\" style=\"text-decoration:none\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spinwheel",
+      "context": "<a id=\"spinwheel\" href=\"https://www.spicejet.com/\" data-sf-nesting-track-id=\"1.3.1.1.1.6\" style=\"text-decoration:none\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(2) > div > a:nth-child(2)",
+      "context": "<a href=\"https://www.spicejet.com/\" style=\"text-decoration:none\"><span class=\"lazy-load-image-ba...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.28:1. Recommendation:  change background to #b36200.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(11) > div > div > div:nth-child(3) > div > div:nth-child(1)",
+      "context": "<div class=\"css-76zvg2 r-jwli3a r-ubezar r-1kfrs79\" dir=\"auto\" style=\"font-family:inherit\">Explore More</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.28:1. Recommendation:  change background to #b36200.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(14) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div > div > a > div",
+      "context": "<div class=\"css-76zvg2 r-jwli3a r-1b43r93 r-1kfrs79 r-14yzgew\" dir=\"auto\" style=\"font-family:inherit\">Join SpiceClub</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.28:1. Recommendation:  change background to #b36200.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(15) > div > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div > div:nth-child(1)",
+      "context": "<div class=\"css-76zvg2 r-jwli3a r-ubezar r-1kfrs79\" dir=\"auto\" style=\"font-family:inherit\">Book Now!</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.28:1. Recommendation:  change background to #b36200.",
+      "selector": "#main-container > div > div:nth-child(1) > div:nth-child(15) > div > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div:nth-child(1)",
+      "context": "<div class=\"css-76zvg2 r-jwli3a r-ubezar r-1kfrs79\" dir=\"auto\" style=\"font-family:inherit\">Book Now!</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.48:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-container > div > div:nth-child(7) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2)",
+      "context": "<div class=\"css-76zvg2 r-1862ga2 r-1enofrn r-1d7gupr\" dir=\"auto\" style=\"font-family:inherit\">© Copyright Spicejet India. All...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.48:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-container > div > div:nth-child(7) > div > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(3)",
+      "context": "<div class=\"css-76zvg2 r-1862ga2 r-1enofrn\" dir=\"auto\" style=\"font-family:inherit\">Registered Office: SpiceJet Ltd...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#juspay-hidden-form1794401341185",
+      "context": "<iframe src=\"\" id=\"juspay-hidden-form1794401341185\" allow=\"payment\" style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(41)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(42)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:50:09+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

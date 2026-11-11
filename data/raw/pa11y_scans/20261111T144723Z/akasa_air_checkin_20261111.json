@@ -1,0 +1,116 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "akasa_air_checkin_20261111.html",
+  "airline_id": "akasa_air",
+  "page_type": "checkin",
+  "scan_started_utc": "2026-11-11T14:47:54+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Online Web Check-In With Seat Selection for Your Flight | Akasa Air",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#popUpHeading",
+      "context": "<h1 id=\"popUpHeading\" class=\"font-semibold text-lg text-typography-primary\" data-testid=\"Dialog Title\"></h1>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#popUpSubHeading",
+      "context": "<h2 id=\"popUpSubHeading\" class=\"font-semibold text-md text-typography-primary\" data-testid=\"Dialog Sub Title\"></h2>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #949494.",
+      "selector": "#__next > div > div > div:nth-child(4) > section > div:nth-child(2) > div > div:nth-child(1) > h3",
+      "context": "<h3 class=\"text-xl sm:text-2xl lg:text-3xl font-bold text-white\">Never miss an offer</h3>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #767676.",
+      "selector": "#__next > div > div > div:nth-child(4) > section > div:nth-child(2) > div > div:nth-child(2) > p",
+      "context": "<p class=\"text-sm my-1\">Subscribe and be the first to r...</p>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.98:1. Recommendation:  change background to #cb4f00.",
+      "selector": "#__next > div > div > div:nth-child(4) > section > div:nth-child(2) > form > div:nth-child(2) > button",
+      "context": "<button class=\"whitespace-nowrap rounded-lg font-semibold hover:bg-none flex gap-1 items-center justify-center text-[14px] bg-primary text-white dark:text-gray-800 hover:brightness-90 px-4 py-2 md:px-8 md:py-3 md:min-w-[150px] w-full md:w-fit h-[40px...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.98:1. Recommendation:  change background to #cb4f00.",
+      "selector": "#__next > div > div > div:nth-child(6) > div:nth-child(5) > div > div > div:nth-child(2) > div > p",
+      "context": "<p class=\"text-sm my-1 text-white dark:text-gray-200 font-medium !text-xs\">© Copyright 2026 Akasa Air. All...</p>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.98:1. Recommendation:  change background to #cb4f00.",
+      "selector": "#__next > div > div > div:nth-child(6) > div:nth-child(5) > div > div > div:nth-child(5) > div:nth-child(1) > div > button > a > span",
+      "context": "<span class=\"text-sm hover:black !text-base !font-medium !text-white\" aria-label=\"Terms and Conditions\" data-testid=\"link-text\">Terms and Conditions</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.98:1. Recommendation:  change background to #cb4f00.",
+      "selector": "#__next > div > div > div:nth-child(6) > div:nth-child(5) > div > div > div:nth-child(5) > div:nth-child(3) > div > button > a > span",
+      "context": "<span class=\"text-sm hover:black !text-base !font-medium !text-white\" aria-label=\"Privacy Policy\" data-testid=\"link-text\">Privacy Policy</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.74:1. Recommendation:  change text colour to #c14b00.",
+      "selector": "#akasa_web_check_in_steps > div:nth-child(1) > div > div:nth-child(3) > div > div > p > a:nth-child(1) > span > i > u",
+      "context": "<u>Akasa Air.com</u>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:47:55+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

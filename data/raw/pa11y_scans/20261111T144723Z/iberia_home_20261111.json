@@ -1,0 +1,132 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "iberia_home_20261111.html",
+  "airline_id": "iberia",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:48:45+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "IBERIA L.A.E. - Home Page - Iberia Spain",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#search-wrapper > form",
+      "context": "<form action=\"https://help.iberia.com/es/results\" class=\"ibe_form sf-hidden\"></form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+      "type": "error",
+      "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#ticketops-seeker",
+      "context": "<select id=\"ticketops-seeker\" name=\"ticketops-seeker\" data-selectmenu=\"\" data-align=\"left\" class=\"ibe-select\" style=\"display:none\"></select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#ticketops-seeker",
+      "context": "<select id=\"ticketops-seeker\" name=\"ticketops-seeker\" data-selectmenu=\"\" data-align=\"left\" class=\"ibe-select\" style=\"display:none\"></select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Rectangle 29\" found on the web page.",
+      "selector": "#Rectangle 29",
+      "context": "<path id=\"Rectangle 29\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M-472 -65H1528V244H-472V-65Z\" fill=\"#D7192D\"></path>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Rectangle 29\" found on the web page.",
+      "selector": "#Rectangle 29",
+      "context": "<path id=\"Rectangle 29\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M-600 -65H1400V244H-600V-65Z\" fill=\"#D7192D\"></path>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Union\" found on the web page.",
+      "selector": "#Union",
+      "context": "<path id=\"Union\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22.2857 12C22.2857 17.6806 17.6806 22.2857 12 22.2857C6.31936 22.2857 1.71429 17.6806 1.71429 12C1.71429 6.31936 6.31936 1.71429 12 1.71429C17.6806 1.71429 22.2857 6.31936 22.2857 12ZM24 12...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(70)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(71)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(83)",
+      "context": "<img src=\"data:,\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(94)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(95)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(96)",
+      "context": "<iframe src=\"\" style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:48:47+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

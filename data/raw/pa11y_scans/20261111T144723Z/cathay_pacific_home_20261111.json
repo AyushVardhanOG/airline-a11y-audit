@@ -1,0 +1,340 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "cathay_pacific_home_20261111.html",
+  "airline_id": "cathay_pacific",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:48:12+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Book flights & elevate your life | Cathay IN",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#optimizelyWrapper-NotificationCenter > div > nav > header > div > div:nth-child(2) > div:nth-child(1) > div > ul > ul:nth-child(3) > li:nth-child(5) > button > div > img",
+      "context": "<img src=\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#memberId > button",
+      "context": "<button class=\"c-unstyled-button c-popover__trigger headerLg__welcomeLabel\" type=\"button\" data-tealium-event-action=\"HEADER_MEMBER_PANEL::OPEN_BTN\" data-tealium-tracking-required=\"TRUE\" data-slot=\"trigger\" aria-haspopup=\"dialog\" aria-expanded=\"false\"...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#hero-banner-default > div > div:nth-child(1) > a > picture > img",
+      "context": "<img class=\"banner__mediaImage -transition -scaleDown\" fetchpriority=\"high\" loading=\"eager\" srcset=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQY...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#optimizelyWrapper-CarouselHeroBanner > div > div > div:nth-child(2) > button",
+      "context": "<button class=\"c-unstyled-button c-carousel__play-pause\" type=\"button\" style=\"box-sizing:border-box\"><span role=\"img\" class=\"cxicon\"...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#functional-tab-1",
+      "context": "<a class=\"functionalTab -tabOf4 -secondTab sf-hidden\" id=\"functional-tab-1\" rel=\"\" href=\"https://www.cathaypacific.com/mb/#!/en_IN/login\" target=\"_top\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#book-trip-flight",
+      "context": "<form action=\"https://www.cathaypacific.com/wdsibe/IBEFacade\" id=\"book-trip-flight\" method=\"GET\" target=\"_self\"><input type=\"hidden\"><input typ...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Div.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: element content, aria-label , aria-labelledby .",
+      "selector": "#flights-panel > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)",
+      "context": "<div class=\"bookTripPanel__ODSwitch\" aria-label=\"\" role=\"button\" tabindex=\"0\"><span role=\"img\" class=\"cxicon\"...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#bookTripPanel-inputValue-694a7c8a-7ec2-49ce-ac03-4ebf542f665f",
+      "context": "<input aria-activedescendant=\"\" aria-controls=\"bookTripPanel__origin__ODOverlayList\" aria-disabled=\"false\" aria-expanded=\"false\" class=\"bookTripPanel__inputValue bookTripPanel__odInputField\" id=\"bookTripPanel-inputValue-694a7c8a-7ec2-49ce-ac03-4ebf54...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#bookTripPanel-inputValue-694a7c8a-7ec2-49ce-ac03-4ebf542f665f",
+      "context": "<input aria-activedescendant=\"\" aria-controls=\"bookTripPanel__origin__ODOverlayList\" aria-disabled=\"false\" aria-expanded=\"false\" class=\"bookTripPanel__inputValue bookTripPanel__odInputField\" id=\"bookTripPanel-inputValue-694a7c8a-7ec2-49ce-ac03-4ebf54...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"flight-bookTripPanel__origin-ODOverlayList\" found on the web page.",
+      "selector": "#flight-bookTripPanel__origin-ODOverlayList",
+      "context": "<div class=\"bookTripPanel__odOverlaySearch d-none sf-hidden\" id=\"flight-bookTripPanel__origin-ODOverlayList\" role=\"listbox\"></div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#bookTripPanel-inputValue-bae53fb1-1c85-4fb6-81aa-350569e212f8",
+      "context": "<input aria-activedescendant=\"\" aria-controls=\"bookTripPanel__destination__ODOverlayList\" aria-disabled=\"false\" aria-expanded=\"false\" class=\"bookTripPanel__inputValue bookTripPanel__odInputField\" id=\"bookTripPanel-inputValue-bae53fb1-1c85-4fb6-81aa-3...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#bookTripPanel-inputValue-bae53fb1-1c85-4fb6-81aa-350569e212f8",
+      "context": "<input aria-activedescendant=\"\" aria-controls=\"bookTripPanel__destination__ODOverlayList\" aria-disabled=\"false\" aria-expanded=\"false\" class=\"bookTripPanel__inputValue bookTripPanel__odInputField\" id=\"bookTripPanel-inputValue-bae53fb1-1c85-4fb6-81aa-3...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"flight-bookTripPanel__destination-ODOverlayList\" found on the web page.",
+      "selector": "#flight-bookTripPanel__destination-ODOverlayList",
+      "context": "<div class=\"bookTripPanel__odOverlaySearch d-none sf-hidden\" id=\"flight-bookTripPanel__destination-ODOverlayList\" role=\"listbox\"></div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Span.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: element content, aria-label , aria-labelledby .",
+      "selector": "#flights-panel > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > div > div > span:nth-child(2)",
+      "context": "<span class=\"dropdown__icon\" role=\"button\" tabindex=\"0\"><svg height=\"1em\" viewBox=\"0 0 ...</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"react-aria4869014510-:r8q:\" found on the web page.",
+      "selector": "#react-aria4869014510-:r8q:",
+      "context": "<button class=\"c-unstyled-button c-date-picker__range-base\" type=\"button\" id=\"react-aria4869014510-:r8q:\" aria-haspopup=\"dialog\" aria-label=\"Calendar\" aria-labelledby=\"react-aria4869014510-:r8q: react-aria4869014510-:r8l:\" aria-expanded=\"false\" data-...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"react-aria4869014510-:r8l:\" found on the web page.",
+      "selector": "#react-aria4869014510-:r8l:",
+      "context": "<div data-react-aria-pressable=\"true\" id=\"react-aria4869014510-:r8l:\" role=\"group\" data-slot=\"input-wrapper\" data-help-inside=\"true\" class=\"c-input__input-wrapper\"><span data-slot=\"label\" aria-hi...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"functional-tab-1\" found on the web page.",
+      "selector": "#functional-tab-1",
+      "context": "<a class=\"functionalTab -tabOf4 additionalTab\" id=\"functional-tab-1\" rel=\"\" href=\"https://www.cathaypacific.com/mb/#!/en_IN/olci/login\" target=\"_top\"><div class=\"functionalTab__icon...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+      "type": "error",
+      "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#destination-offers-origins-IN",
+      "context": "<select class=\"select__native\" id=\"destination-offers-origins-IN\" name=\"destination-offers-origins\"><option value=\"BOM\" selected=\"\"...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#destination-offers-origins-IN",
+      "context": "<select class=\"select__native\" id=\"destination-offers-origins-IN\" name=\"destination-offers-origins\"><option value=\"BOM\" selected=\"\"...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div > button:nth-child(1)",
+      "context": "<button aria-disabled=\"true\" class=\"slick-arrow slick-prev slick-disabled sf-hidden\" type=\"button\" data-role=\"none\" style=\"display:block\"><svg height=\"1em\" viewBox=\"0 0 ...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div > button:nth-child(3)",
+      "context": "<button aria-disabled=\"false\" class=\"slick-arrow slick-next\" type=\"button\" data-role=\"none\" style=\"display:block\"><span class=\"-srOnly\"></span><s...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(1) > div > a",
+      "context": "<a class=\"withCard sf-hidden\" href=\"https://lifestyle.asiamiles.com/en/p/CXB_1165_50001?utm_medium=INTERNAL&amp;utm_source=OTHERS_CXCOM&amp;utm_campaign=20260914-HK-NAR_CXMERCH_80A_SET_OF_8&amp;utm_content=V3_SHOP_RAIL\" rel=\"noopener noreferrer\" targ...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > div > a",
+      "context": "<a class=\"withCard sf-hidden\" href=\"https://lifestyle.asiamiles.com/en/HK/p/BRE_0068_50001\" rel=\"noopener noreferrer\" target=\"_blank\"><div class=\"fullImageCard__imag...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(3) > div > a",
+      "context": "<a class=\"withCard sf-hidden\" href=\"https://lifestyle.asiamiles.com/en/c/t3_aircraft_blindbox\" rel=\"noopener noreferrer\" target=\"_blank\"><div class=\"fullImageCard__imag...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(4) > div > a",
+      "context": "<a class=\"withCard sf-hidden\" href=\"https://lifestyle.asiamiles.com/en/c/t3_80a_classic-uniform-bear-collection?utm_medium=INTERNAL&amp;utm_source=OTHERS_CXCOM&amp;utm_campaign=20260423-HK-NAR_CXMERCH_80A_BEAR&amp;utm_content=V8_CXCOM-80A-RAIL\" rel=\"...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(5) > div > a",
+      "context": "<a class=\"withCard sf-hidden\" href=\"https://lifestyle.asiamiles.com/en/HK/c/t3_80a_special-livery-collection/special-livery-collection?utm_medium=INTERNAL&amp;utm_source=OTHERS_CXCOM&amp;utm_campaign=20260304-MULTI-NAR_CXMERCH_80A-CLASSIC-ERAS-COLLEC...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(6) > div > a",
+      "context": "<a class=\"withCard sf-hidden\" href=\"https://lifestyle.asiamiles.com/en/HK/c/t3_80a_classic-eras-collection/classic-eras-collection?utm_medium=INTERNAL&amp;utm_source=OTHERS_CXCOM&amp;utm_campaign=20260304-MULTI-NAR_CXMERCH_80A-CLASSIC-ERAS-COLLECTION...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(8) > div:nth-child(1) > div:nth-child(2) > div > div > div > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(7) > div > a",
+      "context": "<a class=\"withCard sf-hidden\" href=\"https://lifestyle.asiamiles.com/en/HK/c/t3_80a_classic-eras-collection/classic-eras-collection?utm_medium=INTERNAL&amp;utm_source=OTHERS_CXCOM&amp;utm_campaign=20260304-MULTI-NAR_CXMERCH_80A-CLASSIC-ERAS-COLLECTION...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#inspiration-cards-7c45c799-b7da-437a-ac27-1a03a5000cb9 > div > button:nth-child(1)",
+      "context": "<button aria-disabled=\"true\" class=\"slick-arrow slick-prev slick-disabled sf-hidden\" type=\"button\" data-role=\"none\" style=\"display:block\"><svg height=\"1em\" viewBox=\"0 0 ...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#inspiration-cards-7c45c799-b7da-437a-ac27-1a03a5000cb9 > div > button:nth-child(3)",
+      "context": "<button aria-disabled=\"false\" class=\"slick-arrow slick-next\" type=\"button\" data-role=\"none\" style=\"display:block\"><span class=\"-srOnly\"></span><s...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyNoId",
+      "type": "error",
+      "message": "Anchor element found with no link content and no name and/or ID attribute.",
+      "selector": "#spa-root > div > div:nth-child(1) > div:nth-child(5) > footer > div > div:nth-child(3) > span > a",
+      "context": "<a class=\"c-link footer__languageLink--alter footer__languageSelector sf-hidden\" data-size=\"lg\"></a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#container-69846559",
+      "context": "<iframe id=\"container-69846559\" src=\"\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(21)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(22)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(33)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(34)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(35)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#JlhhOGjkbGMP0IOW",
+      "context": "<iframe id=\"JlhhOGjkbGMP0IOW\" tabindex=\"-1\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:48:15+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

@@ -1,0 +1,148 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "tap_air_portugal_assistance_20261111.html",
+  "airline_id": "tap_air_portugal",
+  "page_type": "assistance",
+  "scan_started_utc": "2026-11-11T14:50:09+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Special needs | TAP Air Portugal",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(1)",
+      "context": "<iframe style=\"height:0;width:0;display:none\" src=\"\" hidden=\"\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#main-content > div > div > div > div:nth-child(1) > div > div:nth-child(3) > h3",
+      "context": "<h3 class=\"font-tap text-title-m font-medium lg:font-bold\"></h3>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Logo Horizontal TAP\" found on the web page.",
+      "selector": "#Logo Horizontal TAP",
+      "context": "<g id=\"Logo Horizontal TAP\"><g id=\"Air Horizontal Portugal\"...</g>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Air Horizontal Portugal\" found on the web page.",
+      "selector": "#Air Horizontal Portugal",
+      "context": "<g id=\"Air Horizontal Portugal\"><path fill-rule=\"evenodd\" clip-...</g>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"TAP Horizontal\" found on the web page.",
+      "selector": "#TAP Horizontal",
+      "context": "<g id=\"TAP Horizontal\"><path id=\"Shape-horizontal\" fil...</g>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Shape-horizontal\" found on the web page.",
+      "selector": "#Shape-horizontal",
+      "context": "<path id=\"Shape-horizontal\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22.0248 6.12264H25.916C26.6374 6.12264 27.2167 6.69707 27.2167 7.4151C27.2167 8.13313 26.6374 8.70755 25.916 8.70755H22.0248V6.12264ZM16.8438 0.963867H25.916C29.5012 0.963867 32....",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Shape-2-horizontal\" found on the web page.",
+      "selector": "#Shape-2-horizontal",
+      "context": "<path id=\"Shape-2-horizontal\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.86938 6.12264V19.0251V19.0362H9.06134L10.0342 15.8105H15.8491V15.7553L16.8438 19.0362V0.963867H0V6.12264H3.86938ZM14.3079 10.6407H11.5863H11.5753L12.9416 6.12264L14.3079 10.6...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Path-horizontal\" found on the web page.",
+      "selector": "#Path-horizontal",
+      "context": "<path id=\"Path-horizontal\" d=\"M3.88086 19.0362H9.06189V6.12264H12.9531V0.963867H9.06189L3.88086 19.0362Z\" fill=\"#72BF44\"></path>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Path-2-horizontal\" found on the web page.",
+      "selector": "#Path-2-horizontal",
+      "context": "<path id=\"Path-2-horizontal\" d=\"M16.8438 19.0362H22.0248L16.8438 0.963867V19.0362Z\" fill=\"#BA131A\"></path>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(28)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#iwc",
+      "context": "<iframe id=\"iwc\" src=\"\" frameborder=\"0\" allowtransparency=\"true\" style=\"position:absolute;overflow:hidden;width:10px;height:10px;left:-10px;top:-10px;visibility:hidden;margin:0;border:0;padding:0;cursor:default;z-index:1001\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(35)",
+      "context": "<img width=\"1\" height=\"1\" src=\"data:,\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(36)",
+      "context": "<img width=\"1\" height=\"1\" src=\"data:,\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(37)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:50:11+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

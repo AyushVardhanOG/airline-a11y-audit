@@ -1,0 +1,60 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "ryanair_assistance_20261111.html",
+  "airline_id": "ryanair",
+  "page_type": "assistance",
+  "scan_started_utc": "2026-11-11T14:49:42+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Assisted Travel – Ryanair Help Centre",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "html > body > div:nth-child(4) > header > div > div:nth-child(3) > a:nth-child(3)",
+      "context": "<a class=\"nav-link flex align-items-center divider desktop-divider header-link\" href=\"https://www.ryanair.com/us/en/r/help/special-assistance\" :target=\"$el.host !== window.location.host ? '_blank' : '_self'\" target=\"_blank\">\n <svg width=\"17\" height=\"...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#video-12489466690833-0 > div:nth-child(1) > button:nth-child(5)",
+      "context": "<button class=\"plyr__controls__item plyr__control sf-hidden\" type=\"button\" data-plyr=\"captions\"><svg class=\"icon--pressed\" aria...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#video-12489466690833-0 > div:nth-child(1) > button:nth-child(7)",
+      "context": "<button class=\"plyr__controls__item plyr__control sf-hidden\" type=\"button\" data-plyr=\"pip\"><svg aria-hidden=\"true\" focusab...</button>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:49:43+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

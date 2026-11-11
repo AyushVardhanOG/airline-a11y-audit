@@ -1,0 +1,52 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "sas_assistance_20261111.html",
+  "airline_id": "sas",
+  "page_type": "assistance",
+  "scan_started_utc": "2026-11-11T14:49:48+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Special Travel Needs – Assistance | SAS",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.23:1. Recommendation:  change text colour to #0062c4.",
+      "selector": "html > body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > p > a",
+      "context": "<a href=\"https://travelready.flysas.com/\" class=\"a72xll2\">US CDC Ebola Attestation Form</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe",
+      "context": "<iframe height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:49:49+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

@@ -1,0 +1,286 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "air_france_home_20261111.html",
+  "airline_id": "air_france",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:47:39+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Flight booking on Air France - Flights to Paris, Sao Paulo, Bogota…. | Air France, France",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#bwc-page-template-sticky > header > bwc-logo-header > div > mat-toolbar > div:nth-child(1) > a",
+      "context": "<a _ngcontent-server-app-c1420534592=\"\" class=\"bwc-logo-header__logo-container-link\" href=\"https://wwws.airfrance.fr/en\" jsaction=\"click:;\"><h1 _ngcontent-server-app-c1420...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H42.2",
+      "type": "error",
+      "message": "Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.",
+      "selector": "#bwc-page-template-sticky > header > bwc-logo-header > div > mat-toolbar > div:nth-child(1) > a > h1",
+      "context": "<h1 _ngcontent-server-app-c1420534592=\"\" class=\"ng-star-inserted\"><span _ngcontent-server-app-c14...</h1>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr",
+      "type": "error",
+      "message": "Align attributes .",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(4) > div > bw-homepage-news > bw-homepage-news-grid > ul > li:nth-child(1) > bw-homepage-news-card > bw-homepage-link-card > a > mat-card > mat-card-actions",
+      "context": "<mat-card-actions _ngcontent-server-app-c3157781563=\"\" align=\"end\" class=\"mat-mdc-card-actions mdc-card__actions bw-homepage-link-card__actions mat-mdc-card-actions-align-end\"><div _ngcontent-server-app-c315...</mat-card-actions>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr",
+      "type": "error",
+      "message": "Align attributes .",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(4) > div > bw-homepage-news > bw-homepage-news-grid > ul > li:nth-child(2) > bw-homepage-news-card > bw-homepage-link-card > a > mat-card > mat-card-actions",
+      "context": "<mat-card-actions _ngcontent-server-app-c3157781563=\"\" align=\"end\" class=\"mat-mdc-card-actions mdc-card__actions bw-homepage-link-card__actions mat-mdc-card-actions-align-end\"><div _ngcontent-server-app-c315...</mat-card-actions>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr",
+      "type": "error",
+      "message": "Align attributes .",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(4) > div > bw-homepage-news > bw-homepage-news-grid > ul > li:nth-child(3) > bw-homepage-news-card > bw-homepage-link-card > a > mat-card > mat-card-actions",
+      "context": "<mat-card-actions _ngcontent-server-app-c3157781563=\"\" align=\"end\" class=\"mat-mdc-card-actions mdc-card__actions bw-homepage-link-card__actions mat-mdc-card-actions-align-end\"><div _ngcontent-server-app-c315...</mat-card-actions>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr",
+      "type": "error",
+      "message": "Align attributes .",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(4) > div > bw-homepage-news > bw-homepage-news-grid > ul > li:nth-child(4) > bw-homepage-news-card > bw-homepage-link-card > a > mat-card > mat-card-actions",
+      "context": "<mat-card-actions _ngcontent-server-app-c3157781563=\"\" align=\"end\" class=\"mat-mdc-card-actions mdc-card__actions bw-homepage-link-card__actions mat-mdc-card-actions-align-end\"><div _ngcontent-server-app-c315...</mat-card-actions>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr",
+      "type": "error",
+      "message": "Align attributes .",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-partners > ul > li:nth-child(1) > bw-homepage-partner-card > bw-homepage-link-card > a > mat-card > mat-card-actions",
+      "context": "<mat-card-actions _ngcontent-server-app-c3157781563=\"\" align=\"end\" class=\"mat-mdc-card-actions mdc-card__actions bw-homepage-link-card__actions mat-mdc-card-actions-align-end\"><div _ngcontent-server-app-c315...</mat-card-actions>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr",
+      "type": "error",
+      "message": "Align attributes .",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-partners > ul > li:nth-child(2) > bw-homepage-partner-card > bw-homepage-link-card > a > mat-card > mat-card-actions",
+      "context": "<mat-card-actions _ngcontent-server-app-c3157781563=\"\" align=\"end\" class=\"mat-mdc-card-actions mdc-card__actions bw-homepage-link-card__actions mat-mdc-card-actions-align-end\"><div _ngcontent-server-app-c315...</mat-card-actions>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr",
+      "type": "error",
+      "message": "Align attributes .",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-partners > ul > li:nth-child(3) > bw-homepage-partner-card > bw-homepage-link-card > a > mat-card > mat-card-actions",
+      "context": "<mat-card-actions _ngcontent-server-app-c3157781563=\"\" align=\"end\" class=\"mat-mdc-card-actions mdc-card__actions bw-homepage-link-card__actions mat-mdc-card-actions-align-end\"><div _ngcontent-server-app-c315...</mat-card-actions>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr",
+      "type": "error",
+      "message": "Align attributes .",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-partners > ul > li:nth-child(4) > bw-homepage-partner-card > bw-homepage-link-card > a > mat-card > mat-card-actions",
+      "context": "<mat-card-actions _ngcontent-server-app-c3157781563=\"\" align=\"end\" class=\"mat-mdc-card-actions mdc-card__actions bw-homepage-link-card__actions mat-mdc-card-actions-align-end\"><div _ngcontent-server-app-c315...</mat-card-actions>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-travel-guide > ul > li:nth-child(1) > bw-homepage-travel-guide-card > a > div:nth-child(2) > span:nth-child(1)",
+      "context": "<span _ngcontent-server-app-c74818174=\"\" data-testid=\"bwhp-travel-guide__country-label\" class=\"bwc-typo-body-m-medium bw-homepage-travel-guide-card__label\"> China </span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #949494.",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-travel-guide > ul > li:nth-child(1) > bw-homepage-travel-guide-card > a > div:nth-child(2) > span:nth-child(2)",
+      "context": "<span _ngcontent-server-app-c74818174=\"\" data-testid=\"bwhp-travel-guide__city-label\" class=\"bwc-typo-headline-m bw-homepage-travel-guide-card__label\"> Beijing </span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-travel-guide > ul > li:nth-child(2) > bw-homepage-travel-guide-card > a > div:nth-child(2) > span:nth-child(1)",
+      "context": "<span _ngcontent-server-app-c74818174=\"\" data-testid=\"bwhp-travel-guide__country-label\" class=\"bwc-typo-body-m-medium bw-homepage-travel-guide-card__label\"> France </span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #949494.",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-travel-guide > ul > li:nth-child(2) > bw-homepage-travel-guide-card > a > div:nth-child(2) > span:nth-child(2)",
+      "context": "<span _ngcontent-server-app-c74818174=\"\" data-testid=\"bwhp-travel-guide__city-label\" class=\"bwc-typo-headline-m bw-homepage-travel-guide-card__label\"> Nantes </span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-travel-guide > ul > li:nth-child(3) > bw-homepage-travel-guide-card > a > div:nth-child(2) > span:nth-child(1)",
+      "context": "<span _ngcontent-server-app-c74818174=\"\" data-testid=\"bwhp-travel-guide__country-label\" class=\"bwc-typo-body-m-medium bw-homepage-travel-guide-card__label\"> United Kingdom </span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #949494.",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-travel-guide > ul > li:nth-child(3) > bw-homepage-travel-guide-card > a > div:nth-child(2) > span:nth-child(2)",
+      "context": "<span _ngcontent-server-app-c74818174=\"\" data-testid=\"bwhp-travel-guide__city-label\" class=\"bwc-typo-headline-m bw-homepage-travel-guide-card__label\"> London </span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #767676.",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-travel-guide > ul > li:nth-child(4) > bw-homepage-travel-guide-card > a > div:nth-child(2) > span:nth-child(1)",
+      "context": "<span _ngcontent-server-app-c74818174=\"\" data-testid=\"bwhp-travel-guide__country-label\" class=\"bwc-typo-body-m-medium bw-homepage-travel-guide-card__label\"> France </span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 3:1, but text in this element has a contrast ratio of 1:1. Recommendation:  change text colour to #949494.",
+      "selector": "#main-content-sticky-spacer > div > bw-homepage-app-root > div > bw-homepage-main-section:nth-child(5) > div > bw-homepage-travel-guide > ul > li:nth-child(4) > bw-homepage-travel-guide-card > a > div:nth-child(2) > span:nth-child(2)",
+      "context": "<span _ngcontent-server-app-c74818174=\"\" data-testid=\"bwhp-travel-guide__city-label\" class=\"bwc-typo-headline-m bw-homepage-travel-guide-card__label\"> Toulouse </span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "html > body > bw-app > bwc-page-template > mat-sidenav-container > mat-sidenav-content > div > footer > bwc-footer > div > div:nth-child(2) > div > bwc-footer-nav-list:nth-child(1) > div > div:nth-child(1) > button",
+      "context": "<button _ngcontent-server-app-c507855926=\"\" type=\"button\" data-testid=\"bwc-footer-nav-list__expand-button\" class=\"bwc-footer-nav-list__expand-button sf-hidden\" aria-controls=\"bwc-footer-nav-list-expandable-customer-service\" aria-expanded=\"false\" jsac...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "html > body > bw-app > bwc-page-template > mat-sidenav-container > mat-sidenav-content > div > footer > bwc-footer > div > div:nth-child(2) > div > bwc-footer-nav-list:nth-child(2) > div > div:nth-child(1) > button",
+      "context": "<button _ngcontent-server-app-c507855926=\"\" type=\"button\" data-testid=\"bwc-footer-nav-list__expand-button\" class=\"bwc-footer-nav-list__expand-button sf-hidden\" aria-controls=\"bwc-footer-nav-list-expandable-online-purchase\" aria-expanded=\"false\" jsact...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "html > body > bw-app > bwc-page-template > mat-sidenav-container > mat-sidenav-content > div > footer > bwc-footer > div > div:nth-child(2) > div > bwc-footer-nav-list:nth-child(3) > div > div:nth-child(1) > button",
+      "context": "<button _ngcontent-server-app-c507855926=\"\" type=\"button\" data-testid=\"bwc-footer-nav-list__expand-button\" class=\"bwc-footer-nav-list__expand-button sf-hidden\" aria-controls=\"bwc-footer-nav-list-expandable-loyalty-program-and-partners\" aria-expanded=...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "html > body > bw-app > bwc-page-template > mat-sidenav-container > mat-sidenav-content > div > footer > bwc-footer > div > div:nth-child(2) > div > bwc-footer-nav-list:nth-child(4) > div > div:nth-child(1) > button",
+      "context": "<button _ngcontent-server-app-c507855926=\"\" type=\"button\" data-testid=\"bwc-footer-nav-list__expand-button\" class=\"bwc-footer-nav-list__expand-button sf-hidden\" aria-controls=\"bwc-footer-nav-list-expandable-about-air-france\" aria-expanded=\"false\" jsac...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "html > body > bw-app > bwc-page-template > mat-sidenav-container > mat-sidenav-content > div > footer > bwc-footer > div > div:nth-child(2) > div > bwc-footer-nav-list:nth-child(5) > div > div:nth-child(1) > button",
+      "context": "<button _ngcontent-server-app-c507855926=\"\" type=\"button\" data-testid=\"bwc-footer-nav-list__expand-button\" class=\"bwc-footer-nav-list__expand-button sf-hidden\" aria-controls=\"bwc-footer-nav-list-expandable-air-france-app\" aria-expanded=\"false\" jsacti...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "html > body > bw-app > bwc-page-template > mat-sidenav-container > mat-sidenav-content > div > footer > bwc-footer > div > div:nth-child(2) > div > bwc-footer-nav-list:nth-child(6) > div > div:nth-child(1) > button",
+      "context": "<button _ngcontent-server-app-c507855926=\"\" type=\"button\" data-testid=\"bwc-footer-nav-list__expand-button\" class=\"bwc-footer-nav-list__expand-button sf-hidden\" aria-controls=\"bwc-footer-nav-list-expandable-fly-from\" aria-expanded=\"false\" jsaction=\"cl...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "html > body > bw-app > bwc-page-template > mat-sidenav-container > mat-sidenav-content > div > footer > bwc-footer > div > div:nth-child(2) > div > bwc-footer-nav-list:nth-child(7) > div > div:nth-child(1) > button",
+      "context": "<button _ngcontent-server-app-c507855926=\"\" type=\"button\" data-testid=\"bwc-footer-nav-list__expand-button\" class=\"bwc-footer-nav-list__expand-button sf-hidden\" aria-controls=\"bwc-footer-nav-list-expandable-fly-worldwide\" aria-expanded=\"false\" jsactio...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name",
+      "type": "error",
+      "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#g-recaptcha-response-100000",
+      "context": "<textarea id=\"g-recaptcha-response-100000\" name=\"g-recaptcha-response\" class=\"g-recaptcha-response\" style=\"width:250px;height:40px;border:1px solid rgb(193,193,193);margin:10px 25px;padding:0px;resize:none;display:none\"></textarea>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#g-recaptcha-response-100000",
+      "context": "<textarea id=\"g-recaptcha-response-100000\" name=\"g-recaptcha-response\" class=\"g-recaptcha-response\" style=\"width:250px;height:40px;border:1px solid rgb(193,193,193);margin:10px 25px;padding:0px;resize:none;display:none\"></textarea>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > div:nth-child(30) > iframe",
+      "context": "<iframe style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(48)",
+      "context": "<iframe height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img",
+      "context": "<img src=\"data:,\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(64)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {
+    "saved-copy.localhost": 1
+  },
+  "scan_finished_utc": "2026-11-11T14:47:41+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

@@ -1,0 +1,76 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "ryanair_home_20261111.html",
+  "airline_id": "ryanair",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:49:45+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Official Ryanair website | Cheap flights from Ireland | Ryanair",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#main-content > ry-spinner > div > hp-lazy-content > hp-content-container > hp-content > section:nth-child(2) > hp-video-banner-container > hp-video-banner-card > a:nth-child(1)",
+      "context": "<a _ngcontent-ng-c2172111408=\"\" rel=\"noopener noreferrer\" ryboxeverclicktracking=\"\" ryboxeverviewtracking=\"\" tabindex=\"0\" class=\"video-banner__content\" href=\"https://www.ryanair.com/ie/en/lp/promotion/flash-sale\"><hp-video _ngcontent-ng-c217211...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#main-content > ry-spinner > div > hp-lazy-content > hp-content-container > hp-content > section:nth-child(2) > hp-video-banner-container > hp-video-banner-card > a:nth-child(2)",
+      "context": "<a href=\"https://www.ryanair.com/ryanair3/dam/2026/flights/11/11-nov-flash-sale-crea6876/animations/IE_MP4_CREA-6876_Sale_Animation.mp4\" target=\"_blank\" style=\"z-index:2147483647!important;position:absolute!important;margin:8px 0px 0px 8px!important;...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputEmail.Name",
+      "type": "error",
+      "message": "This emailinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "html > body > hp-app-root > hp-home-container > hp-home > hp-subscriber-widget-container > hp-subscriber-widget > form > ry-input-d > div > input",
+      "context": "<input _ngcontent-ng-c727544634=\"\" class=\"body-l-lg body-l-sm date-placeholder invisible-background\" type=\"email\" name=\"undefined\" autocomplete=\"\" min=\"undefined\" max=\"undefined\" pattern=\"undefined\" placeholder=\"Email address\" value=\"\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(6)",
+      "context": "<img width=\"1\" height=\"1\" src=\"data:,\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(7)",
+      "context": "<img width=\"1\" height=\"1\" src=\"data:,\" style=\"display:none\">",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:49:48+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

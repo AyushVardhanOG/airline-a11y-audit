@@ -1,0 +1,396 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "peach_home_20261111.html",
+  "airline_id": "peach",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:49:27+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "[OFFICIAL] Peach | Flight booking / Flight Status",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+      "type": "error",
+      "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#LanguageSelect",
+      "context": "<select id=\"LanguageSelect\" class=\"js-selectHref\">\n            \n        \n        ...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#LanguageSelect",
+      "context": "<select id=\"LanguageSelect\" class=\"js-selectHref\">\n            \n        \n        ...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.61:1. Recommendation:  change background to #505050.",
+      "selector": "#Menu > div > nav:nth-child(2) > div > ul > li:nth-child(4) > a",
+      "context": "<a href=\"https://myaccount.flypeach.com/login?lang=en\" target=\"_blank\" class=\"c-featureButton u-weightB\">Login</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"AdvancedHTMLBlock158081\" found on the web page.",
+      "selector": "#AdvancedHTMLBlock158081",
+      "context": "<div id=\"AdvancedHTMLBlock158081\" class=\"advanced_html_block\">\n<ul class=\"p-globalNav__list j...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#Contents > div > main > div:nth-child(1) > div:nth-child(2) > button",
+      "context": "<button class=\"u-resetStyle js-visualSlider__pause\"><i class=\"c-icon -play sf-hidde...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.61:1. Recommendation:  change background to #505050.",
+      "selector": "#Search > div:nth-child(1) > ul > li:nth-child(1) > button > span",
+      "context": "<span class=\"-text\">Flight <br class=\"u-pcNone sf-h...</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.61:1. Recommendation:  change background to #505050.",
+      "selector": "#Search > div:nth-child(1) > ul > li:nth-child(1) > button > span > span",
+      "context": "<span class=\"u-dib u-spNone\">/ Book</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change text colour to #6a5347.",
+      "selector": "#Search > div:nth-child(1) > ul > li:nth-child(2) > button > span",
+      "context": "<span class=\"-text\">Manage <br class=\"u-pcNone sf-h...</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change text colour to #6a5347.",
+      "selector": "#Search > div:nth-child(1) > ul > li:nth-child(2) > button > span > span",
+      "context": "<span class=\"u-dib u-spNone\">/ Change</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 4.3:1. Recommendation:  change text colour to #6a5347.",
+      "selector": "#Search > div:nth-child(1) > ul > li:nth-child(3) > button > span",
+      "context": "<span class=\"-text\">Flight <br class=\"u-pcNone sf-h...</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.33:1. Recommendation:  change background to #767676.",
+      "selector": "#SearchMainFlight > div > div:nth-child(1) > ul > li:nth-child(1) > label > span",
+      "context": "<span>Roundtrip</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#SearchMainFlight > div > div:nth-child(2) > div:nth-child(2) > button",
+      "context": "<button class=\"u-resetStyle js-valueReplace\" data-parent=\".p-flightSearchNav__flex\" data-target1=\"inputFrom\" data-target2=\"inputTo\"><i class=\"c-icon\"><img src=\"dat...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+      "type": "error",
+      "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#SearchMainFlight > div > div:nth-child(4) > div:nth-child(1) > span > span > select",
+      "context": "<select name=\"adt\" class=\"pax is-noValue is-unselected\" data-param=\"adult_count\">\n            <option disabled=\"...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#SearchMainFlight > div > div:nth-child(4) > div:nth-child(1) > span > span > select",
+      "context": "<select name=\"adt\" class=\"pax is-noValue is-unselected\" data-param=\"adult_count\">\n            <option disabled=\"...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+      "type": "error",
+      "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#SearchMainFlight > div > div:nth-child(4) > div:nth-child(2) > span > span > select",
+      "context": "<select name=\"chd\" class=\"pax is-noValue is-unselected\" data-param=\"child_count\">\n            <option disabled=\"...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#SearchMainFlight > div > div:nth-child(4) > div:nth-child(2) > span > span > select",
+      "context": "<select name=\"chd\" class=\"pax is-noValue is-unselected\" data-param=\"child_count\">\n            <option disabled=\"...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Select.Name",
+      "type": "error",
+      "message": "This select element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#SearchMainFlight > div > div:nth-child(4) > div:nth-child(3) > span > span > select",
+      "context": "<select name=\"inf\" class=\"pax is-noValue is-unselected\" data-param=\"infant_count\">\n            <option disabled=\"...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#SearchMainFlight > div > div:nth-child(4) > div:nth-child(3) > span > span > select",
+      "context": "<select name=\"inf\" class=\"pax is-noValue is-unselected\" data-param=\"infant_count\">\n            <option disabled=\"...</select>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#en_top_ryoko_dangan",
+      "context": "<a class=\"p-basicCard__inner\" href=\"https://www.flypeach.com/en/um/specials/shorttrip\" target=\"_self\" id=\"en_top_ryoko_dangan\">\n <img src=\"data:image/webp;bas...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#en_top_ryoko_inflight_service",
+      "context": "<a class=\"p-basicCard__inner\" href=\"https://www.flypeach.com/en/lm/ai/inflights/inflight-service\" target=\"_self\" id=\"en_top_ryoko_inflight_service\">\n <img src=\"data:image/webp;bas...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#Picks > div > section > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > button",
+      "context": "<button class=\"u-resetStyle js-contentSlider__pause\"><i class=\"c-icon -play sf-hidde...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.17:1. Recommendation:  change text colour to #080300.",
+      "selector": "#Contents > div > main > div:nth-child(2) > div:nth-child(5) > section:nth-child(1) > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(1) > a > div:nth-child(1)",
+      "context": "<div class=\"p-newsList__date\">Oct 16, 2026</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.17:1. Recommendation:  change text colour to #080300.",
+      "selector": "#Contents > div > main > div:nth-child(2) > div:nth-child(5) > section:nth-child(1) > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(2) > a > div:nth-child(1)",
+      "context": "<div class=\"p-newsList__date\">Oct 15, 2026</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.17:1. Recommendation:  change text colour to #080300.",
+      "selector": "#Contents > div > main > div:nth-child(2) > div:nth-child(5) > section:nth-child(1) > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(3) > a > div:nth-child(1)",
+      "context": "<div class=\"p-newsList__date\">Aug 19, 2026</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.17:1. Recommendation:  change text colour to #080300.",
+      "selector": "#Contents > div > main > div:nth-child(2) > div:nth-child(5) > section:nth-child(1) > div:nth-child(2) > div:nth-child(2) > ul > li:nth-child(4) > a > div:nth-child(1)",
+      "context": "<div class=\"p-newsList__date\">Aug 17, 2026</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.17:1. Recommendation:  change text colour to #080300.",
+      "selector": "#Contents > div > main > div:nth-child(2) > div:nth-child(5) > section:nth-child(3) > div > div:nth-child(2) > ul > li:nth-child(1) > a > div:nth-child(1)",
+      "context": "<div class=\"p-newsList__date\">Nov 6, 2026</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.17:1. Recommendation:  change text colour to #080300.",
+      "selector": "#Contents > div > main > div:nth-child(2) > div:nth-child(5) > section:nth-child(3) > div > div:nth-child(2) > ul > li:nth-child(2) > a > div:nth-child(1)",
+      "context": "<div class=\"p-newsList__date\">Oct 16, 2026</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.17:1. Recommendation:  change text colour to #080300.",
+      "selector": "#Contents > div > main > div:nth-child(2) > div:nth-child(5) > section:nth-child(3) > div > div:nth-child(2) > ul > li:nth-child(3) > a > div:nth-child(1)",
+      "context": "<div class=\"p-newsList__date\">Oct 15, 2026</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/corporate\">Corporate</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/corporate/sustainability\">Sustainability</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(3) > a",
+      "context": "<a href=\"https://recruit.flypeach.com/\" target=\"_blank\">Careers</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(4) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/corporate/press\">Press Releases</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(1) > ul:nth-child(2) > li:nth-child(1) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/lm/newsletter\">Sign Up for Our Email Newslette...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(1) > ul:nth-child(2) > li:nth-child(2) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/ap/booking/peach_profile\">About Peach Profile</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(1) > ul:nth-child(2) > li:nth-child(3) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/others/promocode\">How to Use Promotion Codes</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > div > nav:nth-child(2) > div > a",
+      "context": "<a href=\"https://www.flypeach.com/en/others/app/download\"><img src=\"data:image/webp;base6...</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(3) > ul > li:nth-child(1) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/fm/terms_and_conditions\">Website terms of use</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(3) > ul > li:nth-child(2) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/fm/privacy_policy\">Privacy Policy</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(3) > ul > li:nth-child(3) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/fm/conditions_of_carriage\">Condition of carriage</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.56:1. Recommendation:  change background to #767676.",
+      "selector": "#Footer > div > div > div:nth-child(1) > nav:nth-child(3) > ul > li:nth-child(4) > a",
+      "context": "<a href=\"https://www.flypeach.com/en/fm/sns_policy\">Social Media Policy</a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 1.84:1. Recommendation:  change background to #606060.",
+      "selector": "#Footer > div > div > div:nth-child(2)",
+      "context": "<div class=\"p-footer__copyright\">(C) <script></script>2026 Peach...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(50)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(51)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(52)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(53)",
+      "context": "<img src=\"data:,\" height=\"1\" width=\"1\" fetchpriority=\"high\" style=\"display:none\">",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:49:29+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

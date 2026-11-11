@@ -1,0 +1,164 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "qatar_airways_checkin_20261111.html",
+  "airline_id": "qatar_airways",
+  "page_type": "checkin",
+  "scan_started_utc": "2026-11-11T14:49:37+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Check in online to save time | Qatar Airways",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#header > div > div > div > div > nav > a:nth-child(4)",
+      "context": "<a class=\"navbar-brand mr-3 QRHLogo QRHLogoDesktop QRHLogoSH sf-hidden\" href=\"https://www.qatarairways.com/en-us/homepage.html\">\n \n </a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#header > div > div > div > div > nav > a:nth-child(5)",
+      "context": "<a class=\"navbar-brand QRHLogo QRHLogoMobile QRHLogoSHMob sf-hidden\" href=\"https://www.qatarairways.com/en-us/homepage.html\">\n \n </a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: element content, aria-label , aria-labelledby .",
+      "selector": "#header > div > div > div > div > nav > a:nth-child(10)",
+      "context": "<a href=\"https://www.qatarairways.com/en-us/services-checking-in.html\" class=\"nav-link mobile-link changeRegionMobile ml-auto sf-hidden\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n \n \n </a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"action_insert_16263445102441508\" found on the web page.",
+      "selector": "#action_insert_16263445102441508",
+      "context": "<div id=\"action_insert_16263445102441508\">\n<div id=\"JJPC-popupDesktop\" cl...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#deskTopCheckinForm",
+      "context": "<form id=\"deskTopCheckinForm\" action=\"\" method=\"POST\">\n <input type=\"hidden\">\n <input...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#callbackForm",
+      "context": "<form id=\"callbackForm\" action=\"#\" method=\"POST\">\n <input type=\"hidden\"> \n <inpu...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#force-login-form",
+      "context": "<form id=\"force-login-form\" action=\"\" method=\"post\">\n <input type=\"hidden\">\n <input...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#externalcallback-form",
+      "context": "<form id=\"externalcallback-form\" action=\"\" method=\"POST\">\n <input type=\"hidden\"> \n </form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#externalkeepAliveURL-form",
+      "context": "<form id=\"externalkeepAliveURL-form\" action=\"\" method=\"POST\">\n <input type=\"hidden\"> \n </form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 2.61:1. Recommendation:  change text colour to #00050a.",
+      "selector": "#main > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div > nav > ol > li:nth-child(2)",
+      "context": "<li aria-current=\"page\" class=\"breadcrumb-item active\">Check in online</li>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#j-call-back-url-form",
+      "context": "<form id=\"j-call-back-url-form\" class=\"hidden sf-hidden\" action=\"\" method=\"post\">\n</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#j-cookie-call-back-url-form",
+      "context": "<form id=\"j-cookie-call-back-url-form\" class=\"hidden sf-hidden\" action=\"\" method=\"post\">\n</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(99)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(113)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(114)",
+      "context": "<img src=\"data:,\" width=\"1\" height=\"1\" scrolling=\"no\" frameborder=\"0\" style=\"display:none\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(125)",
+      "context": "<iframe height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:49:39+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

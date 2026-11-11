@@ -1,0 +1,148 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "southwest_home_20261111.html",
+  "airline_id": "southwest",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:50:04+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Southwest Airlines | Airline Tickets and Low Fares",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#root > div:nth-child(3) > div > div:nth-child(3) > header > div > div > div > div > div > div:nth-child(3) > div > div:nth-child(4) > div:nth-child(1) > div > button",
+      "context": "<button aria-label=\"\" class=\"emphasis__ZUNuZ showUnderline__ZUNuZ link__ZUNuZ iconOnlyMenuItem__ZzlGU menuItemUppercase__ZzlGU\" type=\"button\"><div class=\"iconContainer__c0It...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#tabs-03739716546200007-tab-panel-0 > div > div > div:nth-child(1) > form > div:nth-child(5) > button",
+      "context": "<button aria-label=\"\" class=\"switcherooButton__NWNJe button__RFEwZ customer-button-nostyle customer-light-button-nostyle\" role=\"button\" type=\"button\"><div class=\"iconContainer__c0It...</button>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#tabs-03739716546200007-tab-panel-0 > div > div > div:nth-child(1) > form > div:nth-child(6) > span:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > span > button",
+      "context": "<button aria-hidden=\"false\" aria-label=\"\" class=\"button__X2EyU passMouseEventsThrough__X2EyU button__RFEwZ customer-button-nostyle customer-light-button-nostyle\" data-test=\"undefinedButton\" role=\"button\" tabindex=\"-1\" type=\"button\"><div class=\"origin...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#tabs-03739716546200007-tab-panel-0 > div > div > div:nth-child(1) > form > div:nth-child(6) > span:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > span > button",
+      "context": "<button aria-hidden=\"false\" aria-label=\"\" class=\"button__X2EyU passMouseEventsThrough__X2EyU button__RFEwZ customer-button-nostyle customer-light-button-nostyle\" data-test=\"undefinedButton\" role=\"button\" tabindex=\"-1\" type=\"button\"><div class=\"origin...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#icon-id-09783466075358194 > div:nth-child(1) > div > span > button",
+      "context": "<button aria-hidden=\"false\" aria-label=\"\" class=\"button__X2EyU passMouseEventsThrough__X2EyU button__RFEwZ customer-button-nostyle customer-light-button-nostyle\" data-test=\"undefinedButton\" role=\"button\" tabindex=\"-1\" type=\"button\"><div class=\"origin...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail",
+      "type": "error",
+      "message": "This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least 4.5:1, but text in this element has a contrast ratio of 3.9:1. Recommendation:  change text colour to #707070.",
+      "selector": "#pageContent > div > section > div:nth-child(5) > section > div > div > div > div > span",
+      "context": "<span class=\"sponsored__NWF6W\"><div class=\"iconContainer__c0It...</span>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(17)",
+      "context": "<iframe name=\"__launchpadLocator\" style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(28)",
+      "context": "<img height=\"1\" width=\"1\" border=\"0\" style=\"display:none\" src=\"data:,\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "html > body > img:nth-child(35)",
+      "context": "<img height=\"1\" width=\"1\" style=\"display:none\" src=\"data:,\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#_bcnf",
+      "context": "<iframe id=\"_bcnf\" src=\"\" style=\"display:none\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#udDc31jvXAZZcdis",
+      "context": "<iframe id=\"udDc31jvXAZZcdis\" tabindex=\"-1\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F92,ARIA4",
+      "type": "error",
+      "message": "This element's role is \"presentation\" but contains child elements with semantic meaning.",
+      "selector": "#select-list-id-0017332070205346772-caption > div:nth-child(1) > div > div > div:nth-child(2) > span > svg",
+      "context": "<svg class=\"icon__c0ItZ transparentBorder__c0ItZ\" height=\"20px\" role=\"presentation\" viewBox=\"0 0 16 16\" style=\"fill:var(--cmp-core-color-select-list-icon,cmp-core-color-select-list-icon);stroke:var(--cmp-core-color-select-list-icon,cmp-core-color-sel...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F92,ARIA4",
+      "type": "error",
+      "message": "This element's role is \"presentation\" but contains child elements with semantic meaning.",
+      "selector": "#select-list-id-031685493391211494-caption > div:nth-child(1) > div > div > div:nth-child(2) > span > svg",
+      "context": "<svg class=\"icon__c0ItZ transparentBorder__c0ItZ\" height=\"20px\" role=\"presentation\" viewBox=\"0 0 16 16\" style=\"fill:var(--cmp-core-color-select-list-icon,cmp-core-color-select-list-icon);stroke:var(--cmp-core-color-select-list-icon,cmp-core-color-sel...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F92,ARIA4",
+      "type": "error",
+      "message": "This element's role is \"presentation\" but contains child elements with semantic meaning.",
+      "selector": "#pageContent > div > section > div:nth-child(5) > section > div > div > div > div > span > div > span > svg",
+      "context": "<svg class=\"icon__c0ItZ transparentBorder__c0ItZ\" height=\"18px\" role=\"presentation\" viewBox=\"0 0 32 32\" style=\"fill:var(--cmp-core-color-text-fg-body-secondary,cmp-core-color-text-fg-body-secondary);stroke:var(--cmp-core-color-text-fg-body-secondary,...",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:50:06+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

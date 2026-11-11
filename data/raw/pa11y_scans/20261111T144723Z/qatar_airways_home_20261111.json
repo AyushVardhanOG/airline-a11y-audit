@@ -1,0 +1,196 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "qatar_airways_home_20261111.html",
+  "airline_id": "qatar_airways",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:49:39+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Book Flights - Book & Fly from Qatar | Qatar Airways",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#header > div > div > div > div > nav > a:nth-child(4)",
+      "context": "<a class=\"navbar-brand mr-3 QRHLogo QRHLogoDesktop QRHLogoSH sf-hidden\" href=\"https://www.qatarairways.com/en-qa/homepage.html\">\n \n </a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#header > div > div > div > div > nav > a:nth-child(5)",
+      "context": "<a class=\"navbar-brand QRHLogo QRHLogoMobile QRHLogoSHMob sf-hidden\" href=\"https://www.qatarairways.com/en-qa/homepage.html\">\n \n </a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.Name",
+      "type": "error",
+      "message": "This element has role of \"button\" but does not have a name available to an accessibility API. Valid names are: element content, aria-label , aria-labelledby .",
+      "selector": "#header > div > div > div > div > nav > a:nth-child(10)",
+      "context": "<a href=\"https://www.qatarairways.com/en-qa/homepage.html\" class=\"nav-link mobile-link changeRegionMobile ml-auto sf-hidden\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" data-bs-toggle=\"dropdown\">\n \n \n </a>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"action_insert_16263445102441508\" found on the web page.",
+      "selector": "#action_insert_16263445102441508",
+      "context": "<div id=\"action_insert_16263445102441508\">\n<div id=\"JJPC-popupDesktop\" cl...</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#deskTopCheckinForm",
+      "context": "<form id=\"deskTopCheckinForm\" action=\"\" method=\"POST\">\n <input type=\"hidden\">\n <input...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#callbackForm",
+      "context": "<form id=\"callbackForm\" action=\"#\" method=\"POST\">\n <input type=\"hidden\"> \n <inpu...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#force-login-form",
+      "context": "<form id=\"force-login-form\" action=\"\" method=\"post\">\n <input type=\"hidden\">\n <input...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#externalcallback-form",
+      "context": "<form id=\"externalcallback-form\" action=\"\" method=\"POST\">\n <input type=\"hidden\"> \n </form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#externalkeepAliveURL-form",
+      "context": "<form id=\"externalkeepAliveURL-form\" action=\"\" method=\"POST\">\n <input type=\"hidden\"> \n </form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"planyourTrip\" found on the web page.",
+      "selector": "#planyourTrip",
+      "context": "<div id=\"planyourTrip\" class=\"small_teaser_copy_co_258561004 small-teaser-comp smallTeaser-preLogin hide tripcomponent container formobile d-sm-block d-md-none sf-hidden\">\n \n \n \n \n </div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"planyourTrip\" found on the web page.",
+      "selector": "#planyourTrip",
+      "context": "<div id=\"planyourTrip\" class=\"small_teaser_copy_co_258561004 small-teaser-comp smallTeaser-postLogin hide tripcomponent container fordesktop d-sm-none d-md-block sf-hidden\">\n \n \n \n \n \n </div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"planyourTrip\" found on the web page.",
+      "selector": "#planyourTrip",
+      "context": "<div id=\"planyourTrip\" class=\"small_teaser_copy_co_258561004 hide tripcomponent small-teaser-comp smallTeaser-postLogin container formobile d-sm-block d-md-none sf-hidden\">\n \n \n \n \n \n</div>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#subscribeNewsLetterProfile > div > form",
+      "context": "<form class=\"subscribe-form sf-hidden\" action=\"\">\n <div class=\"form-group sf-hid...</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#j-call-back-url-form",
+      "context": "<form id=\"j-call-back-url-form\" class=\"hidden sf-hidden\" action=\"\" method=\"post\">\n</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2",
+      "type": "error",
+      "message": "This form does not contain a submit button, which creates issues for those who cannot submit the form using the keyboard. Submit buttons are INPUT elements with type attribute \"submit\" or \"image\", or BUTTON elements with type \"submit\" or omitted/invalid.",
+      "selector": "#j-cookie-call-back-url-form",
+      "context": "<form id=\"j-cookie-call-back-url-form\" class=\"hidden sf-hidden\" action=\"\" method=\"post\">\n</form>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name",
+      "type": "error",
+      "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#g-recaptcha-response-100000",
+      "context": "<textarea id=\"g-recaptcha-response-100000\" name=\"g-recaptcha-response\" class=\"g-recaptcha-response\" style=\"width:250px;height:40px;border:1px solid rgb(193,193,193);margin:10px 25px;padding:0px;resize:none;display:none\"></textarea>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#g-recaptcha-response-100000",
+      "context": "<textarea id=\"g-recaptcha-response-100000\" name=\"g-recaptcha-response\" class=\"g-recaptcha-response\" style=\"width:250px;height:40px;border:1px solid rgb(193,193,193);margin:10px 25px;padding:0px;resize:none;display:none\"></textarea>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Textarea.Name",
+      "type": "error",
+      "message": "This textarea element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#g-recaptcha-response-100001",
+      "context": "<textarea id=\"g-recaptcha-response-100001\" name=\"g-recaptcha-response\" class=\"g-recaptcha-response\" style=\"width:250px;height:40px;border:1px solid rgb(193,193,193);margin:10px 25px;padding:0px;resize:none;display:none\"></textarea>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#g-recaptcha-response-100001",
+      "context": "<textarea id=\"g-recaptcha-response-100001\" name=\"g-recaptcha-response\" class=\"g-recaptcha-response\" style=\"width:250px;height:40px;border:1px solid rgb(193,193,193);margin:10px 25px;padding:0px;resize:none;display:none\"></textarea>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(140)",
+      "context": "<iframe height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:49:42+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

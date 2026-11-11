@@ -1,0 +1,316 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "indigo_home_20261111.html",
+  "airline_id": "indigo",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:48:52+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "Book Domestic and International Flights at Lowest Airfare",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#ChatBotBtn > img",
+      "context": "<img src=\"data:,\" class=\"headerv2__login-avatar-mob d-md-none d-none sf-hidden\" loading=\"lazy\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#at_cobrandsTab > img",
+      "context": "<img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAaVBMVEUAAABKVnBLV3JKVnFJVnBKVnJLV3JKWHJMWHRMV3FMWHBMV3JKVXJLV3NJVXFAUHBLV3JKV3FIWHBLVnFLV3FKV3FQUHBKV3FIVHRLV3FKVnJJVnFJVnNQWHBLV3JLV3NQYHBKVXFLV3KCsUjHAAAAInRSTlMAf+/PUH...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input",
+      "context": "<input placeholder=\"Start typing..\" data-value=\"{&quot;stationCode&quot;:&quot;DEL&quot;,&quot;inActive&quot;:false,&quot;allowed&quot;:true,&quot;icaoCode&quot;:&quot;VIDP&quot;,&quot;fullName&quot;:&quot;Delhi&quot;,&quot;shortName&quot;:&quot;Delh...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > input",
+      "context": "<input placeholder=\"Start typing..\" data-value=\"{&quot;stationCode&quot;:&quot;DEL&quot;,&quot;inActive&quot;:false,&quot;allowed&quot;:true,&quot;icaoCode&quot;:&quot;VIDP&quot;,&quot;fullName&quot;:&quot;Delhi&quot;,&quot;shortName&quot;:&quot;Delh...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > input",
+      "context": "<input placeholder=\"Start typing..\" maxlength=\"20\" role=\"combobox\" aria-expanded=\"false\" value=\"\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > input",
+      "context": "<input placeholder=\"Start typing..\" maxlength=\"20\" role=\"combobox\" aria-expanded=\"false\" value=\"\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > input",
+      "context": "<input placeholder=\"Start typing..\" maxlength=\"20\" role=\"combobox\" value=\"\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > input",
+      "context": "<input placeholder=\"Start typing..\" maxlength=\"20\" role=\"combobox\" value=\"\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > input",
+      "context": "<input placeholder=\"Start typing..\" maxlength=\"20\" role=\"combobox\" value=\"\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div > div > input",
+      "context": "<input placeholder=\"Start typing..\" maxlength=\"20\" role=\"combobox\" value=\"\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+      "type": "error",
+      "message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title , aria-label , aria-labelledby .",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) > div > input",
+      "context": "<input placeholder=\"Start typing..\" maxlength=\"20\" role=\"combobox\" value=\"\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+      "type": "error",
+      "message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+      "selector": "#container-1db7a81361 > div:nth-child(2) > div > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(5) > div > input",
+      "context": "<input placeholder=\"Start typing..\" maxlength=\"20\" role=\"combobox\" value=\"\" class=\"sf-hidden\">",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#offerCarousel > div:nth-child(3) > section > div > div:nth-child(1) > a:nth-child(1) > picture > img",
+      "context": "<img src=\"data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAG1pZjFhdmlmbWlhZgAAANZtZXRhAAAAAAAAACFoZGxyAAAAAAAAAABwaWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAAImlsb2MAAAAAREAAAQABAAAAAAD6AAEAAAAAAACHdgAAACNpaW5mAAAAAAABAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAVmlwc...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#offerCarousel > div:nth-child(3) > section > div > div:nth-child(1) > a:nth-child(2) > picture > img",
+      "context": "<img loading=\"lazy\" class=\"slider__background-opacity d-flex justify-content-center align-items-center lazy-bg-none\" data-bg-image=\"https://www.goindigo.in/content/dam/s6web/in/en/assets/homepage/indigo-upfront/HP_Carousal_WEB_indiGo_Upfront.jpg\" dat...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#offerCarousel > div:nth-child(3) > section > div > div:nth-child(1) > a:nth-child(3) > picture > img",
+      "context": "<img loading=\"lazy\" class=\"slider__background-opacity d-flex justify-content-center align-items-center lazy-bg-none\" data-bg-image=\"https://www.goindigo.in/content/dam/s6web/in/en/assets/homepage/Bags-and-Backpacks/Backpacks-web.jpg\" data-bg-mobile-i...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#offerCarousel > div:nth-child(3) > section > div > div:nth-child(1) > a:nth-child(4) > picture > img",
+      "context": "<img loading=\"lazy\" class=\"slider__background-opacity d-flex justify-content-center align-items-center lazy-bg-none\" data-bg-image=\"https://www.goindigo.in/content/dam/s6web/in/en/assets/homepage/maldives-offer/Flights_HP_Carousal_WEB_Maldives_offer....",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#offerCarousel > div:nth-child(3) > section > div > div:nth-child(1) > a:nth-child(5) > picture > img",
+      "context": "<img loading=\"lazy\" class=\"slider__background-opacity d-flex justify-content-center align-items-center lazy-bg-none\" data-bg-image=\"https://www.goindigo.in/content/dam/s6web/in/en/assets/homepage/airomatics/airomatics_HB---Hero-Banner---WEB.jpg\" data...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#offerCarousel > div:nth-child(3) > section > div > div:nth-child(1) > a:nth-child(6) > picture > img",
+      "context": "<img loading=\"lazy\" class=\"slider__background-opacity d-flex justify-content-center align-items-center lazy-bg-none\" data-bg-image=\"https://www.goindigo.in/content/dam/s6web/in/en/assets/homepage/hotels/rollback-hotels-summer-sale/Flight-HP-Carousel-...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#offerCarousel > div:nth-child(3) > div > a:nth-child(2)",
+      "context": "<a class=\"offer-card lazy-bg-none offer-card-2 offers-card__type1 rounded p-6 p-md-10 d-flex flex-column align-items-stretch text-decoration-none text-secondary-white gradient-primary\" data-bg-image=\"https://www.goindigo.in/content/dam/s6web/in/en/as...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H37",
+      "type": "error",
+      "message": "Img element missing an alt attribute. Use the alt attribute to specify a short text alternative.",
+      "selector": "#swiper-wrapper-afa78b8bb3aa7fa1 > div:nth-child(1) > div > picture > img",
+      "context": "<img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAAOgCAIAAACIksFjAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAANwSBJREFUeJzEvYu6LatyHgbdcx/75SNbtqIktuMHiCVZ8iV5i+hm+V3sNbrJgKKKv26MnmttKXznrD1mNw0FFFU/RVHUP/qzvymQ7op/ldauWunRUdox/jMzvv8vr1...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#skipToMainContent > div:nth-child(6) > section > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > a",
+      "context": "<a href=\"https://www.goindigo.in/content/dam/s6common/in/en/assets/homepage/videos/new_videos/indigo_amsterdam_video-web.mp4\" target=\"_blank\" style=\"z-index:2147483647!important;position:absolute!important;margin:8px 0px 0px 8px!important;width:16px!...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Frame\" found on the web page.",
+      "selector": "#Frame",
+      "context": "<g id=\"Frame\">\n <path id=\"Stroke-5\" d=\"M2.001...</g>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Stroke-5\" found on the web page.",
+      "selector": "#Stroke-5",
+      "context": "<path id=\"Stroke-5\" d=\"M2.00146 20L5.71431 16.2869L12.5336 9.46706L18.0003 4\" stroke=\"white\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Rectangle 3466609\" found on the web page.",
+      "selector": "#Rectangle 3466609",
+      "context": "<path id=\"Rectangle 3466609\" d=\"M6 16H4.25C3.42157 16 2.75 15.3284 2.75 14.5V9.49999C2.75 8.67156 3.42157 7.99999 4.25 7.99999H5.64023C6.35636 7.99999 7.04887 7.74381 7.5926 7.27776L11.2738 4.12244C12.2468 3.28843 13.75 3.9798 13.75 5.26133V7.99999M9...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2",
+      "type": "error",
+      "message": "Img element is the only content of the link, but is missing alt text. The alt text should describe the purpose of the link.",
+      "selector": "#skipToMainContent > div:nth-child(6) > section > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > a",
+      "context": "<a href=\"https://www.goindigo.in/content/dam/s6common/in/en/assets/homepage/videos/new_videos/indigo_manchester_video-web.mp4\" target=\"_blank\" style=\"z-index:2147483647!important;position:absolute!important;margin:8px 0px 0px -70px!important;width:16...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations/ayodhya.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n <span c...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations/ayodhya.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(4) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations/ayodhya.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(5) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations/ayodhya.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations/ayodhya.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(7) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations/ayodhya.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(8) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations/ayodhya.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(9) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations/ayodhya.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent",
+      "type": "error",
+      "message": "Anchor element found with a valid href attribute, but no link content has been supplied.",
+      "selector": "#swiper-wrapper-cf3a8eefe39c3bc8 > div:nth-child(10) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(4) > a:nth-child(2)",
+      "context": "<a href=\"https://www.goindigo.in/destinations/indian-destinations/ayodhya.html?linkNav=icon-Bucket_List%7C%7CDiscover\" class=\"icon-bucket-list text-white bg-white-40 border-0 p-5 p-md-8 text-decoration-none\" role=\"link\" tabindex=\"0\" target=\"_blank\">\n...",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:48:58+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}

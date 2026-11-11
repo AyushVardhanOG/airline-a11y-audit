@@ -1,0 +1,1588 @@
+{
+  "source": "saved_copy",
+  "tool": "pa11y",
+  "file_name": "tap_air_portugal_home_20261111.html",
+  "airline_id": "tap_air_portugal",
+  "page_type": "home",
+  "scan_started_utc": "2026-11-11T14:50:13+00:00",
+  "settings": {
+    "runner": "htmlcs",
+    "standard": "WCAG2AA",
+    "include_warnings": false,
+    "include_notices": false,
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "page_scripts": "disabled (CSP script-src 'none')",
+    "network": "all requests blocked except the saved file itself"
+  },
+  "status": "ok",
+  "error": null,
+  "page_title": "TAP Air Portugal | flyTAP Official Website",
+  "issues": [
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "html > body > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "html > body > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Skip to main content</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(1) > div > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(1) > div > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Important Information Regarding...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(2) > div > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(2) > div > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Acceptance of the Portuguese Id...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(3) > div > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(3) > div > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Travel Advisory – Measures Rela...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(4) > div > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(4) > div > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Safety Warning – Power banks</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(5) > div > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(5) > div > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Restrictions for the transport ...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(6) > div > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(6) > div > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Warning: phishing scheme</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(7) > div > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(7) > div > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">November 10th and 11th - Advers...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(8) > div > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#swiper-wrapper-4ae87347d46ad745 > div:nth-child(8) > div > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Travel Advisory – Actions Relat...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > div:nth-child(2) > div > div > div:nth-child(3) > button > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > div:nth-child(2) > div > div > div:nth-child(3) > button > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">See all</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > div:nth-child(3) > div > div > div:nth-child(1) > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > div:nth-child(3) > div > div > div:nth-child(1) > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Credit Intermediation</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > div:nth-child(3) > div > div > div:nth-child(2) > button > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > div:nth-child(3) > div > div > div:nth-child(2) > button > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Learn more</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > header > nav > div > div:nth-child(4) > div:nth-child(4) > div > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > header > nav > div > div:nth-child(4) > div:nth-child(4) > div > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">PT</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-trigger-book-flight > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-trigger-book-flight > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Book flight</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-trigger-check-in > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-trigger-check-in > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Check-in</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-trigger-my-travels > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-trigger-my-travels > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Manage booking</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-trigger-flight-status > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-trigger-flight-status > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Flight status</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#tripType > div > div:nth-child(1) > div > label > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#tripType > div > div:nth-child(1) > div > label > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Round trip</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#tripType > div > div:nth-child(2) > div > label > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#tripType > div > div:nth-child(2) > div > label > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">One way</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#tripType > div > div:nth-child(3) > div > label > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#tripType > div > div:nth-child(3) > div > label > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Multi-city</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(1) > div > div:nth-child(2) > div > div > div > div > div > label > div > div > div:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(1) > div > div:nth-child(2) > div > div > div > div > div > label > div > div > div:nth-child(1) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Pay with miles</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(1) > div > div:nth-child(2) > a > span > span:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(1) > div > div:nth-child(2) > a > span > span:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Corporate bookings</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div:nth-child(1) > label > div > div > div:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div:nth-child(1) > label > div > div > div:nth-child(1) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Origin</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#Origin > div:nth-child(3) > div > div > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#Origin > div:nth-child(3) > div > div > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">LIS</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div:nth-child(3) > label > div > div > div:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > div:nth-child(3) > label > div > div > div:nth-child(1) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Destination</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#flights[0]-label > div > div > div:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#flights[0]-label > div > div > div:nth-child(1) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Dates</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#flights[0]-value > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#flights[0]-value > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Select Dates</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(1) > div > div > div:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(1) > div > div > div:nth-child(1) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Passengers</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(2) > button > font:nth-child(1)",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(2) > button > font:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">1 </font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(2) > button > font:nth-child(2)",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(2) > button > font:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Passenger(s)</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.Button.Name",
+      "type": "error",
+      "message": "This button element does not have a name available to an accessibility API. Valid names are: title , element content, aria-label , aria-labelledby .",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > button:nth-child(1)",
+      "context": "<button type=\"button\" class=\"focus-visible:ring-ring items-center justify-center whitespace-nowrap rounded-md font-medium ring-offset-background transition-colors duration-300 disabled:pointer-events-none disabled:!border-transparent disabled:text-co...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > button:nth-child(2) > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#radix-«Rj5dm»-content-book-flight > div > div > form > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > button:nth-child(2) > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Search</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(1) > a > div > span:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(1) > a > div > span:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Add insurance</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(2) > a > div > span:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(2) > a > div > span:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Rent a car</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(3) > a > div > span:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(3) > a > div > span:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Book accommodation</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(4) > a > div > span:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(4) > a > div > span:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Bag pick-up &amp; delivery</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(5) > a > div > span:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(5) > a > div > span:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Buy eSIM</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(6) > a > div > span:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(6) > a > div > span:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Tours and activities</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(7) > a > div > span:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(7) > a > div > span:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Book transfer</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(8) > a > div > span:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > section > div > section > div > div > div:nth-child(8) > a > div > span:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">All booking options</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > h1 > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > h1 > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Plan your trip in detail</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > section > div > div:nth-child(1) > div:nth-child(1) > div > a > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > section > div > div:nth-child(1) > div:nth-child(1) > div > a > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Baggage rules and restrictions</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > section > div > div:nth-child(1) > div:nth-child(2) > div > a > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > section > div > div:nth-child(1) > div:nth-child(2) > div > a > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Special needs and wheelchairs</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > section > div > div:nth-child(1) > div:nth-child(3) > div > a > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > section > div > div:nth-child(1) > div:nth-child(3) > div > a > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Traveling with animals</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > section > div > div:nth-child(1) > div:nth-child(4) > div > a > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(2) > section > div > div:nth-child(1) > div:nth-child(4) > div > a > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Traveling with sports equipment</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(3) > h3 > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(3) > h3 > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Christmas Markets in Europe</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(3) > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(3) > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Discover sparkling cities, irre...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(3) > div > a > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(3) > div > a > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Book now</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > h2:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > h2:nth-child(1) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">TAP Miles&amp;Go</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > h2:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > h2:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Discover how every mile you tra...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Enjoy exclusive benefits such a...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > div > a > button > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div > div:nth-child(2) > div > div > a > button > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Join the Programme</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(2) > div > div > div:nth-child(2) > div > h2:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(2) > div > div > div:nth-child(2) > div > h2:nth-child(1) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Club TAP Miles&amp;Go</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(2) > div > div > div:nth-child(2) > div > h2:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(2) > div > div > div:nth-child(2) > div > h2:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Earn more miles and benefits</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(2) > div > div > div:nth-child(2) > div > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(2) > div > div > div:nth-child(2) > div > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">With Club TAP Miles&amp;Go, you...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(2) > div > div > div:nth-child(2) > div > div > a > button > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(2) > div > div > div:nth-child(2) > div > div > a > button > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Join the Club</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > h2:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > h2:nth-child(1) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Hotel discounts</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > h2:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > h2:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">A perfect stay for a much-desir...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Check out our special offers, b...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > a > button > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(3) > div > div > div:nth-child(2) > div > div > a > button > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Discover hotels</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > h2:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > h2:nth-child(1) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">TAP Miles&amp;Go Credit Cards</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > h2:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > h2:nth-child(2) > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Earn miles and get closer to yo...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Discover TAP Credit Cards that ...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > a:nth-child(1) > button > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > a:nth-child(1) > button > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Find out more</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > a:nth-child(2) > button > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#main-content > div > div:nth-child(2) > div > div:nth-child(4) > div:nth-child(2) > div > div > div:nth-child(2) > div > div > a:nth-child(2) > button > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">See here</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h3 > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h3 > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Other websites</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(1) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(1) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">TAP Institutional</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(2) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(2) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">TAP FORBIZ</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(3) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(3) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">TAP Air Cargo</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(4) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(4) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">TAP Maintenance &amp; Engineeri...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(5) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > ul > li:nth-child(5) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">TAP Store</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h3 > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h3 > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Other important features</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(1) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(1) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Legal Information Hub</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(2) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(2) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Carriage Conditions</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(3) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(3) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Privacy Policy</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(4) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(4) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Cookies Policy</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#ot-sdk-btn > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#ot-sdk-btn > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Cookies settings</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(6) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(6) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">TAP Miles&amp;Go Terms and Cond...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(7) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul > li:nth-child(7) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Complaints Book</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > h3 > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > h3 > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Featured destinations</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(1) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(1) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Lisbon Flights</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(2) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(2) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Porto Flights</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(3) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(3) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Funchal Flights</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(4) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(4) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Madrid Flights</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(5) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(5) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">London Flights</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(6) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(6) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">New York Flights</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(7) > a > span > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul > li:nth-child(7) > a > span > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Rio de Janeiro Flights</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Logo Horizontal TAP\" found on the web page.",
+      "selector": "#Logo Horizontal TAP",
+      "context": "<g id=\"Logo Horizontal TAP\"><g id=\"Air Horizontal Portugal\"...</g>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Air Horizontal Portugal\" found on the web page.",
+      "selector": "#Air Horizontal Portugal",
+      "context": "<g id=\"Air Horizontal Portugal\"><path fill-rule=\"evenodd\" clip-...</g>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"TAP Horizontal\" found on the web page.",
+      "selector": "#TAP Horizontal",
+      "context": "<g id=\"TAP Horizontal\"><path id=\"Shape-horizontal\" fil...</g>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Shape-horizontal\" found on the web page.",
+      "selector": "#Shape-horizontal",
+      "context": "<path id=\"Shape-horizontal\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22.0248 6.12264H25.916C26.6374 6.12264 27.2167 6.69707 27.2167 7.4151C27.2167 8.13313 26.6374 8.70755 25.916 8.70755H22.0248V6.12264ZM16.8438 0.963867H25.916C29.5012 0.963867 32....",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Shape-2-horizontal\" found on the web page.",
+      "selector": "#Shape-2-horizontal",
+      "context": "<path id=\"Shape-2-horizontal\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.86938 6.12264V19.0251V19.0362H9.06134L10.0342 15.8105H15.8491V15.7553L16.8438 19.0362V0.963867H0V6.12264H3.86938ZM14.3079 10.6407H11.5863H11.5753L12.9416 6.12264L14.3079 10.6...",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Path-horizontal\" found on the web page.",
+      "selector": "#Path-horizontal",
+      "context": "<path id=\"Path-horizontal\" d=\"M3.88086 19.0362H9.06189V6.12264H12.9531V0.963867H9.06189L3.88086 19.0362Z\" fill=\"#72BF44\"></path>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle4.Guideline4_1.4_1_1.F77",
+      "type": "error",
+      "message": "Duplicate id attribute value \"Path-2-horizontal\" found on the web page.",
+      "selector": "#Path-2-horizontal",
+      "context": "<path id=\"Path-2-horizontal\" d=\"M16.8438 19.0362H22.0248L16.8438 0.963867V19.0362Z\" fill=\"#BA131A\"></path>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > h3 > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > h3 > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">Follow us</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > h3 > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > h3 > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">TAP App</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(2) > p > span > font:nth-child(1)",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(2) > p > span > font:nth-child(1) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">© </font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(2) > p > span > font:nth-child(2)",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(2) > p > span > font:nth-child(2) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">2026 </font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(2) > p > span > font:nth-child(3)",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(2) > p > span > font:nth-child(3) > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\">, TAP.</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(2) > p > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"><font dir=\"auto\" style=\"vertica...</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font",
+      "type": "error",
+      "message": "Presentational markup used that has become obsolete in HTML5.",
+      "selector": "#__next > div > footer > div:nth-child(2) > p > font > font",
+      "context": "<font dir=\"auto\" style=\"vertical-align:inherit\"> All rights reserved.</font>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "#iwc",
+      "context": "<iframe id=\"iwc\" src=\"\" frameborder=\"0\" allowtransparency=\"true\" style=\"position:absolute;overflow:hidden;width:10px;height:10px;left:-10px;top:-10px;visibility:hidden;margin:0;border:0;padding:0;cursor:default;z-index:1001\"></iframe>",
+      "runner": "htmlcs"
+    },
+    {
+      "code": "WCAG2AA.Principle2.Guideline2_4.2_4_1.H64.1",
+      "type": "error",
+      "message": "Iframe element requires a non-empty title attribute that identifies the frame.",
+      "selector": "html > body > iframe:nth-child(25)",
+      "context": "<iframe height=\"0\" width=\"0\" src=\"\" style=\"display:none;visibility:hidden\"></iframe>",
+      "runner": "htmlcs"
+    }
+  ],
+  "blocked_requests_by_host": {},
+  "scan_finished_utc": "2026-11-11T14:50:18+00:00",
+  "tool_versions": {
+    "node": "v24.16.0",
+    "pa11y": "10.0.0",
+    "html_codesniffer": "2.6.0",
+    "puppeteer": "25.17.0",
+    "browser": "Chrome/158.0.8127.18",
+    "browser_executable": "Playwright Chromium (ms-playwright)"
+  },
+  "capture_scan_run": "20261111T142233Z"
+}
