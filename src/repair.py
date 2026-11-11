@@ -227,9 +227,12 @@ def cmd_select(args):
                 if c["file_name"] not in pages:
                     pages[c["file_name"]] = open_offline(browser, CAPTURES_DIR / c["file_name"])
                 page = pages[c["file_name"]][1]
-                outer = page.evaluate("(s) => { const e = document.querySelector(s); return e ? e.outerHTML : null; }",
-                                      c["target"])
-                checked[key] = len(prompt_html(outer)[0]) if outer is not None else None
+                # Web components keep content in a shadow DOM, which is LOST when an element is
+                # re-created from its HTML text (trial: R17), so such elements are skipped.
+                outer = page.evaluate("""(s) => { const e = document.querySelector(s); if (!e) return null;
+                    if ([e, ...e.querySelectorAll('*')].some(x => x.shadowRoot)) return 'SHADOW';
+                    return e.outerHTML; }""", c["target"])
+                checked[key] = len(prompt_html(outer)[0]) if outer not in (None, "SHADOW") else None
             return checked[key]
 
         for rule in top_rules:
@@ -346,6 +349,76 @@ APPLY_FIX = """([target, fixed, marker]) => {
 }"""
 
 
+def apply_and_rescan(browser, axe_source, capture, sel, new_html, marker, out_path):
+    """Replace the element in a COPY of the page, save the copy, re-scan the saved copy from disk."""
+    context, page = open_offline(browser, capture)
+    try:
+        status = page.evaluate(APPLY_FIX, [sel["target"], new_html, marker])
+        if status != "applied":
+            return {"apply_status": status}
+        copy_html = "<!DOCTYPE html>\n" + page.evaluate("() => document.documentElement.outerHTML")
+    finally:
+        context.close()
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(copy_html, encoding="utf-8")
+    context, page = open_offline(browser, out_path)
+    try:
+        _, on_el, by_rule = axe_on_page(page, axe_source, marker)
+    finally:
+        context.close()
+    return {"apply_status": "applied", "repaired_file": ax.project_relative(out_path),
+            "rules_on_element": on_el, "page_violations_by_rule": by_rule}
+
+
+HIDING_PATTERNS = [r'alt\s*=\s*""', r"alt\s*=\s*''", r'aria-hidden\s*=\s*"true"', r'role\s*=\s*"(presentation|none)"']
+
+
+def hides_content(before, after):
+    """
+    True if the fix ADDS alt="", aria-hidden="true" or role="presentation"/"none". Such fixes pass
+    automated checks by hiding content from assistive technology. That is only right for truly
+    decorative content, so a human must judge them (trial: R13 got alt="").
+    """
+    return any(len(re.findall(p, after, re.I)) > len(re.findall(p, before, re.I)) for p in HIDING_PATTERNS)
+
+
+GENERIC_TEXTS = {"image", "image description", "description", "icon", "link", "button", "graphic", "picture",
+                 "photo", "placeholder", "alt text", "alternative text", "text", "label"}
+
+
+def attr_pairs(snippet, prefix_re):
+    """Set of (attribute, value) pairs whose name matches prefix_re, e.g. aria-* or role."""
+    return set(re.findall(rf'\s({prefix_re})\s*=\s*"([^"]*)"', snippet, re.I))
+
+
+def visible_text(snippet):
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", snippet)).strip()
+
+
+def quality_flags(before, after):
+    """
+    Automatic review flags for a fix (added after the pilot: passing axe-core is not the same as a
+    correct fix). Any of the first four -> needs_human_check.
+      placeholder_text  new alt / aria-label text is generic ("Image description", "icon", ...)
+      hides_content     adds alt="", aria-hidden="true" or role="presentation"/"none"
+      removes_aria      an aria-* attribute or role present before is gone (information removed)
+      changes_role      a role was added or changed (behaviour, e.g. keyboard support, may be missing)
+      text_changed      the element's text content changed (informational)
+    """
+    new_labels = {v.strip().lower() for _, v in attr_pairs(after, r"alt|aria-label") - attr_pairs(before, r"alt|aria-label")}
+    aria_b, aria_a = attr_pairs(before, r"aria-[\w-]+"), attr_pairs(after, r"aria-[\w-]+")
+    role_b, role_a = attr_pairs(before, r"role"), attr_pairs(after, r"role")
+    flags = {
+        "placeholder_text": any(v in GENERIC_TEXTS for v in new_labels if v),
+        "hides_content": hides_content(before, after),
+        "removes_aria": bool({n.lower() for n, _ in aria_b} - {n.lower() for n, _ in aria_a}) or bool(role_b - role_a),
+        "changes_role": bool(role_a - role_b),
+        "text_changed": visible_text(before) != visible_text(after),
+    }
+    flags["needs_human_check"] = any(flags[k] for k in ("placeholder_text", "hides_content", "removes_aria", "changes_role"))
+    return flags
+
+
 def repair_one(browser, axe_source, provider, env, sel):
     rid, marker = sel["repair_id"], sel["repair_id"]
     rec = {k: sel[k] for k in ("repair_id", "rule_id", "impact", "wcag_criteria", "airline_id", "page_type",
@@ -369,6 +442,20 @@ def repair_one(browser, axe_source, provider, env, sel):
     rec["before"] = {"rules_on_element": before_on_el, "page_violations_by_rule": before_page,
                      "rule_fails_on_element": sel["rule_id"] in before_on_el}
 
+    # 1b. CONTROL: put the UNCHANGED element back with the same replace + save + re-scan steps as a
+    #     real fix. If that alone changes the result, the pipeline is not neutral for this element
+    #     (trial: R17, a web component), so a verdict would say nothing about the LLM -> skip it.
+    control = apply_and_rescan(browser, axe_source, capture, sel, restore_data_uris(rec["original_html"], uris),
+                               marker, REPAIRED_DIR / f"{rid}_control.html")
+    rec["control"] = control
+    rec["control_ok"] = (control.get("apply_status") == "applied"
+                         and sel["rule_id"] in control.get("rules_on_element", [])
+                         and sorted(control["rules_on_element"]) == sorted(before_on_el)
+                         and control["page_violations_by_rule"] == before_page)
+    if not rec["control_ok"]:
+        rec["verdict"] = "pipeline_artifact"
+        return rec
+
     # 2. Ask the LLM.
     prompt = PROMPT_TEMPLATE.format(original_html=rec["original_html"], **{k: sel[k] for k in
                                     ("rule_id", "rule_help", "wcag_criteria", "failure_summary")})
@@ -383,29 +470,18 @@ def repair_one(browser, axe_source, provider, env, sel):
     rec["fixed_html"], rec["output_cleaned"] = clean_llm_output(raw)
     rec["output_unchanged"] = rec["fixed_html"].strip() == rec["original_html"].strip()
 
-    # 3. Apply the fix to a COPY and save it in data/repaired/ (the capture is never changed).
-    context, page = open_offline(browser, capture)
-    try:
-        status = page.evaluate(APPLY_FIX, [sel["target"], restore_data_uris(rec["fixed_html"], uris), marker])
-        rec["apply_status"] = status
-        if status != "applied":
-            rec["verdict"] = "invalid_output"
-            return rec
-        doctype = "<!DOCTYPE html>\n"
-        repaired_html = doctype + page.evaluate("() => document.documentElement.outerHTML")
-    finally:
-        context.close()
-    REPAIRED_DIR.mkdir(parents=True, exist_ok=True)
-    repaired_path = REPAIRED_DIR / f"{rid}_{sel['file_name']}"
-    repaired_path.write_text(repaired_html, encoding="utf-8")
-    rec["repaired_file"] = ax.project_relative(repaired_path)
+    rec["hides_content"] = hides_content(rec["original_html"], rec["fixed_html"])
+    rec["quality_flags"] = quality_flags(rec["original_html"], rec["fixed_html"])
 
-    # 4. AFTER: re-scan the saved repaired copy from disk.
-    context, page = open_offline(browser, repaired_path)
-    try:
-        _, after_on_el, after_page = axe_on_page(page, axe_source, marker)
-    finally:
-        context.close()
+    # 3 + 4. Apply the fix to a COPY in data/repaired/ (never the capture) and re-scan that saved copy.
+    after = apply_and_rescan(browser, axe_source, capture, sel, restore_data_uris(rec["fixed_html"], uris),
+                             marker, REPAIRED_DIR / f"{rid}_{sel['file_name']}")
+    rec["apply_status"] = after["apply_status"]
+    if after["apply_status"] != "applied":
+        rec["verdict"] = "invalid_output"
+        return rec
+    rec["repaired_file"] = after["repaired_file"]
+    after_on_el, after_page = after["rules_on_element"], after["page_violations_by_rule"]
     still = sel["rule_id"] in after_on_el
     new_on_el = sorted(set(after_on_el) - set(before_on_el))
     new_on_page = sorted(r for r in after_page if r not in before_page)
@@ -426,6 +502,9 @@ def cmd_run(args):
     if provider == "echo" and not args.test:
         sys.exit("Provider 'echo' is only for pipeline tests (use --test).")
     selection = list(csv.DictReader(open(SELECTION_CSV, encoding="utf-8")))
+    if args.ids:
+        wanted = [i.strip() for i in args.ids.split(",")]
+        selection = [s for s in selection if s["repair_id"] in wanted]
     if args.limit:
         selection = selection[:args.limit]
     info = model_info(provider, env)
@@ -462,8 +541,29 @@ def cmd_report(args):
     reps, meta = data["repairs"], data["meta"]
     counts = Counter(r["verdict"] for r in reps)
     label = {"fixed": "Fixed", "fixed_but_new_issue": "Fixed, but new issue", "not_fixed": "Not fixed",
-             "invalid_output": "Invalid output", "llm_error": "LLM error", "element_not_found": "Element not found"}
+             "invalid_output": "Invalid output", "llm_error": "LLM error", "element_not_found": "Element not found",
+             "pipeline_artifact": "Not evaluated (control failed)"}
     esc = lambda s: html.escape(s or "")
+    # Review flags are computed here from the saved before/after HTML (they were added after the pilot
+    # run), so the report and the summary CSV are always based on the same rules.
+    for r in reps:
+        if r.get("fixed_html") is not None:
+            r["quality_flags"] = quality_flags(r["original_html"], r["fixed_html"])
+            r["hides_content"] = r["quality_flags"]["hides_content"]
+    summary_rows = [{
+        "repair_id": r["repair_id"], "rule_id": r["rule_id"], "impact": r["impact"], "wcag_criteria": r["wcag_criteria"],
+        "airline_id": r["airline_id"], "page_type": r["page_type"], "verdict": r["verdict"],
+        "output_unchanged": r.get("output_unchanged"), "llm_seconds": r.get("llm_seconds"),
+        **{k: r.get("quality_flags", {}).get(k) for k in ("needs_human_check", "placeholder_text", "hides_content",
+                                                           "removes_aria", "changes_role", "text_changed")},
+    } for r in reps]
+    summary_csv = (Path(args.out).with_suffix(".csv") if args.out else RESULTS / "repairs_pilot_summary.csv")
+    with open(summary_csv, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=list(summary_rows[0].keys()))
+        w.writeheader()
+        w.writerows(summary_rows)
+    n_fixed = sum(r["verdict"] == "fixed" for r in reps)
+    n_check = sum(r["verdict"] == "fixed" and r.get("quality_flags", {}).get("needs_human_check") for r in reps)
     rows = []
     for r in reps:
         after = r.get("after", {})
@@ -472,6 +572,16 @@ def cmd_report(args):
             extra = f"<div class=note>New: {esc(', '.join(sorted(set(after.get('new_rules_on_element', []) + after.get('new_rules_on_page', [])))))}</div>"
         if r.get("apply_status") and r["apply_status"] != "applied":
             extra += f"<div class=note>{esc(r['apply_status'])}</div>"
+        qf = r.get("quality_flags", {})
+        if r["verdict"].startswith("fixed") and qf.get("needs_human_check"):
+            why = {"placeholder_text": "generic placeholder text", "hides_content": "hides content (alt=\"\", aria-hidden or role=presentation/none)",
+                   "removes_aria": "removes ARIA information", "changes_role": "adds or changes a role (behaviour such as keyboard support not checked)"}
+            extra += ("<div class='note check'><b>Check by hand:</b> "
+                      + esc("; ".join(v for k, v in why.items() if qf.get(k))) + "</div>")
+        if r.get("output_unchanged"):
+            extra += "<div class=note>Model returned the HTML unchanged</div>"
+        if r["verdict"] == "pipeline_artifact":
+            extra += "<div class=note>Putting the unchanged element back already changed the result, so the fix cannot be judged</div>"
         rows.append(f"""<tr><td>{esc(r['repair_id'])}</td><td><b>{esc(r['rule_id'])}</b><br><span class=muted>WCAG {esc(r['wcag_criteria'])}</span></td>
 <td>{esc(r['airline_id'])}<br><span class=muted>{esc(r['page_type'])}</span></td>
 <td><pre>{esc(r.get('original_html'))}</pre></td><td><pre>{esc(r.get('fixed_html'))}</pre></td>
@@ -486,13 +596,15 @@ h1{{font-size:22px;margin:0 0 4px}} .muted{{color:var(--ink2);font-size:13px}}
 table{{border-collapse:collapse;width:100%;margin-top:16px}} th,td{{border-top:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}}
 th{{font-size:13px;color:var(--ink2)}} pre{{white-space:pre-wrap;word-break:break-all;font-size:12px;margin:0;max-height:260px;overflow:auto}}
 td:nth-child(4),td:nth-child(5){{width:34%}} .v{{font-weight:600}} .fixed{{color:var(--ok)}} .fixed_but_new_issue{{color:var(--warn)}}
-.not_fixed,.invalid_output,.llm_error,.element_not_found{{color:var(--bad)}} .note{{font-size:12px;color:var(--ink2);margin-top:4px}}
+.not_fixed,.invalid_output,.llm_error,.element_not_found{{color:var(--bad)}} .pipeline_artifact{{color:var(--ink2)}} .check{{color:var(--warn)}} .note{{font-size:12px;color:var(--ink2);margin-top:4px}}
 </style></head><body>
 <h1>LLM repair pilot: before and after</h1>
 <p class=muted>Model: {esc(meta['llm'].get('model'))} ({esc(meta['llm'].get('provider'))}{', digest ' + esc((meta['llm'].get('digest') or '')[:12]) if meta['llm'].get('digest') else ''}) &middot;
 created {esc(meta['created_utc'])} &middot; fixes applied to copies of the saved pages and re-scanned with axe-core {esc(meta['tool_versions'].get('axe_core'))}.
-"Fixed" = the rule no longer fails on the repaired element and no new failure appeared on the element or page.</p>
-<p>{summary} (of {len(reps)})</p>
+"Fixed" = the rule no longer fails on the repaired element and no new failure appeared on the element or page.
+"Fixed" means axe-core is satisfied, not that the fix is correct for users: fixes marked "check by hand" use placeholder text,
+hide content, remove ARIA information or add a role, and must be judged by a person.</p>
+<p>{summary} (of {len(reps)}). Of the {n_fixed} "fixed": <b>{n_check}</b> need a human check (automatic review flags), {n_fixed - n_check} look plausible.</p>
 <table><thead><tr><th>ID</th><th>Rule</th><th>Airline / page</th><th>Before (original HTML)</th><th>After (LLM HTML)</th><th>Result</th></tr></thead>
 <tbody>{''.join(rows)}</tbody></table></body></html>"""
     out = Path(args.out) if args.out else REPORT_HTML
@@ -506,6 +618,7 @@ def main():
     sub.add_parser("select")
     r = sub.add_parser("run")
     r.add_argument("--limit", type=int, help="only the first N selected elements")
+    r.add_argument("--ids", help="only these repair ids, e.g. R01,R05,R09")
     r.add_argument("--out", help="write results here instead of data/results/repairs_pilot.json")
     r.add_argument("--test", action="store_true", help="allow the 'echo' test provider")
     rep = sub.add_parser("report")

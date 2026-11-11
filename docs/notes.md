@@ -741,3 +741,51 @@ account or rate limits, nothing leaves the computer, exact model digest can be r
 16 GB RAM, Ryzen 7 6800H, AMD RX 6650M; if Ollama cannot use the AMD GPU it runs on the CPU (slower,
 fine for 40 short snippets). Option B: any free API with an OpenAI-compatible endpoint via `.env`.
 `.env.example` documents both; `.env` stays git-ignored.
+
+---
+
+## 2026-11-11/12 - Step 5 pilot run: 40 LLM repairs with qwen2.5-coder:7b (Ollama)
+
+**Setup** (confirmed by me): Ollama 0.40.16, model `qwen2.5-coder:7b` (7.6B parameters, Q4_K_M,
+digest dae161e27b0e...), local; temperature 0, seed 42. `.env` is git-ignored.
+
+**5-element trial** (R01, R05, R09, R13, R17: one per rule; `repairs_pilot_trial.json`, kept unchanged):
+3 fixed, 1 not fixed, 1 fixed-but-new-issue. 2.8-8.9 s per answer. Reading the outputs showed:
+- **R17 was a pipeline artifact, not an LLM result**: the model returned the HTML unchanged, yet the
+  result changed. The element is a web component (`<adc-content-switch>`) with a shadow DOM, which is
+  lost when the element is re-created from its HTML text. Fixes:
+  (1) `select` now skips elements that are or contain shadow-DOM hosts (selection redone: 40 elements,
+  21 airlines; 30 of the old 40 unchanged, R17 replaced);
+  (2) every repair now starts with a **CONTROL**: put the unchanged HTML back, save, re-scan. If the
+  result changes, the verdict is `pipeline_artifact` and the LLM is not asked. Tested: R17 -> artifact,
+  R01 -> control ok.
+- R13 got `alt=""` (passes by hiding the image) -> new "hides content" flag.
+
+**Full run** (`repairs_pilot.json`, 16:44 UTC, ~13 min; LLM time 3.2-40.1 s, median 8.8 s, total 7 min):
+- Before-check: the rule really failed on the element in 40 of 40. Controls: 0 artifacts.
+- **24 fixed, 16 not fixed**, 0 invalid output, 0 new violations, 0 code fences to clean.
+- By rule: color-contrast 4/4, link-name 4/4, image-alt 4/4, button-name 4/4, aria-prohibited-attr 3/4,
+  aria-allowed-attr 3/4, list 2/4, label-content-name-mismatch 0/4, nested-interactive 0/4,
+  aria-required-children 0/4. The 0/4 rules need restructuring, not one attribute.
+- 6 times the model returned the HTML unchanged (R01, R02, R20, R27, R28, R40).
+
+**"Fixed" by axe-core is not the same as a correct fix.** I read all 24 diffs, then wrote automatic review
+flags (`quality_flags` in repair.py) that reproduce that reading exactly:
+- placeholder text: R13, R14 got `alt="Image description"` (meaningless to a screen-reader user);
+- hides content: R15, R16 got `alt=""` (right only if the image is decorative; unknown);
+- removes ARIA: R21 (role="group" removed), R37-R39 (aria-expanded / aria-selected deleted; R38 may
+  really need role="tab" instead);
+- changes role: R34-R36 added role="button" (keyboard behaviour not checked by axe).
+- => **11 of 24 "fixed" need a human check, 13 look plausible** (contrast colors, link/button names
+  such as "Cathay Pacific Axisbank Offer", "Close", "Swap", list restructuring with text unchanged).
+  Even the plausible ones use wording the model guessed (it never sees the page or images).
+
+**Reproducibility**: R01, R05, R09, R13 were in both the trial and the full run with the identical prompt.
+R01, R05, R09: identical outputs. **R13 differed** (trial `alt=""`, full run `alt="Image description"`),
+so temperature 0 + seed does not make Ollama fully deterministic. All raw outputs are saved; for
+Objective 3, consider repeating each prompt and recording the variation.
+
+**Files**: `repairs_pilot.json` (everything: prompts, model digest, raw/cleaned output, before/control/after
+scans), `repairs_pilot_summary.csv` (one row per repair: verdict + review flags; start of Objective 3
+labels), `repairs_pilot_report.html` (before/after table, flags shown), trial JSON + report.
+Repaired and control copies are in `data/repaired/` (80 files, git-ignored).

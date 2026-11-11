@@ -119,14 +119,19 @@ getting around that, so **every airline is measured the same way**:
   - [x] `src/compare_checkers.py`: compared per page by WCAG success criterion; 21% of (page, criterion)
         failures found by both tools (44% on the 5 criteria both tools report); differences explained
         (different criterion mapping, criteria only one tool tests, Pa11y also flags hidden elements)
-- [ ] Step 5: LLM repair prototype (Objective 2) - PILOT PREPARED, waiting for the LLM to be set up
-  - [x] `src/repair.py select`: 40 failing elements (top 10 rules x 4, 22 airlines; no iframes/shadow DOM,
-        HTML <= 3000 chars as sent) -> `data/results/repairs_pilot_selection.csv`
-  - [x] `run`/`report` built and tested WITHOUT an LLM (echo provider + hand-written answers): fixed /
-        not fixed / invalid output / fixed-but-new-issue are all detected; fixes go only into copies in
-        `data/repaired/` (git-ignored); prompts send the element HTML without data-sf-* attributes and with
-        long data: URIs replaced by placeholders (restored before applying)
-  - [ ] install Ollama + pull the model (or set a free API in `.env`), then run `repair.py run` and `report`
+- [x] Step 5: LLM repair prototype (Objective 2) - PILOT done 2026-11-11 (one LLM; 40 elements)
+  - [x] LLM: Ollama 0.40.16, qwen2.5-coder:7b (7.6B, Q4_K_M, digest dae161e27b0e...), local, temperature 0, seed 42;
+        settings in `.env` (git-ignored), template in `.env.example`
+  - [x] `src/repair.py select/run/report`: 40 elements (top 10 rules x 4, 21 airlines, no iframes/shadow DOM);
+        fix applied to a COPY (`data/repaired/`, git-ignored) and re-scanned; per element a CONTROL run (unchanged
+        HTML put back) must leave the result unchanged, else `pipeline_artifact` (found in the 5-element trial)
+  - [x] result: **24 of 40 fixed** per axe-core (all 4 for color-contrast, link-name, image-alt, button-name;
+        0 of 4 for label-content-name-mismatch, nested-interactive, aria-required-children), 16 not fixed
+        (6 times the model returned the HTML unchanged); no invalid output, no new violations, no artifacts
+  - [x] automatic review flags: of the 24 "fixed", **11 need a human check** (placeholder alt text, alt="",
+        removed ARIA, added role) and 13 look plausible -> `repairs_pilot_summary.csv`, `repairs_pilot_report.html`
+  - [ ] not fully reproducible: same prompt, different answer for 1 of 4 repeated elements (R13) despite temp 0 + seed
+  - [ ] for Objective 3: 2-3 LLMs, many more fix attempts (500+), human works/fails labels
 - [ ] Step 6: evaluate fixes + label them works/fails (Objective 3)
 - [ ] Step 7: train the ML failure predictor + dashboard (Objective 3)
 - [ ] Step 8: paper draft

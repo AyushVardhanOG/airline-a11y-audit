@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "created_utc": "2026-11-11T16:40:21+00:00",
+    "llm": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:7b",
+      "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "7.6B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 3584,
+        "runner": "ggml"
+      },
+      "ollama_version": "0.40.16"
+    },
+    "temperature": 0,
+    "seed": 42,
+    "system_prompt": "You are a web accessibility expert. You fix HTML so that it meets WCAG 2.1 Level AA.",
+    "prompt_template": "The following HTML element from an airline website fails an automated accessibility check (axe-core).\n\nRule: {rule_id} - {rule_help}\nWCAG success criterion: {wcag_criteria}\nWhy it fails (axe-core): {failure_summary}\n\nFailing HTML:\n{original_html}\n\nReturn ONLY the corrected HTML for this element: the same element with the smallest change that fixes the problem. Keep all other attributes and all content unchanged. Do not add any explanation and do not use Markdown code fences.",
+    "tool_versions": {
+      "python": "3.14.6",
+      "playwright": "1.65.0",
+      "browser": "chromium 158.0.8127.18",
+      "axe_core": "4.14.0"
+    },
+    "capture_scan_run": "20261111T142233Z",
+    "selection_file": "data/results/repairs_pilot_selection.csv",
+    "settings": {
+      "wcag_tags": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21a",
+        "wcag21aa"
+      ],
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "max_html_chars": 3000,
+      "page_scripts": "disabled (CSP script-src 'none')",
+      "network": "blocked (offline)"
+    }
+  },
+  "repairs": [
+    {
+      "repair_id": "R01",
+      "rule_id": "label-content-name-mismatch",
+      "impact": "serious",
+      "wcag_criteria": "2.5.3",
+      "airline_id": "air_canada",
+      "page_type": "home",
+      "file_name": "air_canada_home_20261111.html",
+      "target": "#flightsOriginLocationbkmgLocationContainer",
+      "rule_help": "Elements must have their visible text as part of their accessible name",
+      "failure_summary": "Fix any of the following:   Text inside the element is not included in the accessible name",
+      "original_html": "<div role=\"button\" class=\"dynamic_flights__container --has_after bkmg-flights-tab-trip-origin --left_container\" id=\"flightsOriginLocationbkmgLocationContainer\" tabindex=\"0\" aria-expanded=\"false\" aria-label=\"Departing from - AMD - Ahmedabad\"><div class=\"dynamic_flights__container--post_selector\"><p class=\"ac-h1\">AMD</p><p class=\"dynamic-name ac-paragraphs-m\">Ahmedabad</p></div></div>",
+      "data_uris_shortened": 0,
+      "before": {
+        "rules_on_element": [
+          "label-content-name-mismatch"
+        ],
+        "page_violations_by_rule": {
+          "aria-prohibited-attr": 1,
+          "label-content-name-mismatch": 2
+        },
+        "rule_fails_on_element": true
+      },
+      "prompt": "The following HTML element from an airline website fails an automated accessibility check (axe-core).\n\nRule: label-content-name-mismatch - Elements must have their visible text as part of their accessible name\nWCAG success criterion: 2.5.3\nWhy it fails (axe-core): Fix any of the following:   Text inside the element is not included in the accessible name\n\nFailing HTML:\n<div role=\"button\" class=\"dynamic_flights__container --has_after bkmg-flights-tab-trip-origin --left_container\" id=\"flightsOriginLocationbkmgLocationContainer\" tabindex=\"0\" aria-expanded=\"false\" aria-label=\"Departing from - AMD - Ahmedabad\"><div class=\"dynamic_flights__container--post_selector\"><p class=\"ac-h1\">AMD</p><p class=\"dynamic-name ac-paragraphs-m\">Ahmedabad</p></div></div>\n\nReturn ONLY the corrected HTML for this element: the same element with the smallest change that fixes the problem. Keep all other attributes and all content unchanged. Do not add any explanation and do not use Markdown code fences.",
+      "llm_raw_output": "<div role=\"button\" class=\"dynamic_flights__container --has_after bkmg-flights-tab-trip-origin --left_container\" id=\"flightsOriginLocationbkmgLocationContainer\" tabindex=\"0\" aria-expanded=\"false\" aria-label=\"Departing from - AMD - Ahmedabad\"><div class=\"dynamic_flights__container--post_selector\"><p class=\"ac-h1\">AMD</p><p class=\"dynamic-name ac-paragraphs-m\">Ahmedabad</p></div></div>",
+      "llm_served_model": "qwen2.5-coder:7b",
+      "llm_seconds": 8.9,
+      "fixed_html": "<div role=\"button\" class=\"dynamic_flights__container --has_after bkmg-flights-tab-trip-origin --left_container\" id=\"flightsOriginLocationbkmgLocationContainer\" tabindex=\"0\" aria-expanded=\"false\" aria-label=\"Departing from - AMD - Ahmedabad\"><div class=\"dynamic_flights__container--post_selector\"><p class=\"ac-h1\">AMD</p><p class=\"dynamic-name ac-paragraphs-m\">Ahmedabad</p></div></div>",
+      "output_cleaned": false,
+      "output_unchanged": true,
+      "apply_status": "applied",
+      "repaired_file": "data/repaired/R01_air_canada_home_20261111.html",
+      "after": {
+        "rules_on_element": [
+          "label-content-name-mismatch"
+        ],
+        "page_violations_by_rule": {
+          "aria-prohibited-attr": 1,
+          "label-content-name-mismatch": 2
+        },
+        "rule_still_fails_on_element": true,
+        "new_rules_on_element": [],
+        "new_rules_on_page": []
+      },
+      "verdict": "not_fixed"
+    },
+    {
+      "repair_id": "R05",
+      "rule_id": "color-contrast",
+      "impact": "serious",
+      "wcag_criteria": "1.4.3",
+      "airline_id": "akasa_air",
+      "page_type": "checkin",
+      "file_name": "akasa_air_checkin_20261111.html",
+      "target": "#sidebar-text",
+      "rule_help": "Elements must meet minimum color contrast ratio thresholds",
+      "failure_summary": "Fix any of the following:   Element has insufficient color contrast of 2.98 (foreground color: #ffffff, background color: #ff6300, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+      "original_html": "<span id=\"sidebar-text\" style=\"left:0px;font-size:16px;white-space:nowrap;text-overflow:ellipsis;text-align:center;transform:rotate(-90deg)\">Feedback</span>",
+      "data_uris_shortened": 0,
+      "before": {
+        "rules_on_element": [
+          "color-contrast"
+        ],
+        "page_violations_by_rule": {
+          "color-contrast": 6,
+          "label-content-name-mismatch": 1
+        },
+        "rule_fails_on_element": true
+      },
+      "prompt": "The following HTML element from an airline website fails an automated accessibility check (axe-core).\n\nRule: color-contrast - Elements must meet minimum color contrast ratio thresholds\nWCAG success criterion: 1.4.3\nWhy it fails (axe-core): Fix any of the following:   Element has insufficient color contrast of 2.98 (foreground color: #ffffff, background color: #ff6300, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1\n\nFailing HTML:\n<span id=\"sidebar-text\" style=\"left:0px;font-size:16px;white-space:nowrap;text-overflow:ellipsis;text-align:center;transform:rotate(-90deg)\">Feedback</span>\n\nReturn ONLY the corrected HTML for this element: the same element with the smallest change that fixes the problem. Keep all other attributes and all content unchanged. Do not add any explanation and do not use Markdown code fences.",
+      "llm_raw_output": "<span id=\"sidebar-text\" style=\"left:0px;font-size:16px;white-space:nowrap;text-overflow:ellipsis;text-align:center;transform:rotate(-90deg);color:#000000;\">Feedback</span>",
+      "llm_served_model": "qwen2.5-coder:7b",
+      "llm_seconds": 3.8,
+      "fixed_html": "<span id=\"sidebar-text\" style=\"left:0px;font-size:16px;white-space:nowrap;text-overflow:ellipsis;text-align:center;transform:rotate(-90deg);color:#000000;\">Feedback</span>",
+      "output_cleaned": false,
+      "output_unchanged": false,
+      "apply_status": "applied",
+      "repaired_file": "data/repaired/R05_akasa_air_checkin_20261111.html",
+      "after": {
+        "rules_on_element": [],
+        "page_violations_by_rule": {
+          "color-contrast": 5,
+          "label-content-name-mismatch": 1
+        },
+        "rule_still_fails_on_element": false,
+        "new_rules_on_element": [],
+        "new_rules_on_page": []
+      },
+      "verdict": "fixed"
+    },
+    {
+      "repair_id": "R09",
+      "rule_id": "link-name",
+      "impact": "serious",
+      "wcag_criteria": "2.4.4;4.1.2",
+      "airline_id": "cathay_pacific",
+      "page_type": "home",
+      "file_name": "cathay_pacific_home_20261111.html",
+      "target": "a[spcode=\"20260401-IN-AXISBANK-HB-V1\"]",
+      "rule_help": "Links must have discernible text",
+      "failure_summary": "Fix all of the following:   Element is in tab order and does not have accessible text  Fix any of the following:   Element does not have text that is visible to screen readers   aria-label attribute does not exist or is empty   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty   Element has no title attribute",
+      "original_html": "<a href=\"https://flights.cathaypacific.com/en_IN/offers/cathay-pacific-axisbank-offer.html\" rel=\"noopener noreferrer\" spcode=\"20260401-IN-AXISBANK-HB-V1\" target=\"_blank\" data-cxlinktag-element-position=\"1\" data-cxlinktag-element-total=\"4\" data-cxlinktag-name=\"20260401-IN-AXISBANK-HB-V1\" data-cxlinktag-placement=\"HOMEPAGE::HERO_BANNER\" tabindex=\"0\" data-original-tabindex=\"-1\"><picture><img class=\"banner__mediaImage -transition -scaleDown\" fetchpriority=\"high\" loading=\"eager\" srcset=\"data:removed-1 1x\"></picture></a>",
+      "data_uris_shortened": 1,
+      "before": {
+        "rules_on_element": [
+          "image-alt",
+          "link-name"
+        ],
+        "page_violations_by_rule": {
+          "aria-allowed-attr": 2,
+          "aria-command-name": 1,
+          "aria-hidden-focus": 5,
+          "aria-required-children": 2,
+          "aria-valid-attr-value": 1,
+          "button-name": 3,
+          "image-alt": 2,
+          "label-content-name-mismatch": 5,
+          "link-name": 1,
+          "list": 5,
+          "listitem": 7,
+          "meta-viewport": 1,
+          "role-img-alt": 27,
+          "select-name": 1
+        },
+        "rule_fails_on_element": true
+      },
+      "prompt": "The following HTML element from an airline website fails an automated accessibility check (axe-core).\n\nRule: link-name - Links must have discernible text\nWCAG success criterion: 2.4.4;4.1.2\nWhy it fails (axe-core): Fix all of the following:   Element is in tab order and does not have accessible text  Fix any of the following:   Element does not have text that is visible to screen readers   aria-label attribute does not exist or is empty   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty   Element has no title attribute\n\nFailing HTML:\n<a href=\"https://flights.cathaypacific.com/en_IN/offers/cathay-pacific-axisbank-offer.html\" rel=\"noopener noreferrer\" spcode=\"20260401-IN-AXISBANK-HB-V1\" target=\"_blank\" data-cxlinktag-element-position=\"1\" data-cxlinktag-element-total=\"4\" data-cxlinktag-name=\"20260401-IN-AXISBANK-HB-V1\" data-cxlinktag-placement=\"HOMEPAGE::HERO_BANNER\" tabindex=\"0\" data-original-tabindex=\"-1\"><picture><img class=\"banner__mediaImage -transition -scaleDown\" fetchpriority=\"high\" loading=\"eager\" srcset=\"data:removed-1 1x\"></picture></a>\n\nReturn ONLY the corrected HTML for this element: the same element with the smallest change that fixes the problem. Keep all other attributes and all content unchanged. Do not add any explanation and do not use Markdown code fences.",
+      "llm_raw_output": "<a href=\"https://flights.cathaypacific.com/en_IN/offers/cathay-pacific-axisbank-offer.html\" rel=\"noopener noreferrer\" spcode=\"20260401-IN-AXISBANK-HB-V1\" target=\"_blank\" data-cxlinktag-element-position=\"1\" data-cxlinktag-element-total=\"4\" data-cxlinktag-name=\"20260401-IN-AXISBANK-HB-V1\" data-cxlinktag-placement=\"HOMEPAGE::HERO_BANNER\" tabindex=\"0\" data-original-tabindex=\"-1\"><picture><img class=\"banner__mediaImage -transition -scaleDown\" fetchpriority=\"high\" loading=\"eager\" srcset=\"data:removed-1 1x\" alt=\"Cathay Pacific Axisbank Offer\"></picture></a>",
+      "llm_served_model": "qwen2.5-coder:7b",
+      "llm_seconds": 7.1,
+      "fixed_html": "<a href=\"https://flights.cathaypacific.com/en_IN/offers/cathay-pacific-axisbank-offer.html\" rel=\"noopener noreferrer\" spcode=\"20260401-IN-AXISBANK-HB-V1\" target=\"_blank\" data-cxlinktag-element-position=\"1\" data-cxlinktag-element-total=\"4\" data-cxlinktag-name=\"20260401-IN-AXISBANK-HB-V1\" data-cxlinktag-placement=\"HOMEPAGE::HERO_BANNER\" tabindex=\"0\" data-original-tabindex=\"-1\"><picture><img class=\"banner__mediaImage -transition -scaleDown\" fetchpriority=\"high\" loading=\"eager\" srcset=\"data:removed-1 1x\" alt=\"Cathay Pacific Axisbank Offer\"></picture></a>",
+      "output_cleaned": false,
+      "output_unchanged": false,
+      "apply_status": "applied",
+      "repaired_file": "data/repaired/R09_cathay_pacific_home_20261111.html",
+      "after": {
+        "rules_on_element": [],
+        "page_violations_by_rule": {
+          "aria-allowed-attr": 2,
+          "aria-command-name": 1,
+          "aria-hidden-focus": 5,
+          "aria-required-children": 2,
+          "aria-valid-attr-value": 1,
+          "button-name": 3,
+          "image-alt": 1,
+          "label-content-name-mismatch": 5,
+          "list": 5,
+          "listitem": 7,
+          "meta-viewport": 1,
+          "role-img-alt": 27,
+          "select-name": 1
+        },
+        "rule_still_fails_on_element": false,
+        "new_rules_on_element": [],
+        "new_rules_on_page": []
+      },
+      "verdict": "fixed"
+    },
+    {
+      "repair_id": "R13",
+      "rule_id": "image-alt",
+      "impact": "critical",
+      "wcag_criteria": "1.1.1",
+      "airline_id": "emirates",
+      "page_type": "home",
+      "file_name": "emirates_home_20261111.html",
+      "target": ".background_image_block > img[loading=\"lazy\"]",
+      "rule_help": "Images must have alternative text",
+      "failure_summary": "Fix any of the following:   Element does not have an alt attribute   aria-label attribute does not exist or is empty   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty   Element has no title attribute   Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+      "original_html": "<img src=\"data:removed-1\" loading=\"lazy\">",
+      "data_uris_shortened": 1,
+      "before": {
+        "rules_on_element": [
+          "image-alt"
+        ],
+        "page_violations_by_rule": {
+          "aria-required-attr": 1,
+          "image-alt": 1,
+          "label-content-name-mismatch": 11,
+          "nested-interactive": 4
+        },
+        "rule_fails_on_element": true
+      },
+      "prompt": "The following HTML element from an airline website fails an automated accessibility check (axe-core).\n\nRule: image-alt - Images must have alternative text\nWCAG success criterion: 1.1.1\nWhy it fails (axe-core): Fix any of the following:   Element does not have an alt attribute   aria-label attribute does not exist or is empty   aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty   Element has no title attribute   Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"\n\nFailing HTML:\n<img src=\"data:removed-1\" loading=\"lazy\">\n\nReturn ONLY the corrected HTML for this element: the same element with the smallest change that fixes the problem. Keep all other attributes and all content unchanged. Do not add any explanation and do not use Markdown code fences.",
+      "llm_raw_output": "<img src=\"data:removed-1\" loading=\"lazy\" alt=\"\">",
+      "llm_served_model": "qwen2.5-coder:7b",
+      "llm_seconds": 2.8,
+      "fixed_html": "<img src=\"data:removed-1\" loading=\"lazy\" alt=\"\">",
+      "output_cleaned": false,
+      "output_unchanged": false,
+      "apply_status": "applied",
+      "repaired_file": "data/repaired/R13_emirates_home_20261111.html",
+      "after": {
+        "rules_on_element": [],
+        "page_violations_by_rule": {
+          "aria-required-attr": 1,
+          "label-content-name-mismatch": 11,
+          "nested-interactive": 4
+        },
+        "rule_still_fails_on_element": false,
+        "new_rules_on_element": [],
+        "new_rules_on_page": []
+      },
+      "verdict": "fixed"
+    },
+    {
+      "repair_id": "R17",
+      "rule_id": "nested-interactive",
+      "impact": "serious",
+      "wcag_criteria": "4.1.2",
+      "airline_id": "american",
+      "page_type": "checkin",
+      "file_name": "american_checkin_20261111.html",
+      "target": "#adc-content-switch-0",
+      "rule_help": "Interactive controls must not be nested",
+      "failure_summary": "Fix any of the following:   Element has focusable descendants. Move them outside of the element, or remove them.",
+      "original_html": "<adc-content-switch _ngcontent-ng-c2278228338=\"\" with-checkmark-icon=\"\" value=\"fyt\" aileron-color-scheme=\"light\" label=\"\" class=\"group\" role=\"tab\" id=\"adc-content-switch-0\" aria-selected=\"true\" tabindex=\"0\" aria-disabled=\"false\" selected=\"\" style=\"width:222.934px\">Find trip</adc-content-switch>",
+      "data_uris_shortened": 0,
+      "before": {
+        "rules_on_element": [
+          "nested-interactive"
+        ],
+        "page_violations_by_rule": {
+          "button-name": 2,
+          "nested-interactive": 2
+        },
+        "rule_fails_on_element": true
+      },
+      "prompt": "The following HTML element from an airline website fails an automated accessibility check (axe-core).\n\nRule: nested-interactive - Interactive controls must not be nested\nWCAG success criterion: 4.1.2\nWhy it fails (axe-core): Fix any of the following:   Element has focusable descendants. Move them outside of the element, or remove them.\n\nFailing HTML:\n<adc-content-switch _ngcontent-ng-c2278228338=\"\" with-checkmark-icon=\"\" value=\"fyt\" aileron-color-scheme=\"light\" label=\"\" class=\"group\" role=\"tab\" id=\"adc-content-switch-0\" aria-selected=\"true\" tabindex=\"0\" aria-disabled=\"false\" selected=\"\" style=\"width:222.934px\">Find trip</adc-content-switch>\n\nReturn ONLY the corrected HTML for this element: the same element with the smallest change that fixes the problem. Keep all other attributes and all content unchanged. Do not add any explanation and do not use Markdown code fences.",
+      "llm_raw_output": "<adc-content-switch _ngcontent-ng-c2278228338=\"\" with-checkmark-icon=\"\" value=\"fyt\" aileron-color-scheme=\"light\" label=\"\" class=\"group\" role=\"tab\" id=\"adc-content-switch-0\" aria-selected=\"true\" tabindex=\"0\" aria-disabled=\"false\" selected=\"\" style=\"width:222.934px\">Find trip</adc-content-switch>",
+      "llm_served_model": "qwen2.5-coder:7b",
+      "llm_seconds": 4.7,
+      "fixed_html": "<adc-content-switch _ngcontent-ng-c2278228338=\"\" with-checkmark-icon=\"\" value=\"fyt\" aileron-color-scheme=\"light\" label=\"\" class=\"group\" role=\"tab\" id=\"adc-content-switch-0\" aria-selected=\"true\" tabindex=\"0\" aria-disabled=\"false\" selected=\"\" style=\"width:222.934px\">Find trip</adc-content-switch>",
+      "output_cleaned": false,
+      "output_unchanged": true,
+      "apply_status": "applied",
+      "repaired_file": "data/repaired/R17_american_checkin_20261111.html",
+      "after": {
+        "rules_on_element": [
+          "aria-required-parent"
+        ],
+        "page_violations_by_rule": {
+          "aria-required-parent": 2
+        },
+        "rule_still_fails_on_element": false,
+        "new_rules_on_element": [
+          "aria-required-parent"
+        ],
+        "new_rules_on_page": [
+          "aria-required-parent"
+        ]
+      },
+      "verdict": "fixed_but_new_issue"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+repair_id,rule_id,impact,wcag_criteria,airline_id,page_type,verdict,output_unchanged,llm_seconds,needs_human_check,placeholder_text,hides_content,removes_aria,changes_role,text_changed
+R01,label-content-name-mismatch,serious,2.5.3,air_canada,home,not_fixed,True,8.9,False,False,False,False,False,False
+R05,color-contrast,serious,1.4.3,akasa_air,checkin,fixed,False,3.8,False,False,False,False,False,False
+R09,link-name,serious,2.4.4;4.1.2,cathay_pacific,home,fixed,False,7.1,False,False,False,False,False,False
+R13,image-alt,critical,1.1.1,emirates,home,fixed,False,2.8,True,False,True,False,False,False
+R17,nested-interactive,serious,4.1.2,american,checkin,fixed_but_new_issue,True,4.7,False,False,False,False,False,False
