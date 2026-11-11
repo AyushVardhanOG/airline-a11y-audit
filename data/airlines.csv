@@ -5,10 +5,10 @@ spicejet,SpiceJet,India,https://www.spicejet.com,SAME_AS_HOME,MISSING,yes
 akasa_air,Akasa Air,India,https://www.akasaair.com,https://www.akasaair.com/check-in/web-check-in,MISSING,yes
 air_india_express,Air India Express,India,https://www.airindiaexpress.com/home,https://www.airindiaexpress.com/checkin-home,MISSING,yes
 ana,ANA,Japan/Asia,https://www.ana.co.jp/en/in/,https://aswbe.ana.co.jp/webapps/checkin/checkin-search?LANG=en&CONNECTION_KIND=CHE,https://www.ana.co.jp/en/jp/guide/flight_service_info/assist/,yes
-jal,JAL,Japan/Asia,https://www.jal.co.jp/jp/en/,https://www.jal.co.jp/jp/en/inter/boarding/online-checkin/,https://www.jal.co.jp/jp/en/jalpri/support/,no
-peach,Peach,Japan/Asia,https://www.flypeach.com/en,MISSING,https://www.flypeach.com/en/lm/ai/airports/special_support,no
-singapore_airlines,Singapore Airlines,Japan/Asia,https://www.singaporeair.com,https://www.singaporeair.com/en_UK/sg/travel-info/check-in/online-mobile-checkin/,https://www.singaporeair.com/en_UK/us/travel-info/special-assistance/,no
-cathay_pacific,Cathay Pacific,Japan/Asia,https://www.cathaypacific.com,MISSING,https://www.cathaypacific.com/cx/en_US/prepare-trip/help-for-passengers.html,no
+jal,JAL,Japan/Asia,https://www.jal.co.jp/en-jp/,https://www.jal.co.jp/jp/en/inter/boarding/online-checkin/,https://www.jal.co.jp/jp/en/jalpri/support/,yes
+peach,Peach,Japan/Asia,https://www.flypeach.com/en,MISSING,https://www.flypeach.com/en/lm/ai/airports/special_support,yes
+singapore_airlines,Singapore Airlines,Japan/Asia,https://www.singaporeair.com/en_UK/in/home/,https://www.singaporeair.com/en_UK/sg/travel-info/check-in/online-mobile-checkin/,https://www.singaporeair.com/en_UK/us/travel-info/special-assistance/,yes
+cathay_pacific,Cathay Pacific,Japan/Asia,https://www.cathaypacific.com/cx/en_IN.html,MISSING,https://www.cathaypacific.com/cx/en_US/prepare-trip/help-for-passengers.html,yes
 lufthansa,Lufthansa,Europe,https://www.lufthansa.com,https://www.lufthansa.com/ge/en/online-check-in,https://www.lufthansa.com/hk/en/travellers-with-special-needs.html,no
 air_france,Air France,Europe,https://www.airfrance.com,https://wwws.airfrance.co.uk/check-in,https://wwws.airfrance.fr/en/information/passagers/acheter-billet-avion-pmr-autres-handicaps,no
 klm,KLM,Europe,https://www.klm.com,https://www.klm.nl/en/check-in,https://www.klm.com/information/assistance-health,no

@@ -387,3 +387,29 @@ Live scans now exist for 4 of the 11 "allowed" airlines (ANA, SpiceJet, Akasa Ai
   Future live scans skip it automatically.
 
 Page totals: 90 slots = 82 to capture + 7 MISSING + 1 SAME_AS_HOME. Captured so far: 14 (ANA 3 + India 11).
+
+---
+
+## 2026-11-11 - Japan/Asia batch registered (10 pages)
+
+Opened with `open_batch.py Japan/Asia` (10 tabs; ANA was already done) and saved with SingleFile;
+all 10 files arrived, saved within 4 s (22:10:59-22:11:03 local = 13:11 UTC). Registered with
+`register_captures.py` (Chrome/SingleFile versions re-checked: unchanged).
+
+| Airline | Pages captured | URL changes | url_verified |
+|---|---|---|---|
+| JAL | home, checkin, assistance | home `/jp/en/` -> `/en-jp/` (still Japan/English: URL change within the site) | yes |
+| Peach | home, assistance | none; check-in stays MISSING (app-only) | yes |
+| Singapore Airlines | home, checkin, assistance | **home redirected by location to the India version** `/en_UK/in/home/` | yes |
+| Cathay Pacific | home, assistance | **home redirected by location to the India version** `/cx/en_IN.html`; check-in stays MISSING | yes |
+
+- No page went to the homepage: every file's title matches its page type. The Singapore Airlines
+  assistance page has little visible text (about 1,600 characters), but its title is "Special Assistance".
+- Location redirects so far: ANA, Singapore Airlines and Cathay Pacific homepages were captured
+  as their **India** versions (I am in India), not their home-country versions. For the paper:
+  the homepage captures reflect what a visitor from India sees.
+- **No live scans**: no airline in this batch is "allowed" in automated_access.csv
+  (JAL blocked, Singapore blocked_unconfirmed, Peach and Cathay error).
+- Checklist: 10 more boxes ticked.
+
+Progress: 10 of 30 airlines verified (India + Japan/Asia complete); 24 of 82 pages captured.

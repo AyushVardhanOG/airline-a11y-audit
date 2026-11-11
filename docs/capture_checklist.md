@@ -75,33 +75,33 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 ### JAL (`jal`)
 
-- [ ] **home**: <https://www.jal.co.jp/jp/en/>
-- [ ] **checkin**: <https://www.jal.co.jp/jp/en/inter/boarding/online-checkin/>
-- [ ] **assistance**: <https://www.jal.co.jp/jp/en/jalpri/support/>
+- [x] **home**: <https://www.jal.co.jp/jp/en/>
+- [x] **checkin**: <https://www.jal.co.jp/jp/en/inter/boarding/online-checkin/>
+- [x] **assistance**: <https://www.jal.co.jp/jp/en/jalpri/support/>
 
 ### Peach (`peach`)
 
-- [ ] **home**: <https://www.flypeach.com/en>
+- [x] **home**: <https://www.flypeach.com/en>
 - [ ] **checkin**: MISSING  
   _Note: web check-in is app-only; no Manage Booking URL found - look for 'Manage Booking' on the homepage_
-- [ ] **assistance**: <https://www.flypeach.com/en/lm/ai/airports/special_support>
+- [x] **assistance**: <https://www.flypeach.com/en/lm/ai/airports/special_support>
 
 ### Singapore Airlines (`singapore_airlines`)
 
-- [ ] **home**: <https://www.singaporeair.com>  
+- [x] **home**: <https://www.singaporeair.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.singaporeair.com/en_UK/sg/travel-info/check-in/online-mobile-checkin/>  
+- [x] **checkin**: <https://www.singaporeair.com/en_UK/sg/travel-info/check-in/online-mobile-checkin/>  
   _Note: may be an info page - check that it has the booking-reference form_
-- [ ] **assistance**: <https://www.singaporeair.com/en_UK/us/travel-info/special-assistance/>  
+- [x] **assistance**: <https://www.singaporeair.com/en_UK/us/travel-info/special-assistance/>  
   _Note: US-market version (en_UK/us) - switch to Singapore (sg) if it exists_
 
 ### Cathay Pacific (`cathay_pacific`)
 
-- [ ] **home**: <https://www.cathaypacific.com>  
+- [x] **home**: <https://www.cathaypacific.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
 - [ ] **checkin**: MISSING  
   _Note: only FAQ pages found - look for 'Manage booking' / 'Check in' on the homepage_
-- [ ] **assistance**: <https://www.cathaypacific.com/cx/en_US/prepare-trip/help-for-passengers.html>  
+- [x] **assistance**: <https://www.cathaypacific.com/cx/en_US/prepare-trip/help-for-passengers.html>  
   _Note: US-market version (en_US) - switch to Hong Kong (en_HK) if it exists_
 
 ## Europe
