@@ -17,6 +17,11 @@ screenshots/**/*_blocked.png
 data/raw/step2_feasibility/20261111T115319Z/lufthansa.json
 screenshots/step2_feasibility/20261111T115319Z/lufthansa.png
 
+# Saved SingleFile page copies: full copies of airlines' pages (copyright) that can
+# also contain details about the person who captured them. Kept locally + backed up.
+# data/captures/log.csv and the SingleFile settings ARE committed.
+data/captures/*.html
+
 # Editor / OS clutter
 .vscode/
 .idea/

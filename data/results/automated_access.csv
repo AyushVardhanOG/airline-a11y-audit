@@ -1,0 +1,31 @@
+airline_id,airline,region,result,http_status,evidence,tested_in_run,live_scan_kept
+air_india,Air India,India,error,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airindia.com/,20261111T115319Z,no
+indigo,IndiGo,India,blocked_unconfirmed,200,page has almost no visible text (possible block or failed load),20261111T115319Z,no
+spicejet,SpiceJet,India,not_tested,,,,no
+akasa_air,Akasa Air,India,not_tested,,,,no
+air_india_express,Air India Express,India,not_tested,,,,no
+ana,ANA,Japan/Asia,allowed,200,,20261111T115319Z,yes
+jal,JAL,Japan/Asia,blocked,403,HTTP status 403,20261111T115319Z,no
+peach,Peach,Japan/Asia,not_tested,,,,no
+singapore_airlines,Singapore Airlines,Japan/Asia,not_tested,,,,no
+cathay_pacific,Cathay Pacific,Japan/Asia,not_tested,,,,no
+lufthansa,Lufthansa,Europe,blocked,403,HTTP status 403,20261111T115319Z,no
+air_france,Air France,Europe,not_tested,,,,no
+klm,KLM,Europe,not_tested,,,,no
+ryanair,Ryanair,Europe,not_tested,,,,no
+easyjet,easyJet,Europe,not_tested,,,,no
+iberia,Iberia,Europe,not_tested,,,,no
+finnair,Finnair,Europe,not_tested,,,,no
+sas,SAS,Europe,not_tested,,,,no
+tap_air_portugal,TAP Air Portugal,Europe,not_tested,,,,no
+turkish_airlines,Turkish Airlines,Europe,not_tested,,,,no
+delta,Delta,North America,not_tested,,,,no
+united,United,North America,not_tested,,,,no
+american,American,North America,not_tested,,,,no
+southwest,Southwest,North America,not_tested,,,,no
+alaska,Alaska,North America,not_tested,,,,no
+jetblue,JetBlue,North America,not_tested,,,,no
+air_canada,Air Canada,North America,not_tested,,,,no
+emirates,Emirates,Middle East/Oceania,blocked,403,HTTP status 403,20261111T115319Z,no
+qatar_airways,Qatar Airways,Middle East/Oceania,not_tested,,,,no
+qantas,Qantas,Middle East/Oceania,not_tested,,,,no

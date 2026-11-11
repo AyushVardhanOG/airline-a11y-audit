@@ -1,6 +1,10 @@
 """
 feasibility_scan.py - Step 2: feasibility test on 6 airline homepages.
 
+NOTE: kept as the exact record of how the Step 2 results were produced.
+New scans use scan_captures.py (saved copies, main method) and scan_live.py
+(live pages), which share their axe-core settings through axe_runner.py.
+
 Question this step answers: "Can we load real airline homepages with Playwright
 and scan them with axe-core, or do the sites block automated browsers?"
 

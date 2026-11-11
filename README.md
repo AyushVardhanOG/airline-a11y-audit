@@ -16,6 +16,22 @@ College major project and planned research paper.
 Automated checkers find only part of all accessibility problems. This tool supports
 human audits; it does not replace them.
 
+## How pages are collected
+
+Most airline sites block automated browsers (found in Step 2), and we do not get around
+bot protection. So every page is **saved by hand** with the SingleFile browser extension
+(see [docs/capture_guide.md](docs/capture_guide.md)) and scanned **offline**. For airlines
+that do allow automated access, the live page is scanned too, to check how close the
+saved copy is to the live page.
+
+| Script | What it does |
+|--------|--------------|
+| `src/scan_captures.py` | scans saved copies in `data/captures/` offline (main method) |
+| `src/scan_live.py` | scans live pages, only for airlines that allow automated access |
+| `src/compare_live_vs_capture.py` | compares live vs saved-copy results per page |
+| `src/record_access.py` | records which airlines blocked automated access |
+| `src/axe_runner.py` | shared axe-core settings used by both scanners |
+
 ## Ethics and scanning rules
 
 - At least 10 seconds between sites, one page at a time, no parallel requests to the same site.
@@ -48,7 +64,7 @@ npm install
 
 - [x] Step 1: project setup
 - [x] Step 2: feasibility test on 6 airline homepages
-- [ ] Step 3: final list of airlines and pages
+- [ ] Step 3: final list of airlines and pages (in progress: pages are being captured by hand)
 - [ ] Step 4: full audit pipeline
 - [ ] Step 5: LLM repair prototype
 - [ ] Step 6: evaluate fixes

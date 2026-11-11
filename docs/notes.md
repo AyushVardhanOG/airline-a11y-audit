@@ -88,3 +88,59 @@ Options that stay within the rules:
 5. Scan archived copies (Internet Archive) - quality varies, and not the live site.
 
 **Next**: decide on the page-collection method, then Step 3 (final airline list).
+
+---
+
+## 2026-11-11 - Step 3 (part 1): capture method for all airlines
+
+**Decision**: option 1 from Step 2 for ALL airlines. Every page is saved by hand with the
+SingleFile extension and scanned offline, so every airline is measured the same way.
+Live scans are kept only for airlines that allowed automated access (only ANA so far),
+to check how much a saved copy differs from the live page.
+
+(An earlier plan for this step, crawling each homepage with Playwright to find the check-in and
+assistance links, was dropped: it would hit the same bot blocks.)
+
+**Done**
+- `data/airlines.csv`: the 30 airlines with a fixed `airline_id` used in all file names.
+  URL columns are filled in by hand during capture (or `MISSING`).
+- `docs/capture_guide.md`: how to save pages with SingleFile (separate Chrome profile, no
+  extensions that change pages, default SingleFile settings, don't touch cookie banners,
+  don't log in or type), file naming `airline_pagetype_YYYYMMDD.html`, and `data/captures/log.csv`.
+- `src/axe_runner.py`: shared code so live and saved-copy scans use the same axe-core
+  version, WCAG tags and iframe setting.
+- `src/scan_captures.py`: scans saved copies fully offline.
+- `src/scan_live.py`: replaces the Step 2 script for live scans. Reads the page list from
+  airlines.csv + automated_access.csv. Now runs axe BEFORE the full-page screenshot, so the
+  screenshot's viewport resize cannot change what axe sees (Step 2 did it the other way round).
+- `src/compare_live_vs_capture.py`: pairs each saved-copy scan with the live scan of the same
+  page closest in time; reports failed rules on both / only live / only copy, element
+  counts, rule overlap (Jaccard), and warns if the two are more than 24 h apart.
+- `src/record_access.py` -> `data/results/automated_access.csv`: Step 2 access result per
+  airline (allowed 1, blocked 3, blocked_unconfirmed 1, error 1, not_tested 24).
+
+**Problems and how they were solved**
+- First idea for scanning saved copies offline: switch JavaScript off completely in Playwright.
+  Result: axe-core hung (no result after more than 60 s), presumably because switching off
+  JavaScript also stops the timers axe needs. Solution: serve the saved file
+  from disk under a fake local address (`http://saved-copy.localhost/`) with the header
+  `Content-Security-Policy: script-src 'none'`. The page's own scripts are blocked, but axe-core
+  still runs because Playwright injects it through the browser's debugging channel.
+  All other network requests are blocked, so scanning a copy never contacts the airline.
+- Tested on local test pages (no real sites): the page script did not run, the internet
+  image was blocked, axe found errors inside a srcdoc iframe, the SingleFile header
+  (URL + save date) was read, and 10:15 +05:30 was converted to 04:45 UTC. A planted
+  difference between a "live" and a "saved" test page was reported correctly
+  (link-name only live, button-name only in copy, image-alt in both, Jaccard 0.333).
+
+**Limitations to mention in the paper**
+- A saved copy is a snapshot: interactive behaviour (menus, focus handling, things that
+  appear after clicks) is not in it. Keyboard testing in Objective 3 must keep this in mind.
+- SingleFile may change the page slightly while saving (for example, removing hidden
+  elements, depending on its settings). The live-vs-copy comparison measures this, but only for
+  airlines that allow automated access (currently only ANA: one airline is a small sample).
+- Saved `.html` captures are not on GitHub (copyright + they can contain personal
+  details). They must be backed up separately.
+
+**Next**: capture the pages for all 30 airlines; for ANA, run `scan_live.py ana` in the same
+hour; then `scan_captures.py` and `compare_live_vs_capture.py`.

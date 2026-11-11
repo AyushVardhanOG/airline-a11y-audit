@@ -37,8 +37,28 @@ can fix the problems it finds, and check whether those fixes actually work.
 - FastAPI + a simple React dashboard (Objective 3)
 - Git + GitHub; GitHub Actions later
 
+## Method: how pages are collected (decided after Step 2)
+In Step 2 most airline sites blocked our headless browser (only ANA allowed it). Rule 3 forbids
+getting around that, so **every airline is measured the same way**:
+1. **Saved copies (main method, ALL airlines)**: I open each page in my normal Chrome and save it
+   with the SingleFile extension, following `docs/capture_guide.md`. Files are named
+   `airline_pagetype_YYYYMMDD.html` (page types: home, checkin, assistance), stored in
+   `data/captures/`, and every capture gets a row in `data/captures/log.csv` (URL, local time + UTC offset,
+   browser and SingleFile versions). `src/scan_captures.py` scans them fully offline: page scripts
+   off (CSP `script-src 'none'`), all network requests blocked, same axe-core rules and iframe setting
+   as live scans (shared code in `src/axe_runner.py`). For saved copies, HTTP status does not exist;
+   capture time and URL come from the log.
+2. **Live scans (only airlines with result "allowed" in `data/results/automated_access.csv`)**:
+   `src/scan_live.py`, run within the same hour as the capture, so that
+   `src/compare_live_vs_capture.py` can measure how much a saved copy differs from the live page
+   (failed rules and element counts per page). This validates method 1.
+3. Which airlines blocked automated access is itself a **result** (`src/record_access.py` ->
+   `data/results/automated_access.csv`) and goes in the paper.
+
 ## Folder structure
 - `src/` all code
+- `data/airlines.csv` the 30 airlines (airline_id used in all file names) and their page URLs
+- `data/captures/` saved SingleFile copies (`*.html`, NOT on GitHub, back them up) + `log.csv`
 - `data/raw/` raw scan results (JSON), never edited by hand
 - `data/results/` processed tables and charts
 - `screenshots/` page screenshots
@@ -62,7 +82,12 @@ can fix the problems it finds, and check whether those fixes actually work.
 ## Current status
 - [x] Step 1: project setup
 - [x] Step 2: feasibility test on 6 airline homepages (Air India, IndiGo, ANA, JAL, Lufthansa, Emirates)
-- [ ] Step 3: choose the final list of ~30 airlines and pages
+- [ ] Step 3: choose the final list of ~30 airlines and pages — IN PROGRESS
+  - [x] 30 airlines listed in `data/airlines.csv`
+  - [x] capture method chosen (SingleFile for all airlines), guide written, scanners + live-vs-copy comparison built
+  - [x] which airlines blocked automated access recorded (6 tested: 1 allowed, 3 blocked, 1 unconfirmed, 1 error)
+  - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand) and fill in URLs
+  - [ ] ANA: live scan in the same hour as its captures, then run the live-vs-copy comparison
 - [ ] Step 4: full audit pipeline (Objective 1)
 - [ ] Step 5: LLM repair prototype (Objective 2)
 - [ ] Step 6: evaluate fixes + label them works/fails (Objective 3)
