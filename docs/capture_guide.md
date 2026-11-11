@@ -79,10 +79,22 @@ Capture all three pages of one airline **in one sitting** (same day, close toget
 
 ## 4. Capturing one page, step by step
 
+**Tip: open a whole region at once.** `src\open_batch.py` opens every page of one region
+as tabs in your `a11y-capture` Chrome profile, one tab every 10 s (skipping MISSING URLs and
+airlines already marked `url_verified = yes`), and prints the file name each page should get:
+
+```powershell
+.venv\Scripts\python.exe src\open_batch.py India
+.venv\Scripts\python.exe src\open_batch.py "North America" --dry-run   # only list the tabs
+```
+
+It only opens tabs. You still check each page, save it, and follow the steps below.
+
 1. Open the page and **wait about 10 seconds** until it stops changing.
 2. Click the **SingleFile icon**. Wait until it finishes. The file appears in your
    Downloads folder.
-3. **Rename** the file (or skip steps 3-5 and run `srcegister_captures.py`, which reads the
+3. **Rename** the file (or skip steps 3-5 and run `src
+egister_captures.py`, which reads the
    URL and save date from the file, renames it and adds the log row for you - the final
    URL must already be in `data/airlines.csv`) to:
 

@@ -278,3 +278,18 @@ on /en/jp/ in Step 2. These are different page versions on different days, so th
 are not directly comparable.
 
 **Next**: scan the 3 ANA captures (`scan_captures.py`) and run `compare_live_vs_capture.py`.
+
+---
+
+## 2026-11-11 - Helper to open one region's pages for capturing
+
+- `src/open_batch.py <region>` opens all pages of one region from `data/airlines.csv` as tabs in
+  my normal Chrome, in the "a11y-capture" profile. It finds the profile folder by reading
+  Chrome's "Local State" file (currently "Profile 4"). If the profile is not found it stops instead of
+  using another profile, because my other profiles are signed in to personal accounts.
+- Skips MISSING URLs and airlines with `url_verified = yes`. It opens one tab every 10 s
+  (minimum), so the same airline's site never gets several page loads at once (rule 1).
+- It only opens tabs: a person still checks, saves and registers each page. This is normal
+  browsing, not automation, and the browser is not disguised.
+- Tested with `--dry-run` only: India 13 tabs, Japan/Asia 10, Europe 30, North America 19,
+  Middle East/Oceania 9. That is 81 tabs = 90 pages - 3 ANA (verified) - 6 MISSING.
