@@ -1,0 +1,6 @@
+# Python packages this project needs. Install with:
+#   python -m pip install -r requirements.txt
+# Versions are pinned (==) so results can be reproduced later.
+# More packages (scikit-learn, xgboost, shap, fastapi) will be added in later steps.
+
+playwright==1.65.0

@@ -1,0 +1,16 @@
+# Python virtual environment (each person creates their own)
+.venv/
+__pycache__/
+*.pyc
+
+# Node packages (re-created with `npm install`)
+node_modules/
+
+# Secrets such as LLM API keys - never commit these
+.env
+
+# Editor / OS clutter
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

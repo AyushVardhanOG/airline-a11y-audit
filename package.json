@@ -1,0 +1,9 @@
+{
+  "name": "airline-a11y-audit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Node is used only to download a pinned copy of axe-core, which Python injects into pages.",
+  "dependencies": {
+    "axe-core": "4.14.0"
+  }
+}
