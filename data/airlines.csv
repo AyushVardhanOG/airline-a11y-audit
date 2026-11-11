@@ -10,12 +10,12 @@ peach,Peach,Japan/Asia,https://www.flypeach.com/en,MISSING,https://www.flypeach.
 singapore_airlines,Singapore Airlines,Japan/Asia,https://www.singaporeair.com/en_UK/in/home/,https://www.singaporeair.com/en_UK/sg/travel-info/check-in/online-mobile-checkin/,https://www.singaporeair.com/en_UK/us/travel-info/special-assistance/,yes
 cathay_pacific,Cathay Pacific,Japan/Asia,https://www.cathaypacific.com/cx/en_IN.html,MISSING,https://www.cathaypacific.com/cx/en_US/prepare-trip/help-for-passengers.html,yes
 lufthansa,Lufthansa,Europe,https://www.lufthansa.com/in/en/homepage,https://www.lufthansa.com/ge/en/online-check-in,https://www.lufthansa.com/de/en/passengers-using-wheelchairs,yes
-air_france,Air France,Europe,https://www.airfrance.com,https://wwws.airfrance.fr/en/check-in,https://wwws.airfrance.fr/en/information/passagers/acheter-billet-avion-pmr-autres-handicaps,no
+air_france,Air France,Europe,https://wwws.airfrance.fr/en,https://wwws.airfrance.fr/en/check-in,https://wwws.airfrance.fr/en/information/passagers/acheter-billet-avion-pmr-autres-handicaps,yes
 klm,KLM,Europe,https://www.klm.co.in/?showredirectnotice=1,https://www.klm.nl/en/check-in,https://www.klm.co.in/information/assistance-health?showredirectnotice=1,yes
 ryanair,Ryanair,Europe,https://www.ryanair.com/ie/en,https://www.ryanair.com/us/en/lp/check-in/link?returnTo=managehub,https://help.ryanair.com/hc/en-us/categories/12489466690833-Special-Assistance,yes
 easyjet,easyJet,Europe,https://www.easyjet.com/en/,https://www.easyjet.com/en/help/booking-and-check-in/check-in,https://www.easyjet.com/en/help/boarding-and-flying/special-assistance,yes
 iberia,Iberia,Europe,https://www.iberia.com,https://www.iberia.com/us/checkin-information/,https://www.iberia.com/us/fly-with-iberia/special-needs/,yes
-finnair,Finnair,Europe,https://www.finnair.com,https://www.finnair.com/fi-en/check-in,https://www.finnair.com/us-en/special-assistance-and-health,yes
+finnair,Finnair,Europe,https://www.finnair.com/fi-en,https://www.finnair.com/fi-en/check-in,https://www.finnair.com/us-en/special-assistance-and-health,yes
 sas,SAS,Europe,https://www.flysas.com/en,https://www.flysas.com/us-en/checkin,https://www.flysas.com/nl-en/travel-info/assistance/,yes
 tap_air_portugal,TAP Air Portugal,Europe,https://www.flytap.com/en-pt,https://www.flytap.com/en-pt/check-in-information,https://www.flytap.com/en-pt/information/special-needs,yes
 turkish_airlines,Turkish Airlines,Europe,https://www.turkishairlines.com/en-in/,SAME_AS_HOME,https://www.turkishairlines.com/en-int/any-questions/special-assistance-for-passengers/,yes

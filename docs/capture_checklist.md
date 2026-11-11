@@ -118,7 +118,8 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 ### Air France (`air_france`)
 
-- [ ] **home**: <https://www.airfrance.com>  
+- [x] **home**: <https://www.airfrance.com>  
+  _Update 2026-11-11: captured as https://wwws.airfrance.fr/en (replacement for the splash page)_  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
 - [x] **checkin**: <https://wwws.airfrance.co.uk/check-in>  
   _Note: UK-market version (airfrance.co.uk) - switch to France/English if it exists_
@@ -162,6 +163,7 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 - [x] **home**: <https://www.finnair.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
+  _Update 2026-11-11: re-captured as https://www.finnair.com/fi-en (first capture was only the country-selection page)_
 - [x] **checkin**: <https://www.finnair.com/fi-en/check-in>
 - [x] **assistance**: <https://www.finnair.com/us-en/special-assistance-and-health>  
   _Note: US-market version (us-en) - switch to Finland (fi-en) if it exists_

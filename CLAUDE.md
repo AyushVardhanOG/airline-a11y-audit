@@ -95,19 +95,20 @@ getting around that, so **every airline is measured the same way**:
   - [x] which airlines blocked automated access recorded (Step 2: 6 airlines; all 30 after Step 4 part 1)
   - [x] URLs suggested by web search for all 90 pages (84 found, 6 MISSING), all `url_verified = no`;
         source notes in `data/url_search_notes.csv`; `docs/capture_checklist.md` has one box per page
-  - [ ] check each airline's URLs by hand and set `url_verified = yes` (19 of 30 done: India, Japan/Asia complete; Europe all except Air France - no homepage captured yet)
+  - [ ] check each airline's URLs by hand and set `url_verified = yes` (20 of 30 done: India, Japan/Asia, Europe complete)
   - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand), ticking `docs/capture_checklist.md`
-        (52 pages done on 2026-11-11: India 11 + Japan/Asia 13 + Europe 28; registered with
+        (53 pages done on 2026-11-11: India 11 + Japan/Asia 13 + Europe 29; registered with
         `src/register_captures.py`. Of the 90 page slots: 7 MISSING, 2 SAME_AS_HOME (SpiceJet and
-        Turkish check-in), so 81 pages to capture in total; still open: Air France home,
-        North America, Middle East/Oceania)
+        Turkish check-in), so 81 pages to capture in total; still open: North America,
+        Middle East/Oceania)
   - [ ] airlines with access "allowed" (11): live scan in the same hour as their captures, then run the live-vs-copy comparison
         (ANA live scan done, run 20261111T124041Z: home + assistance ok, check-in page connection cut;
         live-vs-copy comparison for ANA not run yet;
         SpiceJet, Akasa Air, Air India Express live scan done, run 20261111T130057Z, ~10 min after
         their captures: all 6 pages ok;
         Ryanair, Finnair, TAP live scan done, run 20261111T133826Z, ~15 min after their captures:
-        8 of 9 pages ok, Ryanair assistance (help.ryanair.com) blocked 403;
+        8 of 9 pages ok, Ryanair assistance (help.ryanair.com) blocked 403; Finnair home was the
+        country-selection page and is NOT comparable with the new fi-en capture (no fi-en live scan yet);
         7 of 11 allowed airlines now have live scans)
 - [ ] Step 4: full audit pipeline (Objective 1)
   - [x] part 1: one headless homepage visit to the 24 untested airlines (`src/access_test.py`);

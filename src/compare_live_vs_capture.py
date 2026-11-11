@@ -8,8 +8,8 @@ check this for airlines that allowed automated access (see automated_access.csv)
 
 How pages are matched:
   Each saved-copy scan (data/raw/capture_scans/) is paired with the live scan
-  (data/raw/live_scans/) of the same airline + page type that is CLOSEST IN TIME
-  to the capture. Websites change, so a big time gap makes the comparison weak;
+  (data/raw/live_scans/) of the same airline + page type + URL (the live page's final URL
+  must equal the captured URL) that is CLOSEST IN TIME to the capture. Websites change, so a big time gap makes the comparison weak;
   pairs more than 24 hours apart get a warning.
 
 Outputs (rewritten every time; they are calculated from the raw files):
@@ -31,6 +31,7 @@ import json
 from datetime import datetime
 
 import axe_runner as ax
+from register_captures import normalize  # same URL normalisation as when registering captures
 
 LIVE_DIR = ax.PROJECT_ROOT / "data" / "raw" / "live_scans"
 CAPTURE_DIR = ax.PROJECT_ROOT / "data" / "raw" / "capture_scans"
@@ -59,16 +60,33 @@ def to_time(iso_text):
     return datetime.fromisoformat(iso_text) if iso_text else None
 
 
+def same_url(live, capture):
+    """
+    True if the live scan ended on the same URL that was captured. Added after Finnair's
+    homepage was re-captured: the old live scan showed the country-selection page
+    (https://www.finnair.com/), the new capture is https://www.finnair.com/fi-en -
+    different pages that must not be compared.
+    """
+    live_url = live.get("final_url") or live.get("url") or ""
+    return normalize(live_url) == normalize(capture.get("url") or "")
+
+
 def pick_live_scan(capture, live_scans):
-    """The live scan of the same page closest in time to the capture (or the latest one)."""
-    same_page = [s for s in live_scans
-                 if s["airline_id"] == capture["airline_id"] and s["page_type"] == capture["page_type"]]
+    """
+    The live scan of the same page (same airline, page type AND URL) closest in time to
+    the capture (or the latest one). Returns (live scan or None, number of live scans of the
+    same airline/page type that were skipped because their URL differs).
+    """
+    candidates = [s for s in live_scans
+                  if s["airline_id"] == capture["airline_id"] and s["page_type"] == capture["page_type"]]
+    same_page = [s for s in candidates if same_url(s, capture)]
+    skipped = len(candidates) - len(same_page)
     if not same_page:
-        return None
+        return None, skipped
     captured = to_time(capture.get("captured_utc"))
     if captured is None:  # capture time unknown: use the most recent live scan
-        return max(same_page, key=lambda s: s["scan_started_utc"])
-    return min(same_page, key=lambda s: abs(to_time(s["scan_started_utc"]) - captured))
+        return max(same_page, key=lambda s: s["scan_started_utc"]), skipped
+    return min(same_page, key=lambda s: abs(to_time(s["scan_started_utc"]) - captured)), skipped
 
 
 def compare(capture, live):
@@ -141,7 +159,10 @@ def main():
 
     page_rows, rule_rows = [], []
     for capture in capture_scans:
-        live = pick_live_scan(capture, live_scans)
+        live, skipped = pick_live_scan(capture, live_scans)
+        if skipped:
+            print(f"NOTE: {capture['file_name']}: {skipped} live scan(s) of {capture['airline_id']} "
+                  f"{capture['page_type']} skipped because their URL differs from the captured URL")
         if live is None:
             continue  # no live scan for this page (normal for airlines that block us)
         page_row, rows = compare(capture, live)

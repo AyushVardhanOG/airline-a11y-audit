@@ -473,3 +473,27 @@ fixed first and `scan_live.py ryanair finnair tap_air_portugal` started at 13:38
 
 Progress: 19 of 30 airlines verified; 52 of 81 pages captured; live scans for 7 of 11 "allowed"
 airlines (still to do: Southwest, JetBlue, Air Canada, Qantas - all in the remaining regions).
+
+---
+
+## 2026-11-11 - Replacement homepages: Air France and Finnair
+
+- **Air France**: homepage captured separately as https://wwws.airfrance.fr/en (22:56:01 local =
+  13:56 UTC), France/English. Registered as `air_france_home_20261111.html`. Air France now
+  `url_verified = yes`, so Europe is complete.
+- **Finnair**: homepage re-captured as https://www.finnair.com/fi-en (22:58:48 local = 13:58 UTC).
+  The old capture (country/language selection page) was moved, content unchanged, to
+  `data/captures/_duplicates/finnair_home_20261111_country-selector.html`. It was renamed so the
+  new capture can use the normal name, and its log.csv row now points there with a note.
+  airlines.csv Finnair homepage = /fi-en.
+- For consistency, the log row of the moved SpiceJet check-in file now also points to `_duplicates/`.
+- **Comparison safeguard**: the Finnair live scan from run 20261111T133826Z visited the
+  country-selection page, so it must NOT be compared with the new fi-en capture.
+  `compare_live_vs_capture.py` now pairs a capture only with live scans whose final URL equals the
+  captured URL (normalised as in register_captures.py) and prints a note for skipped ones.
+  Tested against the log: 15 capture/live pairs still match, and Finnair home is correctly not paired.
+- A Finnair fi-en live scan has not been run (not requested). Without it, Finnair home has no live
+  comparison.
+
+Progress: 20 of 30 airlines verified; 53 of 81 pages captured; remaining regions: North America,
+Middle East/Oceania.
