@@ -94,6 +94,11 @@ def detect_block(http_status, title, body_text):
     """
     if http_status in BLOCK_STATUS_CODES:
         return f"HTTP status {http_status}"
+    # Any other error status (e.g. 404, 406, 444) also means we did not get the real
+    # page. Added in Step 4: Singapore Airlines (404) and Alaska (406) showed error pages
+    # with enough text to pass the checks below.
+    if http_status is not None and http_status >= 400:
+        return f"HTTP error status {http_status} (error page, not the real page)"
 
     # Only look at the title and the start of the visible text. Block pages are short,
     # and this avoids false alarms from words deep inside a normal page.

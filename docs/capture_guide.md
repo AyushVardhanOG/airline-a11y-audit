@@ -120,7 +120,7 @@ Capture all three pages of one airline **in one sitting** (same day, close toget
 
 ---
 
-## 5. Airlines that allow automated access (currently only ANA)
+## 5. Airlines that allow automated access (11 airlines, see the list in automated_access.csv)
 
 See `data/results/automated_access.csv`. For these airlines we **also** scan the live
 pages, to measure how much a saved copy differs from the live page. The two must be
@@ -128,7 +128,7 @@ made **close together in time**, because websites change:
 
 1. Capture the airline's 3 pages as above, check their URLs in `data/airlines.csv`
    and set `url_verified` to `yes` (the live scanner skips airlines that are not `yes`).
-2. **Within the same hour**, run the live scan:
+2. **Within the same hour**, run the live scan for that airline (its `airline_id`):
    ```powershell
    .venv\Scripts\python.exe src\scan_live.py ana
    ```
@@ -139,7 +139,7 @@ made **close together in time**, because websites change:
 
 ```powershell
 .venv\Scripts\python.exe src\scan_captures.py              # scan all saved copies
-.venv\Scripts\python.exe src\compare_live_vs_capture.py    # live vs saved copy (ANA)
+.venv\Scripts\python.exe src\compare_live_vs_capture.py    # live vs saved copy ("allowed" airlines)
 ```
 
 `scan_captures.py` prints a WARNING if a file has no row in `log.csv` or uses an unknown

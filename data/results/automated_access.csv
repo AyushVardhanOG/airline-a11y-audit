@@ -1,31 +1,31 @@
-airline_id,airline,region,result,http_status,evidence,tested_in_run,live_scan_kept
-air_india,Air India,India,error,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airindia.com/,20261111T115319Z,no
-indigo,IndiGo,India,blocked_unconfirmed,200,page has almost no visible text (possible block or failed load),20261111T115319Z,no
-spicejet,SpiceJet,India,not_tested,,,,no
-akasa_air,Akasa Air,India,not_tested,,,,no
-air_india_express,Air India Express,India,not_tested,,,,no
-ana,ANA,Japan/Asia,allowed,200,,20261111T115319Z,yes
-jal,JAL,Japan/Asia,blocked,403,HTTP status 403,20261111T115319Z,no
-peach,Peach,Japan/Asia,not_tested,,,,no
-singapore_airlines,Singapore Airlines,Japan/Asia,not_tested,,,,no
-cathay_pacific,Cathay Pacific,Japan/Asia,not_tested,,,,no
-lufthansa,Lufthansa,Europe,blocked,403,HTTP status 403,20261111T115319Z,no
-air_france,Air France,Europe,not_tested,,,,no
-klm,KLM,Europe,not_tested,,,,no
-ryanair,Ryanair,Europe,not_tested,,,,no
-easyjet,easyJet,Europe,not_tested,,,,no
-iberia,Iberia,Europe,not_tested,,,,no
-finnair,Finnair,Europe,not_tested,,,,no
-sas,SAS,Europe,not_tested,,,,no
-tap_air_portugal,TAP Air Portugal,Europe,not_tested,,,,no
-turkish_airlines,Turkish Airlines,Europe,not_tested,,,,no
-delta,Delta,North America,not_tested,,,,no
-united,United,North America,not_tested,,,,no
-american,American,North America,not_tested,,,,no
-southwest,Southwest,North America,not_tested,,,,no
-alaska,Alaska,North America,not_tested,,,,no
-jetblue,JetBlue,North America,not_tested,,,,no
-air_canada,Air Canada,North America,not_tested,,,,no
-emirates,Emirates,Middle East/Oceania,blocked,403,HTTP status 403,20261111T115319Z,no
-qatar_airways,Qatar Airways,Middle East/Oceania,not_tested,,,,no
-qantas,Qantas,Middle East/Oceania,not_tested,,,,no
+airline_id,airline,region,result,http_status,evidence,tested_in,tested_in_run,live_scan_kept
+air_india,Air India,India,error,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airindia.com/,step2_feasibility,20261111T115319Z,no
+indigo,IndiGo,India,blocked_unconfirmed,200,page has almost no visible text (possible block or failed load),step2_feasibility,20261111T115319Z,no
+spicejet,SpiceJet,India,allowed,200,,step4_access_test,20261111T121946Z,yes
+akasa_air,Akasa Air,India,allowed,200,,step4_access_test,20261111T121946Z,yes
+air_india_express,Air India Express,India,allowed,200,,step4_access_test,20261111T121946Z,yes
+ana,ANA,Japan/Asia,allowed,200,,step2_feasibility,20261111T115319Z,yes
+jal,JAL,Japan/Asia,blocked,403,HTTP status 403,step2_feasibility,20261111T115319Z,no
+peach,Peach,Japan/Asia,error,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.flypeach.com/en,step4_access_test,20261111T121946Z,no
+singapore_airlines,Singapore Airlines,Japan/Asia,blocked_unconfirmed,404,HTTP 404 error page instead of homepage (title: SIA-Maintenance Page),step4_access_test,20261111T121946Z,no
+cathay_pacific,Cathay Pacific,Japan/Asia,error,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.cathaypacific.com/,step4_access_test,20261111T121946Z,no
+lufthansa,Lufthansa,Europe,blocked,403,HTTP status 403,step2_feasibility,20261111T115319Z,no
+air_france,Air France,Europe,error,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airfrance.com/,step4_access_test,20261111T121946Z,no
+klm,KLM,Europe,error,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.klm.com/,step4_access_test,20261111T121946Z,no
+ryanair,Ryanair,Europe,allowed,200,,step4_access_test,20261111T121946Z,yes
+easyjet,easyJet,Europe,blocked,403,HTTP status 403,step4_access_test,20261111T121946Z,no
+iberia,Iberia,Europe,blocked,403,HTTP status 403,step4_access_test,20261111T121946Z,no
+finnair,Finnair,Europe,allowed,200,,step4_access_test,20261111T121946Z,yes
+sas,SAS,Europe,blocked,403,HTTP status 403,step4_access_test,20261111T121946Z,no
+tap_air_portugal,TAP Air Portugal,Europe,allowed,200,,step4_access_test,20261111T121946Z,yes
+turkish_airlines,Turkish Airlines,Europe,error,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.turkishairlines.com/,step4_access_test,20261111T121946Z,no
+delta,Delta,North America,blocked,444,block phrase found: 'access denied',step4_access_test,20261111T121946Z,no
+united,United,North America,error,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.united.com/,step4_access_test,20261111T121946Z,no
+american,American,North America,blocked,403,HTTP status 403,step4_access_test,20261111T121946Z,no
+southwest,Southwest,North America,allowed,200,,step4_access_test,20261111T121946Z,yes
+alaska,Alaska,North America,blocked_unconfirmed,406,HTTP 406 error page instead of homepage (title: Looks like we hit some turbulence - ATMOS Rewards),step4_access_test,20261111T121946Z,no
+jetblue,JetBlue,North America,allowed,200,,step4_access_test,20261111T121946Z,yes
+air_canada,Air Canada,North America,allowed,200,,step4_access_test,20261111T121946Z,yes
+emirates,Emirates,Middle East/Oceania,blocked,403,HTTP status 403,step2_feasibility,20261111T115319Z,no
+qatar_airways,Qatar Airways,Middle East/Oceania,blocked,403,HTTP status 403,step4_access_test,20261111T121946Z,no
+qantas,Qantas,Middle East/Oceania,allowed,200,,step4_access_test,20261111T121946Z,yes

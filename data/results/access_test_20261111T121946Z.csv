@@ -1,0 +1,25 @@
+airline,status,http,load_s,final_url,page_title,note
+SpiceJet,ok,200,9.5,https://www.spicejet.com/,"SpiceJet - Flight Booking for Domestic and International, Cheap Air Tickets",
+Akasa Air,ok,200,7.4,https://www.akasaair.com/,Book Flights Online with Akasa Air at affordable fares.,
+Air India Express,ok,200,19.5,https://www.airindiaexpress.com/home,Air India Express | Book Affordable Flights & Check-In Online,
+Peach,error,,,,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.flypeach.com/en
+Singapore Airlines,ok,404,4.2,https://www.singaporeair.com/,SIA-Maintenance Page,
+Cathay Pacific,error,,,,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.cathaypacific.com/
+Air France,error,,,,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airfrance.com/
+KLM,error,,,,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.klm.com/
+Ryanair,ok,200,7.7,https://www.ryanair.com/ie/en,Official Ryanair website | Cheap flights from Ireland | Ryanair,
+easyJet,blocked,403,3.8,https://www.easyjet.com/,Access Denied,HTTP status 403
+Iberia,blocked,403,7.9,https://www.iberia.com/,"Sorry!The connection was interrupted due to an error, but we can take you to the homepage if you want to carry on browsing.",HTTP status 403
+Finnair,ok,200,18.8,https://www.finnair.com/,Flight bookings | select country and language | Finnair,
+SAS,blocked,403,4.0,https://www.flysas.com/,Denied boarding,HTTP status 403
+TAP Air Portugal,ok,200,17.7,https://www.flytap.com/pt-pt,TAP Air Portugal | flyTAP Website Oficial,
+Turkish Airlines,error,,,,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.turkishairlines.com/
+Delta,blocked,444,3.9,https://www.delta.com/,Access Denied,block phrase found: 'access denied'
+United,error,,,,,Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.united.com/
+American,blocked,403,3.9,https://www.aa.com/,Access Denied,HTTP status 403
+Southwest,ok,200,10.6,https://www.southwest.com/,Southwest Airlines | Airline Tickets and Low Fares,
+Alaska,ok,406,5.6,https://www.alaskaair.com/,Looks like we hit some turbulence - ATMOS Rewards,
+JetBlue,ok,200,19.8,https://www.jetblue.com/,JetBlue | Flights & travel deals | Book here for low fares | JetBlue,
+Air Canada,ok,200,19.4,https://www.aircanada.com/home/in/en/aco/flights,Book flights | Air Canada,
+Qatar Airways,blocked,403,3.7,https://www.qatarairways.com/en-qa/homepage.html,Access Denied,HTTP status 403
+Qantas,ok,200,18.8,https://www.qantas.com/en-in,Fly with the Spirit of Australia | Qantas IN,

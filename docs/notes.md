@@ -183,3 +183,54 @@ do not touch the airline sites at all.
 results were marked as years old). That is why every URL must be checked by hand before use.
 
 **Next**: check URLs and capture pages, airline by airline, using the checklist.
+
+---
+
+## 2026-11-11 - Step 4 (part 1): automated-access test of the remaining 24 airlines
+
+**Done**
+- `src/access_test.py`: ONE headless visit to the homepage of each airline still `not_tested`
+  (24 airlines), one at a time, 10 s apart, default "HeadlessChrome" user agent, no retries,
+  no clicks, nothing to avoid detection. No axe-core scan (access only).
+  IP addresses removed from saved text; block-page screenshots are git-ignored.
+- Run `20261111T121946Z`. Raw JSON in `data/raw/access_test/20261111T121946Z/`,
+  summary in `data/results/access_test_20261111T121946Z.csv`.
+- `src/record_access.py` now merges Step 2 and Step 4 runs into `automated_access.csv`
+  (latest run wins per airline; new column `tested_in`).
+
+**Result for all 30 airlines** (Step 2 + Step 4 part 1):
+
+| Result | n | Airlines |
+|---|---|---|
+| allowed | 11 | SpiceJet, Akasa Air, Air India Express, ANA, Ryanair, Finnair, TAP Air Portugal, Southwest, JetBlue, Air Canada, Qantas |
+| blocked | 9 | JAL, Lufthansa, Emirates (Step 2); easyJet, Iberia, SAS, American, Qatar Airways (HTTP 403), Delta (HTTP 444 + "Access Denied") |
+| blocked_unconfirmed | 3 | IndiGo (Step 2); Singapore Airlines (HTTP 404 error page), Alaska (HTTP 406 error page) |
+| error | 7 | Air India (Step 2); Peach, Cathay Pacific, Air France, KLM, Turkish Airlines, United - all `net::ERR_HTTP2_PROTOCOL_ERROR` (connection cut before any page loaded) |
+
+So 19 of 30 (63%) did not give our headless browser the real homepage.
+
+**Problem found and fixed**
+- The script first marked Singapore Airlines (HTTP 404, title "SIA-Maintenance Page") and
+  Alaska (HTTP 406, title "Looks like we hit some turbulence") as `ok`, because
+  `detect_block()` only treated 401/403/405/429/503 as refusals and these error pages had enough
+  text. Checked the screenshots: both are error pages, not homepages (Alaska's page suggests
+  pausing VPNs / privacy extensions; Singapore's shows an Akamai-style reference code like
+  Delta's block page). Fixes:
+  - `record_access.py`: a page with HTTP status >= 400 is never counted as "allowed";
+    these two are `blocked_unconfirmed`, with the status and title in the evidence column.
+    (Raw files not edited, rule 6.)
+  - `axe_runner.detect_block()`: any HTTP status >= 400 is now flagged, for future runs.
+- Small change to the categories: a clear block phrase (e.g. "access denied") now counts as
+  `blocked` even without a 4xx status. Checked: this does not change any Step 2 result.
+
+**How to read the categories (for the paper)**
+- `error` with ERR_HTTP2_PROTOCOL_ERROR: the server closed the connection. This pattern is
+  often bot protection, but we cannot prove it, so it is not counted as "blocked".
+- All results are from ONE visit from ONE location (India) on ONE day. Sites can behave
+  differently from other countries or at other times.
+- Some allowed sites redirected by location: Air Canada and Qantas to their India versions
+  (/in/en, en-in), Ryanair to Ireland (/ie/en), and TAP opened in Portuguese (pt-pt). This only
+  affects the access test, not the captures.
+
+**Next**: Step 4 part 2. With 11 "allowed" airlines, the live-vs-copy comparison can now be
+done on more than one airline.

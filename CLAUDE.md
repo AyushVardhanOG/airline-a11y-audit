@@ -38,7 +38,8 @@ can fix the problems it finds, and check whether those fixes actually work.
 - Git + GitHub; GitHub Actions later
 
 ## Method: how pages are collected (decided after Step 2)
-In Step 2 most airline sites blocked our headless browser (only ANA allowed it). Rule 3 forbids
+In Step 2 most airline sites blocked our headless browser (only ANA allowed it); in the Step 4
+access test of all 30 airlines, 11 allowed it and 19 did not (blocked, error page or connection cut). Rule 3 forbids
 getting around that, so **every airline is measured the same way**:
 1. **Saved copies (main method, ALL airlines)**: I open each page in my normal Chrome and save it
    with the SingleFile extension, following `docs/capture_guide.md`. Files are named
@@ -88,13 +89,15 @@ getting around that, so **every airline is measured the same way**:
 - [ ] Step 3: choose the final list of ~30 airlines and pages — IN PROGRESS
   - [x] 30 airlines listed in `data/airlines.csv`
   - [x] capture method chosen (SingleFile for all airlines), guide written, scanners + live-vs-copy comparison built
-  - [x] which airlines blocked automated access recorded (6 tested: 1 allowed, 3 blocked, 1 unconfirmed, 1 error)
+  - [x] which airlines blocked automated access recorded (Step 2: 6 airlines; all 30 after Step 4 part 1)
   - [x] URLs suggested by web search for all 90 pages (84 found, 6 MISSING), all `url_verified = no`;
         source notes in `data/url_search_notes.csv`; `docs/capture_checklist.md` has one box per page
   - [ ] check each airline's URLs by hand and set `url_verified = yes` (0 of 30 done)
   - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand), ticking `docs/capture_checklist.md`
-  - [ ] ANA: live scan in the same hour as its captures, then run the live-vs-copy comparison
+  - [ ] airlines with access "allowed" (11): live scan in the same hour as their captures, then run the live-vs-copy comparison
 - [ ] Step 4: full audit pipeline (Objective 1)
+  - [x] part 1: one headless homepage visit to the 24 untested airlines (`src/access_test.py`);
+        all 30 now in `data/results/automated_access.csv`: 11 allowed, 9 blocked, 3 blocked_unconfirmed, 7 error
 - [ ] Step 5: LLM repair prototype (Objective 2)
 - [ ] Step 6: evaluate fixes + label them works/fails (Objective 3)
 - [ ] Step 7: train the ML failure predictor + dashboard (Objective 3)

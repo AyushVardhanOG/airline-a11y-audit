@@ -1,0 +1,26 @@
+{
+  "airline_id": "air_france",
+  "airline": "Air France",
+  "url": "https://www.airfrance.com",
+  "visit_started_utc": "2026-11-11T12:21:30+00:00",
+  "tool_versions": {
+    "python": "3.14.6",
+    "playwright": "1.65.0",
+    "browser": "chromium 158.0.8127.18"
+  },
+  "settings": {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "headless": true,
+    "page_load_timeout_ms": 60000,
+    "settle_time_s": 3,
+    "visits_per_site": 1
+  },
+  "status": "error",
+  "block_reason": null,
+  "error": "Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.airfrance.com/",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36",
+  "visit_finished_utc": "2026-11-11T12:21:31+00:00"
+}

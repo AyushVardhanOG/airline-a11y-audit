@@ -1,0 +1,32 @@
+{
+  "airline_id": "southwest",
+  "airline": "Southwest",
+  "url": "https://www.southwest.com",
+  "visit_started_utc": "2026-11-11T12:24:42+00:00",
+  "tool_versions": {
+    "python": "3.14.6",
+    "playwright": "1.65.0",
+    "browser": "chromium 158.0.8127.18"
+  },
+  "settings": {
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "headless": true,
+    "page_load_timeout_ms": 60000,
+    "settle_time_s": 3,
+    "visits_per_site": 1
+  },
+  "status": "ok",
+  "block_reason": null,
+  "error": null,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36",
+  "load_time_s": 10.6,
+  "http_status": 200,
+  "final_url": "https://www.southwest.com/",
+  "page_title": "Southwest Airlines | Airline Tickets and Low Fares",
+  "visible_text_length": 4087,
+  "screenshot": "screenshots/access_test/20261111T121946Z/southwest.png",
+  "visit_finished_utc": "2026-11-11T12:24:53+00:00"
+}
