@@ -413,3 +413,63 @@ all 10 files arrived, saved within 4 s (22:10:59-22:11:03 local = 13:11 UTC). Re
 - Checklist: 10 more boxes ticked.
 
 Progress: 10 of 30 airlines verified (India + Japan/Asia complete); 24 of 82 pages captured.
+
+---
+
+## 2026-11-11 - Europe batch registered (28 pages) + live scans of Ryanair, Finnair, TAP
+
+Opened with `open_batch.py Europe` (30 tabs). 33 files arrived: main save 22:23:11-22:23:32
+local (13:23 UTC), TAP re-saved 22:29, Air France pages 22:27 and 22:30.
+
+**Live scans first** (time-critical): Ryanair, Finnair and TAP are "allowed", so their URLs were
+fixed first and `scan_live.py ryanair finnair tap_air_portugal` started at 13:38 UTC
+(run 20261111T133826Z), about 15 min after the captures. Then the remaining files were handled.
+
+**Moved unchanged to `data/captures/_duplicates/` (5 files)**, chosen by the URL in the SingleFile header:
+- Air France country-selection splash page (`/splash`), as instructed.
+- TAP homepage in Portuguese (`/pt-pt`), as instructed.
+- TAP check-in and assistance in **en-us** (22:23). Instructions said to use the "English (en-us)"
+  homepage, but the English homepage I saved is **en-pt** (22:29), and check-in and assistance were also
+  re-saved in en-pt at 22:29. To keep all 3 TAP pages in the same locale and session (and Portugal =
+  TAP's home country), the en-pt pages were used and the en-us ones moved. Easy to swap back.
+- Turkish homepage `/en-int/` that the check-in URL redirected to. No separate check-in page was
+  saved, so Turkish `checkin_url = SAME_AS_HOME`.
+
+**Registered 28 pages**. Redirects:
+- **By location to the India version**: KLM home + assistance (klm.com -> klm.co.in, with
+  `?showredirectnotice=1`), Lufthansa home (`/in/en/homepage`), Turkish home (`/en-in/`).
+- Language/path only (not location): easyJet `/en/`, SAS `/en`, Ryanair `/ie/en` (Ireland =
+  Ryanair's home country).
+- Lufthansa assistance: the suggested `/hk/en/travellers-with-special-needs.html` was "page not
+  found"; used `/de/en/passengers-using-wheelchairs` (a wheelchair sub-page, not an overview).
+- Air France check-in: used `wwws.airfrance.fr/en/check-in` (France/English) instead of the
+  suggested `.co.uk` version. **No Air France homepage captured** (only the splash page), so Air France
+  stays `url_verified = no`.
+- **Finnair "home" is the country/language selection page** (about 850 characters of text), not a real
+  homepage; registered as captured (live scan visited the same URL) but flagged.
+- No page went to the homepage except Turkish check-in (handled above).
+
+**Live scan results** (run 20261111T133826Z):
+
+| Page | Result | Rules / elements |
+|---|---|---|
+| ryanair home (/ie/en) | ok | 4 / 9 |
+| ryanair checkin ("Lost Booking" page) | ok | 2 / 3 |
+| ryanair assistance (help.ryanair.com) | **blocked**: HTTP 403, "Just a moment..." bot check; not retried | - |
+| finnair home (country selector) | ok | 2 / 2 |
+| finnair checkin | ok | **0 / 0** |
+| finnair assistance | ok | **0 / 0** |
+| tap home (en-pt) | ok | 2 / 3 |
+| tap checkin (en-pt) | ok | 1 / 2 |
+| tap assistance (en-pt) | ok | 1 / 2 |
+
+- **Finnair 0 violations checked**: the check-in screenshot shows the fully loaded page (form,
+  content, cookie dialog), and axe passed 30 rules (similar to pages with violations), so the page
+  was really scanned. Both Finnair pages never reached "network idle" within 15 s.
+- **Ryanair**: www.ryanair.com allows automated access but its help centre (help.ryanair.com,
+  behind a "Just a moment..." bot check) does not, the same pattern as ANA's check-in site. So the
+  homepage access test does not cover separate sub-sites. automated_access.csv (homepage level)
+  is unchanged; this is recorded here instead.
+
+Progress: 19 of 30 airlines verified; 52 of 81 pages captured; live scans for 7 of 11 "allowed"
+airlines (still to do: Southwest, JetBlue, Air Canada, Qantas - all in the remaining regions).

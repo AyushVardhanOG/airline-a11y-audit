@@ -1,0 +1,40 @@
+{
+  "source": "live",
+  "airline_id": "ryanair",
+  "page_type": "assistance",
+  "url": "https://help.ryanair.com/hc/en-us/categories/12489466690833-Special-Assistance",
+  "scan_started_utc": "2026-11-11T13:39:04+00:00",
+  "tool_versions": {
+    "python": "3.14.6",
+    "playwright": "1.65.0",
+    "browser": "chromium 158.0.8127.18"
+  },
+  "settings": {
+    "wcag_tags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa"
+    ],
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "headless": true,
+    "page_scripts": "enabled (live site)",
+    "page_load_timeout_ms": 60000,
+    "settle_time_s": 3
+  },
+  "status": "blocked",
+  "block_reason": "HTTP status 403",
+  "error": null,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.8127.18 Safari/537.36",
+  "note": "network never went idle within 15 s; scanned anyway",
+  "load_time_s": 18.2,
+  "http_status": 403,
+  "final_url": "https://help.ryanair.com/hc/en-us/categories/12489466690833-Special-Assistance",
+  "page_title": "Just a moment...",
+  "visible_text_start": "help.ryanair.com\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\n\nRay ID: a58db336fe633a4c\nPerformance and Security by Cloudflare\nPrivacy",
+  "screenshot": "screenshots/live_scans/20261111T133826Z/ryanair_assistance_blocked.png",
+  "scan_finished_utc": "2026-11-11T13:39:23+00:00"
+}

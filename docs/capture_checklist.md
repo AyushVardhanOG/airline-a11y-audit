@@ -109,88 +109,89 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 ### Lufthansa (`lufthansa`)
 
-- [ ] **home**: <https://www.lufthansa.com>  
+- [x] **home**: <https://www.lufthansa.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.lufthansa.com/ge/en/online-check-in>  
+- [x] **checkin**: <https://www.lufthansa.com/ge/en/online-check-in>  
   _Note: Georgia-market version (/ge/en/) - switch to Germany (/de/en/) if it exists_
-- [ ] **assistance**: <https://www.lufthansa.com/hk/en/travellers-with-special-needs.html>  
+- [x] **assistance**: <https://www.lufthansa.com/hk/en/travellers-with-special-needs.html>  
   _Note: Hong Kong-market version (/hk/en/) - switch to Germany (/de/en/) if it exists_
 
 ### Air France (`air_france`)
 
 - [ ] **home**: <https://www.airfrance.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://wwws.airfrance.co.uk/check-in>  
+- [x] **checkin**: <https://wwws.airfrance.co.uk/check-in>  
   _Note: UK-market version (airfrance.co.uk) - switch to France/English if it exists_
-- [ ] **assistance**: <https://wwws.airfrance.fr/en/information/passagers/acheter-billet-avion-pmr-autres-handicaps>
+- [x] **assistance**: <https://wwws.airfrance.fr/en/information/passagers/acheter-billet-avion-pmr-autres-handicaps>
 
 ### KLM (`klm`)
 
-- [ ] **home**: <https://www.klm.com>  
+- [x] **home**: <https://www.klm.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.klm.nl/en/check-in>
-- [ ] **assistance**: <https://www.klm.com/information/assistance-health>  
+- [x] **checkin**: <https://www.klm.nl/en/check-in>
+- [x] **assistance**: <https://www.klm.com/information/assistance-health>  
   _Note: US-market version - switch to Netherlands/English if it exists_
 
 ### Ryanair (`ryanair`)
 
-- [ ] **home**: <https://www.ryanair.com>  
+- [x] **home**: <https://www.ryanair.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.ryanair.com/us/en/lp/check-in/link?returnTo=managehub>  
+- [x] **checkin**: <https://www.ryanair.com/us/en/lp/check-in/link?returnTo=managehub>  
   _Note: booking-lookup page found ('Lost Booking' title) - check it is the check-in start page_
-- [ ] **assistance**: <https://help.ryanair.com/hc/en-us/categories/12489466690833-Special-Assistance>  
+- [x] **assistance**: <https://help.ryanair.com/hc/en-us/categories/12489466690833-Special-Assistance>  
   _Note: separate help-centre site (help.ryanair.com)_
 
 ### easyJet (`easyjet`)
 
-- [ ] **home**: <https://www.easyjet.com>  
+- [x] **home**: <https://www.easyjet.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.easyjet.com/en/help/booking-and-check-in/check-in>  
+- [x] **checkin**: <https://www.easyjet.com/en/help/booking-and-check-in/check-in>  
   _Note: help page about check-in; not the check-in form (check-in is inside Manage Bookings which needs login - do NOT log in; use the 'Find booking' form if there is one)_
-- [ ] **assistance**: <https://www.easyjet.com/en/help/boarding-and-flying/special-assistance>
+- [x] **assistance**: <https://www.easyjet.com/en/help/boarding-and-flying/special-assistance>
 
 ### Iberia (`iberia`)
 
-- [ ] **home**: <https://www.iberia.com>  
+- [x] **home**: <https://www.iberia.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.iberia.com/us/checkin-information/>  
+- [x] **checkin**: <https://www.iberia.com/us/checkin-information/>  
   _Note: info page; US-market version - check for the booking-reference form; switch to Spain/English if it exists_
-- [ ] **assistance**: <https://www.iberia.com/us/fly-with-iberia/special-needs/>  
+- [x] **assistance**: <https://www.iberia.com/us/fly-with-iberia/special-needs/>  
   _Note: US-market version - switch to Spain/English if it exists_
 
 ### Finnair (`finnair`)
 
-- [ ] **home**: <https://www.finnair.com>  
+- [x] **home**: <https://www.finnair.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.finnair.com/fi-en/check-in>
-- [ ] **assistance**: <https://www.finnair.com/us-en/special-assistance-and-health>  
+- [x] **checkin**: <https://www.finnair.com/fi-en/check-in>
+- [x] **assistance**: <https://www.finnair.com/us-en/special-assistance-and-health>  
   _Note: US-market version (us-en) - switch to Finland (fi-en) if it exists_
 
 ### SAS (`sas`)
 
-- [ ] **home**: <https://www.flysas.com>  
+- [x] **home**: <https://www.flysas.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.flysas.com/us-en/checkin>  
+- [x] **checkin**: <https://www.flysas.com/us-en/checkin>  
   _Note: US-market version (us-en)_
-- [ ] **assistance**: <https://www.flysas.com/nl-en/travel-info/assistance/>  
+- [x] **assistance**: <https://www.flysas.com/nl-en/travel-info/assistance/>  
   _Note: Netherlands-market version (nl-en)_
 
 ### TAP Air Portugal (`tap_air_portugal`)
 
-- [ ] **home**: <https://www.flytap.com>  
+- [x] **home**: <https://www.flytap.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.flytap.com/en-us/check-in/online-check-in>  
+- [x] **checkin**: <https://www.flytap.com/en-us/check-in/online-check-in>  
   _Note: US-market version (en-us) - switch to Portugal/English if it exists_
-- [ ] **assistance**: <https://www.flytap.com/en-us/special-needs>  
+- [x] **assistance**: <https://www.flytap.com/en-us/special-needs>  
   _Note: US-market version (en-us) - switch to Portugal/English if it exists_
 
 ### Turkish Airlines (`turkish_airlines`)
 
-- [ ] **home**: <https://www.turkishairlines.com>  
+- [x] **home**: <https://www.turkishairlines.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.turkishairlines.com/en-int/flights/check-in/oci-select-seats/selectseatocitys.html>  
+- [x] **checkin**: <https://www.turkishairlines.com/en-int/flights/check-in/oci-select-seats/selectseatocitys.html>  
+  _Update 2026-11-11: redirects to the homepage -> SAME_AS_HOME in airlines.csv; not scanned separately_
   _Note: unusual URL (seat-selection path) - check it opens the check-in start page; info page is https://www.turkishairlines.com/en-us/any-questions/check-in/_
-- [ ] **assistance**: <https://www.turkishairlines.com/en-int/any-questions/special-assistance-for-passengers/>
+- [x] **assistance**: <https://www.turkishairlines.com/en-int/any-questions/special-assistance-for-passengers/>
 
 ## North America
 
