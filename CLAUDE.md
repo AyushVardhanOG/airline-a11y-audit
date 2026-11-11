@@ -90,32 +90,24 @@ getting around that, so **every airline is measured the same way**:
 ## Current status
 - [x] Step 1: project setup
 - [x] Step 2: feasibility test on 6 airline homepages (Air India, IndiGo, ANA, JAL, Lufthansa, Emirates)
-- [ ] Step 3: choose the final list of ~30 airlines and pages — IN PROGRESS
-  - [x] 30 airlines listed in `data/airlines.csv`
-  - [x] capture method chosen (SingleFile for all airlines), guide written, scanners + live-vs-copy comparison built
-  - [x] which airlines blocked automated access recorded (Step 2: 6 airlines; all 30 after Step 4 part 1)
-  - [x] URLs suggested by web search for all 90 pages (84 found, 6 MISSING), all `url_verified = no`;
-        source notes in `data/url_search_notes.csv`; `docs/capture_checklist.md` has one box per page
-  - [ ] check each airline's URLs by hand and set `url_verified = yes` (26 of 30 done: India, Japan/Asia, Europe, North America complete; Alaska excluded as
-        blocked_for_human_visitor; left: Middle East/Oceania - Emirates, Qatar Airways, Qantas)
-  - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand), ticking `docs/capture_checklist.md`
-        (69 pages done on 2026-11-11: India 11 + Japan/Asia 13 + Europe 29 + North America 16; registered with
-        `src/register_captures.py`. Of the 90 page slots: 7 MISSING, 2 SAME_AS_HOME (SpiceJet and
-        Turkish check-in), 3 excluded (Alaska), so 78 pages to capture in total; still open:
-        Middle East/Oceania, 9 pages)
-  - [ ] airlines with access "allowed" (11): live scan in the same hour as their captures, then run the live-vs-copy comparison
-        (ANA live scan done, run 20261111T124041Z: home + assistance ok, check-in page connection cut;
-        live-vs-copy comparison for ANA not run yet;
-        SpiceJet, Akasa Air, Air India Express live scan done, run 20261111T130057Z, ~10 min after
-        their captures: all 6 pages ok;
-        Ryanair, Finnair, TAP live scan done, run 20261111T133826Z, ~15 min after their captures:
-        8 of 9 pages ok, Ryanair assistance (help.ryanair.com) blocked 403; Finnair home was the
-        country-selection page and is NOT comparable with the new fi-en capture (no fi-en live scan yet);
-        Southwest, JetBlue, Air Canada live scan done, run 20261111T140859Z, ~2 min after their captures:
-        all 8 pages ok; 10 of 11 allowed airlines now have live scans - Qantas left)
+- [x] Step 3: choose the final list of ~30 airlines and pages (finished 2026-11-11)
+  - [x] 30 airlines in `data/airlines.csv`; URLs first suggested by web search (`data/url_search_notes.csv`),
+        then checked by hand while capturing: 29 airlines `url_verified = yes`, Alaska excluded
+        (`excluded_reason = blocked_for_human_visitor`: no page loaded in a normal browser)
+  - [x] capture method: SingleFile by hand for ALL airlines (`docs/capture_guide.md`), opened per region
+        with `src/open_batch.py`, registered with `src/register_captures.py`, ticked in `docs/capture_checklist.md`
+  - [x] all captures done on 2026-11-11: 90 page slots = **78 captured** + 7 MISSING + 2 SAME_AS_HOME
+        (SpiceJet, Turkish check-in) + 3 excluded (Alaska). Unneeded duplicates in `data/captures/_duplicates/`.
+        Several homepages were redirected by location to their India versions (noted in `data/captures/log.csv`)
+  - [x] live scans of all 11 "allowed" airlines within ~15 min of their captures (runs 20261111T124041Z,
+        T130057Z, T133826Z, T140859Z, T141945Z). Not scannable live: ANA check-in (connection cut),
+        Ryanair assistance (403). Finnair live home = country-selection page, NOT comparable with
+        the fi-en capture. Exclude spicejet/checkin (SAME_AS_HOME) from live analyses.
 - [ ] Step 4: full audit pipeline (Objective 1)
   - [x] part 1: one headless homepage visit to the 24 untested airlines (`src/access_test.py`);
         all 30 now in `data/results/automated_access.csv`: 11 allowed, 9 blocked, 3 blocked_unconfirmed, 7 error
+  - [ ] scan the 78 saved copies offline (`src/scan_captures.py`)
+  - [ ] live-vs-copy comparison for the 11 allowed airlines (`src/compare_live_vs_capture.py`)
 - [ ] Step 5: LLM repair prototype (Objective 2)
 - [ ] Step 6: evaluate fixes + label them works/fails (Objective 3)
 - [ ] Step 7: train the ML failure predictor + dashboard (Objective 3)

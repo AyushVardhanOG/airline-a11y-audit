@@ -546,3 +546,43 @@ others). Alaska stays `url_verified = no` (nothing could be confirmed) and has n
 
 Progress: 26 of 30 airlines verified + 1 excluded; 69 of 78 pages captured; live scans for
 10 of 11 "allowed" airlines (Qantas left, in the last region).
+
+---
+
+## 2026-11-11 - Middle East/Oceania batch (9 pages) + Qantas live scan; capturing finished
+
+Opened with `open_batch.py "Middle East/Oceania"` (9 tabs); all 9 saved at 23:15:53-23:15:57 local
+(14:15 UTC).
+
+**Qantas live scan first** (last "allowed" airline): `scan_live.py qantas`, run 20261111T141945Z,
+started 14:19:45 UTC (~4 min after capture). All 3 pages ok (HTTP 200, final URL = captured URL,
+29-34 rules passed): home 1 rule / 2 elements, check-in 1 / 1, assistance 1 / 1, all
+`label-content-name-mismatch`.
+
+**Registered 9 pages**:
+- Emirates home: **location redirect** to the India version `/in/english/`. Emirates assistance: same
+  page as suggested, but the URL gained `?section=mobility+assistance` (a section of the hub page).
+  Check-in as suggested (UAE/English).
+- Qatar Airways: all 3 as suggested (home is Qatar/English `/en-qa/homepage.html`).
+- Qantas: bare domain -> `/en-us` (US version). The headless access test from India on the same
+  day was sent to `/en-in`, so the human browser and the headless browser landed on different
+  versions. Check-in and assistance are the US-market (en-us) versions as suggested.
+- No page went to the homepage.
+
+**Capturing is finished.** Completeness check over all 90 page slots (airlines.csv vs
+data/captures vs log.csv): 78 captured (exactly 78 files, each with a log row whose URL equals
+the airlines.csv URL) + 7 MISSING + 2 SAME_AS_HOME + 3 excluded (Alaska) = 90; all 29 non-excluded
+airlines `url_verified = yes`; no problems found. Checklist: the 10 unticked boxes are exactly the
+7 MISSING pages and Alaska's 3 pages.
+
+**Live scans done for all 11 "allowed" airlines** (5 runs, each within ~15 min of the captures).
+Pages without a usable live scan: ANA check-in (connection cut), Ryanair assistance (403),
+Finnair home (live scan saw the country-selection page). spicejet/checkin is SAME_AS_HOME.
+
+**Homepages captured as their India version** (location redirects): ANA, Singapore Airlines,
+Cathay Pacific, KLM (+ assistance), Lufthansa, Turkish, American (americanairlines.in), Air Canada,
+Emirates. Delta went to Asia-Pacific (`/apac/en`). This must be stated in the method section:
+the homepages reflect what a visitor from India sees.
+
+**Next (Step 4)**: scan the 78 saved copies offline with `scan_captures.py`, then
+`compare_live_vs_capture.py` for the 11 allowed airlines.

@@ -265,25 +265,25 @@ browser (blocked or error), so there are no captures. Alaska stays in the result
 
 ### Emirates (`emirates`)
 
-- [ ] **home**: <https://www.emirates.com>  
+- [x] **home**: <https://www.emirates.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.emirates.com/ae/english/manage-booking/online-check-in/>  
+- [x] **checkin**: <https://www.emirates.com/ae/english/manage-booking/online-check-in/>  
   _Note: UAE (ae/english) version_
-- [ ] **assistance**: <https://www.emirates.com/ae/english/help/accessibility-hub/accessible-travel/>
+- [x] **assistance**: <https://www.emirates.com/ae/english/help/accessibility-hub/accessible-travel/>
 
 ### Qatar Airways (`qatar_airways`)
 
-- [ ] **home**: <https://www.qatarairways.com/en-qa/homepage.html>
-- [ ] **checkin**: <https://www.qatarairways.com/en-us/services-checking-in.html>  
+- [x] **home**: <https://www.qatarairways.com/en-qa/homepage.html>
+- [x] **checkin**: <https://www.qatarairways.com/en-us/services-checking-in.html>  
   _Note: US-market version (en-us) - switch to Qatar (en-qa) if it exists_
-- [ ] **assistance**: <https://www.qatarairways.com/en/services-special/disability-and-medical.html>  
+- [x] **assistance**: <https://www.qatarairways.com/en/services-special/disability-and-medical.html>  
   _Note: generic English version (/en/)_
 
 ### Qantas (`qantas`)
 
-- [ ] **home**: <https://www.qantas.com>  
+- [x] **home**: <https://www.qantas.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [ ] **checkin**: <https://www.qantas.com/en-us/manage-booking/check-in>  
+- [x] **checkin**: <https://www.qantas.com/en-us/manage-booking/check-in>  
   _Note: US-market version (en-us) - switch to Australia (en-au) if it exists_
-- [ ] **assistance**: <https://www.qantas.com/en-us/travel-information/specific-needs-assistance>  
+- [x] **assistance**: <https://www.qantas.com/en-us/travel-information/specific-needs-assistance>  
   _Note: US-market version (en-us) - switch to Australia (en-au) if it exists_

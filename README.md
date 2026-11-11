@@ -66,7 +66,7 @@ npm install
 
 - [x] Step 1: project setup
 - [x] Step 2: feasibility test on 6 airline homepages
-- [ ] Step 3: final list of airlines and pages (in progress: pages are being captured by hand)
+- [x] Step 3: final list of airlines and pages (78 pages captured by hand on 2026-11-11)
 - [ ] Step 4: full audit pipeline (part 1 done: automated-access test of all 30 airlines)
 - [ ] Step 5: LLM repair prototype
 - [ ] Step 6: evaluate fixes
