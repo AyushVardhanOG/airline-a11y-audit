@@ -21,6 +21,9 @@ screenshots/step2_feasibility/20261111T115319Z/lufthansa.png
 # also contain details about the person who captured them. Kept locally + backed up.
 # data/captures/log.csv and the SingleFile settings ARE committed.
 data/captures/*.html
+# ...including subfolders such as data/captures/_duplicates/ (the line above only
+# covers files directly in data/captures/)
+data/captures/**/*.html
 
 # Editor / OS clutter
 .vscode/

@@ -1,7 +1,7 @@
 airline_id,airline,region,homepage,checkin_url,assistance_url,url_verified
 air_india,Air India,India,https://www.airindia.com,https://www.airindia.com/in/en/manage/web-checkin.html,https://www.airindia.com/in/en/travel-information/health-medical-assistance/disability-assistance.html,yes
-indigo,IndiGo,India,https://www.goindigo.in,https://www.goindigo.in/web-check-in.html,https://www.goindigo.in/information/special-disability-assistance.html,no
-spicejet,SpiceJet,India,https://www.spicejet.com,https://www.spicejet.com/#checkin,MISSING,yes
+indigo,IndiGo,India,https://www.goindigo.in,https://www.goindigo.in/web-check-in.html,https://www.goindigo.in/information/special-disability-assistance.html,yes
+spicejet,SpiceJet,India,https://www.spicejet.com,SAME_AS_HOME,MISSING,yes
 akasa_air,Akasa Air,India,https://www.akasaair.com,https://www.akasaair.com/check-in/web-check-in,MISSING,yes
 air_india_express,Air India Express,India,https://www.airindiaexpress.com/home,https://www.airindiaexpress.com/checkin-home,MISSING,yes
 ana,ANA,Japan/Asia,https://www.ana.co.jp/en/in/,https://aswbe.ana.co.jp/webapps/checkin/checkin-search?LANG=en&CONNECTION_KIND=CHE,https://www.ana.co.jp/en/jp/guide/flight_service_info/assist/,yes

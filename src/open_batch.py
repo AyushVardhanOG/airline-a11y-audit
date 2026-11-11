@@ -91,8 +91,11 @@ def pages_for_region(region):
             continue
         for page_type, column in URL_COLUMNS.items():
             url = r[column].strip()
-            if not url or url.upper() == "MISSING":
-                skipped.append(f"{r['airline_id']} {page_type} (MISSING)")
+            # MISSING = no such page; SAME_AS_HOME = the page is really the homepage.
+            # (Same rule as axe_runner.is_real_url; repeated here so this script runs
+            # with plain Python, without Playwright installed.)
+            if not url or url.upper() in ("MISSING", "SAME_AS_HOME"):
+                skipped.append(f"{r['airline_id']} {page_type} ({url or 'empty'})")
                 continue
             pages.append((r["airline_id"], page_type, url))
     return pages, skipped

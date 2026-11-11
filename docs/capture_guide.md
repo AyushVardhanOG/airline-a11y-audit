@@ -53,7 +53,9 @@ Write the country you chose in `notes`.
 
 If a suggested URL is wrong, correct it in `data/airlines.csv`. If an airline has no
 such page, or you cannot find it within about 5 minutes, write `MISSING` in that
-column and move on. When all three URLs of an airline are checked, set its
+column and move on. If the page turns out to be the homepage itself (e.g. SpiceJet's
+check-in is the homepage with a check-in tab open), write `SAME_AS_HOME`: it is then
+not captured or scanned separately. When all three URLs of an airline are checked, set its
 `url_verified` column to `yes`.
 
 Capture all three pages of one airline **in one sitting** (same day, close together).
@@ -128,6 +130,10 @@ egister_captures.py`, which reads the
 6. If the URL differs from the suggestion in `data/airlines.csv` (`homepage`,
    `checkin_url` or `assistance_url`), correct it there. Tick the box in
    `docs/capture_checklist.md`.
+
+**Duplicates**: a capture that is not needed (e.g. a second copy of the same page) is
+moved, unchanged, to `data/captures/_duplicates/` - never deleted. Files in that folder
+are not scanned and, like all captures, are not uploaded to GitHub.
 
 **Never edit a saved capture file afterwards.** Captures are raw data, like
 `data/raw/`. The LLM fixes in Objective 2 will work on copies stored elsewhere.

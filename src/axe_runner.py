@@ -29,6 +29,18 @@ VIEWPORT = {"width": 1366, "height": 768}  # a common laptop screen size
 # The three page types we collect for every airline (also used in file names).
 PAGE_TYPES = ["home", "checkin", "assistance"]
 
+# Values in the URL columns of data/airlines.csv that are NOT URLs:
+#   MISSING       the airline has no such page (or it could not be found)
+#   SAME_AS_HOME  the page is really the homepage (e.g. SpiceJet's check-in is the homepage
+#                 with a check-in tab open), so it is not captured or scanned separately
+NOT_A_URL = {"MISSING", "SAME_AS_HOME"}
+
+
+def is_real_url(value):
+    """True if a URL column of airlines.csv holds a real URL (not empty, MISSING or SAME_AS_HOME)."""
+    value = (value or "").strip()
+    return bool(value) and value.upper() not in NOT_A_URL
+
 # HTTP status codes that usually mean "you are not allowed in".
 BLOCK_STATUS_CODES = {401, 403, 405, 429, 503}
 

@@ -5,6 +5,9 @@ This is now the MAIN way pages are measured (method decided after Step 2, where 
 airline sites blocked automated browsers). See docs/capture_guide.md for how the
 copies are made.
 
+Only files directly in data/captures/ are scanned (NOT subfolders such as
+data/captures/_duplicates/), and pages marked SAME_AS_HOME in data/airlines.csv are skipped.
+
 For every file data/captures/<airline_id>_<page_type>_<YYYYMMDD>.html:
   1. Check the file name and find its row in data/captures/log.csv
      (who/when/where it was captured). Missing log rows are reported as warnings.
@@ -78,6 +81,15 @@ def load_capture_log():
 def load_airline_ids():
     with open(AIRLINES_PATH, newline="", encoding="utf-8") as f:
         return {row["airline_id"] for row in csv.DictReader(f)}
+
+
+def load_same_as_home():
+    """{(airline_id, page_type)} whose URL in airlines.csv is SAME_AS_HOME (never scanned)."""
+    columns = {"home": "homepage", "checkin": "checkin_url", "assistance": "assistance_url"}
+    with open(AIRLINES_PATH, newline="", encoding="utf-8") as f:
+        return {(row["airline_id"], page_type) for row in csv.DictReader(f)
+                for page_type, column in columns.items()
+                if row[column].strip().upper() == "SAME_AS_HOME"}
 
 
 def captured_utc_from_log(row):
@@ -230,6 +242,13 @@ def main():
     files, bad_names = find_capture_files(only_names)
     for path in bad_names:
         print(f"SKIPPED (name does not match airline_pagetype_YYYYMMDD.html): {path.name}")
+
+    # Pages marked SAME_AS_HOME in airlines.csv are the homepage again: never scan them twice.
+    same_as_home = load_same_as_home()
+    for path in [p for p in files if (FILE_NAME_RE.match(p.name)["airline_id"],
+                                      FILE_NAME_RE.match(p.name)["page_type"]) in same_as_home]:
+        print(f"SKIPPED (page is SAME_AS_HOME in data/airlines.csv): {path.name}")
+        files.remove(path)
     if not files:
         print(f"No capture files to scan in {CAPTURES_DIR.relative_to(ax.PROJECT_ROOT)}.")
         return

@@ -73,7 +73,7 @@ def pages_to_scan(only_airlines):
                 continue
             for page_type, column in URL_COLUMNS.items():
                 url = (row.get(column) or "").strip()
-                if url and url.upper() != "MISSING":
+                if ax.is_real_url(url):  # skips empty, MISSING and SAME_AS_HOME
                     pages.append((row["airline_id"], page_type, url))
     return pages
 

@@ -362,3 +362,28 @@ Observations:
 
 Live scans now exist for 4 of the 11 "allowed" airlines (ANA, SpiceJet, Akasa Air, Air India Express).
 **Next**: scan the saved copies (`scan_captures.py`) and run `compare_live_vs_capture.py`.
+
+---
+
+## 2026-11-11 - India batch finished
+
+- **IndiGo homepage** captured separately (21:57:40 local = 12:57 UTC; https://www.goindigo.in/,
+  no location redirect) and registered as `indigo_home_20261111.html`. IndiGo `url_verified = yes`.
+  All 5 India airlines are now verified; `open_batch.py India` has nothing left to open.
+- **SpiceJet check-in**: the captured `#checkin` page is just the homepage with the check-in
+  tab open. `checkin_url` is now `SAME_AS_HOME` in airlines.csv, a new marker next to `MISSING`.
+  It means "this page is the homepage; do not capture or scan it separately".
+  Supported in all scripts: `axe_runner.is_real_url()` (used by scan_live and register_captures),
+  open_batch (own copy of the rule, so it runs without Playwright), make_capture_checklist, and an
+  explicit skip in scan_captures.
+- `spicejet_checkin_20261111.html` and the leftover second SpiceJet homepage file were **moved
+  unchanged** (same byte size checked) to `data/captures/_duplicates/`. Nothing was deleted. Notes
+  added to log.csv. scan_captures only scans files directly in data/captures/, so they are not scanned.
+- **Privacy fix**: `.gitignore` had only `data/captures/*.html`, which does NOT cover subfolders,
+  so the moved files would have been committed to the public repo. Added
+  `data/captures/**/*.html` before moving them, and checked with `git check-ignore`.
+- The earlier live scan of SpiceJet's `#checkin` page (run 20261111T130057Z) stays in data/raw (rule 6),
+  but it is the homepage again: **exclude `spicejet/checkin` when analysing live scans**.
+  Future live scans skip it automatically.
+
+Page totals: 90 slots = 82 to capture + 7 MISSING + 1 SAME_AS_HOME. Captured so far: 14 (ANA 3 + India 11).

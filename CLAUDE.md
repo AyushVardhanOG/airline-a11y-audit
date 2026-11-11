@@ -62,7 +62,10 @@ getting around that, so **every airline is measured the same way**:
   `url_verified` (yes only after a person checked the URLs; the live scanner skips airlines that are not yes)
 - `data/url_search_notes.csv` where each web-search URL suggestion came from / what to check
 - `docs/capture_checklist.md` one checkbox per page to capture (made by `src/make_capture_checklist.py`)
-- `data/captures/` saved SingleFile copies (`*.html`, NOT on GitHub, back them up) + `log.csv`
+- `data/captures/` saved SingleFile copies (`*.html`, NOT on GitHub, back them up) + `log.csv`;
+  `data/captures/_duplicates/` holds unneeded duplicate captures (moved, never deleted, not scanned)
+- URL columns of `data/airlines.csv` may also hold `MISSING` (no such page) or `SAME_AS_HOME`
+  (the page is the homepage itself; not captured/scanned separately)
 - `data/raw/` raw scan results (JSON), never edited by hand
 - `data/results/` processed tables and charts
 - `screenshots/` page screenshots
@@ -92,10 +95,11 @@ getting around that, so **every airline is measured the same way**:
   - [x] which airlines blocked automated access recorded (Step 2: 6 airlines; all 30 after Step 4 part 1)
   - [x] URLs suggested by web search for all 90 pages (84 found, 6 MISSING), all `url_verified = no`;
         source notes in `data/url_search_notes.csv`; `docs/capture_checklist.md` has one box per page
-  - [ ] check each airline's URLs by hand and set `url_verified = yes` (5 of 30 done: ANA, Air India, SpiceJet, Akasa Air, Air India Express)
+  - [ ] check each airline's URLs by hand and set `url_verified = yes` (6 of 30 done: ANA + all 5 India airlines)
   - [ ] capture home/checkin/assistance pages for all 30 airlines (by hand), ticking `docs/capture_checklist.md`
-        (14 of 90 done on 2026-11-11: ANA 3, India 11 - IndiGo homepage still to capture;
-        registered with `src/register_captures.py`; SpiceJet assistance now MISSING, so 7 MISSING)
+        (14 pages done on 2026-11-11: ANA 3 + India 11 - India region complete; registered with
+        `src/register_captures.py`. Of the 90 page slots: 7 MISSING, 1 SAME_AS_HOME (SpiceJet
+        check-in), so 82 pages to capture in total)
   - [ ] airlines with access "allowed" (11): live scan in the same hour as their captures, then run the live-vs-copy comparison
         (ANA live scan done, run 20261111T124041Z: home + assistance ok, check-in page connection cut;
         live-vs-copy comparison for ANA not run yet;

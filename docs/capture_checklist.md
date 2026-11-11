@@ -32,7 +32,7 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 ### IndiGo (`indigo`)
 
-- [ ] **home**: <https://www.goindigo.in>  
+- [x] **home**: <https://www.goindigo.in>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
 - [x] **checkin**: <https://www.goindigo.in/web-check-in.html>
 - [x] **assistance**: <https://www.goindigo.in/information/special-disability-assistance.html>
@@ -41,7 +41,8 @@ airline in `data/airlines.csv`. (The live scanner only scans airlines marked `ye
 
 - [x] **home**: <https://www.spicejet.com>  
   _Note: bare domain: the site redirects by location - choose English and the airline's home country_
-- [x] **checkin**: <https://www.spicejet.com/checkin>
+- [x] **checkin**: <https://www.spicejet.com/checkin>  
+  _Update 2026-11-11: redirects to the homepage (#checkin) -> SAME_AS_HOME in airlines.csv; not scanned separately_
 - [ ] **assistance**: <https://spicejet.com/SpecialAssistance.aspx>    
   _Update 2026-11-11: this URL redirected to the homepage; now MISSING in airlines.csv (to be confirmed)_
   _Note: old-style .aspx page; SpiceJet's site has several old versions (classic/corporate) - look for a current page on spicejet.com_

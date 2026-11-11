@@ -61,7 +61,7 @@ def url_lookup():
         for row in csv.DictReader(f):
             for page_type, column in URL_COLUMNS.items():
                 url = row[column].strip()
-                if url and url.upper() != "MISSING":
+                if ax.is_real_url(url):  # skips empty, MISSING and SAME_AS_HOME
                     lookup[normalize(url)] = (row["airline_id"], page_type)
     return lookup
 

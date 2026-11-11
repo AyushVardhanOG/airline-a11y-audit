@@ -81,6 +81,8 @@ def main():
             if url.upper() == "MISSING":
                 n_missing += 1
                 line = f"- [ ] **{page_type}**: MISSING"
+            elif url.upper() == "SAME_AS_HOME":
+                line = f"- [x] **{page_type}**: SAME_AS_HOME (the homepage; not captured separately)"
             else:
                 line = f"- [ ] **{page_type}**: <{url}>"
             note = notes.get((a["airline_id"], page_type)) or auto_note(page_type, url)
