@@ -143,6 +143,11 @@ getting around that, so **every airline is measured the same way**:
         aria-required-parent, aria-required-children; easiest: link-name, image-alt (100% for all 3)
   - [x] outputs: `repairs_full.json`, `repairs_full_summary.csv`, `repairs_full_log.jsonl`, 3 `charts/repair_*` charts
   - [ ] for Objective 3: human works/fails labels (axe-core "fixed" is not proof the fix works)
+- [x] Presentation demo (2026-11-13): `src/demo.py` (one saved page: scan -> qwen fix -> re-scan), steps and
+      talking points in `docs/demo_steps.md`
+- [ ] OPEN: capture artifact found 2026-11-13 - a 16 px link + icon next to videos was inserted while saving
+      (7 pages, 4 airlines; not on the Ryanair live page): 14 of 768 audit elements, 9 of 587 repair elements,
+      about 7 Pa11y issues (rough count). Not yet removed from the results (see notes 2026-11-13); demo already skips them
 - [ ] Step 6: evaluate fixes + label them works/fails (Objective 3)
 - [ ] Step 7: train the ML failure predictor + dashboard (Objective 3)
 - [ ] Step 8: paper draft

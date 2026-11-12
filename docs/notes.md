@@ -857,3 +857,35 @@ Notable differences: llama is best on label-content-name-mismatch (55% vs 29% qw
 best on listitem (96% vs 46%) and aria-required-parent (32% vs 0%); gemma is best on color-contrast
 (79%) but returns the HTML unchanged most often (113 times). Only qwen used placeholder text (10
 times); llama most often hid content (25). Objective 2 is done; next is Step 6 (works/fails labels).
+
+## 2026-11-13 - Presentation demo (`src/demo.py`, `docs/demo_steps.md`) + a capture artifact found
+
+**Demo**: `src/demo.py <saved page> [--rule R]` scans one saved page offline with axe-core, lists
+the problems by type in plain words, picks one element (an easy-to-explain rule, shortest HTML,
+same exclusions as the full run, with the same CONTROL check), asks qwen2.5-coder:7b with the exact
+prompt and settings of the full run (temp 0, seed 42, num_ctx 8192), applies the fix to a copy,
+re-scans and prints ACCEPTED / NOT FIXED / FIXED BUT NEW PROBLEM / INVALID plus the review flags.
+A record of each run (prompt, model digest, answer, result) goes to `data/repaired/demo/`
+(git-ignored). Tested: Qatar Airways assistance (image-alt -> `alt="Open icon"`, accepted, no flags,
+8.5 s), Air India home link-name (accepted) and label-content-name-mismatch (model only changed
+whitespace -> not fixed; same answer in two runs). `docs/demo_steps.md` = steps + what to say.
+
+**Finding while testing (data quality, NOT yet corrected in the results)**: the first demo element
+on Air India home was a 16 px link with `z-index:2147483647; position:absolute; margin:8px 0 0 8px`
+pointing straight at a video file, with a 16 px icon image inside. The same code sits next to every
+video on **7 saved pages of 4 airlines** (Air India home/checkin/assistance, IndiGo home/checkin,
+Ryanair home, Turkish assistance). Evidence that it was **inserted while saving** (by SingleFile or
+another browser extension), not by the airlines: identical code on 4 unrelated websites; the
+**Ryanair live scan has no image-alt failure**, the Ryanair capture does (only this icon).
+Impact (checked by opening the 7 pages and testing every failing element):
+- audit: **14 of 768 failing elements** (1.8%): 7 image-alt + 7 link-name. Every affected page
+  also has other failures, so "67 of 78 pages fail" should not change.
+- full repair run: **9 of 587 elements** (F0049, F0051, F0056, F0376, F0379, F0482, F0490, F0577,
+  F0585) = 27 of 1,761 attempts, all "fixed" by all 3 models. Without them: qwen 352/578 (61%),
+  llama 341/578 (59%), gemma 301/578 (52%).
+- Pa11y: 7 issues whose HTML contains `2147483647` (rough count: other elements can use that
+  z-index too, e.g. a chat widget; to be checked element by element like the axe count).
+The demo labels them ("added while saving the page, not the airline's") and never repairs them.
+`data/raw/` stays untouched (rule 6); correcting `analyze.py`, `compare_checkers.py` and
+`repair_full.py report` (mark these elements as `capture_artifact` and leave them out of the
+counts) is the next decision.
