@@ -88,10 +88,10 @@ So low agreement does not mean one tool is wrong: they implement different tests
 Every de-duplicated failing element (one per airline, rule and identical HTML; not in iframes or shadow DOM; with a passing control run) was sent to each local model with the same prompt (temperature 0, seed 42). The fix was applied to a COPY of the saved page and re-scanned with axe-core. "Fixed" = the rule no longer fails on the element and no new violation appeared. Review flags mark fixed repairs that a person must judge (placeholder text, hidden content, removed ARIA, added/changed role).
 
 - **qwen2.5-coder:7b**: 587 attempts, **361 fixed (61%)**, 212 not fixed, 13 fixed with a new issue, 1 invalid; answer unchanged 67 times. Of the fixed, **55 (15%) need a human check**.
-- **llama3.1:8b**: 310 attempts, **167 fixed (54%)**, 125 not fixed, 17 fixed with a new issue, 1 invalid; answer unchanged 12 times. Of the fixed, **20 (12%) need a human check**.
+- **llama3.1:8b**: 410 attempts, **222 fixed (54%)**, 170 not fixed, 17 fixed with a new issue, 1 invalid; answer unchanged 18 times. Of the fixed, **32 (14%) need a human check**.
 - **gemma2:9b**: 7 attempts, **2 fixed (29%)**, 5 not fixed, 0 fixed with a new issue, 0 invalid; answer unchanged 2 times. Of the fixed, **2 (100%) need a human check**.
 
-Rules with at least 10 attempts (all models together): hardest nested-interactive 0%, aria-required-children 9%, aria-required-parent 16%; easiest link-name 100%, aria-command-name 100%, link-in-text-block 100%.
+Rules with at least 10 attempts (all models together): hardest nested-interactive 0%, aria-required-children 8%, aria-required-parent 16%; easiest link-name 100%, aria-command-name 100%, image-alt 100%.
 
 Charts: `charts/repair_fix_rate_per_model.png`, `charts/repair_fix_rate_per_rule_model.png`, `charts/repair_human_check_share.png`. Passing axe-core is not proof that a fix helps real users; Objective 3 labels the fixes works / fails.
 
