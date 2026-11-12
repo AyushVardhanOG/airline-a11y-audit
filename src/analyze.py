@@ -28,6 +28,7 @@ Run:  .venv\\Scripts\\python.exe src\\analyze.py            (latest capture-scan
 import argparse
 import json
 import re
+from collections import Counter
 from pathlib import Path
 
 import matplotlib
@@ -376,23 +377,74 @@ def llm_repair_section():
          "(temperature 0, seed 42). The fix was applied to a COPY of the saved page and re-scanned with axe-core. "
          "\"Fixed\" = the rule no longer fails on the element and no new violation appeared. Review flags mark fixed "
          "repairs that a person must judge (placeholder text, hidden content, removed ARIA, added/changed role).", ""]
-    for model, g in df.groupby("model", sort=False):
+    models = list(df["model"].drop_duplicates())  # in run order: qwen, llama, gemma
+
+    # 1) Overall comparison: one row per model
+    L += ["### Overall comparison", "",
+          "| model | attempts | fixed | not fixed | fixed + new issue | invalid output | answer unchanged | fixed that need a human check |",
+          "|---|---|---|---|---|---|---|---|"]
+    for model in models:
+        g = df[df["model"] == model]
         fx = g[g["fixed"]]
         check = int((fx["needs_human_check"] == True).sum())
-        L.append(f"- **{model}**: {len(g)} attempts, **{int(g['fixed'].sum())} fixed ({g['fixed'].mean():.0%})**, "
-                 f"{int((g['verdict'] == 'not_fixed').sum())} not fixed, {int((g['verdict'] == 'fixed_but_new_issue').sum())} "
-                 f"fixed with a new issue, {int((g['verdict'] == 'invalid_output').sum())} invalid; answer unchanged "
-                 f"{int((g['output_unchanged'] == True).sum())} times. Of the fixed, **{check} ({check / max(len(fx), 1):.0%}) need a "
-                 f"human check**.")
-    rates = df.groupby("rule_id")["fixed"].agg(["mean", "size"])
-    rates = rates[rates["size"] >= 10].sort_values("mean")
-    if len(rates) >= 4:  # enough rules for a separate "hardest" and "easiest" list
-        L += ["", "Rules with at least 10 attempts (all models together): hardest "
-              + ", ".join(f"{r} {m:.0%}" for r, m in rates["mean"].head(3).items())
-              + "; easiest " + ", ".join(f"{r} {m:.0%}" for r, m in rates["mean"].tail(3).iloc[::-1].items()) + "."]
-    elif len(rates):
-        L += ["", "Rules with at least 10 attempts (all models together): "
-              + ", ".join(f"{r} {m:.0%}" for r, m in rates["mean"].items()) + "."]
+        count = lambda verdict: int((g["verdict"] == verdict).sum())
+        L.append(f"| {model} | {len(g)} | **{len(fx)} ({len(fx) / len(g):.0%})** | {count('not_fixed')} | "
+                 f"{count('fixed_but_new_issue')} | {count('invalid_output')} | {int((g['output_unchanged'] == True).sum())} | "
+                 f"{check} ({check / max(len(fx), 1):.0%}) |")
+    L += ["", "\"Answer unchanged\" = the model returned the HTML exactly as it was (counted inside \"not fixed\")."]
+
+    # 2) Do the models fix the same elements? (only meaningful when every model did the same elements)
+    per_element = df.pivot_table(index="element_id", columns="model", values="fixed", aggfunc="first")
+    if len(models) > 1 and not per_element.isna().any().any():
+        n_fixed = per_element.sum(axis=1).astype(int).value_counts()
+        parts = [f"{int(n_fixed.get(k, 0))} by {'all ' + str(k) if k == len(models) else k} model{'s' if k != 1 else ''}"
+                 for k in range(len(models), 0, -1)]
+        L += ["", f"Per element ({len(per_element)} elements): fixed " + ", ".join(parts)
+              + f", **{int(n_fixed.get(0, 0))} by none**; {int((per_element.sum(axis=1) > 0).sum())} "
+              f"({(per_element.sum(axis=1) > 0).mean():.0%}) fixed by at least one model."]
+
+    # 3) Fix rate per rule and model (rules with at least 10 attempts per model)
+    rate = df.pivot_table(index="rule_id", columns="model", values="fixed", aggfunc="mean")[models]
+    size = df.groupby("rule_id").size() / len(models)
+    common = size[size >= 10].sort_values(ascending=False).index
+    if len(common):
+        L += ["", "### Fix rate per rule (rules with at least 10 attempts per model)", "",
+              "| rule | attempts per model | " + " | ".join(models) + " |",
+              "|---|---|" + "---|" * len(models)]
+        for rule in common:
+            L.append(f"| {rule} | {int(size[rule])} | " + " | ".join(f"{rate.loc[rule, m]:.0%}" for m in models) + " |")
+        L += ["", f"The other {len(size) - len(common)} rules have fewer than 10 attempts each; all values are in "
+              "`charts/repair_fix_rate_per_rule_model.csv`."]
+
+    # 4) New issues and invalid outputs: details are in the run log (one line per attempt)
+    log_path = RESULTS / "repairs_full_log.jsonl"
+    if log_path.exists():
+        log = [json.loads(line) for line in log_path.open(encoding="utf-8") if line.strip()]
+        L += ["", "### New issues and invalid outputs", ""]
+        for model in models:
+            recs = [r for r in log if r["model"] == model]
+            new_rules = Counter()
+            for r in recs:
+                if r["verdict"] == "fixed_but_new_issue":
+                    after = r.get("after") or {}
+                    new_rules.update(set(after.get("new_rules_on_element") or []) | set(after.get("new_rules_on_page") or []))
+            invalid = [r for r in recs if r["verdict"] == "invalid_output"]
+            several = sum("not exactly one HTML element" in str(r.get("apply_status")) for r in invalid)
+            L.append(f"- **{model}**: {sum(r['verdict'] == 'fixed_but_new_issue' for r in recs)} repairs fixed the rule but "
+                     "introduced a new one (" + (", ".join(f"{k} {v}" for k, v in new_rules.most_common(4)) or "none")
+                     + f"); invalid outputs: {len(invalid)}, of which {several} returned more or fewer than one HTML "
+                     "element (the pipeline refuses to apply those).")
+
+    # 5) Why "fixed" repairs need a human check (one repair can have several flags)
+    flags = {"placeholder_text": "placeholder text", "hides_content": "hides content",
+             "removes_aria": "removes ARIA", "changes_role": "adds/changes a role"}
+    L += ["", "### Why \"fixed\" repairs need a human check", "",
+          "| model | " + " | ".join(flags.values()) + " |", "|---|" + "---|" * len(flags)]
+    for model in models:
+        fx = df[(df["model"] == model) & df["fixed"]]
+        L.append(f"| {model} | " + " | ".join(str(int((fx[c] == True).sum())) for c in flags) + " |")
+    L += ["", "One repair can have several flags, so the columns can add up to more than the human-check count above."]
+
     L += ["", "Charts: `charts/repair_fix_rate_per_model.png`, `charts/repair_fix_rate_per_rule_model.png`, "
           "`charts/repair_human_check_share.png`. Passing axe-core is not proof that a fix helps real users; "
           "Objective 3 labels the fixes works / fails.", ""]

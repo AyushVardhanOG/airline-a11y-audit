@@ -87,11 +87,53 @@ So low agreement does not mean one tool is wrong: they implement different tests
 
 Every de-duplicated failing element (one per airline, rule and identical HTML; not in iframes or shadow DOM; with a passing control run) was sent to each local model with the same prompt (temperature 0, seed 42). The fix was applied to a COPY of the saved page and re-scanned with axe-core. "Fixed" = the rule no longer fails on the element and no new violation appeared. Review flags mark fixed repairs that a person must judge (placeholder text, hidden content, removed ARIA, added/changed role).
 
-- **qwen2.5-coder:7b**: 587 attempts, **361 fixed (61%)**, 212 not fixed, 13 fixed with a new issue, 1 invalid; answer unchanged 67 times. Of the fixed, **55 (15%) need a human check**.
-- **llama3.1:8b**: 587 attempts, **350 fixed (60%)**, 213 not fixed, 20 fixed with a new issue, 4 invalid; answer unchanged 20 times. Of the fixed, **45 (13%) need a human check**.
-- **gemma2:9b**: 587 attempts, **310 fixed (53%)**, 252 not fixed, 10 fixed with a new issue, 15 invalid; answer unchanged 113 times. Of the fixed, **43 (14%) need a human check**.
+### Overall comparison
 
-Rules with at least 10 attempts (all models together): hardest nested-interactive 4%, aria-required-parent 11%, aria-required-children 12%; easiest link-name 100%, image-alt 100%, aria-command-name 96%.
+| model | attempts | fixed | not fixed | fixed + new issue | invalid output | answer unchanged | fixed that need a human check |
+|---|---|---|---|---|---|---|---|
+| qwen2.5-coder:7b | 587 | **361 (61%)** | 212 | 13 | 1 | 67 | 55 (15%) |
+| llama3.1:8b | 587 | **350 (60%)** | 213 | 20 | 4 | 20 | 45 (13%) |
+| gemma2:9b | 587 | **310 (53%)** | 252 | 10 | 15 | 113 | 43 (14%) |
+
+"Answer unchanged" = the model returned the HTML exactly as it was (counted inside "not fixed").
+
+Per element (587 elements): fixed 223 by all 3 models, 132 by 2 models, 88 by 1 model, **144 by none**; 443 (75%) fixed by at least one model.
+
+### Fix rate per rule (rules with at least 10 attempts per model)
+
+| rule | attempts per model | qwen2.5-coder:7b | llama3.1:8b | gemma2:9b |
+|---|---|---|---|---|
+| color-contrast | 179 | 69% | 68% | 79% |
+| label-content-name-mismatch | 120 | 29% | 55% | 3% |
+| link-name | 34 | 100% | 100% | 100% |
+| nested-interactive | 31 | 0% | 3% | 10% |
+| image-alt | 24 | 100% | 100% | 100% |
+| listitem | 24 | 96% | 46% | 46% |
+| list | 24 | 75% | 54% | 54% |
+| aria-required-parent | 22 | 32% | 0% | 0% |
+| link-in-text-block | 17 | 100% | 65% | 100% |
+| aria-allowed-attr | 15 | 87% | 40% | 93% |
+| aria-required-children | 14 | 7% | 7% | 21% |
+| aria-hidden-focus | 14 | 57% | 57% | 57% |
+| role-img-alt | 13 | 100% | 62% | 46% |
+
+The other 13 rules have fewer than 10 attempts each; all values are in `charts/repair_fix_rate_per_rule_model.csv`.
+
+### New issues and invalid outputs
+
+- **qwen2.5-coder:7b**: 13 repairs fixed the rule but introduced a new one (aria-required-children 6, link-in-text-block 5, color-contrast 1, aria-valid-attr-value 1); invalid outputs: 1, of which 1 returned more or fewer than one HTML element (the pipeline refuses to apply those).
+- **llama3.1:8b**: 20 repairs fixed the rule but introduced a new one (aria-required-children 14, aria-allowed-attr 8, color-contrast 2, aria-valid-attr-value 2); invalid outputs: 4, of which 4 returned more or fewer than one HTML element (the pipeline refuses to apply those).
+- **gemma2:9b**: 10 repairs fixed the rule but introduced a new one (link-in-text-block 5, nested-interactive 2, aria-required-children 1, aria-command-name 1); invalid outputs: 15, of which 15 returned more or fewer than one HTML element (the pipeline refuses to apply those).
+
+### Why "fixed" repairs need a human check
+
+| model | placeholder text | hides content | removes ARIA | adds/changes a role |
+|---|---|---|---|---|
+| qwen2.5-coder:7b | 10 | 10 | 14 | 21 |
+| llama3.1:8b | 0 | 25 | 11 | 10 |
+| gemma2:9b | 0 | 19 | 16 | 8 |
+
+One repair can have several flags, so the columns can add up to more than the human-check count above.
 
 Charts: `charts/repair_fix_rate_per_model.png`, `charts/repair_fix_rate_per_rule_model.png`, `charts/repair_human_check_share.png`. Passing axe-core is not proof that a fix helps real users; Objective 3 labels the fixes works / fails.
 

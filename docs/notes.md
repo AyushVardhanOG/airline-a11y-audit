@@ -836,10 +836,24 @@ which the pipeline correctly refuses to apply.
   the structure changed, not one attribute. Large model differences: label-content-name-mismatch
   (qwen 29%, llama 55%, gemma 3%), listitem (qwen 96%, others 46%).
 - gemma most often returned the HTML unchanged (113 times) - a big part of its lower fix rate.
-- New issues introduced by "fixed but new issue" repairs: mostly aria-required-children and
-  link-in-text-block (21 each), then aria-allowed-attr (8), color-contrast (6).
+- New issues introduced by the 43 "fixed but new issue" repairs (each rule counted once per repair):
+  aria-required-children 21, link-in-text-block 10, aria-allowed-attr 8, color-contrast 3,
+  aria-valid-attr-value 3. (A first quick count said 21 / 6 for link-in-text-block / color-contrast:
+  it counted a rule twice when it was new both on the element and on the page. Corrected.)
 
 **Honest caveats**: "fixed" only means axe-core no longer reports it. The review flags show 13-15% of
 the fixed ones need a person to judge them, and even "plausible" ones use guessed wording. Temperature 0
 + seed is not fully deterministic in Ollama (pilot R13). These 1,761 attempts are the input for
 Objective 3 (works/fails labels and the failure predictor); 500+ was the goal.
+
+## 2026-11-12 - Objective 2 finished: 3-model comparison in summary.md
+
+Re-ran `src/repair_full.py report` (final `repairs_full.json`, `repairs_full_summary.csv`, 3 charts) and
+`src/analyze.py`. The LLM section of `data/results/summary.md` now compares the 3 models side by side:
+an overall table (fixed, not fixed, fixed + new issue, invalid, unchanged answer, human check), how many
+elements 3/2/1/0 models fixed, a per-rule table (13 rules with at least 10 attempts per model), which
+new issues each model introduced, why its invalid outputs were refused, and which review flags fired.
+Notable differences: llama is best on label-content-name-mismatch (55% vs 29% qwen, 3% gemma); qwen is
+best on listitem (96% vs 46%) and aria-required-parent (32% vs 0%); gemma is best on color-contrast
+(79%) but returns the HTML unchanged most often (113 times). Only qwen used placeholder text (10
+times); llama most often hid content (25). Objective 2 is done; next is Step 6 (works/fails labels).

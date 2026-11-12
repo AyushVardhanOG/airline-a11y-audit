@@ -119,7 +119,8 @@ getting around that, so **every airline is measured the same way**:
   - [x] `src/compare_checkers.py`: compared per page by WCAG success criterion; 21% of (page, criterion)
         failures found by both tools (44% on the 5 criteria both tools report); differences explained
         (different criterion mapping, criteria only one tool tests, Pa11y also flags hidden elements)
-- [x] Step 5: LLM repair prototype (Objective 2) - PILOT done 2026-11-11 (one LLM; 40 elements)
+- [x] Step 5: LLM repairs - **Objective 2 DONE 2026-11-12** (pilot 2026-11-11: one LLM, 40 elements;
+      full run: 3 LLMs x 587 elements; 3-model comparison in `data/results/summary.md`)
   - [x] LLM: Ollama 0.40.16, qwen2.5-coder:7b (7.6B, Q4_K_M, digest dae161e27b0e...), local, temperature 0, seed 42;
         settings in `.env` (git-ignored), template in `.env.example`
   - [x] `src/repair.py select/run/report`: 40 elements (top 10 rules x 4, 21 airlines, no iframes/shadow DOM);
