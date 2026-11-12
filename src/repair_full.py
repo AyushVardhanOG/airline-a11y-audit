@@ -311,6 +311,153 @@ def cmd_run(args):
     print(f"done in {(time.time() - t_start) / 60:.1f} min")
 
 
+# ---------------------------------------------------------------- report (JSON, summary CSV, charts)
+
+FLAG_KEYS = ["needs_human_check", "placeholder_text", "hides_content", "removes_aria", "changes_role", "text_changed"]
+
+
+def cmd_report(args):
+    """
+    Build the results from whatever is in the run log (works for partial runs too):
+      repairs_full.json         meta + every record
+      repairs_full_summary.csv  one row per (model, element): verdict + review flags
+      charts/repair_fix_rate_per_model.png, repair_fix_rate_per_rule_model.png,
+      charts/repair_human_check_share.png  (each with a CSV of the numbers shown)
+    "Fixed" = the rule no longer fails on the element AND no new violation on element/page
+    (same definition as the pilot). "fixed_but_new_issue" is NOT counted as fixed.
+    """
+    import pandas as pd
+    import analyze  # shared chart style
+
+    log = read_jsonl(RUN_LOG)
+    controls = read_jsonl(CONTROLS_LOG)
+    selection = list(csv.DictReader(open(SELECTION_CSV, encoding="utf-8")))
+    models = list(dict.fromkeys(r["model"] for r in log))
+    meta = {
+        "created_utc": ax.utc_now(),
+        "selection": {"elements": len(selection), "control_ok": sum(c["control_ok"] for c in controls),
+                      "control_failed": [c["element_id"] for c in controls if not c["control_ok"]]},
+        "models": {m: next(r["model_info"] for r in log if r["model"] == m) for m in models},
+        "settings": {"temperature": 0, "seed": 42, "num_ctx": NUM_CTX, "system_prompt": rp.SYSTEM_PROMPT,
+                     "prompt_template": rp.PROMPT_TEMPLATE},
+        "capture_scan_run": rp.latest_capture_run().name,
+    }
+    FULL_JSON.write_text(json.dumps({"meta": meta, "repairs": log}, ensure_ascii=False), encoding="utf-8")
+
+    rows = [{"model": r["model"], "element_id": r["element_id"], "rule_id": r["rule_id"], "impact": r["impact"],
+             "airline_id": r["airline_id"], "page_type": r["page_type"], "copies": r.get("copies"),
+             "verdict": r["verdict"], "output_unchanged": r.get("output_unchanged"), "llm_seconds": r.get("llm_seconds"),
+             "prompt_tokens": r.get("prompt_tokens"), "answer_tokens": r.get("answer_tokens"),
+             **{k: (r.get("quality_flags") or {}).get(k) for k in FLAG_KEYS}} for r in log]
+    df = pd.DataFrame(rows)
+    df.to_csv(SUMMARY_CSV, index=False)
+    df["fixed"] = df["verdict"] == "fixed"
+    charts = RESULTS / "charts"
+    charts.mkdir(parents=True, exist_ok=True)
+
+    # 1. Fix rate per model
+    per_model = df.groupby("model", sort=False).agg(attempts=("element_id", "size"), fixed=("fixed", "sum"),
+                                                    fixed_new_issue=("verdict", lambda v: (v == "fixed_but_new_issue").sum()),
+                                                    not_fixed=("verdict", lambda v: (v == "not_fixed").sum()),
+                                                    invalid=("verdict", lambda v: (v == "invalid_output").sum()),
+                                                    llm_error=("verdict", lambda v: (v == "llm_error").sum()),
+                                                    unchanged=("output_unchanged", lambda v: (v == True).sum()))
+    per_model["fix_rate"] = (per_model["fixed"] / per_model["attempts"]).round(3)
+    per_model.to_csv(charts / "repair_fix_rate_per_model.csv")
+    analyze.ranked_bars(list(per_model.index), list(per_model["fix_rate"] * 100),
+                        [f"{r.fix_rate:.0%}  ({int(r.fixed)} of {int(r.attempts)})" for r in per_model.itertuples()],
+                        "LLM repairs that axe-core accepts, per model",
+                        "Fixed = rule no longer fails on the element and no new violation; same prompt, temperature 0, seed 42",
+                        "% of repair attempts fixed", charts / "repair_fix_rate_per_model.png")
+
+    # 2. Fix rate per rule per model (heatmap, rows = rules ordered by number of elements)
+    order = df[df["model"] == models[0]]["rule_id"].value_counts().index.tolist()
+    order += [r for r in df["rule_id"].unique() if r not in order]
+    pivot_rate = df.pivot_table(index="rule_id", columns="model", values="fixed", aggfunc="mean").reindex(order)[models]
+    pivot_n = df.pivot_table(index="rule_id", columns="model", values="fixed", aggfunc="size").reindex(order)[models]
+    out = pivot_rate.round(3).add_suffix(" fix_rate").join(pivot_n.add_suffix(" n"))
+    out.to_csv(charts / "repair_fix_rate_per_rule_model.csv")
+    heatmap(pivot_rate, pivot_n, charts / "repair_fix_rate_per_rule_model.png", analyze)
+
+    # 3. Among fixed repairs: how many need a human check (review flags)?
+    fx = df[df["fixed"]]
+    share = fx.groupby("model", sort=False)["needs_human_check"].agg(
+        fixed="size", needs_check=lambda v: (v == True).sum()).reindex(models)
+    share["plausible"] = share["fixed"] - share["needs_check"]
+    share.to_csv(charts / "repair_human_check_share.csv")
+    two_part_bars(share, charts / "repair_human_check_share.png", analyze)
+
+    print(f"{len(log)} records, models: {', '.join(f'{m} ({int(per_model.loc[m, 'attempts'])})' for m in models)}")
+    print(per_model[["attempts", "fixed", "fix_rate", "fixed_new_issue", "not_fixed", "invalid", "llm_error", "unchanged"]].to_string())
+    print("\nneeds human check among fixed:\n" + share.to_string())
+    print(f"\nWrote {FULL_JSON.name}, {SUMMARY_CSV.name}, 3 charts")
+
+
+def heatmap(rate, n, path, analyze):
+    """Rules x models; one blue hue light->dark (sequential), each cell labelled 'xx% (n)'."""
+    import matplotlib.pyplot as plt
+    from matplotlib.colors import LinearSegmentedColormap
+    import numpy as np
+    ramp = LinearSegmentedColormap.from_list("blue", ["#cde2fb", "#86b6ef", "#3987e5", "#256abf", "#104281"])
+    ramp.set_bad(analyze.SURFACE)  # no attempts = blank cell, never confused with 0%
+    rows, cols = rate.shape
+    fig, ax_ = plt.subplots(figsize=(2.3 + 1.9 * cols, 1.4 + 0.34 * rows), dpi=150)
+    ax_.imshow(np.ma.masked_invalid(rate.values.astype(float)), cmap=ramp, vmin=0, vmax=1, aspect="auto")
+    for i in range(rows):
+        for j in range(cols):
+            v, k = rate.iat[i, j], n.iat[i, j]
+            if pd_isna(k):
+                ax_.text(j, i, "–", ha="center", va="center", fontsize=9, color=analyze.MUTED)
+                continue
+            ax_.text(j, i, f"{v:.0%} ({int(k)})", ha="center", va="center", fontsize=8.5,
+                     color="#ffffff" if v >= 0.5 else analyze.INK)
+    ax_.set_xticks(range(cols), list(rate.columns))
+    ax_.set_yticks(range(rows), list(rate.index))
+    ax_.tick_params(length=0, labelcolor=analyze.INK_2)
+    for s in ax_.spines.values():
+        s.set_visible(False)
+    ax_.set_title("Fix rate per rule and model", loc="left", color=analyze.INK, fontsize=13, fontweight="bold", pad=24)
+    ax_.text(0, 1.01, "Share of repair attempts that axe-core accepts; (n) = attempts; – = no attempts. Darker = more fixed.",
+             transform=ax_.transAxes, color=analyze.INK_2, fontsize=9, va="bottom")
+    fig.tight_layout()
+    fig.savefig(path)
+    plt.close(fig)
+
+
+def pd_isna(x):
+    return x != x or x is None  # NaN check without importing pandas here
+
+
+def two_part_bars(share, path, analyze):
+    """Per model: fixed repairs split into 'looks plausible' and 'needs a human check' (stacked)."""
+    import matplotlib.pyplot as plt
+    fig, ax_ = plt.subplots(figsize=(8.5, 1.6 + 0.45 * len(share)), dpi=150)
+    y = list(range(len(share)))
+    parts = [("plausible", "Looks plausible", analyze.CATEGORICAL[0]), ("needs_check", "Needs a human check", analyze.CATEGORICAL[1])]
+    left = [0] * len(share)
+    for col, label, color in parts:
+        vals = list(share[col])
+        ax_.barh(y, vals, left=left, height=0.5, color=color, edgecolor=analyze.SURFACE, linewidth=1.0, label=label)
+        for yi, l, v, tot in zip(y, left, vals, share["fixed"]):
+            if tot and v / tot >= 0.12:
+                ax_.text(l + v / 2, yi, f"{v} ({v / tot:.0%})", ha="center", va="center", color="#ffffff",
+                         fontsize=9, fontweight="bold")
+        left = [a + b for a, b in zip(left, vals)]
+    ax_.set_yticks(y, list(share.index))
+    ax_.invert_yaxis()
+    ax_.set_xlim(0, max(left) * 1.05 if max(left) else 1)
+    ax_.set_xlabel("repairs that axe-core accepts (fixed)", color=analyze.INK_2)
+    analyze.style_axes(ax_, "How many 'fixed' repairs need a human check?",
+                       "Review flags: placeholder text, hides content, removes ARIA, adds/changes a role")
+    leg = ax_.legend(loc="upper center", bbox_to_anchor=(0.5, -0.28), ncol=2, frameon=False, fontsize=9.5,
+                     handlelength=1.2, handleheight=1.0)
+    for t in leg.get_texts():
+        t.set_color(analyze.INK_2)
+    fig.tight_layout()
+    fig.savefig(path)
+    plt.close(fig)
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -322,8 +469,9 @@ def main():
     r = sub.add_parser("run")
     r.add_argument("--model", required=True)
     r.add_argument("--limit", type=int, help="only the next N elements (e.g. 10 for timing)")
+    sub.add_parser("report")
     args = parser.parse_args()
-    {"select": cmd_select, "prepare": cmd_prepare, "run": cmd_run}[args.cmd](args)
+    {"select": cmd_select, "prepare": cmd_prepare, "run": cmd_run, "report": cmd_report}[args.cmd](args)
 
 
 if __name__ == "__main__":

@@ -363,6 +363,42 @@ def experimental_section(elements, pages_ok):
             f"| different rules | {elements['rule_id'].nunique()} | {non['rule_id'].nunique()} |", ""]
 
 
+def llm_repair_section():
+    """Objective 2: LLM repairs (from src/repair_full.py report). Works for partial runs."""
+    path = RESULTS / "repairs_full_summary.csv"
+    if not path.exists():
+        return []
+    df = pd.read_csv(path)
+    df["fixed"] = df["verdict"] == "fixed"
+    L = ["## LLM repairs (Objective 2)", "",
+         "Every de-duplicated failing element (one per airline, rule and identical HTML; not in iframes or "
+         "shadow DOM; with a passing control run) was sent to each local model with the same prompt "
+         "(temperature 0, seed 42). The fix was applied to a COPY of the saved page and re-scanned with axe-core. "
+         "\"Fixed\" = the rule no longer fails on the element and no new violation appeared. Review flags mark fixed "
+         "repairs that a person must judge (placeholder text, hidden content, removed ARIA, added/changed role).", ""]
+    for model, g in df.groupby("model", sort=False):
+        fx = g[g["fixed"]]
+        check = int((fx["needs_human_check"] == True).sum())
+        L.append(f"- **{model}**: {len(g)} attempts, **{int(g['fixed'].sum())} fixed ({g['fixed'].mean():.0%})**, "
+                 f"{int((g['verdict'] == 'not_fixed').sum())} not fixed, {int((g['verdict'] == 'fixed_but_new_issue').sum())} "
+                 f"fixed with a new issue, {int((g['verdict'] == 'invalid_output').sum())} invalid; answer unchanged "
+                 f"{int((g['output_unchanged'] == True).sum())} times. Of the fixed, **{check} ({check / max(len(fx), 1):.0%}) need a "
+                 f"human check**.")
+    rates = df.groupby("rule_id")["fixed"].agg(["mean", "size"])
+    rates = rates[rates["size"] >= 10].sort_values("mean")
+    if len(rates) >= 4:  # enough rules for a separate "hardest" and "easiest" list
+        L += ["", "Rules with at least 10 attempts (all models together): hardest "
+              + ", ".join(f"{r} {m:.0%}" for r, m in rates["mean"].head(3).items())
+              + "; easiest " + ", ".join(f"{r} {m:.0%}" for r, m in rates["mean"].tail(3).iloc[::-1].items()) + "."]
+    elif len(rates):
+        L += ["", "Rules with at least 10 attempts (all models together): "
+              + ", ".join(f"{r} {m:.0%}" for r, m in rates["mean"].items()) + "."]
+    L += ["", "Charts: `charts/repair_fix_rate_per_model.png`, `charts/repair_fix_rate_per_rule_model.png`, "
+          "`charts/repair_human_check_share.png`. Passing axe-core is not proof that a fix helps real users; "
+          "Objective 3 labels the fixes works / fails.", ""]
+    return L
+
+
 def second_checker_section():
     pages_csv, crit_csv = RESULTS / "checker_comparison_pages.csv", RESULTS / "checker_comparison_criteria.csv"
     if not pages_csv.exists():
@@ -458,6 +494,7 @@ def write_summary(run_dir, pages, pages_ok, elements, per_airline, by_rule, acce
     L += experimental_section(elements, pages_ok)
     L += live_vs_copy_section()
     L += second_checker_section()
+    L += llm_repair_section()
     L += ["## Limitations (state these in the paper)", "",
           "- Automated checkers detect only part of all WCAG problems; manual testing is still needed.",
           "- Saved copies are snapshots: menus, focus behaviour and anything after a click are not tested.",
