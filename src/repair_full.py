@@ -36,6 +36,8 @@ seed 42) plus an explicit context window NUM_CTX for every model (see the note a
 import argparse
 import csv
 import json
+import os
+import subprocess
 import sys
 import time
 from collections import Counter
@@ -79,6 +81,32 @@ def append_jsonl(path, record):
     with open(path, "a", encoding="utf-8") as f:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
         f.flush()
+        os.fsync(f.fileno())  # make sure the line is on disk before the next element (sudden shutdowns)
+
+
+def repair_log_tail(path):
+    """
+    After a sudden shutdown the LAST line of a log can be half-written. Such a line is moved
+    (not deleted) to <log>_broken.txt and removed from the log, so that element is simply redone
+    and new records never get glued onto a broken line.
+    """
+    if not path.exists():
+        return
+    text = path.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    if not lines:
+        return
+    try:
+        json.loads(lines[-1])
+        if not text.endswith("\n"):
+            path.write_text(text + "\n", encoding="utf-8")
+        return
+    except json.JSONDecodeError:
+        broken = path.with_name(path.stem + "_broken.txt")
+        with open(broken, "a", encoding="utf-8") as f:
+            f.write(f"# moved from {path.name} at {ax.utc_now()}\n{lines[-1]}\n")
+        path.write_text("\n".join(lines[:-1]) + ("\n" if len(lines) > 1 else ""), encoding="utf-8")
+        print(f"WARNING: half-written last line moved from {path.name} to {broken.name}; that element will be redone")
 
 
 # ---------------------------------------------------------------- select
@@ -282,33 +310,102 @@ def ask(provider, env, prompt):
     return r["message"]["content"], r.get("model"), round(time.time() - t0, 1), usage
 
 
-def cmd_run(args):
+def model_progress(model):
+    """(elements done for this model, elements eligible) - eligible = passing control."""
+    preps = read_jsonl(CONTROLS_LOG)
+    eligible = {r["element_id"] for r in preps if r["control_ok"]}
+    done = {r["element_id"] for r in read_jsonl(RUN_LOG) if r["model"] == model} & eligible
+    return len(done), len(eligible)
+
+
+def run_model(model, limit=None, pause=0.0):
+    """Run the next `limit` not-yet-done elements for one model. Returns how many were run."""
+    repair_log_tail(RUN_LOG)
     provider, env = rp.llm_settings()
-    env = {**env, "LLM_MODEL": args.model}
+    env = {**env, "LLM_MODEL": model}
     info = rp.model_info(provider, env)
     selection = {s["element_id"]: s for s in csv.DictReader(open(SELECTION_CSV, encoding="utf-8"))}
     preps = {r["element_id"]: r for r in read_jsonl(CONTROLS_LOG)}
-    done = {r["element_id"] for r in read_jsonl(RUN_LOG) if r["model"] == args.model}
+    done = {r["element_id"] for r in read_jsonl(RUN_LOG) if r["model"] == model}
     eligible = [e for e in selection if e in preps and preps[e]["control_ok"]]
-    todo = [e for e in eligible if e not in done][: args.limit or None]
-    print(f"{args.model}: {len(eligible)} elements with a passing control; {len(done)} already done; {len(todo)} to do now")
+    todo = [e for e in eligible if e not in done][: limit or None]
+    print(f"{model}: {len(eligible)} elements with a passing control; {len(done)} already done; {len(todo)} to do now"
+          + (f"; {pause:g} s cool-down pause between elements" if pause else ""), flush=True)
+    if not todo:
+        return 0
     axe_source = ax.load_axe_source()
     t_start = time.time()
     with sync_playwright() as p:
         browser = p.chromium.launch()
         for i, eid in enumerate(todo, 1):
             t0 = time.time()
-            rec = run_one(browser, axe_source, provider, env, selection[eid], preps[eid], args.model)
+            rec = run_one(browser, axe_source, provider, env, selection[eid], preps[eid], model)
             rec["model_info"] = info
             rec["settings"] = {"temperature": 0, "seed": 42, "num_ctx": NUM_CTX}
             rec["total_seconds"] = round(time.time() - t0, 1)
             append_jsonl(RUN_LOG, rec)  # saved immediately: a restart continues from here
-            avg = (time.time() - t_start) / i
-            print(f"[{i}/{len(todo)}] {eid} {rec['rule_id']:<28} -> {rec['verdict']:<20} "
+            avg = (time.time() - t_start) / i + pause
+            print(f"[{len(done) + i}/{len(eligible)}] {eid} {rec['rule_id']:<28} -> {rec['verdict']:<20} "
                   f"llm {rec.get('llm_seconds', '-')} s, total {rec['total_seconds']} s | "
-                  f"ETA {avg * (len(todo) - i) / 60:.0f} min", flush=True)
+                  f"ETA this batch {avg * (len(todo) - i) / 60:.0f} min", flush=True)
+            if pause and i < len(todo):
+                time.sleep(pause)  # cool-down: lets the laptop's CPU/GPU cool a little between elements
         browser.close()
-    print(f"done in {(time.time() - t_start) / 60:.1f} min")
+    print(f"batch done in {(time.time() - t_start) / 60:.1f} min", flush=True)
+    return len(todo)
+
+
+def cmd_run(args):
+    run_model(args.model, args.limit, args.pause)
+
+
+# ---------------------------------------------------------------- run-all (models in order, commits)
+
+def git(*args):
+    """Run a git command in the project folder; return (ok, output)."""
+    r = subprocess.run(["git", *args], cwd=ax.PROJECT_ROOT, capture_output=True, text=True)
+    return r.returncode == 0, (r.stdout + r.stderr).strip()
+
+
+def commit_results(message):
+    """Rebuild the results (report + summary.md) and commit + push them. Push failures do not stop the run."""
+    cmd_report(None)
+    subprocess.run([sys.executable, str(ax.PROJECT_ROOT / "src" / "analyze.py")], cwd=ax.PROJECT_ROOT,
+                   capture_output=True, text=True)
+    files = [RUN_LOG, FULL_JSON, SUMMARY_CSV, RESULTS / "summary.md"]
+    files += sorted((RESULTS / "charts").glob("repair_*"))
+    broken = RUN_LOG.with_name(RUN_LOG.stem + "_broken.txt")
+    if broken.exists():
+        files.append(broken)
+    git("add", *[str(f.relative_to(ax.PROJECT_ROOT)) for f in files])
+    ok, out = git("commit", "-m", message, "-m", "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>")
+    if not ok:
+        print(f"git commit: {out.splitlines()[-1] if out else 'nothing to commit'}", flush=True)
+        return
+    ok, out = git("push")
+    print(f"committed: {message} | push {'ok' if ok else 'FAILED (will be pushed with a later commit): ' + out[-200:]}",
+          flush=True)
+
+
+def cmd_run_all(args):
+    """
+    All models in order, resumable. After every `commit_every` elements: rebuild results, commit, push.
+    When a model is complete: a final commit for that model.
+    """
+    for model in args.models:
+        while True:
+            n_before, total = model_progress(model)
+            if n_before >= total:
+                print(f"{model}: complete ({n_before}/{total})", flush=True)
+                break
+            ran = run_model(model, args.commit_every, args.pause)
+            n_after, total = model_progress(model)
+            if n_after >= total:
+                commit_results(f"Step 5 full run: {model} finished ({n_after}/{total} elements)")
+                break
+            commit_results(f"Step 5 full run: {model} progress {n_after}/{total} elements")
+            if ran == 0:
+                break
 
 
 # ---------------------------------------------------------------- report (JSON, summary CSV, charts)
@@ -469,9 +566,15 @@ def main():
     r = sub.add_parser("run")
     r.add_argument("--model", required=True)
     r.add_argument("--limit", type=int, help="only the next N elements (e.g. 10 for timing)")
+    r.add_argument("--pause", type=float, default=0.0, help="cool-down seconds between elements")
+    ra = sub.add_parser("run-all", help="all models in order, resumable, with progress commits")
+    ra.add_argument("--models", nargs="+", default=["qwen2.5-coder:7b", "llama3.1:8b", "gemma2:9b"])
+    ra.add_argument("--pause", type=float, default=5.0, help="cool-down seconds between elements (default 5)")
+    ra.add_argument("--commit-every", type=int, default=100, help="commit + push after this many elements")
     sub.add_parser("report")
     args = parser.parse_args()
-    {"select": cmd_select, "prepare": cmd_prepare, "run": cmd_run, "report": cmd_report}[args.cmd](args)
+    {"select": cmd_select, "prepare": cmd_prepare, "run": cmd_run, "run-all": cmd_run_all,
+     "report": cmd_report}[args.cmd](args)
 
 
 if __name__ == "__main__":
