@@ -30,6 +30,7 @@ import urllib.error
 from playwright.sync_api import sync_playwright
 
 import axe_runner as ax
+import capture_artifacts
 import repair as rp
 import repair_full as rf
 
@@ -42,24 +43,18 @@ SHORT_HTML = 400  # prefer an element whose HTML (as sent to the LLM) is at most
 IMPACT_WORDS = {"critical": "critical", "serious": "serious", "moderate": "moderate", "minor": "minor", None: "?"}
 LINE = "-" * 78
 
-# Found while testing this demo (see docs/notes.md, 2026-11-13): on 7 saved pages a tiny 16 px link
-# with this exact style sits next to every video. It was inserted while SAVING the page (identical on
-# 4 unrelated airlines; absent from the Ryanair live scan), so it is not the airline's own code.
-# The demo labels such elements and never picks one to repair.
-SAVE_TOOL_STYLE = "z-index:2147483647!important;position:absolute!important;margin:8px 0px 0px 8px"
-ELEMENT_INFO = """([s, key]) => { const e = document.querySelector(s); if (!e) return null;
-    const a = e.closest('a');
-    return {tag: e.tagName.toLowerCase(),
-            shadow: [e, ...e.querySelectorAll('*')].some(x => x.shadowRoot),
-            added_by_save_tool: !!(a && (a.getAttribute('style') || '').includes(key)),
-            outer: e.outerHTML}; }"""
-
-
+# Elements inserted while SAVING the page (a tiny 16 px link next to videos; see docs/notes.md
+# 2026-11-13 and src/capture_artifacts.py, the shared rule). The demo labels them and never repairs them.
 def element_info(page, node):
     """Tag, shadow DOM, 'added while saving' and HTML of a failing element (None if inside an iframe / shadow DOM)."""
     if len(node["target"]) != 1 or not isinstance(node["target"][0], str):
         return None
-    return page.evaluate(ELEMENT_INFO, [node["target"][0], SAVE_TOOL_STYLE])
+    info = page.evaluate(rf.ELEMENT_INFO, node["target"][0])
+    if info is not None:
+        check = page.evaluate(capture_artifacts.CHECK_JS, [node["target"][0], capture_artifacts.SINGLEFILE_DECLARATIONS,
+                                                           capture_artifacts.SINGLEFILE_MARGIN])
+        info["added_by_save_tool"] = bool(check and check["artifact"])
+    return info
 
 
 def list_pages():

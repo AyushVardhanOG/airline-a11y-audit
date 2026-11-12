@@ -107,7 +107,8 @@ getting around that, so **every airline is measured the same way**:
   - [x] part 1: one headless homepage visit to the 24 untested airlines (`src/access_test.py`);
         all 30 now in `data/results/automated_access.csv`: 11 allowed, 9 blocked, 3 blocked_unconfirmed, 7 error
   - [x] scanned the 78 saved copies offline (`src/scan_captures.py`, run 20261111T142233Z): 0 errors,
-        768 failing elements, 67 of 78 pages (86%) fail at least one rule
+        768 failing elements in the scans, of which 16 capture artifacts (see below) -> **752 counted**,
+        67 of 78 pages (86%) fail at least one rule
   - [x] live-vs-copy comparison (`src/compare_live_vs_capture.py`): 25 page pairs, 16 (64%) with identical
         failed-rule sets, mean rule overlap (Jaccard) 0.77; color-contrast is the least stable rule
   - [x] `src/analyze.py` -> `data/results/`: violations_all.csv, pages_summary.csv, summary_per_airline.csv,
@@ -116,8 +117,9 @@ getting around that, so **every airline is measured the same way**:
         (label-content-name-mismatch is a normal WCAG 2.1 A rule, SC 2.5.3), so no is_experimental column needed
   - [x] second checker: Pa11y 10.0.0 / HTML_CodeSniffer 2.6.0, WCAG2AA, errors only (`src/scan_pa11y.js`,
         run 20261111T144723Z), same 78 copies, same offline setup and same Chromium 158; 0 errors
-  - [x] `src/compare_checkers.py`: compared per page by WCAG success criterion; 21% of (page, criterion)
-        failures found by both tools (44% on the 5 criteria both tools report); differences explained
+  - [x] `src/compare_checkers.py`: compared per page by WCAG success criterion; 19% of (page, criterion)
+        failures found by both tools (40% on the 5 criteria both tools report; was 21% / 44% before the
+        capture artifacts were removed); differences explained
         (different criterion mapping, criteria only one tool tests, Pa11y also flags hidden elements)
 - [x] Step 5: LLM repairs - **Objective 2 DONE 2026-11-12** (pilot 2026-11-11: one LLM, 40 elements;
       full run: 3 LLMs x 587 elements; 3-model comparison in `data/results/summary.md`)
@@ -135,19 +137,24 @@ getting around that, so **every airline is measured the same way**:
   - [x] FULL RUN done 2026-11-12 (`src/repair_full.py`; run-all with 5 s cool-down, commit every 100 elements):
         601 de-duplicated elements selected (28 airlines, 62 pages; excluded: iframe/shadow DOM, duplicates,
         too large, document element -> `repairs_full_exclusions.csv`); 14 IndiGo-home controls failed -> excluded,
-        so **587 elements x 3 models = 1,761 attempts**, same prompt as pilot, temp 0, seed 42, num_ctx 8192
+        so 587 elements x 3 models = 1,761 attempts were RUN, same prompt as pilot, temp 0, seed 42, num_ctx 8192;
+        9 elements (27 attempts) are capture artifacts -> **578 elements x 3 = 1,734 attempts counted**
   - [x] models (Ollama 0.40.16): qwen2.5-coder:7b (dae161e27b0e), llama3.1:8b (46e0c10c039e, 8.0B Q4_K_M),
-        gemma2:9b (ff02c3702f32, 9.2B Q4_0). Fixed per axe-core: **qwen 361 (61%), llama 350 (60%), gemma 310 (53%)**;
-        needs a human check among fixed: 55 / 45 / 43; invalid output 1 / 4 / 15; answer unchanged 67 / 20 / 113
-  - [x] per element: 223 fixed by all 3 models, 132 by 2, 88 by 1, 144 by none. Hardest: nested-interactive,
+        gemma2:9b (ff02c3702f32, 9.2B Q4_0). Fixed per axe-core: **qwen 352 (61%), llama 341 (59%), gemma 301 (52%)**;
+        needs a human check among fixed: 51 / 41 / 39; invalid output 1 / 4 / 15; answer unchanged 67 / 20 / 113
+  - [x] per element: 214 fixed by all 3 models, 132 by 2, 88 by 1, 144 by none. Hardest: nested-interactive,
         aria-required-parent, aria-required-children; easiest: link-name, image-alt (100% for all 3)
   - [x] outputs: `repairs_full.json`, `repairs_full_summary.csv`, `repairs_full_log.jsonl`, 3 `charts/repair_*` charts
   - [ ] for Objective 3: human works/fails labels (axe-core "fixed" is not proof the fix works)
 - [x] Presentation demo (2026-11-13): `src/demo.py` (one saved page: scan -> qwen fix -> re-scan), steps and
       talking points in `docs/demo_steps.md`
-- [ ] OPEN: capture artifact found 2026-11-13 - a 16 px link + icon next to videos was inserted while saving
-      (7 pages, 4 airlines; not on the Ryanair live page): 14 of 768 audit elements, 9 of 587 repair elements,
-      about 7 Pa11y issues (rough count). Not yet removed from the results (see notes 2026-11-13); demo already skips them
+- [x] capture artifact CORRECTED (2026-11-13): SingleFile inserted a 16 px link + icon next to videos (7 pages,
+      4 airlines; not on the Ryanair live page). Shared rule in `src/capture_artifacts.py` (`build` ->
+      `data/results/capture_artifacts.csv`, checked element by element, incl. Pa11y by selector); used by
+      analyze.py, compare_checkers.py, repair_full.py report and demo.py. Rows kept in the CSVs with
+      `capture_artifact=True`, left out of every count/chart: 16 of 768 axe elements, 8 of 1,576 Pa11y errors,
+      9 of 587 repair elements. Live-vs-copy comparison deliberately unchanged (it measures the copy as saved).
+      Re-run order after a new scan: capture_artifacts.py build -> repair_full.py report -> compare_checkers.py -> analyze.py
 - [ ] Step 6: evaluate fixes + label them works/fails (Objective 3)
 - [ ] Step 7: train the ML failure predictor + dashboard (Objective 3)
 - [ ] Step 8: paper draft

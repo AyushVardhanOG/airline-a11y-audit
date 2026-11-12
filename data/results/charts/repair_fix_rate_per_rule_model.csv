@@ -1,12 +1,12 @@
 rule_id,qwen2.5-coder:7b fix_rate,llama3.1:8b fix_rate,gemma2:9b fix_rate,qwen2.5-coder:7b n,llama3.1:8b n,gemma2:9b n
 color-contrast,0.693,0.676,0.788,179,179,179
 label-content-name-mismatch,0.292,0.55,0.033,120,120,120
-link-name,1.0,1.0,1.0,34,34,34
 nested-interactive,0.0,0.032,0.097,31,31,31
+link-name,1.0,1.0,1.0,29,29,29
 list,0.75,0.542,0.542,24,24,24
 listitem,0.958,0.458,0.458,24,24,24
-image-alt,1.0,1.0,1.0,24,24,24
 aria-required-parent,0.318,0.0,0.0,22,22,22
+image-alt,1.0,1.0,1.0,20,20,20
 link-in-text-block,1.0,0.647,1.0,17,17,17
 aria-allowed-attr,0.867,0.4,0.933,15,15,15
 aria-required-children,0.071,0.071,0.214,14,14,14

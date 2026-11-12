@@ -1,6 +1,6 @@
 airline_id,airline,region,access_result,excluded_reason,pages_scanned,page_types_scanned,rules_failed_distinct,elements_failed,elements_per_page,critical,serious,moderate,minor
-air_india,Air India,India,error,,3,home;checkin;assistance,4.0,55.0,18.3,3.0,52.0,0.0,0.0
-indigo,IndiGo,India,blocked_unconfirmed,,3,home;checkin;assistance,11.0,66.0,22.0,19.0,47.0,0.0,0.0
+air_india,Air India,India,error,,3,home;checkin;assistance,2.0,49.0,16.3,0.0,49.0,0.0,0.0
+indigo,IndiGo,India,blocked_unconfirmed,,3,home;checkin;assistance,11.0,60.0,20.0,16.0,44.0,0.0,0.0
 spicejet,SpiceJet,India,allowed,,1,home,6.0,33.0,33.0,2.0,30.0,1.0,0.0
 akasa_air,Akasa Air,India,allowed,,2,home;checkin,2.0,29.0,14.5,0.0,29.0,0.0,0.0
 air_india_express,Air India Express,India,allowed,,2,home;checkin,7.0,47.0,23.5,28.0,19.0,0.0,0.0
@@ -12,13 +12,13 @@ cathay_pacific,Cathay Pacific,Japan/Asia,error,,2,home;assistance,14.0,82.0,41.0
 lufthansa,Lufthansa,Europe,blocked,,3,home;checkin;assistance,2.0,7.0,2.3,0.0,7.0,0.0,0.0
 air_france,Air France,Europe,error,,3,home;checkin;assistance,3.0,30.0,10.0,0.0,30.0,0.0,0.0
 klm,KLM,Europe,error,,3,home;checkin;assistance,2.0,5.0,1.7,2.0,3.0,0.0,0.0
-ryanair,Ryanair,Europe,allowed,,3,home;checkin;assistance,9.0,18.0,6.0,5.0,13.0,0.0,0.0
+ryanair,Ryanair,Europe,allowed,,3,home;checkin;assistance,8.0,16.0,5.3,4.0,12.0,0.0,0.0
 easyjet,easyJet,Europe,blocked,,3,home;checkin;assistance,10.0,78.0,26.0,4.0,72.0,2.0,0.0
 iberia,Iberia,Europe,blocked,,3,home;checkin;assistance,7.0,16.0,5.3,1.0,15.0,0.0,0.0
 finnair,Finnair,Europe,allowed,,3,home;checkin;assistance,1.0,1.0,0.3,0.0,1.0,0.0,0.0
 sas,SAS,Europe,blocked,,3,home;checkin;assistance,3.0,6.0,2.0,0.0,6.0,0.0,0.0
 tap_air_portugal,TAP Air Portugal,Europe,allowed,,3,home;checkin;assistance,3.0,6.0,2.0,2.0,4.0,0.0,0.0
-turkish_airlines,Turkish Airlines,Europe,error,,2,home;assistance,4.0,23.0,11.5,8.0,15.0,0.0,0.0
+turkish_airlines,Turkish Airlines,Europe,error,,2,home;assistance,4.0,21.0,10.5,7.0,14.0,0.0,0.0
 delta,Delta,North America,blocked,,3,home;checkin;assistance,2.0,14.0,4.7,3.0,11.0,0.0,0.0
 united,United,North America,error,,2,home;checkin,2.0,4.0,2.0,0.0,4.0,0.0,0.0
 american,American,North America,blocked,,3,home;checkin;assistance,3.0,10.0,3.3,3.0,7.0,0.0,0.0

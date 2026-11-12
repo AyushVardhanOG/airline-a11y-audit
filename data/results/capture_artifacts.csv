@@ -1,0 +1,58 @@
+tool,file_name,rule_or_code,target,tag,found_in_page,capture_artifact,reason,axe_run,pa11y_run
+axe,air_india_assistance_20261111.html,image-alt,".floating-chat-bot-outer-wrapper > a[target=""_blank""] > img",img,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,air_india_assistance_20261111.html,link-name,".floating-chat-bot-outer-wrapper > a[target=""_blank""]",a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+pa11y,air_india_assistance_20261111.html,WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2,#page-0b37d82a66 > app-ai-agent-initial-root > app-sticky-chat-bot > section > div > a,a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,air_india_checkin_20261111.html,image-alt,".floating-chat-bot-outer-wrapper > a[target=""_blank""] > img",img,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,air_india_checkin_20261111.html,link-name,".floating-chat-bot-outer-wrapper > a[target=""_blank""]",a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+pa11y,air_india_checkin_20261111.html,WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2,#page-026b1e921c > app-ai-agent-initial-root > app-sticky-chat-bot > section > div > a,a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,air_india_home_20261111.html,image-alt,".floating-chat-bot-outer-wrapper > a[target=""_blank""] > img",img,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,air_india_home_20261111.html,link-name,".floating-chat-bot-outer-wrapper > a[target=""_blank""]",a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+pa11y,air_india_home_20261111.html,WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2,#home > app-ai-agent-initial-root > app-sticky-chat-bot > section > div > a,a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,akasa_air_checkin_20261111.html,color-contrast,#sidebar-text,span,True,False,mentions 2147483647 but not the SingleFile style,20261111T142233Z,20261111T144723Z
+axe,akasa_air_checkin_20261111.html,label-content-name-mismatch,#sidebar-button,div,True,False,mentions 2147483647 but not the SingleFile style,20261111T142233Z,20261111T144723Z
+axe,akasa_air_home_20261111.html,color-contrast,#sidebar-text,span,True,False,mentions 2147483647 but not the SingleFile style,20261111T142233Z,20261111T144723Z
+axe,akasa_air_home_20261111.html,label-content-name-mismatch,#sidebar-button,div,True,False,mentions 2147483647 but not the SingleFile style,20261111T142233Z,20261111T144723Z
+axe,american_checkin_20261111.html,button-name,"adc-button-icon[a11y-description=""Passenger last name tooltip""] #button-icon",,False,False,inside iframe or shadow DOM,20261111T142233Z,20261111T144723Z
+axe,american_checkin_20261111.html,button-name,"adc-button-icon[a11y-description=""Record locator tooltip""] #button-icon",,False,False,inside iframe or shadow DOM,20261111T142233Z,20261111T144723Z
+pa11y,cathay_pacific_home_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#react-aria4869014510-:r8q:,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,cathay_pacific_home_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#react-aria4869014510-:r8l:,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,delta_assistance_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#at-the-airport-&-onboard,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,iberia_assistance_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Rectangle 29,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,iberia_checkin_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Rectangle 29,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,iberia_home_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Rectangle 29,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,iberia_home_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Rectangle 29,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+axe,indigo_checkin_20261111.html,image-alt,".wrapper > a[target=""_blank""] > img",img,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,indigo_checkin_20261111.html,link-name,".wrapper > a[target=""_blank""]",a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+pa11y,indigo_checkin_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#skipToMainContent,div,True,False,mentions 2147483647 but not the SingleFile style,20261111T142233Z,20261111T144723Z
+pa11y,indigo_checkin_20261111.html,WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2,#container-5d3527d46e > div > section > div > a,a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,indigo_home_20261111.html,image-alt,"div[aria-label=""Explore Amsterdam, card 1 of 2""] > a[target=""_blank""] > img",img,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,indigo_home_20261111.html,image-alt,".media-flip__item.overflow-hidden.rounded:nth-child(2) > a[target=""_blank""] > img",img,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,indigo_home_20261111.html,link-name,"div[aria-label=""Explore Amsterdam, card 1 of 2""] > a[target=""_blank""]",a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,indigo_home_20261111.html,link-name,".media-flip__item.overflow-hidden.rounded:nth-child(2) > a[target=""_blank""]",a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,indigo_home_20261111.html,nested-interactive,r10-chat .launcher-nudge,,False,False,inside iframe or shadow DOM,20261111T142233Z,20261111T144723Z
+pa11y,indigo_home_20261111.html,WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2,#skipToMainContent > div:nth-child(6) > section > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > a,a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+pa11y,indigo_home_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Rectangle 3466609,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,indigo_home_20261111.html,WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2,#skipToMainContent > div:nth-child(6) > section > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > a,a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,qantas_checkin_20261111.html,aria-allowed-attr,"iframe[title=""Content from youtube""] >> .ytmVideoInfoVideoTitle",,False,False,inside iframe or shadow DOM,20261111T142233Z,20261111T144723Z
+axe,qantas_checkin_20261111.html,aria-prohibited-attr,"iframe[title=""Content from youtube""] >> #movie_player",,False,False,inside iframe or shadow DOM,20261111T142233Z,20261111T144723Z
+axe,qantas_checkin_20261111.html,button-name,"iframe[title=""Content from youtube""] >> .ytmVideoInfoChannelAvatar",,False,False,inside iframe or shadow DOM,20261111T142233Z,20261111T144723Z
+axe,ryanair_home_20261111.html,image-alt,"a[target=""_blank""] > img",img,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,ryanair_home_20261111.html,link-name,"hp-video-banner-card > a[target=""_blank""]",a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+pa11y,ryanair_home_20261111.html,WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2,#main-content > ry-spinner > div > hp-lazy-content > hp-content-container > hp-content > section:nth-child(2) > hp-video-banner-container > hp-video-banner-card > a:nth-child(2),a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_assistance_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Logo Horizontal TAP,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_assistance_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Air Horizontal Portugal,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_assistance_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#TAP Horizontal,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_checkin_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Logo Horizontal TAP,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_checkin_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Air Horizontal Portugal,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_checkin_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#TAP Horizontal,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_home_20261111.html,WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font,#flights[0]-label > div > div > div:nth-child(1) > font,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_home_20261111.html,WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font,#flights[0]-label > div > div > div:nth-child(1) > font > font,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_home_20261111.html,WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font,#flights[0]-value > font,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_home_20261111.html,WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font,#flights[0]-value > font > font,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_home_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Logo Horizontal TAP,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_home_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#Air Horizontal Portugal,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+pa11y,tap_air_portugal_home_20261111.html,WCAG2AA.Principle4.Guideline4_1.4_1_1.F77,#TAP Horizontal,,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z
+axe,turkish_airlines_assistance_20261111.html,image-alt,".video-embed > a[target=""_blank""] > img",img,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+axe,turkish_airlines_assistance_20261111.html,link-name,".video-embed > a[target=""_blank""]",a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+pa11y,turkish_airlines_assistance_20261111.html,WCAG2AA.Principle1.Guideline1_1.1_1_1.H30.2,#tcm508-325511 > div > div:nth-child(2) > div > div > div > div > div > a,a,True,True,SingleFile style on element or ancestor,20261111T142233Z,20261111T144723Z
+pa11y,united_home_20261111.html,WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail,#043ee804-39ce-491d-8f18-a66495da90d1 > div:nth-child(2) > span:nth-child(2),,False,False,selector not usable in saved page,20261111T142233Z,20261111T144723Z

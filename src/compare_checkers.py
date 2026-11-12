@@ -18,6 +18,8 @@ Outputs (rewritten every run):
   data/results/charts/checker_agreement_by_criterion.png (+ .csv with the numbers shown)
 
 Counting rules:
+  - Findings on elements inserted by the saving tool (capture_artifacts.py) are left out of every
+    count; the page CSV shows how many per tool (axe_capture_artifacts, pa11y_capture_artifacts).
   - axe-core: "violations" only. An axe rule can map to several SCs (e.g. link-name -> 2.4.4 and 4.1.2).
   - Pa11y: "errors" only (warnings/notices are "check by hand" items, not failures).
   - Agreement per page = Jaccard overlap of the two SC sets (1 = same criteria, 0 = none in common).
@@ -37,6 +39,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 import analyze  # shared chart style (colors, fonts) and paths
+import capture_artifacts  # shared rule: findings inserted by the saving tool are left out of every count
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 AXE_DIR = PROJECT_ROOT / "data" / "raw" / "capture_scans"
@@ -73,22 +76,36 @@ def latest(folder, run=None):
     return runs[-1]
 
 
-def axe_criteria(record):
-    """{SC: number of failing elements} from one axe-core scan record."""
+def axe_nodes(record, artifacts):
+    """[(violation, nodes)] with the capture-artifact nodes left out (capture_artifacts.py)."""
+    return [(v, [n for n in v["nodes"]
+                 if (record["file_name"], capture_artifacts.axe_target_key(n["target"])) not in artifacts])
+            for v in record["axe_results"]["violations"]]
+
+
+def pa11y_issues(record, artifacts):
+    """Pa11y errors with the capture-artifact issues left out (checked element by element by selector)."""
+    return [i for i in record.get("issues", []) if (record["file_name"], i.get("selector") or "") not in artifacts]
+
+
+def axe_criteria(record, artifacts):
+    """{SC: number of failing elements} from one axe-core scan record (capture artifacts left out)."""
     out = {}
-    for v in record["axe_results"]["violations"]:
+    for v, nodes in axe_nodes(record, artifacts):
+        if not nodes:
+            continue
         for t in v.get("tags", []):
             m = re.fullmatch(r"wcag(\d)(\d)(\d+)", t)
             if m:
                 sc = f"{m[1]}.{m[2]}.{m[3]}"
-                out[sc] = out.get(sc, 0) + len(v["nodes"])
+                out[sc] = out.get(sc, 0) + len(nodes)
     return out
 
 
-def pa11y_criteria(record):
+def pa11y_criteria(record, artifacts):
     """{SC: number of error issues} from one Pa11y record, e.g. ...Guideline1_4.1_4_3.G18.Fail -> 1.4.3."""
     out = {}
-    for issue in record.get("issues", []):
+    for issue in pa11y_issues(record, artifacts):
         m = re.search(r"Guideline\d+_\d+\.(\d+)_(\d+)_(\d+)", issue["code"])
         if m:
             sc = f"{m[1]}.{m[2]}.{m[3]}"
@@ -149,19 +166,23 @@ def main():
     axe = {json.loads(p.read_text(encoding="utf-8"))["file_name"]: json.loads(p.read_text(encoding="utf-8"))
            for p in sorted(axe_dir.glob("*.json"))}
 
+    artifacts = capture_artifacts.load(axe_run=axe_run)  # elements inserted by the saving tool: left out
     rows, skipped = [], []
     for file_name, a in sorted(axe.items()):
         p = pa11y.get(file_name)
         if a.get("status") != "ok" or p is None or p.get("status") != "ok":
             skipped.append(file_name)
             continue
-        ax_sc, pa_sc = axe_criteria(a), pa11y_criteria(p)
+        ax_sc, pa_sc = axe_criteria(a, artifacts["axe"]), pa11y_criteria(p, artifacts["pa11y"])
+        axe_kept = sum(len(nodes) for _, nodes in axe_nodes(a, artifacts["axe"]))
+        pa_kept = len(pa11y_issues(p, artifacts["pa11y"]))
         both, only_a, only_p = ax_sc.keys() & pa_sc.keys(), ax_sc.keys() - pa_sc.keys(), pa_sc.keys() - ax_sc.keys()
         either = ax_sc.keys() | pa_sc.keys()
         rows.append({
             "file_name": file_name, "airline_id": a["airline_id"], "page_type": a["page_type"],
-            "axe_elements": sum(len(v["nodes"]) for v in a["axe_results"]["violations"]),
-            "pa11y_errors": len(p.get("issues", [])),
+            "axe_elements": axe_kept, "pa11y_errors": pa_kept,  # capture artifacts NOT included
+            "axe_capture_artifacts": sum(len(v["nodes"]) for v in a["axe_results"]["violations"]) - axe_kept,
+            "pa11y_capture_artifacts": len(p.get("issues", [])) - pa_kept,
             "axe_criteria": len(ax_sc), "pa11y_criteria": len(pa_sc),
             "criteria_both": ";".join(sorted(both, key=sc_sort_key)),
             "criteria_only_axe": ";".join(sorted(only_a, key=sc_sort_key)),

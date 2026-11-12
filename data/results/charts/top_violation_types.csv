@@ -1,12 +1,12 @@
 rule_id,pages_affected,airlines_affected,elements_failed,impact,wcag_criteria,rule_help
 label-content-name-mismatch,46,23,152,serious,2.5.3,Elements must have their visible text as part of their accessible name
 color-contrast,22,13,228,serious,1.4.3,Elements must meet minimum color contrast ratio thresholds
-link-name,15,9,45,serious,2.4.4;4.1.2,Links must have discernible text
-image-alt,13,8,41,critical,1.1.1,Images must have alternative text
+link-name,12,8,37,serious,2.4.4;4.1.2,Links must have discernible text
 nested-interactive,12,10,34,serious,4.1.2,Interactive controls must not be nested
 list,11,9,27,serious,1.3.1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
 aria-required-children,11,7,18,critical,1.3.1,Certain ARIA roles must contain particular children
 button-name,11,9,16,critical,4.1.2,Buttons must have discernible text
+image-alt,9,6,33,critical,1.1.1,Images must have alternative text
 aria-prohibited-attr,9,7,14,serious,4.1.2,Elements must only use permitted ARIA attributes
 aria-allowed-attr,8,8,20,critical,4.1.2,Elements must only use supported ARIA attributes
 listitem,6,5,31,serious,1.3.1,<li> elements must be contained in a <ul> or <ol>

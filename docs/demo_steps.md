@@ -83,8 +83,8 @@ Expected: *RESULT: ACCEPTED* and *Review flags: none (looks plausible)*.
 
 ### Results to show next (slide, not live)
 
-> "I repeated this for 587 problems with three local models: Qwen fixed 61%, Llama 3.1 60% and
-> Gemma 2 53%, according to axe-core. 13 to 15% of the accepted fixes still need a human check.
+> "I repeated this for 578 problems with three local models: Qwen fixed 61%, Llama 3.1 59% and
+> Gemma 2 52%, according to axe-core. 12 to 14% of the accepted fixes still need a human check.
 > Simple problems like missing link text or image text were fixed almost always; problems that
 > need the page structure changed, like nested interactive elements, almost never."
 
@@ -107,8 +107,8 @@ Notice in STEP 1 of this run: two problems are marked *added while saving the pa
 airline's*. If asked:
 
 > "While preparing this demo I found that a tiny link icon next to videos was added by the tool
-> I used to save the pages. It caused 14 of the 768 failing elements. The demo skips them, and I
-> will correct them in the results."
+> I used to save the pages. It caused 16 of the 768 failing elements. They are now left out of all
+> results (752 counted), and the demo skips them."
 
 ---
 

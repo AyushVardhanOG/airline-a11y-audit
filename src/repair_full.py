@@ -425,8 +425,11 @@ def cmd_report(args):
     """
     import pandas as pd
     import analyze  # shared chart style
+    import capture_artifacts  # shared rule: elements inserted by the saving tool
 
-    log = read_jsonl(RUN_LOG)
+    artifacts = capture_artifacts.load(axe_run=rp.latest_capture_run().name)["axe"]
+    # every record keeps its data; capture_artifact=True marks the ones left out of all counts and charts
+    log = [{**r, "capture_artifact": (r["file_name"], r["target"]) in artifacts} for r in read_jsonl(RUN_LOG)]
     controls = read_jsonl(CONTROLS_LOG)
     selection = list(csv.DictReader(open(SELECTION_CSV, encoding="utf-8")))
     models = list(dict.fromkeys(r["model"] for r in log))
@@ -438,6 +441,7 @@ def cmd_report(args):
         "settings": {"temperature": 0, "seed": 42, "num_ctx": NUM_CTX, "system_prompt": rp.SYSTEM_PROMPT,
                      "prompt_template": rp.PROMPT_TEMPLATE},
         "capture_scan_run": rp.latest_capture_run().name,
+        "capture_artifacts_left_out": sorted({r["element_id"] for r in log if r["capture_artifact"]}),
     }
     FULL_JSON.write_text(json.dumps({"meta": meta, "repairs": log}, ensure_ascii=False), encoding="utf-8")
 
@@ -445,9 +449,12 @@ def cmd_report(args):
              "airline_id": r["airline_id"], "page_type": r["page_type"], "copies": r.get("copies"),
              "verdict": r["verdict"], "output_unchanged": r.get("output_unchanged"), "llm_seconds": r.get("llm_seconds"),
              "prompt_tokens": r.get("prompt_tokens"), "answer_tokens": r.get("answer_tokens"),
-             **{k: (r.get("quality_flags") or {}).get(k) for k in FLAG_KEYS}} for r in log]
+             **{k: (r.get("quality_flags") or {}).get(k) for k in FLAG_KEYS},
+             "capture_artifact": r["capture_artifact"]} for r in log]
     df = pd.DataFrame(rows)
-    df.to_csv(SUMMARY_CSV, index=False)
+    df.to_csv(SUMMARY_CSV, index=False)  # ALL rows, incl. capture_artifact=True
+    n_art = int(df["capture_artifact"].sum())
+    df = df[~df["capture_artifact"]].copy()  # from here on: counts and charts without capture artifacts
     df["fixed"] = df["verdict"] == "fixed"
     charts = RESULTS / "charts"
     charts.mkdir(parents=True, exist_ok=True)
@@ -485,7 +492,9 @@ def cmd_report(args):
     share.to_csv(charts / "repair_human_check_share.csv")
     two_part_bars(share, charts / "repair_human_check_share.png", analyze)
 
-    print(f"{len(log)} records, models: {', '.join(f'{m} ({int(per_model.loc[m, 'attempts'])})' for m in models)}")
+    print(f"{len(log)} records; {n_art} on capture artifacts left out "
+          f"({len(meta['capture_artifacts_left_out'])} elements: {', '.join(meta['capture_artifacts_left_out'])})")
+    print(f"counted attempts per model: {', '.join(f'{m} ({int(per_model.loc[m, 'attempts'])})' for m in models)}")
     print(per_model[["attempts", "fixed", "fix_rate", "fixed_new_issue", "not_fixed", "invalid", "llm_error", "unchanged"]].to_string())
     print("\nneeds human check among fixed:\n" + share.to_string())
     print(f"\nWrote {FULL_JSON.name}, {SUMMARY_CSV.name}, 3 charts")

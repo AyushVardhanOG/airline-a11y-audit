@@ -37,6 +37,8 @@ matplotlib.use("Agg")  # draw to files only, no window
 import matplotlib.pyplot as plt
 import pandas as pd
 
+import capture_artifacts  # shared rule: elements inserted by the saving tool (SingleFile)
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RAW_CAPTURE_SCANS = PROJECT_ROOT / "data" / "raw" / "capture_scans"
 RESULTS = PROJECT_ROOT / "data" / "results"
@@ -96,8 +98,12 @@ def wcag_level(tags):
     return ""
 
 
-def load_scans(run_dir, airlines):
-    """Read every scan JSON of one run into a page table and an element (violation) table."""
+def load_scans(run_dir, airlines, artifacts):
+    """
+    Read every scan JSON of one run into a page table and an element (violation) table.
+    artifacts = {(file_name, target)} of elements inserted by the saving tool (capture_artifacts.py):
+    they stay in the element table (capture_artifact=True) but are left out of the page counts.
+    """
     pages, elements = [], []
     for path in sorted(run_dir.glob("*.json")):
         rec = json.loads(path.read_text(encoding="utf-8"))
@@ -111,11 +117,15 @@ def load_scans(run_dir, airlines):
             pages.append(page)
             continue
         violations = rec["axe_results"]["violations"]
-        page["rules_failed"] = len(violations)
-        page["elements_failed"] = sum(len(v["nodes"]) for v in violations)
+        is_artifact = lambda node: (rec["file_name"], capture_artifacts.axe_target_key(node["target"])) in artifacts
+        # per rule: only the failing elements that belong to the airline's page (artifacts left out)
+        kept = [(v, [n for n in v["nodes"] if not is_artifact(n)]) for v in violations]
+        page["rules_failed"] = sum(1 for _, nodes in kept if nodes)
+        page["elements_failed"] = sum(len(nodes) for _, nodes in kept)
         for imp in IMPACTS:
-            page[imp] = sum(len(v["nodes"]) for v in violations if (v.get("impact") or "minor") == imp)
+            page[imp] = sum(len(nodes) for v, nodes in kept if (v.get("impact") or "minor") == imp)
         page["rules_passed"] = len(rec["axe_results"].get("passes", []))
+        page["capture_artifacts_removed"] = sum(len(v["nodes"]) for v in violations) - page["elements_failed"]
         pages.append(page)
         for v in violations:
             for node in v["nodes"]:
@@ -133,6 +143,7 @@ def load_scans(run_dir, airlines):
                     "html_length": len(html),
                     "html_snippet": html[:HTML_SNIPPET_MAX],
                     "scan_run": run_dir.name,
+                    "capture_artifact": is_artifact(node),
                 })
     return pd.DataFrame(pages), pd.DataFrame(elements)
 
@@ -342,6 +353,61 @@ def live_vs_copy_section():
     return lines
 
 
+def capture_artifact_section(all_elements, pages_ok):
+    """What was removed as 'inserted by the saving tool' (capture_artifacts.py), with the evidence."""
+    art = all_elements[all_elements["capture_artifact"]]
+    L = ["## Data quality: capture artifact", ""]
+    if art.empty:
+        return L + ["- No failing element inserted by the saving tool was found.", ""]
+    airlines_n = art["airline_id"].nunique()
+    L += ["**What it is.** While the pages were saved with SingleFile, a tiny 16 px link was inserted next to videos: "
+          "a link straight to the video file, with a 16 px icon image inside and the inline style "
+          "`z-index:2147483647; position:absolute; margin:8px 0px 0px <N>px` (N is usually 8; SingleFile adjusts it to the "
+          "video's position). The link has no text and "
+          "the icon has no alt text, so both checkers report them, but they are not part of the airline's website.", "",
+          f"**Evidence.** The same code appears on {art['file_name'].nunique()} pages of {airlines_n} unrelated airlines "
+          f"({', '.join(sorted(art['airline'].unique()))}), always next to a video and pointing at that video file."]
+    lv_path = RESULTS / "live_vs_capture_pages.csv"
+    if lv_path.exists():
+        lv = pd.read_csv(lv_path, dtype=str, keep_default_na=False)
+        for r in lv[lv["capture_file"].isin(art["file_name"])].itertuples():
+            rules = set(art[art["file_name"] == r.capture_file]["rule_id"])
+            only_copy = rules & set(filter(None, r.rules_only_capture.split(";")))
+            if only_copy:
+                L[-1] += (f" The {r.airline_id} {r.page_type} page was also scanned live: "
+                          f"{', '.join(sorted(only_copy))} failed only in the saved copy, not on the live page.")
+    L += ["", "**Removed from every count, percentage and chart** (the rows stay in the CSVs with "
+          "`capture_artifact=True`; the full list with the check of each element is `capture_artifacts.csv`):", "",
+          f"- axe-core: **{len(art)} of {len(all_elements)} failing elements** ({len(art) / len(all_elements):.1%}) on "
+          f"{art['file_name'].nunique()} pages: " + ", ".join(f"{r} {c}" for r, c in art["rule_id"].value_counts().items()) + "."]
+    cp_path = RESULTS / "checker_comparison_pages.csv"
+    if cp_path.exists():
+        cp = pd.read_csv(cp_path)
+        if "pa11y_capture_artifacts" in cp:
+            n_art = int(cp["pa11y_capture_artifacts"].sum())
+            L.append(f"- Pa11y: **{n_art} of {int(cp['pa11y_errors'].sum()) + n_art} errors**.")
+    rs_path = RESULTS / "repairs_full_summary.csv"
+    if rs_path.exists():
+        rs = pd.read_csv(rs_path)
+        if "capture_artifact" in rs:
+            a = rs[rs["capture_artifact"] == True]
+            L.append(f"- LLM repairs: **{a['element_id'].nunique()} of {rs['element_id'].nunique()} elements** "
+                     f"({len(a)} of {len(rs)} attempts; {int((a['verdict'] == 'fixed').sum())} of them counted as fixed before).")
+    flipped = int(((pages_ok["elements_failed"] == 0) & (pages_ok["capture_artifacts_removed"] > 0)).sum())
+    L.append(f"- Pages that failed ONLY because of the artifact (now counted as passing): {flipped}.")
+    ca_rows = pd.read_csv(capture_artifacts.ARTIFACTS_CSV, dtype=str)
+    not_marked = ca_rows[ca_rows["reason"].str.startswith("mentions")]
+    if len(not_marked):
+        L.append(f"- Not removed: {len(not_marked)} findings that only share the z-index 2147483647 without the rest of the "
+                 f"style or only CONTAIN the inserted link (on "
+                 f"{', '.join(sorted(not_marked['file_name'].str.replace(r'_\d{8}\.html$', '', regex=True).unique()))}; "
+                 "checked 2026-11-13: Akasa Air's own orange sidebar button, and an IndiGo video container): "
+                 "that is the airline's own code.")
+    L += ["- The live-vs-copy comparison further down still compares the copies AS SAVED (artifact included), because it "
+          "measures how much a saved copy differs from the live page, and this artifact is one such difference.", ""]
+    return L
+
+
 def experimental_section(elements, pages_ok):
     """
     Checked 2026-11-11: axe-core 4.14.0 has 6 experimental rules; axe leaves them out unless asked
@@ -370,10 +436,12 @@ def llm_repair_section():
     if not path.exists():
         return []
     df = pd.read_csv(path)
+    if "capture_artifact" in df:  # elements inserted by the saving tool: kept in the CSV, left out here
+        df = df[df["capture_artifact"] != True].copy()
     df["fixed"] = df["verdict"] == "fixed"
     L = ["## LLM repairs (Objective 2)", "",
          "Every de-duplicated failing element (one per airline, rule and identical HTML; not in iframes or "
-         "shadow DOM; with a passing control run) was sent to each local model with the same prompt "
+         "shadow DOM; with a passing control run; capture artifacts left out) was sent to each local model with the same prompt "
          "(temperature 0, seed 42). The fix was applied to a COPY of the saved page and re-scanned with axe-core. "
          "\"Fixed\" = the rule no longer fails on the element and no new violation appeared. Review flags mark fixed "
          "repairs that a person must judge (placeholder text, hidden content, removed ARIA, added/changed role).", ""]
@@ -419,7 +487,9 @@ def llm_repair_section():
     # 4) New issues and invalid outputs: details are in the run log (one line per attempt)
     log_path = RESULTS / "repairs_full_log.jsonl"
     if log_path.exists():
-        log = [json.loads(line) for line in log_path.open(encoding="utf-8") if line.strip()]
+        counted = set(df["element_id"])  # same elements as the tables above (no capture artifacts)
+        log = [r for r in (json.loads(line) for line in log_path.open(encoding="utf-8") if line.strip())
+               if r["element_id"] in counted]
         L += ["", "### New issues and invalid outputs", ""]
         for model in models:
             recs = [r for r in log if r["model"] == model]
@@ -495,7 +565,7 @@ def second_checker_section():
     return L
 
 
-def write_summary(run_dir, pages, pages_ok, elements, per_airline, by_rule, access_df, made):
+def write_summary(run_dir, pages, pages_ok, elements, per_airline, by_rule, access_df, made, all_elements):
     n = len(pages_ok)
     with_viol = int((pages_ok["elements_failed"] > 0).sum())
     total_el = len(elements)
@@ -511,7 +581,8 @@ def write_summary(run_dir, pages, pages_ok, elements, per_airline, by_rule, acce
     L = ["# Summary of the accessibility audit", "",
          f"Generated by `src/analyze.py` from capture-scan run `{run_dir.name}` "
          "(saved copies of the pages, captured by hand on 11 Nov 2026). Numbers are from "
-         "axe-core, WCAG 2.0/2.1 Level A and AA rules only.", "",
+         "axe-core, WCAG 2.0/2.1 Level A and AA rules only. Elements inserted by the saving tool are left out "
+         "(see \"Data quality: capture artifact\").", "",
          "## What was scanned", "",
          f"- **{per_airline['pages_scanned'].gt(0).sum()} airlines**, **{n} pages** (homepage, check-in, special assistance). "
          f"Pages scanned per type: " + ", ".join(f"{t} {int(pt.loc[t, 'pages'])}" for t in pt.index) + ".",
@@ -543,6 +614,7 @@ def write_summary(run_dir, pages, pages_ok, elements, per_airline, by_rule, acce
           f"to a headless browser**: {int(acc.get('blocked', 0))} blocked it outright, {int(acc.get('blocked_unconfirmed', 0))} showed an "
           f"error page, {int(acc.get('error', 0))} cut the connection. Only {int(acc.get('allowed', 0))} allowed it.",
           "- This is why all pages were captured by hand with SingleFile instead of scanned automatically.", ""]
+    L += capture_artifact_section(all_elements, pages_ok)
     L += experimental_section(elements, pages_ok)
     L += live_vs_copy_section()
     L += second_checker_section()
@@ -574,19 +646,23 @@ def main():
     access_df = pd.read_csv(RESULTS / "automated_access.csv", dtype=str, keep_default_na=False)
     access = dict(zip(access_df["airline_id"], access_df["result"]))
 
-    pages, elements = load_scans(run_dir, airlines)
+    artifacts = capture_artifacts.load(axe_run=run_dir.name)["axe"]
+    pages, all_elements = load_scans(run_dir, airlines, artifacts)
     pages_ok = pages[pages["status"] == "ok"].copy()
-    print(f"Run {run_dir.name}: {len(pages)} pages ({len(pages_ok)} ok), {len(elements)} failing elements")
 
     # is_experimental is only written if any experimental rule appears (checked: none in run 20261111T142233Z)
-    to_write = elements if elements["is_experimental"].any() else elements.drop(columns=["is_experimental"])
-    to_write.to_csv(RESULTS / "violations_all.csv", index=False)
+    to_write = all_elements if all_elements["is_experimental"].any() else all_elements.drop(columns=["is_experimental"])
+    to_write.to_csv(RESULTS / "violations_all.csv", index=False)  # ALL rows, incl. capture_artifact=True
+    # From here on, every count, percentage and chart uses only the airline's own elements.
+    elements = all_elements[~all_elements["capture_artifact"]].copy()
+    print(f"Run {run_dir.name}: {len(pages)} pages ({len(pages_ok)} ok), {len(all_elements)} failing elements in the scans, "
+          f"{len(all_elements) - len(elements)} capture artifacts left out -> {len(elements)} counted")
     pages.to_csv(RESULTS / "pages_summary.csv", index=False)
     per_airline = airline_summary(airlines, access, pages_ok, elements)
     per_airline.to_csv(RESULTS / "summary_per_airline.csv", index=False)
 
     made, by_rule = make_charts(pages_ok, elements, per_airline, access_df)
-    write_summary(run_dir, pages, pages_ok, elements, per_airline, by_rule, access_df, made)
+    write_summary(run_dir, pages, pages_ok, elements, per_airline, by_rule, access_df, made, all_elements)
     print("Wrote violations_all.csv, pages_summary.csv, summary_per_airline.csv, summary.md and "
           f"{len(made)} charts in {CHARTS.relative_to(PROJECT_ROOT)}")
 

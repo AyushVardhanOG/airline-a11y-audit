@@ -889,3 +889,36 @@ The demo labels them ("added while saving the page, not the airline's") and neve
 `data/raw/` stays untouched (rule 6); correcting `analyze.py`, `compare_checkers.py` and
 `repair_full.py report` (mark these elements as `capture_artifact` and leave them out of the
 counts) is the next decision.
+
+## 2026-11-13 - Capture artifact corrected in all results
+
+**Shared rule** (`src/capture_artifacts.py`): an element is a `capture_artifact` if it or an ancestor
+has an inline style with `z-index:2147483647` AND `position:absolute` AND `margin:8px 0px 0px <N>px`
+(spacing / `!important` ignored). I first used `margin:8px 0px 0px 8px` exactly, as asked, but IndiGo's
+homepage has a SECOND inserted link (next to its second video) with `margin:8px 0px 0px -70px` and
+otherwise identical code, so only the left margin may vary. `build` opens the 46 saved pages that
+mention 2147483647 at all (offline, read only) and checks every axe finding by its target and every
+Pa11y error by its selector -> `data/results/capture_artifacts.csv` (also lists what was NOT marked).
+Pa11y selectors that are not valid CSS (22 duplicate-id findings like `#Rectangle 29`) fall back to
+the same test on Pa11y's HTML snippet; none matched.
+
+**Marked**: axe 16 (image-alt 8, link-name 8) and Pa11y 8, on 7 pages of 4 airlines. My first count
+(notes above) was 14 / about 7; the second IndiGo link adds 2 axe elements and 1 Pa11y error.
+**Not marked (correct)**: Akasa Air's own orange sidebar button (z-index 2147483647 but `margin:0px`,
+no `position:absolute`; 4 axe findings) and a duplicate-id finding on an IndiGo video container that
+only contains the inserted link (1 Pa11y).
+
+**Used in** analyze.py, compare_checkers.py, repair_full.py report (and demo.py). The rows stay in
+`violations_all.csv`, `repairs_full_summary.csv`, `repairs_full.json` with `capture_artifact=True`;
+`pages_summary.csv` has `capture_artifacts_removed`, `checker_comparison_pages.csv` has
+`axe_capture_artifacts` / `pa11y_capture_artifacts`. Every count, percentage and chart leaves them out.
+`data/raw/` and `data/captures/` untouched. Live-vs-copy comparison deliberately NOT changed: it
+measures how much the copy as saved differs from the live page, and this artifact is such a difference.
+
+**Old -> new**: failing elements 768 -> 752; pages failing 67 -> 67 (86%; every affected page has
+other failures); link-name 15 pages / 45 elements -> 12 / 37; image-alt 13 / 41 -> 9 / 33 (drops out of
+the top 5, `list` 11 / 27 comes in); Pa11y errors 1,576 -> 1,568; (page, criterion) pairs found by both
+tools 78 of 370 (21%) -> 71 of 367 (19%), on the 5 common criteria 44% -> 40% (both tools had flagged
+the inserted icon under 1.1.1). Repairs: 587 -> 578 elements per model; qwen 361 (61.5%) -> 352 (60.9%),
+llama 350 (59.6%) -> 341 (59.0%), gemma 310 (52.8%) -> 301 (52.1%); all 27 removed attempts had been
+"fixed". IndiGo home's 2 extra axe elements were never in the repair run (IndiGo home controls failed).
