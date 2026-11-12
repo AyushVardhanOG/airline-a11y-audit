@@ -1,4 +1,4 @@
 model,attempts,fixed,fixed_new_issue,not_fixed,invalid,llm_error,unchanged,fix_rate
 qwen2.5-coder:7b,587,361,13,212,1,0,67,0.615
 llama3.1:8b,587,350,20,213,4,0,20,0.596
-gemma2:9b,507,260,10,224,13,0,96,0.513
+gemma2:9b,587,310,10,252,15,0,113,0.528
