@@ -1,4 +1,4 @@
 model,fixed,needs_check,plausible
 qwen2.5-coder:7b,361,55,306
-llama3.1:8b,103,14,89
+llama3.1:8b,167,20,147
 gemma2:9b,2,2,0
