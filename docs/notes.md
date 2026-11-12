@@ -789,3 +789,57 @@ Objective 3, consider repeating each prompt and recording the variation.
 scans), `repairs_pilot_summary.csv` (one row per repair: verdict + review flags; start of Objective 3
 labels), `repairs_pilot_report.html` (before/after table, flags shown), trial JSON + report.
 Repaired and control copies are in `data/repaired/` (80 files, git-ignored).
+
+## 2026-11-11/12 - Step 5 full run: 587 elements x 3 local LLMs (Objective 2 finished)
+
+**Selection** (`src/repair_full.py select`): from the 768 failing elements, 601 kept (F0001-F0601,
+28 airlines, 62 pages). Left out (`repairs_full_exclusions.csv`): 14 inside an iframe or shadow DOM,
+144 duplicates (same airline, rule and identical HTML; the copies are listed so results can be
+counted per page later), 3 that contain a shadow-DOM host, 5 too large for the model's context,
+1 document element (`<html>`). **Controls** (`prepare`): 587 ok; F0380-F0393 (all IndiGo home) changed
+when the unchanged HTML was put back -> excluded, as in the pilot. So each model got 587 elements.
+
+**Settings**: same system prompt and prompt template as the pilot, temperature 0, seed 42, plus
+`num_ctx` 8192 (pilot used Ollama's default 4096; tested: 10 of 10 answers identical with both).
+Models (Ollama 0.40.16, all local): qwen2.5-coder:7b (dae161e27b0e), llama3.1:8b (46e0c10c039e,
+8.0B Q4_K_M), gemma2:9b (ff02c3702f32, 9.2B Q4_0; partly on the CPU, so slowest: median 10.1 s per
+answer vs 5.0 s qwen, 6.7 s llama).
+
+**What went wrong on the way (and what I changed)**:
+- The timing test stopped at gemma 7/10 when the session ended; I skipped the rest.
+- My laptop shut down (probably overheating) at qwen 481/587. The log was intact (498 complete
+  lines). I added `run-all`: models one after the other, a **5 s cool-down pause** between elements,
+  an automatic **commit + push every 100 elements** and when a model finishes, every log line forced
+  to disk (fsync), and a half-written last line (sudden power loss) is moved to
+  `repairs_full_log_broken.txt` and that element redone. Resumed 2026-11-12 06:23 UTC; finished
+  14:43 UTC with no further problems (14 progress/final commits, all pushed).
+- Rounding bug found when checking the chart: qwen 361/587 = 61.499% was shown as 62% (label made from
+  the already-rounded 0.615). The label now uses the exact counts -> 61%, same as summary.md.
+
+**Checks on the raw log**: 1,761 records, 587 per model, no duplicates, no llm_error, every answer
+ended normally (`done_reason = stop`, nothing cut off). The 20 invalid outputs are real model mistakes:
+the model returned 2 or 3 elements instead of one (e.g. it added a new `<label>` next to the input),
+which the pipeline correctly refuses to apply.
+
+**Results** (fixed = rule no longer fails on the element and no new violation, per axe-core):
+
+| model | fixed | not fixed | fixed + new issue | invalid | unchanged answer | fixed needing human check |
+|---|---|---|---|---|---|---|
+| qwen2.5-coder:7b | 361 (61%) | 212 | 13 | 1 | 67 | 55 (15%) |
+| llama3.1:8b | 350 (60%) | 213 | 20 | 4 | 20 | 45 (13%) |
+| gemma2:9b | 310 (53%) | 252 | 10 | 15 | 113 | 43 (14%) |
+
+- Per element: 223 fixed by all 3 models, 132 by 2, 88 by 1, **144 by none** (443 of 587 = 75% fixed
+  by at least one model).
+- By rule: link-name and image-alt 100% for all 3; color-contrast 68-79%; very hard:
+  nested-interactive (0-10%), aria-required-parent (0-32%), aria-required-children (7-21%) - these need
+  the structure changed, not one attribute. Large model differences: label-content-name-mismatch
+  (qwen 29%, llama 55%, gemma 3%), listitem (qwen 96%, others 46%).
+- gemma most often returned the HTML unchanged (113 times) - a big part of its lower fix rate.
+- New issues introduced by "fixed but new issue" repairs: mostly aria-required-children and
+  link-in-text-block (21 each), then aria-allowed-attr (8), color-contrast (6).
+
+**Honest caveats**: "fixed" only means axe-core no longer reports it. The review flags show 13-15% of
+the fixed ones need a person to judge them, and even "plausible" ones use guessed wording. Temperature 0
++ seed is not fully deterministic in Ollama (pilot R13). These 1,761 attempts are the input for
+Objective 3 (works/fails labels and the failure predictor); 500+ was the goal.

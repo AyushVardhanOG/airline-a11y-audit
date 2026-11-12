@@ -131,7 +131,17 @@ getting around that, so **every airline is measured the same way**:
   - [x] automatic review flags: of the 24 "fixed", **11 need a human check** (placeholder alt text, alt="",
         removed ARIA, added role) and 13 look plausible -> `repairs_pilot_summary.csv`, `repairs_pilot_report.html`
   - [ ] not fully reproducible: same prompt, different answer for 1 of 4 repeated elements (R13) despite temp 0 + seed
-  - [ ] for Objective 3: 2-3 LLMs, many more fix attempts (500+), human works/fails labels
+  - [x] FULL RUN done 2026-11-12 (`src/repair_full.py`; run-all with 5 s cool-down, commit every 100 elements):
+        601 de-duplicated elements selected (28 airlines, 62 pages; excluded: iframe/shadow DOM, duplicates,
+        too large, document element -> `repairs_full_exclusions.csv`); 14 IndiGo-home controls failed -> excluded,
+        so **587 elements x 3 models = 1,761 attempts**, same prompt as pilot, temp 0, seed 42, num_ctx 8192
+  - [x] models (Ollama 0.40.16): qwen2.5-coder:7b (dae161e27b0e), llama3.1:8b (46e0c10c039e, 8.0B Q4_K_M),
+        gemma2:9b (ff02c3702f32, 9.2B Q4_0). Fixed per axe-core: **qwen 361 (61%), llama 350 (60%), gemma 310 (53%)**;
+        needs a human check among fixed: 55 / 45 / 43; invalid output 1 / 4 / 15; answer unchanged 67 / 20 / 113
+  - [x] per element: 223 fixed by all 3 models, 132 by 2, 88 by 1, 144 by none. Hardest: nested-interactive,
+        aria-required-parent, aria-required-children; easiest: link-name, image-alt (100% for all 3)
+  - [x] outputs: `repairs_full.json`, `repairs_full_summary.csv`, `repairs_full_log.jsonl`, 3 `charts/repair_*` charts
+  - [ ] for Objective 3: human works/fails labels (axe-core "fixed" is not proof the fix works)
 - [ ] Step 6: evaluate fixes + label them works/fails (Objective 3)
 - [ ] Step 7: train the ML failure predictor + dashboard (Objective 3)
 - [ ] Step 8: paper draft

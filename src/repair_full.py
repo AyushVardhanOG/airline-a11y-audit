@@ -462,7 +462,8 @@ def cmd_report(args):
     per_model["fix_rate"] = (per_model["fixed"] / per_model["attempts"]).round(3)
     per_model.to_csv(charts / "repair_fix_rate_per_model.csv")
     analyze.ranked_bars(list(per_model.index), list(per_model["fix_rate"] * 100),
-                        [f"{r.fix_rate:.0%}  ({int(r.fixed)} of {int(r.attempts)})" for r in per_model.itertuples()],
+                        # label from the exact counts (not the rounded fix_rate), so it matches summary.md
+                        [f"{r.fixed / r.attempts:.0%}  ({int(r.fixed)} of {int(r.attempts)})" for r in per_model.itertuples()],
                         "LLM repairs that axe-core accepts, per model",
                         "Fixed = rule no longer fails on the element and no new violation; same prompt, temperature 0, seed 42",
                         "% of repair attempts fixed", charts / "repair_fix_rate_per_model.png")
