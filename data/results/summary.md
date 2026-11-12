@@ -89,7 +89,7 @@ Every de-duplicated failing element (one per airline, rule and identical HTML; n
 
 - **qwen2.5-coder:7b**: 587 attempts, **361 fixed (61%)**, 212 not fixed, 13 fixed with a new issue, 1 invalid; answer unchanged 67 times. Of the fixed, **55 (15%) need a human check**.
 - **llama3.1:8b**: 587 attempts, **350 fixed (60%)**, 213 not fixed, 20 fixed with a new issue, 4 invalid; answer unchanged 20 times. Of the fixed, **45 (13%) need a human check**.
-- **gemma2:9b**: 207 attempts, **90 fixed (43%)**, 107 not fixed, 2 fixed with a new issue, 8 invalid; answer unchanged 42 times. Of the fixed, **21 (23%) need a human check**.
+- **gemma2:9b**: 307 attempts, **161 fixed (52%)**, 130 not fixed, 6 fixed with a new issue, 10 invalid; answer unchanged 51 times. Of the fixed, **23 (14%) need a human check**.
 
 Rules with at least 10 attempts (all models together): hardest nested-interactive 4%, aria-required-parent 11%, aria-required-children 11%; easiest select-name 100%, link-name 100%, aria-command-name 100%.
 
