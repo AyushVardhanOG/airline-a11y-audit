@@ -597,3 +597,9 @@ qwen2.5-coder:7b,F0592,color-contrast,serious,turkish_airlines,home,1,not_fixed,
 qwen2.5-coder:7b,F0593,color-contrast,serious,turkish_airlines,home,1,fixed,False,5.5,238,51,False,False,False,False,False,False
 qwen2.5-coder:7b,F0594,color-contrast,serious,turkish_airlines,home,1,fixed,False,5.4,235,48,False,False,False,False,False,False
 qwen2.5-coder:7b,F0595,color-contrast,serious,turkish_airlines,home,1,fixed,False,5.1,236,36,False,False,False,False,False,False
+qwen2.5-coder:7b,F0596,label-content-name-mismatch,serious,turkish_airlines,home,1,fixed,False,52.4,1858,1702,False,False,False,False,False,False
+qwen2.5-coder:7b,F0597,link-name,serious,turkish_airlines,home,1,fixed,False,5.4,257,50,False,False,False,False,False,True
+qwen2.5-coder:7b,F0598,aria-prohibited-attr,serious,united,home,1,not_fixed,False,5.6,212,57,True,False,False,False,True,False
+qwen2.5-coder:7b,F0599,label-content-name-mismatch,serious,united,home,1,not_fixed,False,5.9,304,64,True,False,False,True,False,False
+qwen2.5-coder:7b,F0600,label-content-name-mismatch,serious,united,home,1,not_fixed,False,5.2,206,44,False,False,False,False,False,False
+qwen2.5-coder:7b,F0601,label-content-name-mismatch,serious,united,home,1,fixed,False,20.4,776,621,False,False,False,False,False,False

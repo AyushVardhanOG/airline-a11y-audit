@@ -1,7 +1,7 @@
 rule_id,qwen2.5-coder:7b fix_rate,llama3.1:8b fix_rate,gemma2:9b fix_rate,qwen2.5-coder:7b n,llama3.1:8b n,gemma2:9b n
 color-contrast,0.693,,,179.0,,
-label-content-name-mismatch,0.284,0.875,0.0,116.0,8.0,5.0
-link-name,1.0,,,33.0,,
+label-content-name-mismatch,0.292,0.875,0.0,120.0,8.0,5.0
+link-name,1.0,,,34.0,,
 nested-interactive,0.0,,,31.0,,
 list,0.75,,,24.0,,
 listitem,0.958,,,24.0,,
@@ -12,7 +12,7 @@ aria-allowed-attr,0.867,,,15.0,,
 aria-required-children,0.071,,,14.0,,
 aria-hidden-focus,0.571,,,14.0,,
 role-img-alt,1.0,,,13.0,,
-aria-prohibited-attr,1.0,1.0,1.0,8.0,2.0,2.0
+aria-prohibited-attr,0.889,1.0,1.0,9.0,2.0,2.0
 aria-valid-attr-value,0.0,,,8.0,,
 aria-command-name,1.0,,,8.0,,
 button-name,1.0,,,8.0,,
