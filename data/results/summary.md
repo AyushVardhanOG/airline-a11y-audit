@@ -89,9 +89,9 @@ Every de-duplicated failing element (one per airline, rule and identical HTML; n
 
 - **qwen2.5-coder:7b**: 587 attempts, **361 fixed (61%)**, 212 not fixed, 13 fixed with a new issue, 1 invalid; answer unchanged 67 times. Of the fixed, **55 (15%) need a human check**.
 - **llama3.1:8b**: 587 attempts, **350 fixed (60%)**, 213 not fixed, 20 fixed with a new issue, 4 invalid; answer unchanged 20 times. Of the fixed, **45 (13%) need a human check**.
-- **gemma2:9b**: 407 attempts, **202 fixed (50%)**, 188 not fixed, 6 fixed with a new issue, 11 invalid; answer unchanged 76 times. Of the fixed, **36 (18%) need a human check**.
+- **gemma2:9b**: 507 attempts, **260 fixed (51%)**, 224 not fixed, 10 fixed with a new issue, 13 invalid; answer unchanged 96 times. Of the fixed, **39 (15%) need a human check**.
 
-Rules with at least 10 attempts (all models together): hardest nested-interactive 4%, aria-required-parent 11%, aria-required-children 12%; easiest select-name 100%, link-name 100%, image-alt 100%.
+Rules with at least 10 attempts (all models together): hardest nested-interactive 3%, aria-required-parent 11%, aria-required-children 12%; easiest link-name 100%, image-alt 100%, aria-command-name 95%.
 
 Charts: `charts/repair_fix_rate_per_model.png`, `charts/repair_fix_rate_per_rule_model.png`, `charts/repair_human_check_share.png`. Passing axe-core is not proof that a fix helps real users; Objective 3 labels the fixes works / fails.
 
